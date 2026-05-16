@@ -21,6 +21,8 @@ import kitNkAcademySlideBone from "@/assets/kit-nk-academy-slide-bone.png";
 import kitTommyVelejadorVermelho from "@/assets/kit-tommy-velejador-vermelho.png";
 import kitHilfigerNavy1 from "@/assets/kit-hilfiger-navy-1.png";
 import kitHilfigerNavy2 from "@/assets/kit-hilfiger-navy-2.png";
+import boneTommyVermelho1 from "@/assets/bone-tommy-vermelho-1.png";
+import boneTommyVermelho2 from "@/assets/bone-tommy-vermelho-2.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -90,7 +92,7 @@ export const products: Product[] = [
   { slug: "calca-jeans-city-denim", title: "Calça Jeans City Denim", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 900, stock: 15, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6615.png?v=1775625469&width=1200" },
   { slug: "sandalia-croc-classic", title: "Sandália Croc Classic", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "crocs", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "chinelo-nk-victori-one", title: "Chinelo NK Slide Victori One", price: "59,99", oldPrice: "190,00", installment: "5,99", off: "70% OFF", kind: "footwear", category: "slides", sold: 3300, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
-  { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
+  { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
   { slug: "bone-pma-motosport-bmw", title: "Boné Pma Motosport BMW", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 760, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
   { slug: "kit-nk-academy", title: "KIT COMPLETO TOMMY VELEJADOR 2026", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "kit", category: "kits-completos", sold: 2100, stock: 14, img: kitTommyVelejadorVermelho },
