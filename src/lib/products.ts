@@ -4,6 +4,10 @@ import kitPma5Pecas from "@/assets/kit-pma-5-pecas.png";
 import tenisPmaCavenFerrari from "@/assets/tenis-pma-caven-ferrari.png";
 import tenisPmaCavenFerrari2 from "@/assets/tenis-pma-caven-ferrari-2.png";
 import boneLcstSportDiamante from "@/assets/bone-lcst-sport-diamante.png";
+import tenisNkCourtBorough1 from "@/assets/tenis-nk-court-borough-1.png";
+import tenisNkCourtBorough2 from "@/assets/tenis-nk-court-borough-2.png";
+import tenisNkCourtBorough3 from "@/assets/tenis-nk-court-borough-3.png";
+import tenisNkCourtBorough4 from "@/assets/tenis-nk-court-borough-4.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -82,7 +86,7 @@ export const products: Product[] = [
   { slug: "kit-4-camisas-nk-academy", title: "Kit 4 Camisas NK Academy", price: "59,99", oldPrice: "299,99", installment: "5,99", off: "80% OFF", kind: "clothing", category: "camisetas", sold: 4200, stock: 30, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
   { slug: "conjunto-nk-academy", title: "Conjunto NK Academy", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "kit", category: "kits-completos", sold: 1500, stock: 12, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6618.png?v=1775625574&width=1200" },
   { slug: "tenis-pma-caven-ferrari", title: "Tênis Pma Caven Ferrari", price: "139,99", oldPrice: "549,99", installment: "13,99", off: "75% OFF", kind: "footwear", category: "sneakers", sold: 2800, stock: 8, img: tenisPmaCavenFerrari, images: [tenisPmaCavenFerrari, tenisPmaCavenFerrari2] },
-  { slug: "tenis-nk-court-borough-low-2", title: "Tênis NK Court Borough Low 2", price: "139,99", oldPrice: "449,99", installment: "13,99", off: "69% OFF", kind: "footwear", category: "sneakers", sold: 3100, stock: 11, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
+  { slug: "tenis-nk-court-borough-low-2", title: "Tênis NK Court Borough Low 2", price: "139,99", oldPrice: "449,99", installment: "13,99", off: "69% OFF", kind: "footwear", category: "sneakers", sold: 3100, stock: 11, img: tenisNkCourtBorough1, images: [tenisNkCourtBorough1, tenisNkCourtBorough2, tenisNkCourtBorough3, tenisNkCourtBorough4] },
   { slug: "tenis-pma-ca-pro", title: "Tênis Pma CA Pro", price: "159,99", oldPrice: "599,99", installment: "15,99", off: "73% OFF", kind: "footwear", category: "sneakers", sold: 2200, stock: 9, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
   { slug: "jaqueta-tommy-azul-royal", title: "Jaqueta Tommy Azul Royal", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1100, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6615.png?v=1775625469&width=1200" },
   { slug: "jaqueta-tommy-corta-vento", title: "Jaqueta Tommy Corta-Vento", price: "149,99", oldPrice: "799,99", installment: "14,99", off: "81% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1340, stock: 6, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6615.png?v=1775625469&width=1200" },
