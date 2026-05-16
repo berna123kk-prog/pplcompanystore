@@ -54,13 +54,7 @@ export function TopBanner() {
 }
 
 export function Logo() {
-  return (
-    <Link to="/" className="flex items-center gap-2">
-      <div className="h-14 w-14 rounded bg-gradient-to-br from-emerald-700 to-emerald-950 grid place-items-center text-[10px] font-black text-white leading-tight text-center px-1">
-        VSN<br />STORE
-      </div>
-    </Link>
-  );
+  return <Link to="/" className="flex items-center" aria-label="Início" />;
 }
 
 export function Header() {
