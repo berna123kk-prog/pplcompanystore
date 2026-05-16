@@ -133,7 +133,7 @@ function ProductPage() {
                 <ChevronRight className="h-5 w-5" />
               </button>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-                {gallery.map((_, i) => (
+                {gallery.map((_: string, i: number) => (
                   <button
                     key={i}
                     onClick={() => setImgIdx(i)}
