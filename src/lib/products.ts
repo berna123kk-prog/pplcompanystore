@@ -1,3 +1,5 @@
+import kitLcstSportswear from "@/assets/kit-lcst-sportswear.png";
+
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
 export type CategorySlug =
