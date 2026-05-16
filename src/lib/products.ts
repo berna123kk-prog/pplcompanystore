@@ -97,14 +97,6 @@ export const products: Product[] = [
   { slug: "kit-completo-nk-sportswear", title: "Kit Completo NK Sportswear", price: "149,99", oldPrice: "799,99", installment: "14,97", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 1620, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6603.png?v=1775624725&width=1200" },
   { slug: "kit-completo-nk-academy-4-pecas", title: "Kit Completo NK Academy 4 Peças", price: "159,99", oldPrice: "699,99", installment: "15,97", off: "77% OFF", kind: "kit", category: "kits-completos", sold: 1480, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6618.png?v=1775625574&width=1200" },
   { slug: "kit-completo-tommy-gringo", title: "Kit Completo Tommy Gringo", price: "149,99", oldPrice: "799,99", installment: "14,97", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 1310, stock: 9, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
-  { slug: "kit-completo-tommy-gringo-red", title: "Kit Completo Tommy Gringo Red", price: "149,99", oldPrice: "799,99", installment: "14,97", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 1190, stock: 6, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
-  { slug: "kit-completo-pma-bmw-motosport-v2", title: "Kit Completo Pma BMW Motosport", price: "139,99", oldPrice: "899,99", installment: "13,97", off: "84% OFF", kind: "kit", category: "kits-completos", sold: 1755, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6620.png?v=1775625760&width=1200" },
-  { slug: "kit-completo-tommy-velejador-navy", title: "Kit Completo Tommy Velejador Navy", price: "179,99", oldPrice: "1.350,00", installment: "17,97", off: "87% OFF", kind: "kit", category: "kits-completos", sold: 980, stock: 5, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
-  { slug: "kit-completo-pma-bmw-5-pecas", title: "Kit Completo Pma BMW 5 Peças", price: "199,99", oldPrice: "999,99", installment: "19,99", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 870, stock: 4, img: kitPmaBmwM1, images: [kitPmaBmwM1, kitPmaBmwM2] },
-  { slug: "kit-completo-pma-mercedes-motosport", title: "Kit Completo Pma Mercedes Motosport", price: "189,99", oldPrice: "999,99", installment: "18,99", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 920, stock: 6, img: kitPmaMercedes1, images: [kitPmaMercedes1, kitPmaMercedes2] },
-  { slug: "kit-completo-pma-5-pecas", title: "Kit Completo Pma 5 Peças", price: "199,99", oldPrice: "899,99", installment: "19,99", off: "78% OFF", kind: "kit", category: "kits-completos", sold: 1240, stock: 7, img: kitPma5Pecas },
-  { slug: "kit-completo-pma-motosport-bmw-azul", title: "Kit Completo Pma Motosport BMW", price: "159,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 1530, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6620.png?v=1775625760&width=1200" },
-  { slug: "kit-completo-tommy-velejador-2026-v2", title: "Kit Completo Tommy Velejador 2026", price: "165,99", oldPrice: "1.198,99", installment: "16,57", off: "86% OFF", kind: "kit", category: "kits-completos", sold: 1180, stock: 5, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
   { slug: "bone-lcst-sport-diamante", title: "Boné Lcst Sport Diamante (Modelo Novo)", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 860, stock: 18, img: boneLcstSportDiamante },
 ];
 
@@ -114,14 +106,9 @@ export const bones = products.filter(p => /bon[ée]/i.test(p.title));
 export const sneakers = products.filter(p => p.category === "sneakers");
 
 const FEATURED_EXTRA_SLUGS = [
-  "kit-completo-pma-5-pecas",
-  "kit-completo-pma-motosport-bmw-azul",
   "tenis-pma-caven-ferrari",
-  "kit-completo-tommy-velejador-2026-v2",
   "bone-lcst-sport-diamante",
   "tenis-nk-court-borough-low-2",
-  "kit-completo-pma-mercedes-motosport",
-  "kit-completo-pma-bmw-5-pecas",
 ];
 
 export const featured = [
