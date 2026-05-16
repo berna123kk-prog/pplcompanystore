@@ -124,7 +124,7 @@ function ProductPage() {
 
       <section className="max-w-[1400px] mx-auto px-6 py-8 grid lg:grid-cols-2 gap-10">
         <div className="relative border border-sky-100 bg-white group">
-          <img key={`${product.slug}-${imgIdx}`} src={currentImage} alt={product.title} className="w-full aspect-square object-contain bg-white" />
+          <img key={`${product.slug}-${imgIdx}`} src={currentImage} alt={product.title} className="w-full h-auto object-contain bg-white block" />
           {hasMultiple && (
             <>
               <button
