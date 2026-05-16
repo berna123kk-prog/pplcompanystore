@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Search, User, ShoppingBag, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import type { Product } from "@/lib/products";
+import headerBg from "@/assets/header-bg.png";
 
 const banners = [
   "DIRETO PARA SUA CASA",
