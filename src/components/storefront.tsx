@@ -68,7 +68,7 @@ export function Logo() {
 export function Header() {
   const [open, setOpen] = useState<string | null>(null);
   return (
-    <header className="relative bg-white border-b border-sky-100">
+    <header className="relative bg-sky-400">
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center justify-between">
         <Logo />
         <nav className="hidden md:flex items-center gap-8" onMouseLeave={() => setOpen(null)}>
@@ -77,7 +77,7 @@ export function Header() {
               <Link
                 to="/colecoes/$slug"
                 params={{ slug: item.slug }}
-                className="flex items-center gap-1 text-[12px] font-bold uppercase tracking-[0.15em] text-sky-900 hover:text-sky-600 py-2"
+                className="flex items-center gap-1 text-[12px] font-bold uppercase tracking-[0.15em] text-white hover:text-white/80 py-2"
               >
                 {item.label}
                 {item.sub && <ChevronDown className="h-3 w-3" />}
@@ -102,7 +102,7 @@ export function Header() {
             </div>
           ))}
         </nav>
-        <div className="flex items-center gap-5 text-sky-900">
+        <div className="flex items-center gap-5 text-white">
           <button aria-label="Buscar"><Search className="h-5 w-5" /></button>
           <button aria-label="Conta"><User className="h-5 w-5" /></button>
           <button aria-label="Sacola" className="relative">
@@ -111,7 +111,7 @@ export function Header() {
         </div>
       </div>
       <div className="max-w-[1400px] mx-auto px-6">
-        <div className="h-px bg-gradient-to-r from-transparent via-sky-300 to-transparent" />
+          <div className="h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
       </div>
     </header>
   );
