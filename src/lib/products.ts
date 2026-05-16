@@ -1,4 +1,5 @@
 import kitLcstSportswear from "@/assets/kit-lcst-sportswear.png";
+import kitLcstFeatured from "@/assets/kit-lcst-featured.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -95,7 +96,9 @@ export const nikeAcademy = products.filter(p => /nk academy|academy/i.test(p.tit
 export const bones = products.filter(p => /bon[ée]/i.test(p.title));
 export const sneakers = products.filter(p => p.category === "sneakers");
 
-export const featured = products.slice(0, 8);
+export const featured = products.slice(0, 8).map((p) =>
+  p.slug === "kit-completo-lcst-sportswear" ? { ...p, img: kitLcstFeatured } : p
+);
 export const kits = products.filter((p) => p.kind === "kit");
 
 export const SHOE_SIZES = ["33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"];
