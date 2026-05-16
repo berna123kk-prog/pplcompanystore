@@ -8,6 +8,8 @@ import tenisNkCourtBorough1 from "@/assets/tenis-nk-court-borough-1.png";
 import tenisNkCourtBorough2 from "@/assets/tenis-nk-court-borough-2.png";
 import tenisNkCourtBorough3 from "@/assets/tenis-nk-court-borough-3.png";
 import tenisNkCourtBorough4 from "@/assets/tenis-nk-court-borough-4.png";
+import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
+import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -97,7 +99,7 @@ export const products: Product[] = [
   { slug: "kit-completo-pma-bmw-motosport-v2", title: "Kit Completo Pma BMW Motosport", price: "139,99", oldPrice: "899,99", installment: "13,97", off: "84% OFF", kind: "kit", category: "kits-completos", sold: 1755, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6620.png?v=1775625760&width=1200" },
   { slug: "kit-completo-tommy-velejador-navy", title: "Kit Completo Tommy Velejador Navy", price: "179,99", oldPrice: "1.350,00", installment: "17,97", off: "87% OFF", kind: "kit", category: "kits-completos", sold: 980, stock: 5, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
   { slug: "kit-completo-pma-bmw-5-pecas", title: "Kit Completo Pma BMW 5 Peças", price: "199,99", oldPrice: "999,99", installment: "19,99", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 870, stock: 4, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6620.png?v=1775625760&width=1200" },
-  { slug: "kit-completo-pma-mercedes-motosport", title: "Kit Completo Pma Mercedes Motosport", price: "189,99", oldPrice: "999,99", installment: "18,99", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 920, stock: 6, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6620.png?v=1775625760&width=1200" },
+  { slug: "kit-completo-pma-mercedes-motosport", title: "Kit Completo Pma Mercedes Motosport", price: "189,99", oldPrice: "999,99", installment: "18,99", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 920, stock: 6, img: kitPmaMercedes1, images: [kitPmaMercedes1, kitPmaMercedes2] },
   { slug: "kit-completo-pma-5-pecas", title: "Kit Completo Pma 5 Peças", price: "199,99", oldPrice: "899,99", installment: "19,99", off: "78% OFF", kind: "kit", category: "kits-completos", sold: 1240, stock: 7, img: kitPma5Pecas },
   { slug: "kit-completo-pma-motosport-bmw-azul", title: "Kit Completo Pma Motosport BMW", price: "159,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 1530, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6620.png?v=1775625760&width=1200" },
   { slug: "kit-completo-tommy-velejador-2026-v2", title: "Kit Completo Tommy Velejador 2026", price: "165,99", oldPrice: "1.198,99", installment: "16,57", off: "86% OFF", kind: "kit", category: "kits-completos", sold: 1180, stock: 5, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
