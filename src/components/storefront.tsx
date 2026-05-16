@@ -77,7 +77,7 @@ export function Header() {
               <Link
                 to="/colecoes/$slug"
                 params={{ slug: item.slug }}
-                className="flex items-center gap-1 text-[12px] font-bold uppercase tracking-[0.15em] text-white hover:text-white/80 py-2"
+                className="flex items-center gap-1 text-[12px] font-bold uppercase tracking-[0.15em] text-sky-900 hover:text-sky-600 py-2"
               >
                 {item.label}
                 {item.sub && <ChevronDown className="h-3 w-3" />}
