@@ -14,6 +14,7 @@ import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
 import kitPmaBmwM2 from "@/assets/kit-pma-bmw-m-2.png";
 import kitTommyHilfiger1 from "@/assets/kit-tommy-hilfiger-1.png";
 import kitTommyHilfiger2 from "@/assets/kit-tommy-hilfiger-2.png";
+import kitPmaBmwMotosportJeans from "@/assets/kit-pma-bmw-motosport-jeans.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
