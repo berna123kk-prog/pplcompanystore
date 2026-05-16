@@ -102,7 +102,7 @@ export function Header() {
             </div>
           ))}
         </nav>
-        <div className="flex items-center gap-5 text-white">
+        <div className="flex items-center gap-5 text-sky-900">
           <button aria-label="Buscar"><Search className="h-5 w-5" /></button>
           <button aria-label="Conta"><User className="h-5 w-5" /></button>
           <button aria-label="Sacola" className="relative">
@@ -111,7 +111,7 @@ export function Header() {
         </div>
       </div>
       <div className="max-w-[1400px] mx-auto px-6">
-        <div className="h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+        <div className="h-px bg-gradient-to-r from-transparent via-sky-300 to-transparent" />
       </div>
     </header>
   );
