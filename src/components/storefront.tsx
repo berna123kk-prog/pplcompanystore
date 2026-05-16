@@ -59,7 +59,7 @@ export function Logo() {
       <img
         src={logoPpl}
         alt="PPL Company"
-        className="h-12 md:h-16 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
+        className="h-20 md:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
       />
     </Link>
   );
