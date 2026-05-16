@@ -100,11 +100,27 @@ export const nikeAcademy = products.filter(p => /nk academy|academy/i.test(p.tit
 export const bones = products.filter(p => /bon[ée]/i.test(p.title));
 export const sneakers = products.filter(p => p.category === "sneakers");
 
-export const featured = products.slice(0, 8).map((p) =>
-  p.slug === "kit-completo-lcst-sportswear"
-    ? { ...p, slug: "kit-completo-lcst-sportswear-featured", img: kitLcstFeatured }
-    : p
-);
+const FEATURED_EXTRA_SLUGS = [
+  "kit-completo-pma-5-pecas",
+  "kit-completo-pma-motosport-bmw-azul",
+  "tenis-pma-caven-ferrari",
+  "kit-completo-tommy-velejador-2026-v2",
+  "bone-lcst-sport-diamante",
+  "tenis-nk-court-borough-low-2",
+  "kit-completo-pma-mercedes-motosport",
+  "kit-completo-pma-bmw-5-pecas",
+];
+
+export const featured = [
+  ...products.slice(0, 8).map((p) =>
+    p.slug === "kit-completo-lcst-sportswear"
+      ? { ...p, slug: "kit-completo-lcst-sportswear-featured", img: kitLcstFeatured }
+      : p
+  ),
+  ...FEATURED_EXTRA_SLUGS
+    .map((slug) => products.find((p) => p.slug === slug))
+    .filter((p): p is Product => Boolean(p)),
+];
 export const kits = products.filter((p) => p.kind === "kit");
 
 export const SHOE_SIZES = ["33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"];
