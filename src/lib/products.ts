@@ -26,6 +26,7 @@ export type Product = {
   installment: string;
   off: string;
   img: string;
+  images?: string[];
   kind: ProductKind;
   category: CategorySlug;
   sold?: number;
