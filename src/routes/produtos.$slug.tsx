@@ -114,8 +114,36 @@ function ProductPage() {
       </div>
 
       <section className="max-w-[1400px] mx-auto px-6 py-8 grid lg:grid-cols-2 gap-10">
-        <div className="border border-sky-100 bg-white">
-          <img src={product.img} alt={product.title} className="w-full aspect-square object-contain bg-white" />
+        <div className="relative border border-sky-100 bg-white group">
+          <img src={gallery[imgIdx]} alt={product.title} className="w-full aspect-square object-contain bg-white" />
+          {hasMultiple && (
+            <>
+              <button
+                onClick={prev}
+                aria-label="Imagem anterior"
+                className="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 grid place-items-center rounded-full bg-white/90 border border-sky-200 text-sky-900 hover:bg-white shadow"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button
+                onClick={next}
+                aria-label="Próxima imagem"
+                className="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 grid place-items-center rounded-full bg-white/90 border border-sky-200 text-sky-900 hover:bg-white shadow"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                {gallery.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setImgIdx(i)}
+                    aria-label={`Ir para imagem ${i + 1}`}
+                    className={`h-2 rounded-full transition-all ${i === imgIdx ? "w-6 bg-sky-900" : "w-2 bg-sky-300"}`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
 
         <div>
