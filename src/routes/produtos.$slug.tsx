@@ -110,7 +110,7 @@ function ProductPage() {
 
       <section className="max-w-[1400px] mx-auto px-6 py-8 grid lg:grid-cols-2 gap-10">
         <div className="border border-sky-100 bg-white">
-          <img src={product.img} alt={product.title} className="w-full aspect-square object-cover" />
+          <img src={product.img} alt={product.title} className="w-full aspect-square object-contain bg-white" />
         </div>
 
         <div>
