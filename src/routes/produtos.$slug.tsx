@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-router";
 import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TopBanner, Header, Footer, Section } from "@/components/storefront";
 import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product } from "@/lib/products";
 
@@ -93,9 +93,18 @@ function ProductPage() {
   const [cep, setCep] = useState("");
   const gallery = product.images && product.images.length > 0 ? product.images : [product.img];
   const [imgIdx, setImgIdx] = useState(0);
+  const currentImage = gallery[imgIdx] ?? gallery[0] ?? product.img;
   const hasMultiple = gallery.length > 1;
   const prev = () => setImgIdx((i) => (i - 1 + gallery.length) % gallery.length);
   const next = () => setImgIdx((i) => (i + 1) % gallery.length);
+
+  useEffect(() => {
+    setImgIdx(0);
+  }, [product.slug]);
+
+  useEffect(() => {
+    setImgIdx((i) => (gallery.length === 0 ? 0 : Math.min(i, gallery.length - 1)));
+  }, [gallery.length]);
 
   const stock = product.stock ?? 10;
   const stockPct = Math.max(10, Math.min(100, (stock / 30) * 100));
@@ -115,7 +124,7 @@ function ProductPage() {
 
       <section className="max-w-[1400px] mx-auto px-6 py-8 grid lg:grid-cols-2 gap-10">
         <div className="relative border border-sky-100 bg-white group">
-          <img src={gallery[imgIdx]} alt={product.title} className="w-full aspect-square object-contain bg-white" />
+          <img key={`${product.slug}-${imgIdx}`} src={currentImage} alt={product.title} className="w-full aspect-square object-contain bg-white" />
           {hasMultiple && (
             <>
               <button
