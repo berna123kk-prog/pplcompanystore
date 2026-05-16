@@ -15,13 +15,13 @@ export const Route = createFileRoute("/")({
 function BannerStrip({ title, subtitle, note }: { title: string; subtitle: string; note?: string }) {
   return (
     <section className="relative max-w-[1400px] mx-auto px-6 py-8">
-      <div className="relative overflow-hidden border border-white/10 bg-gradient-to-br from-[#0a4dd6] via-[#1466ff] to-[#0a2a8a] px-8 py-14 md:py-20">
-        <div className="absolute inset-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, white, transparent 60%)" }} />
+      <div className="relative overflow-hidden border border-sky-200 bg-gradient-to-br from-sky-300 via-sky-400 to-sky-500 px-8 py-14 md:py-20 rounded-md">
+        <div className="absolute inset-0 opacity-30 mix-blend-overlay" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, white, transparent 60%)" }} />
         <div className="relative">
           <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight text-white leading-[0.9]">{title}</h2>
           <p className="mt-4 text-xl md:text-2xl font-bold text-white/95">{subtitle}</p>
           {note && <p className="mt-3 text-sm md:text-base italic text-white/90 font-serif">{note}</p>}
-          <div className="mt-6 inline-flex items-center gap-2 bg-[#0a2a8a] border border-white/20 px-5 py-2 text-xs font-bold tracking-[0.2em] uppercase text-white">
+          <div className="mt-6 inline-flex items-center gap-2 bg-white/90 border border-white text-sky-800 px-5 py-2 text-xs font-bold tracking-[0.2em] uppercase">
             🔒 Compra 100% Segura 🔒
           </div>
         </div>
