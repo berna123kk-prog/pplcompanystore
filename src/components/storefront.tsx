@@ -68,7 +68,7 @@ export function Logo() {
 export function Header() {
   const [open, setOpen] = useState<string | null>(null);
   return (
-    <header className="relative bg-sky-400">
+    <header className="relative bg-white border-b border-sky-100">
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center justify-between">
         <Logo />
         <nav className="hidden md:flex items-center gap-8" onMouseLeave={() => setOpen(null)}>
