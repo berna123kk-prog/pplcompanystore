@@ -54,16 +54,21 @@ export function TopBanner() {
 }
 
 export function Logo() {
-  return <Link to="/" className="flex items-center" aria-label="Início" />;
+  return (
+    <Link to="/" className="flex items-center" aria-label="Início">
+      <img
+        src={logoPpl}
+        alt="PPL Company"
+        className="h-12 md:h-16 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
+      />
+    </Link>
+  );
 }
 
 export function Header() {
   const [open, setOpen] = useState<string | null>(null);
   return (
-    <header
-      className="relative bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${headerBg})` }}
-    >
+    <header className="relative bg-[#0a4dd6]">
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center justify-between">
         <Logo />
         <nav className="hidden md:flex items-center gap-8" onMouseLeave={() => setOpen(null)}>
