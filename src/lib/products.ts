@@ -3,6 +3,7 @@ import kitLcstFeatured from "@/assets/kit-lcst-featured.png";
 import kitPma5Pecas from "@/assets/kit-pma-5-pecas.png";
 import tenisPmaCavenFerrari from "@/assets/tenis-pma-caven-ferrari.png";
 import tenisPmaCavenFerrari2 from "@/assets/tenis-pma-caven-ferrari-2.png";
+import boneLcstSportDiamante from "@/assets/bone-lcst-sport-diamante.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -96,7 +97,7 @@ export const products: Product[] = [
   { slug: "kit-completo-pma-5-pecas", title: "Kit Completo Pma 5 Peças", price: "199,99", oldPrice: "899,99", installment: "19,99", off: "78% OFF", kind: "kit", category: "kits-completos", sold: 1240, stock: 7, img: kitPma5Pecas },
   { slug: "kit-completo-pma-motosport-bmw-azul", title: "Kit Completo Pma Motosport BMW", price: "159,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 1530, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6620.png?v=1775625760&width=1200" },
   { slug: "kit-completo-tommy-velejador-2026-v2", title: "Kit Completo Tommy Velejador 2026", price: "165,99", oldPrice: "1.198,99", installment: "16,57", off: "86% OFF", kind: "kit", category: "kits-completos", sold: 1180, stock: 5, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
-  { slug: "bone-lcst-sport-diamante", title: "Boné Lcst Sport Diamante (Modelo Novo)", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 860, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
+  { slug: "bone-lcst-sport-diamante", title: "Boné Lcst Sport Diamante (Modelo Novo)", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 860, stock: 18, img: boneLcstSportDiamante },
 ];
 
 export const tommyProducts = products.filter(p => /tommy/i.test(p.title));
