@@ -119,23 +119,26 @@ function ProductPage() {
           {hasMultiple && (
             <>
               <button
+                type="button"
                 onClick={prev}
                 aria-label="Imagem anterior"
-                className="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 grid place-items-center rounded-full bg-white/90 border border-sky-200 text-sky-900 hover:bg-white shadow"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 h-10 w-10 grid place-items-center rounded-full bg-white/90 border border-sky-200 text-sky-900 hover:bg-white shadow cursor-pointer"
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
               <button
+                type="button"
                 onClick={next}
                 aria-label="Próxima imagem"
-                className="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 grid place-items-center rounded-full bg-white/90 border border-sky-200 text-sky-900 hover:bg-white shadow"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 h-10 w-10 grid place-items-center rounded-full bg-white/90 border border-sky-200 text-sky-900 hover:bg-white shadow cursor-pointer"
               >
                 <ChevronRight className="h-5 w-5" />
               </button>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
                 {gallery.map((_: string, i: number) => (
                   <button
                     key={i}
+                    type="button"
                     onClick={() => setImgIdx(i)}
                     aria-label={`Ir para imagem ${i + 1}`}
                     className={`h-2 rounded-full transition-all ${i === imgIdx ? "w-6 bg-sky-900" : "w-2 bg-sky-300"}`}
