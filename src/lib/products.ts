@@ -1,4 +1,5 @@
 import kitLcstSportswear from "@/assets/kit-lcst-sportswear.png";
+import kitLcstFeatured from "@/assets/kit-lcst-featured.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
