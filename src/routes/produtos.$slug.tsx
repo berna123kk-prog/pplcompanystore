@@ -25,7 +25,7 @@ export const Route = createFileRoute("/produtos/$slug")({
       <main className="min-h-screen bg-background text-foreground grid place-items-center">
         <div className="text-center max-w-md px-4">
           <h1 className="text-xl font-bold">Erro ao carregar o produto</h1>
-          <p className="text-white/60 text-sm mt-2">{error.message}</p>
+          <p className="text-slate-500 text-sm mt-2">{error.message}</p>
           <button onClick={() => { router.invalidate(); reset(); }} className="mt-4 bg-blue-600 px-5 py-2 text-sm font-bold uppercase">
             Tentar novamente
           </button>
@@ -45,7 +45,7 @@ function SizeGrid({ sizes, value, onChange }: { sizes: string[]; value: string; 
             key={s}
             onClick={() => onChange(s)}
             className={`min-w-[44px] h-11 px-3 text-[11px] font-bold uppercase border rounded-sm transition ${
-              active ? "bg-white text-black border-white" : "bg-transparent text-white/80 border-white/25 hover:border-white/60"
+              active ? "bg-white text-black border-white" : "bg-transparent text-sky-900/80 border-sky-200 hover:border-sky-500"
             }`}
           >
             {s}
@@ -69,16 +69,16 @@ function SizeSelector({ product }: { product: Product }) {
     <div className="space-y-5">
       {showClothing && (
         <div>
-          <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-white/70 mb-3">
-            Tamanho da roupa: <span className="text-white">{clothing}</span>
+          <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
+            Tamanho da roupa: <span className="text-sky-900">{clothing}</span>
           </p>
           <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} />
         </div>
       )}
       {showShoe && (
         <div>
-          <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-white/70 mb-3">
-            {product.kind === "kit" ? "Tamanho do calçado" : "Tamanho"}: <span className="text-white">{shoe}</span>
+          <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
+            {product.kind === "kit" ? "Tamanho do calçado" : "Tamanho"}: <span className="text-sky-900">{shoe}</span>
           </p>
           <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} />
         </div>
@@ -102,32 +102,32 @@ function ProductPage() {
       <TopBanner />
       <Header />
 
-      <div className="max-w-[1400px] mx-auto px-6 pt-6 text-[11px] uppercase tracking-[0.15em] font-bold text-white/60">
-        <Link to="/" className="hover:text-white">Home</Link>
-        <span className="mx-2 text-white/30">›</span>
-        <span className="text-white">{product.title}</span>
+      <div className="max-w-[1400px] mx-auto px-6 pt-6 text-[11px] uppercase tracking-[0.15em] font-bold text-slate-500">
+        <Link to="/" className="hover:text-sky-900">Home</Link>
+        <span className="mx-2 text-slate-300">›</span>
+        <span className="text-sky-900">{product.title}</span>
       </div>
 
       <section className="max-w-[1400px] mx-auto px-6 py-8 grid lg:grid-cols-2 gap-10">
-        <div className="border border-white/10 bg-white">
+        <div className="border border-sky-100 bg-white">
           <img src={product.img} alt={product.title} className="w-full aspect-square object-cover" />
         </div>
 
         <div>
           <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.15em] font-bold">
-            {product.sold && <span className="text-white/60">{product.sold.toLocaleString("pt-BR")} vendidos</span>}
-            <span className="border border-white/30 px-2 py-1 text-white/90">Itens Oficiais</span>
+            {product.sold && <span className="text-slate-500">{product.sold.toLocaleString("pt-BR")} vendidos</span>}
+            <span className="border border-sky-300 px-2 py-1 text-sky-900/90">Itens Oficiais</span>
           </div>
 
-          <h1 className="mt-4 text-2xl md:text-3xl font-extrabold text-white">{product.title}</h1>
+          <h1 className="mt-4 text-2xl md:text-3xl font-extrabold text-sky-900">{product.title}</h1>
 
           <div className="mt-5 flex items-baseline gap-3">
-            <span className="text-3xl font-extrabold text-white">R$ {product.price}</span>
-            {product.oldPrice && <span className="text-white/40 line-through text-sm">R$ {product.oldPrice}</span>}
-            {product.off && <span className="bg-black border border-white/20 text-white text-[10px] font-bold px-2 py-1">🏷 {product.off}</span>}
+            <span className="text-3xl font-extrabold text-sky-900">R$ {product.price}</span>
+            {product.oldPrice && <span className="text-slate-400 line-through text-sm">R$ {product.oldPrice}</span>}
+            {product.off && <span className="bg-sky-700 border border-sky-200 text-sky-900 text-[10px] font-bold px-2 py-1">🏷 {product.off}</span>}
           </div>
-          <p className="mt-1 text-[11px] uppercase tracking-[0.15em] text-white/70">
-            em até 12x de <span className="text-white font-bold">R$ {product.installment}</span>
+          <p className="mt-1 text-[11px] uppercase tracking-[0.15em] text-sky-700">
+            em até 12x de <span className="text-sky-900 font-bold">R$ {product.installment}</span>
           </p>
 
           <div className="mt-7">
@@ -136,28 +136,28 @@ function ProductPage() {
 
           {product.kind !== "accessory" && (
             <div className="mt-6">
-              <p className="text-center text-[11px] uppercase tracking-[0.15em] text-white/70">
+              <p className="text-center text-[11px] uppercase tracking-[0.15em] text-sky-700">
                 Restam apenas <span className="text-red-500 font-extrabold">{stock}</span> unidades desse produto
               </p>
-              <div className="mt-2 h-1.5 bg-white/10 rounded">
+              <div className="mt-2 h-1.5 bg-sky-100 rounded">
                 <div className="h-full bg-blue-600 rounded" style={{ width: `${stockPct}%` }} />
               </div>
             </div>
           )}
 
           <div className="mt-6 flex items-stretch gap-3">
-            <div className="flex items-center border border-white/20">
-              <button onClick={() => setQty((q) => Math.max(1, q - 1))} className="px-3 h-12 text-white/80 hover:text-white"><Minus className="h-4 w-4" /></button>
+            <div className="flex items-center border border-sky-200">
+              <button onClick={() => setQty((q) => Math.max(1, q - 1))} className="px-3 h-12 text-sky-900/80 hover:text-sky-900"><Minus className="h-4 w-4" /></button>
               <span className="w-12 text-center font-bold">{qty}</span>
-              <button onClick={() => setQty((q) => q + 1)} className="px-3 h-12 text-white/80 hover:text-white"><Plus className="h-4 w-4" /></button>
+              <button onClick={() => setQty((q) => q + 1)} className="px-3 h-12 text-sky-900/80 hover:text-sky-900"><Plus className="h-4 w-4" /></button>
             </div>
-            <button className="flex-1 h-12 bg-blue-600 hover:bg-blue-700 text-white text-sm font-extrabold uppercase tracking-[0.15em]">
+            <button className="flex-1 h-12 bg-blue-600 hover:bg-blue-700 text-sky-900 text-sm font-extrabold uppercase tracking-[0.15em]">
               Adicionar ao carrinho
             </button>
           </div>
 
-          <div className="mt-6 border border-white/10 p-4">
-            <p className="text-center text-[11px] uppercase tracking-[0.15em] text-white/70 mb-3">
+          <div className="mt-6 border border-sky-100 p-4">
+            <p className="text-center text-[11px] uppercase tracking-[0.15em] text-sky-700 mb-3">
               Calcule o envio e prazo de entrega
             </p>
             <div className="flex gap-2">
@@ -165,23 +165,23 @@ function ProductPage() {
                 value={cep}
                 onChange={(e) => setCep(e.target.value)}
                 placeholder="Digite seu CEP"
-                className="flex-1 bg-transparent border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/50"
+                className="flex-1 bg-transparent border border-sky-200 px-4 py-3 text-sm text-sky-900 placeholder:text-slate-400 focus:outline-none focus:border-sky-400"
               />
-              <button className="bg-black border border-white/20 px-5 text-[11px] font-bold uppercase tracking-[0.15em] text-white">
+              <button className="bg-sky-700 border border-sky-200 px-5 text-[11px] font-bold uppercase tracking-[0.15em] text-sky-900">
                 Calcular
               </button>
             </div>
           </div>
 
-          <div className="mt-6 divide-y divide-white/10 border-y border-white/10">
+          <div className="mt-6 divide-y divide-sky-100 border-y border-sky-100">
             {[
               { icon: Headphones, label: "Suporte personalizado" },
               { icon: Package, label: "Informações do envio" },
               { icon: RefreshCw, label: "Trocas e devoluções" },
               { icon: ShieldCheck, label: "Compra 100% segura" },
             ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-3 py-4 text-sm text-white/90">
-                <Icon className="h-4 w-4 text-white/70" />
+              <div key={label} className="flex items-center gap-3 py-4 text-sm text-sky-900/90">
+                <Icon className="h-4 w-4 text-sky-700" />
                 <span>{label}</span>
               </div>
             ))}
@@ -189,12 +189,12 @@ function ProductPage() {
         </div>
       </section>
 
-      <div className="max-w-[1400px] mx-auto px-6 py-10 border-t border-white/10 mt-6">
-        <div className="flex items-center justify-center gap-4 text-white/80">
+      <div className="max-w-[1400px] mx-auto px-6 py-10 border-t border-sky-100 mt-6">
+        <div className="flex items-center justify-center gap-4 text-sky-900/80">
           <Truck className="h-7 w-7" />
           <div>
-            <p className="text-xl font-extrabold text-white">Entrega Garantida</p>
-            <p className="text-[11px] uppercase tracking-[0.15em] text-white/60">Receba no prazo ou seu dinheiro de volta.</p>
+            <p className="text-xl font-extrabold text-sky-900">Entrega Garantida</p>
+            <p className="text-[11px] uppercase tracking-[0.15em] text-slate-500">Receba no prazo ou seu dinheiro de volta.</p>
           </div>
         </div>
       </div>
