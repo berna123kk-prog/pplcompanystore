@@ -96,7 +96,6 @@ export const nikeAcademy = products.filter(p => /nk academy|academy/i.test(p.tit
 export const bones = products.filter(p => /bon[ée]/i.test(p.title));
 export const sneakers = products.filter(p => p.category === "sneakers");
 
-import kitLcstFeatured from "@/assets/kit-lcst-featured.png";
 export const featured = products.slice(0, 8).map((p) =>
   p.slug === "kit-completo-lcst-sportswear" ? { ...p, img: kitLcstFeatured } : p
 );
