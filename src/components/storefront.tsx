@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Search, User, ShoppingBag, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import type { Product } from "@/lib/products";
+import headerBg from "@/assets/header-bg.png";
 
 const banners = [
   "DIRETO PARA SUA CASA",
@@ -53,19 +54,16 @@ export function TopBanner() {
 }
 
 export function Logo() {
-  return (
-    <Link to="/" className="flex items-center gap-2">
-      <div className="h-14 w-14 rounded bg-gradient-to-br from-emerald-700 to-emerald-950 grid place-items-center text-[10px] font-black text-white leading-tight text-center px-1">
-        VSN<br />STORE
-      </div>
-    </Link>
-  );
+  return <Link to="/" className="flex items-center" aria-label="Início" />;
 }
 
 export function Header() {
   const [open, setOpen] = useState<string | null>(null);
   return (
-    <header className="relative">
+    <header
+      className="relative bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${headerBg})` }}
+    >
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center justify-between">
         <Logo />
         <nav className="hidden md:flex items-center gap-8" onMouseLeave={() => setOpen(null)}>
