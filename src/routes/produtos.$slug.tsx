@@ -91,6 +91,11 @@ function ProductPage() {
   const { product } = Route.useLoaderData();
   const [qty, setQty] = useState(1);
   const [cep, setCep] = useState("");
+  const gallery = product.images && product.images.length > 0 ? product.images : [product.img];
+  const [imgIdx, setImgIdx] = useState(0);
+  const hasMultiple = gallery.length > 1;
+  const prev = () => setImgIdx((i) => (i - 1 + gallery.length) % gallery.length);
+  const next = () => setImgIdx((i) => (i + 1) % gallery.length);
 
   const stock = product.stock ?? 10;
   const stockPct = Math.max(10, Math.min(100, (stock / 30) * 100));
