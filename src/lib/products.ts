@@ -23,6 +23,8 @@ import kitHilfigerNavy1 from "@/assets/kit-hilfiger-navy-1.png";
 import kitHilfigerNavy2 from "@/assets/kit-hilfiger-navy-2.png";
 import boneTommyVermelho1 from "@/assets/bone-tommy-vermelho-1.png";
 import boneTommyVermelho2 from "@/assets/bone-tommy-vermelho-2.png";
+import kitNkSportswearLacoste1 from "@/assets/kit-nk-sportswear-lacoste-1.png";
+import kitNkSportswearLacoste2 from "@/assets/kit-nk-sportswear-lacoste-2.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -107,6 +109,7 @@ export const products: Product[] = [
   { slug: "jaqueta-tommy-corta-vento", title: "Jaqueta Tommy Corta-Vento", price: "149,99", oldPrice: "799,99", installment: "14,99", off: "81% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1340, stock: 6, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6615.png?v=1775625469&width=1200" },
   { slug: "kit-completo-nk-sportswear", title: "Kit Completo NK Sportswear", price: "149,99", oldPrice: "799,99", installment: "14,97", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 1620, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6603.png?v=1775624725&width=1200" },
   { slug: "kit-completo-nk-academy-4-pecas", title: "Kit Completo NK Academy 4 Peças", price: "159,99", oldPrice: "699,99", installment: "15,97", off: "77% OFF", kind: "kit", category: "kits-completos", sold: 1480, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6618.png?v=1775625574&width=1200" },
+  { slug: "kit-completo-nk-sportswear-lacoste", title: "KIT COMPLETO NK SPORTSWEAR", price: "159,99", oldPrice: "749,99", installment: "15,97", off: "78% OFF", kind: "kit", category: "kits-completos", sold: 1200, stock: 10, img: kitNkSportswearLacoste1, images: [kitNkSportswearLacoste1, kitNkSportswearLacoste2] },
   
   { slug: "bone-lcst-sport-diamante", title: "Boné Lcst Sport Diamante (Modelo Novo)", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 860, stock: 18, img: boneLcstSportDiamante },
 ];
