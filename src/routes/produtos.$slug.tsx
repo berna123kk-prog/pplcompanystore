@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-router";
-import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package } from "lucide-react";
+import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { TopBanner, Header, Footer, Section } from "@/components/storefront";
 import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product } from "@/lib/products";
