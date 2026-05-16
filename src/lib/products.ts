@@ -114,14 +114,9 @@ export const bones = products.filter(p => /bon[ée]/i.test(p.title));
 export const sneakers = products.filter(p => p.category === "sneakers");
 
 const FEATURED_EXTRA_SLUGS = [
-  "kit-completo-pma-5-pecas",
-  "kit-completo-pma-motosport-bmw-azul",
   "tenis-pma-caven-ferrari",
-  "kit-completo-tommy-velejador-2026-v2",
   "bone-lcst-sport-diamante",
   "tenis-nk-court-borough-low-2",
-  "kit-completo-pma-mercedes-motosport",
-  "kit-completo-pma-bmw-5-pecas",
 ];
 
 export const featured = [
