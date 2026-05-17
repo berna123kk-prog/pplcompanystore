@@ -30,6 +30,10 @@ import jaquetaTommyModeloAntigo1 from "@/assets/jaqueta-tommy-modelo-antigo-1.pn
 import jaquetaTommyModeloAntigo2 from "@/assets/jaqueta-tommy-modelo-antigo-2.png";
 import jaquetaTommyModeloAntigo3 from "@/assets/jaqueta-tommy-modelo-antigo-3.png";
 import jaquetaTommyModeloAntigo4 from "@/assets/jaqueta-tommy-modelo-antigo-4.png";
+import jaquetaTommyBranca1 from "@/assets/jaqueta-tommy-branca-1.png";
+import jaquetaTommyBranca2 from "@/assets/jaqueta-tommy-branca-2.png";
+import jaquetaTommyBranca3 from "@/assets/jaqueta-tommy-branca-3.png";
+import jaquetaTommyBranca4 from "@/assets/jaqueta-tommy-branca-4.png";
 import jaquetaTommyVelejador2 from "@/assets/jaqueta-tommy-velejador-2.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -87,7 +91,7 @@ export const products: Product[] = [
   { slug: "slide-lcst-nuvem-branco", title: "Slide Lcst Nuvem Branco", price: "109,99", oldPrice: "349,99", installment: "10,98", off: "69% OFF", kind: "footwear", category: "slides", sold: 8523, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "combo-kit-3-blusas-zip-tommy", title: "Jaqueta Tommy Velejador Sustainable", price: "149,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: jaquetaTommyVelejador1, images: [jaquetaTommyVelejador1, jaquetaTommyVelejador2] },
   { slug: "kit-completo-lcst-sportswear", title: "Kit Completo Lcst Sportswear", price: "149,99", oldPrice: "749,99", installment: "14,97", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3421, stock: 9, img: kitLcstSportswear },
-  { slug: "kit-tommy-velejador-2026-v3", title: "KIT COMPLETO TOMMY VELEJADOR 2026", price: "159,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 4188, stock: 6, img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] },
+  { slug: "kit-tommy-velejador-2026-v3", title: "Jaqueta branca Tommy Velejador Modelo Antigo", price: "159,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 4188, stock: 6, img: jaquetaTommyBranca1, images: [jaquetaTommyBranca1, jaquetaTommyBranca2, jaquetaTommyBranca3, jaquetaTommyBranca4] },
   { slug: "jaqueta-nasa", title: "Jaqueta Nasa - A do Momento", price: "99,99", oldPrice: "", installment: "9,98", off: "", kind: "clothing", category: "jaquetas-e-moletons", sold: 1722, stock: 14, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
   { slug: "shorts-nk-praia", title: "Shorts Nk Praia", price: "99,99", oldPrice: "289,99", installment: "9,98", off: "66% OFF", kind: "clothing", category: "bermudas-e-shorts", sold: 2603, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
   { slug: "kit-3-bones-pma-bmw", title: "Kit 3 Bonés Pma BMW Motosport", price: "129,99", oldPrice: "259,99", installment: "12,98", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 22, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
