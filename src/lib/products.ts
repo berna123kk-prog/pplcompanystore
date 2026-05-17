@@ -142,7 +142,18 @@ import boneLcstSport3 from "@/assets/bone-lcst-sport-3.png";
 import boneLcstSport4 from "@/assets/bone-lcst-sport-4.png";
 import boneLcstSport5 from "@/assets/bone-lcst-sport-5.png";
 import boneLcstSport6 from "@/assets/bone-lcst-sport-6.png";
+import bonePmaBmw1 from "@/assets/bone-pma-bmw-1.png";
+import bonePmaBmw2 from "@/assets/bone-pma-bmw-2.png";
 export const bones = products.filter(p => /bon[ée]/i.test(p.title)).map((p) => {
+  if (p.slug === "kit-3-bones-pma-bmw") {
+    return {
+      ...p,
+      slug: "kit-3-bones-pma-bmw-bones",
+      title: "Boné Pma BMW Motosport",
+      img: bonePmaBmw1,
+      images: [bonePmaBmw1, bonePmaBmw2],
+    };
+  }
   if (p.slug === "bone-lcst-miami-open") {
     return {
       ...p,
