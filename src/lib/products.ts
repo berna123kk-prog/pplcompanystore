@@ -217,7 +217,23 @@ export const bones = products.filter(p => /bon[ée]/i.test(p.title)).map((p) => 
 import tenisPmaCaven2_1 from "@/assets/tenis-pma-caven-2-1.png";
 import tenisPmaCaven2_2 from "@/assets/tenis-pma-caven-2-2.png";
 import tenisCaProCaven3 from "@/assets/tenis-ca-pro-caven-3.png";
-export const sneakers = products.filter(p => p.category === "sneakers").map((p) => {
+import tenisPmaCavenBmw1 from "@/assets/tenis-pma-caven-bmw-1.png";
+import tenisPmaCavenBmw2 from "@/assets/tenis-pma-caven-bmw-2.png";
+const tenisPmaCavenBmw: Product = {
+  slug: "tenis-pma-caven-bmw-sneakers",
+  title: "Tênis Pma Caven BMW",
+  price: "139,99",
+  oldPrice: "549,99",
+  installment: "13,97",
+  off: "75% OFF",
+  kind: "footwear",
+  category: "sneakers",
+  sold: 4334,
+  stock: 12,
+  img: tenisPmaCavenBmw1,
+  images: [tenisPmaCavenBmw1, tenisPmaCavenBmw2],
+};
+export const sneakers = [...products.filter(p => p.category === "sneakers").map((p) => {
   if (p.slug === "tenis-nk-court-borough-low-2") {
     return {
       ...p,
