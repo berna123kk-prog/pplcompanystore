@@ -145,6 +145,15 @@ export const featured = [
         images: undefined,
       };
     }
+    if (p.slug === "jaqueta-tommy-velejador") {
+      return {
+        ...p,
+        slug: "jaqueta-tommy-velejador-featured",
+        title: "Jaqueta Tommy Velejador Sustainable",
+        img: "https://visionariostore.com.br/cdn/shop/files/IMG_6615.png?v=1775625469&width=1200",
+        images: undefined,
+      };
+    }
     return p;
   }),
   ...FEATURED_EXTRA_SLUGS
