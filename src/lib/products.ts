@@ -312,5 +312,5 @@ export const SHOE_SIZES = ["33", "34", "35", "36", "37", "38", "39", "40", "41",
 export const CLOTHING_SIZES = ["P", "M", "G", "GG"];
 
 export function getProduct(slug: string) {
-  return [...featured, ...products].find((p) => p.slug === slug);
+  return [...featured, ...products, ...sneakers, ...kits].find((p) => p.slug === slug);
 }
