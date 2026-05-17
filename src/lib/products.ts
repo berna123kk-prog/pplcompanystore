@@ -252,7 +252,7 @@ export const sneakers = [...products.filter(p => p.category === "sneakers").map(
     };
   }
   return p;
-});
+}), tenisPmaCavenBmw];
 
 const FEATURED_EXTRA_SLUGS = [
   "tenis-pma-caven-ferrari",
