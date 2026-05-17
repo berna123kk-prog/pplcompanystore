@@ -134,7 +134,21 @@ export const products: Product[] = [
 ];
 
 export const tommyProducts = products.filter(p => /tommy/i.test(p.title));
-export const nikeAcademy = products.filter(p => /nk academy|academy/i.test(p.title));
+import conjuntoNkAcademy1 from "@/assets/conjunto-nk-academy-1.png";
+import conjuntoNkAcademy2 from "@/assets/conjunto-nk-academy-2.png";
+import conjuntoNkAcademy3 from "@/assets/conjunto-nk-academy-3.png";
+export const nikeAcademy = products.filter(p => /nk academy|academy/i.test(p.title)).map((p) => {
+  if (p.slug === "kit-4-camisas-nk-academy") {
+    return {
+      ...p,
+      slug: "kit-4-camisas-nk-academy-nike",
+      title: "Conjunto NK Academy",
+      img: conjuntoNkAcademy1,
+      images: [conjuntoNkAcademy1, conjuntoNkAcademy2, conjuntoNkAcademy3],
+    };
+  }
+  return p;
+});
 import boneLcst2Faixas1 from "@/assets/bone-lcst-2-faixas-1.png";
 import boneLcst2Faixas2 from "@/assets/bone-lcst-2-faixas-2.png";
 import boneLcst2Faixas3 from "@/assets/bone-lcst-2-faixas-3.png";
