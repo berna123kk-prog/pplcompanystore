@@ -25,6 +25,8 @@ import boneTommyVermelho1 from "@/assets/bone-tommy-vermelho-1.png";
 import boneTommyVermelho2 from "@/assets/bone-tommy-vermelho-2.png";
 import kitNkSportswearLacoste1 from "@/assets/kit-nk-sportswear-lacoste-1.png";
 import kitNkSportswearLacoste2 from "@/assets/kit-nk-sportswear-lacoste-2.png";
+import jaquetaTommyVelejador1 from "@/assets/jaqueta-tommy-velejador-1.png";
+import jaquetaTommyVelejador2 from "@/assets/jaqueta-tommy-velejador-2.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -79,7 +81,7 @@ export const COLLECTIONS: Record<string, { title: string; filter: (p: Product) =
 
 export const products: Product[] = [
   { slug: "slide-lcst-nuvem-branco", title: "Slide Lcst Nuvem Branco", price: "109,99", oldPrice: "349,99", installment: "10,98", off: "69% OFF", kind: "footwear", category: "slides", sold: 8523, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
-  { slug: "combo-kit-3-blusas-zip-tommy", title: "Combo Kit 3 Blusas Meio Zíper Tommy", price: "149,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6553.png?v=1775623742&width=1200" },
+  { slug: "combo-kit-3-blusas-zip-tommy", title: "Jaqueta Tommy Velejador Sustainable", price: "149,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: jaquetaTommyVelejador1, images: [jaquetaTommyVelejador1, jaquetaTommyVelejador2] },
   { slug: "kit-completo-lcst-sportswear", title: "Kit Completo Lcst Sportswear", price: "149,99", oldPrice: "749,99", installment: "14,97", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3421, stock: 9, img: kitLcstSportswear },
   { slug: "kit-tommy-velejador-2026-v3", title: "KIT COMPLETO TOMMY VELEJADOR 2026", price: "159,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 4188, stock: 6, img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] },
   { slug: "jaqueta-nasa", title: "Jaqueta Nasa - A do Momento", price: "99,99", oldPrice: "", installment: "9,98", off: "", kind: "clothing", category: "jaquetas-e-moletons", sold: 1722, stock: 14, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
