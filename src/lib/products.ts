@@ -144,7 +144,21 @@ import boneLcstSport5 from "@/assets/bone-lcst-sport-5.png";
 import boneLcstSport6 from "@/assets/bone-lcst-sport-6.png";
 import bonePmaBmw1 from "@/assets/bone-pma-bmw-1.png";
 import bonePmaBmw2 from "@/assets/bone-pma-bmw-2.png";
+import boneLcstSportPreto1 from "@/assets/bone-lcst-sport-preto-1.png";
+import boneLcstSportPreto2 from "@/assets/bone-lcst-sport-preto-2.png";
+import boneLcstSportPreto3 from "@/assets/bone-lcst-sport-preto-3.png";
+import boneLcstSportPreto4 from "@/assets/bone-lcst-sport-preto-4.png";
+import boneLcstSportPreto5 from "@/assets/bone-lcst-sport-preto-5.png";
 export const bones = products.filter(p => /bon[ée]/i.test(p.title)).map((p) => {
+  if (p.slug === "kit-nk-academy-slide-bone") {
+    return {
+      ...p,
+      slug: "kit-nk-academy-slide-bone-bones",
+      title: "Boné Lcst Sport preto",
+      img: boneLcstSportPreto1,
+      images: [boneLcstSportPreto1, boneLcstSportPreto2, boneLcstSportPreto3, boneLcstSportPreto4, boneLcstSportPreto5],
+    };
+  }
   if (p.slug === "kit-3-bones-pma-bmw") {
     return {
       ...p,
