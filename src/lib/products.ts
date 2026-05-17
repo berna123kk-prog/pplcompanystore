@@ -40,6 +40,8 @@ import jaquetaTommyVermelha3 from "@/assets/jaqueta-tommy-vermelha-3.png";
 import jaquetaTommyVermelha4 from "@/assets/jaqueta-tommy-vermelha-4.png";
 import jaquetaTommyVelejador2 from "@/assets/jaqueta-tommy-velejador-2.png";
 import boneTommyBigLogo from "@/assets/bone-tommy-big-logo.png";
+import boneTommySince1985_1 from "@/assets/bone-tommy-since-1985-1.png";
+import boneTommySince1985_2 from "@/assets/bone-tommy-since-1985-2.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -121,7 +123,7 @@ export const products: Product[] = [
   { slug: "tenis-nk-court-borough-low-2", title: "Tênis NK Court Borough Low 2", price: "139,99", oldPrice: "449,99", installment: "13,99", off: "69% OFF", kind: "footwear", category: "sneakers", sold: 3100, stock: 11, img: tenisNkCourtBorough1, images: [tenisNkCourtBorough1, tenisNkCourtBorough2, tenisNkCourtBorough3, tenisNkCourtBorough4] },
   { slug: "tenis-pma-ca-pro", title: "Tênis Pma CA Pro", price: "159,99", oldPrice: "599,99", installment: "15,99", off: "73% OFF", kind: "footwear", category: "sneakers", sold: 2200, stock: 9, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
   { slug: "jaqueta-tommy-azul-royal", title: "Boné Tommy Big Logo", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "accessory", category: "acessorios", sold: 1100, stock: 7, img: boneTommyBigLogo },
-  { slug: "jaqueta-tommy-corta-vento", title: "Jaqueta Tommy Corta-Vento", price: "149,99", oldPrice: "799,99", installment: "14,99", off: "81% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1340, stock: 6, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6615.png?v=1775625469&width=1200" },
+  { slug: "jaqueta-tommy-corta-vento", title: "Boné Tommy Since 1985", price: "149,99", oldPrice: "799,99", installment: "14,99", off: "81% OFF", kind: "accessory", category: "acessorios", sold: 1340, stock: 6, img: boneTommySince1985_1, images: [boneTommySince1985_1, boneTommySince1985_2] },
   { slug: "kit-completo-nk-sportswear", title: "Kit Completo NK Sportswear", price: "149,99", oldPrice: "799,99", installment: "14,97", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 1620, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6603.png?v=1775624725&width=1200" },
   { slug: "kit-completo-nk-academy-4-pecas", title: "Kit Completo NK Academy 4 Peças", price: "159,99", oldPrice: "699,99", installment: "15,97", off: "77% OFF", kind: "kit", category: "kits-completos", sold: 1480, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6618.png?v=1775625574&width=1200" },
   { slug: "kit-completo-nk-sportswear-lacoste", title: "KIT COMPLETO NK SPORTSWEAR", price: "159,99", oldPrice: "749,99", installment: "15,97", off: "78% OFF", kind: "kit", category: "kits-completos", sold: 1200, stock: 10, img: kitNkSportswearLacoste1, images: [kitNkSportswearLacoste1, kitNkSportswearLacoste2] },
