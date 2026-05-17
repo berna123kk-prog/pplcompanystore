@@ -42,6 +42,8 @@ import jaquetaTommyVelejador2 from "@/assets/jaqueta-tommy-velejador-2.png";
 import boneTommyBigLogo from "@/assets/bone-tommy-big-logo.png";
 import boneTommySince1985_1 from "@/assets/bone-tommy-since-1985-1.png";
 import boneTommySince1985_2 from "@/assets/bone-tommy-since-1985-2.png";
+import kit5CamisetasNk1 from "@/assets/kit-5-camisetas-nk-1.png";
+import kit5CamisetasNk2 from "@/assets/kit-5-camisetas-nk-2.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -116,7 +118,7 @@ export const products: Product[] = [
   { slug: "bone-pma-motosport-bmw", title: "Boné Pma Motosport BMW", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 760, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
-  { slug: "kit-5-camisetas-nk-academy", title: "Kit 5 Camisetas NK Academy Dri-Fit", price: "99,99", oldPrice: "899,99", installment: "9,99", off: "89% OFF", kind: "clothing", category: "camisetas", sold: 3400, stock: 22, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
+  { slug: "kit-5-camisetas-nk-academy", title: "Kit 5 Camisetas NK Academy Dri-Fit", price: "99,99", oldPrice: "899,99", installment: "9,99", off: "89% OFF", kind: "clothing", category: "camisetas", sold: 3400, stock: 22, img: kit5CamisetasNk1, images: [kit5CamisetasNk1, kit5CamisetasNk2] },
   { slug: "kit-4-camisas-nk-academy", title: "Kit 4 Camisas NK Academy", price: "59,99", oldPrice: "299,99", installment: "5,99", off: "80% OFF", kind: "clothing", category: "camisetas", sold: 4200, stock: 30, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
   
   { slug: "tenis-pma-caven-ferrari", title: "Tênis Pma Caven Ferrari", price: "139,99", oldPrice: "549,99", installment: "13,99", off: "75% OFF", kind: "footwear", category: "sneakers", sold: 2800, stock: 8, img: tenisPmaCavenFerrari, images: [tenisPmaCavenFerrari, tenisPmaCavenFerrari2] },
