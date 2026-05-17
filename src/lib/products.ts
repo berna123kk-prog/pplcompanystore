@@ -214,7 +214,20 @@ export const bones = products.filter(p => /bon[ée]/i.test(p.title)).map((p) => 
   }
   return p;
 });
-export const sneakers = products.filter(p => p.category === "sneakers");
+import tenisPmaCaven2_1 from "@/assets/tenis-pma-caven-2-1.png";
+import tenisPmaCaven2_2 from "@/assets/tenis-pma-caven-2-2.png";
+export const sneakers = products.filter(p => p.category === "sneakers").map((p) => {
+  if (p.slug === "tenis-nk-court-borough-low-2") {
+    return {
+      ...p,
+      slug: "tenis-nk-court-borough-low-2-sneakers",
+      title: "Tênis Pma Caven 2.0 Ferrari",
+      img: tenisPmaCaven2_1,
+      images: [tenisPmaCaven2_1, tenisPmaCaven2_2],
+    };
+  }
+  return p;
+});
 
 const FEATURED_EXTRA_SLUGS = [
   "tenis-pma-caven-ferrari",
