@@ -34,6 +34,10 @@ import jaquetaTommyBranca1 from "@/assets/jaqueta-tommy-branca-1.png";
 import jaquetaTommyBranca2 from "@/assets/jaqueta-tommy-branca-2.png";
 import jaquetaTommyBranca3 from "@/assets/jaqueta-tommy-branca-3.png";
 import jaquetaTommyBranca4 from "@/assets/jaqueta-tommy-branca-4.png";
+import jaquetaTommyVermelha1 from "@/assets/jaqueta-tommy-vermelha-1.png";
+import jaquetaTommyVermelha2 from "@/assets/jaqueta-tommy-vermelha-2.png";
+import jaquetaTommyVermelha3 from "@/assets/jaqueta-tommy-vermelha-3.png";
+import jaquetaTommyVermelha4 from "@/assets/jaqueta-tommy-vermelha-4.png";
 import jaquetaTommyVelejador2 from "@/assets/jaqueta-tommy-velejador-2.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -107,7 +111,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
   { slug: "bone-pma-motosport-bmw", title: "Boné Pma Motosport BMW", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 760, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
-  { slug: "kit-nk-academy", title: "KIT COMPLETO TOMMY VELEJADOR 2026", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "kit", category: "kits-completos", sold: 2100, stock: 14, img: kitTommyVelejadorVermelho },
+  { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "kit", category: "kits-completos", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   
   { slug: "kit-5-camisetas-nk-academy", title: "Kit 5 Camisetas NK Academy Dri-Fit", price: "99,99", oldPrice: "899,99", installment: "9,99", off: "89% OFF", kind: "clothing", category: "camisetas", sold: 3400, stock: 22, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
   { slug: "kit-4-camisas-nk-academy", title: "Kit 4 Camisas NK Academy", price: "59,99", oldPrice: "299,99", installment: "5,99", off: "80% OFF", kind: "clothing", category: "camisetas", sold: 4200, stock: 30, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
