@@ -137,6 +137,7 @@ export const tommyProducts = products.filter(p => /tommy/i.test(p.title));
 import conjuntoNkAcademy1 from "@/assets/conjunto-nk-academy-1.png";
 import conjuntoNkAcademy2 from "@/assets/conjunto-nk-academy-2.png";
 import conjuntoNkAcademy3 from "@/assets/conjunto-nk-academy-3.png";
+import conjuntoNkAcademy2025 from "@/assets/conjunto-nk-academy-2025.png";
 export const nikeAcademy = products.filter(p => /nk academy|academy/i.test(p.title)).map((p) => {
   if (p.slug === "kit-4-camisas-nk-academy") {
     return {
@@ -145,6 +146,15 @@ export const nikeAcademy = products.filter(p => /nk academy|academy/i.test(p.tit
       title: "Conjunto NK Academy",
       img: conjuntoNkAcademy1,
       images: [conjuntoNkAcademy1, conjuntoNkAcademy2, conjuntoNkAcademy3],
+    };
+  }
+  if (p.slug === "kit-completo-nk-academy-4-pecas") {
+    return {
+      ...p,
+      slug: "kit-completo-nk-academy-4-pecas-nike",
+      title: "Conjunto NK Academy Modelo 2025",
+      img: conjuntoNkAcademy2025,
+      images: [conjuntoNkAcademy2025],
     };
   }
   return p;
