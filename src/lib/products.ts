@@ -128,11 +128,21 @@ const FEATURED_EXTRA_SLUGS = [
 ];
 
 export const featured = [
-  ...products.slice(0, 8).map((p) =>
-    p.slug === "kit-completo-lcst-sportswear"
-      ? { ...p, slug: "kit-completo-lcst-sportswear-featured", img: kitLcstFeatured }
-      : p
-  ),
+  ...products.slice(0, 8).map((p) => {
+    if (p.slug === "kit-completo-lcst-sportswear") {
+      return { ...p, slug: "kit-completo-lcst-sportswear-featured", img: kitLcstFeatured };
+    }
+    if (p.slug === "combo-kit-3-blusas-zip-tommy") {
+      return {
+        ...p,
+        slug: "combo-kit-3-blusas-zip-tommy-featured",
+        title: "Combo Kit 3 Blusas Meio Zíper Tommy",
+        img: "https://visionariostore.com.br/cdn/shop/files/IMG_6553.png?v=1775623742&width=1200",
+        images: undefined,
+      };
+    }
+    return p;
+  }),
   ...FEATURED_EXTRA_SLUGS
     .map((slug) => products.find((p) => p.slug === slug))
     .filter((p): p is Product => Boolean(p)),
