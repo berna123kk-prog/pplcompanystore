@@ -136,6 +136,12 @@ export const nikeAcademy = products.filter(p => /nk academy|academy/i.test(p.tit
 import boneLcst2Faixas1 from "@/assets/bone-lcst-2-faixas-1.png";
 import boneLcst2Faixas2 from "@/assets/bone-lcst-2-faixas-2.png";
 import boneLcst2Faixas3 from "@/assets/bone-lcst-2-faixas-3.png";
+import boneLcstSport1 from "@/assets/bone-lcst-sport-1.png";
+import boneLcstSport2 from "@/assets/bone-lcst-sport-2.png";
+import boneLcstSport3 from "@/assets/bone-lcst-sport-3.png";
+import boneLcstSport4 from "@/assets/bone-lcst-sport-4.png";
+import boneLcstSport5 from "@/assets/bone-lcst-sport-5.png";
+import boneLcstSport6 from "@/assets/bone-lcst-sport-6.png";
 export const bones = products.filter(p => /bon[ée]/i.test(p.title)).map((p) => {
   if (p.slug === "bone-lcst-miami-open") {
     return {
@@ -144,6 +150,15 @@ export const bones = products.filter(p => /bon[ée]/i.test(p.title)).map((p) => 
       title: "Boné Lcst Sport 2 Faixas Original (Peça única)",
       img: boneLcst2Faixas1,
       images: [boneLcst2Faixas1, boneLcst2Faixas2, boneLcst2Faixas3],
+    };
+  }
+  if (p.slug === "bone-pma-motosport-bmw") {
+    return {
+      ...p,
+      slug: "bone-pma-motosport-bmw-bones",
+      title: "Boné Lcst Sport (Peça única)",
+      img: boneLcstSport1,
+      images: [boneLcstSport1, boneLcstSport2, boneLcstSport3, boneLcstSport4, boneLcstSport5, boneLcstSport6],
     };
   }
   return p;
