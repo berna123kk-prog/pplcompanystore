@@ -177,11 +177,15 @@ export const featured = [
     .map((slug) => products.find((p) => p.slug === slug))
     .filter((p): p is Product => Boolean(p)),
 ];
-export const kits = products.filter((p) => p.kind === "kit").map((p) =>
-  p.slug === "kit-tommy-velejador-2026-v3"
-    ? { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] }
-    : p
-);
+export const kits = products.filter((p) => p.kind === "kit").map((p) => {
+  if (p.slug === "kit-tommy-velejador-2026-v3") {
+    return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
+  }
+  if (p.slug === "kit-nk-academy") {
+    return { ...p, slug: "kit-nk-academy-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitTommyVelejadorVermelho, images: undefined };
+  }
+  return p;
+});
 
 export const SHOE_SIZES = ["33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"];
 export const CLOTHING_SIZES = ["P", "M", "G", "GG"];
