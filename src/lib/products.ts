@@ -133,7 +133,21 @@ export const products: Product[] = [
 
 export const tommyProducts = products.filter(p => /tommy/i.test(p.title));
 export const nikeAcademy = products.filter(p => /nk academy|academy/i.test(p.title));
-export const bones = products.filter(p => /bon[ée]/i.test(p.title));
+import boneLcst2Faixas1 from "@/assets/bone-lcst-2-faixas-1.png";
+import boneLcst2Faixas2 from "@/assets/bone-lcst-2-faixas-2.png";
+import boneLcst2Faixas3 from "@/assets/bone-lcst-2-faixas-3.png";
+export const bones = products.filter(p => /bon[ée]/i.test(p.title)).map((p) => {
+  if (p.slug === "bone-lcst-miami-open") {
+    return {
+      ...p,
+      slug: "bone-lcst-miami-open-bones",
+      title: "Boné Lcst Sport 2 Faixas Original (Peça única)",
+      img: boneLcst2Faixas1,
+      images: [boneLcst2Faixas1, boneLcst2Faixas2, boneLcst2Faixas3],
+    };
+  }
+  return p;
+});
 export const sneakers = products.filter(p => p.category === "sneakers");
 
 const FEATURED_EXTRA_SLUGS = [
