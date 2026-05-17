@@ -26,6 +26,10 @@ import boneTommyVermelho2 from "@/assets/bone-tommy-vermelho-2.png";
 import kitNkSportswearLacoste1 from "@/assets/kit-nk-sportswear-lacoste-1.png";
 import kitNkSportswearLacoste2 from "@/assets/kit-nk-sportswear-lacoste-2.png";
 import jaquetaTommyVelejador1 from "@/assets/jaqueta-tommy-velejador-1.png";
+import jaquetaTommyModeloAntigo1 from "@/assets/jaqueta-tommy-modelo-antigo-1.png";
+import jaquetaTommyModeloAntigo2 from "@/assets/jaqueta-tommy-modelo-antigo-2.png";
+import jaquetaTommyModeloAntigo3 from "@/assets/jaqueta-tommy-modelo-antigo-3.png";
+import jaquetaTommyModeloAntigo4 from "@/assets/jaqueta-tommy-modelo-antigo-4.png";
 import jaquetaTommyVelejador2 from "@/assets/jaqueta-tommy-velejador-2.png";
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -87,7 +91,7 @@ export const products: Product[] = [
   { slug: "jaqueta-nasa", title: "Jaqueta Nasa - A do Momento", price: "99,99", oldPrice: "", installment: "9,98", off: "", kind: "clothing", category: "jaquetas-e-moletons", sold: 1722, stock: 14, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
   { slug: "shorts-nk-praia", title: "Shorts Nk Praia", price: "99,99", oldPrice: "289,99", installment: "9,98", off: "66% OFF", kind: "clothing", category: "bermudas-e-shorts", sold: 2603, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
   { slug: "kit-3-bones-pma-bmw", title: "Kit 3 Bonés Pma BMW Motosport", price: "129,99", oldPrice: "259,99", installment: "12,98", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 22, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
-  { slug: "jaqueta-tommy-velejador", title: "Jaqueta Tommy Velejador Sustainable", price: "139,99", oldPrice: "999,00", installment: "13,97", off: "86% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 3088, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6615.png?v=1775625469&width=1200" },
+  { slug: "jaqueta-tommy-velejador", title: "Jaqueta Tommy Velejador Modelo Antigo", price: "139,99", oldPrice: "999,00", installment: "13,97", off: "86% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 3088, stock: 8, img: jaquetaTommyModeloAntigo1, images: [jaquetaTommyModeloAntigo1, jaquetaTommyModeloAntigo2, jaquetaTommyModeloAntigo3, jaquetaTommyModeloAntigo4] },
   { slug: "kit-tommy-velejador-2026", title: "Kit Completo hilfiger  Velejador 2026", price: "179,99", oldPrice: "1.350,00", installment: "17,97", off: "87% OFF", kind: "kit", category: "kits-completos", sold: 1455, stock: 5, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
   { slug: "kit-completo-lcst", title: "Kit Completo Pma BMW Motosport", price: "139,99", oldPrice: "899,00", installment: "13,97", off: "84% OFF", kind: "kit", category: "kits-completos", sold: 1899, stock: 7, img: kitPmaBmwMotosportJeans },
   { slug: "kit-pma-bmw-m-4-pecas", title: "Kit Completo Pma BMW Motosport", price: "139,99", oldPrice: "999,00", installment: "13,97", off: "86% OFF", kind: "kit", category: "kits-completos", sold: 2244, stock: 10, img: kitPmaBmwMotosportCinza1, images: [kitPmaBmwMotosportCinza1, kitPmaBmwMotosportCinza2] },
@@ -138,6 +142,15 @@ export const featured = [
         slug: "combo-kit-3-blusas-zip-tommy-featured",
         title: "Combo Kit 3 Blusas Meio Zíper Tommy",
         img: "https://visionariostore.com.br/cdn/shop/files/IMG_6553.png?v=1775623742&width=1200",
+        images: undefined,
+      };
+    }
+    if (p.slug === "jaqueta-tommy-velejador") {
+      return {
+        ...p,
+        slug: "jaqueta-tommy-velejador-featured",
+        title: "Jaqueta Tommy Velejador Sustainable",
+        img: "https://visionariostore.com.br/cdn/shop/files/IMG_6615.png?v=1775625469&width=1200",
         images: undefined,
       };
     }
