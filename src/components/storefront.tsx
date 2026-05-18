@@ -23,6 +23,7 @@ const navItems: { label: string; slug: string; sub?: { label: string; slug: stri
       { label: "Kits Completos", slug: "kits-completos" },
     ],
   },
+  { label: "Kits", slug: "kits-completos" },
   { label: "Acessórios", slug: "acessorios" },
   {
     label: "Slides",
