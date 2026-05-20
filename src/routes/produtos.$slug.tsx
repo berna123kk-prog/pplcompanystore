@@ -3,6 +3,8 @@ import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, Chevro
 import { useEffect, useState } from "react";
 import { TopBanner, Header, Footer, Section } from "@/components/storefront";
 import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product } from "@/lib/products";
+import { useCart } from "@/lib/cart";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/produtos/$slug")({
   loader: ({ params }) => {
@@ -56,12 +58,21 @@ function SizeGrid({ sizes, value, onChange }: { sizes: string[]; value: string; 
   );
 }
 
-function SizeSelector({ product }: { product: Product }) {
+function SizeSelector({
+  product,
+  shoe,
+  setShoe,
+  clothing,
+  setClothing,
+}: {
+  product: Product;
+  shoe: string;
+  setShoe: (s: string) => void;
+  clothing: string;
+  setClothing: (s: string) => void;
+}) {
   const showShoe = product.kind === "footwear" || product.kind === "kit";
   const showClothing = product.kind === "clothing" || product.kind === "kit";
-
-  const [shoe, setShoe] = useState(showShoe ? "34" : "");
-  const [clothing, setClothing] = useState(showClothing ? "M" : "");
 
   if (product.kind === "accessory") return null;
 
@@ -89,8 +100,13 @@ function SizeSelector({ product }: { product: Product }) {
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
+  const { addItem } = useCart();
   const [qty, setQty] = useState(1);
   const [cep, setCep] = useState("");
+  const showShoe = product.kind === "footwear" || product.kind === "kit";
+  const showClothing = product.kind === "clothing" || product.kind === "kit";
+  const [shoe, setShoe] = useState(showShoe ? "38" : "");
+  const [clothing, setClothing] = useState(showClothing ? "M" : "");
   const gallery = product.images && product.images.length > 0 ? product.images : [product.img];
   const [imgIdx, setImgIdx] = useState(0);
   const currentImage = gallery[imgIdx] ?? gallery[0] ?? product.img;
@@ -110,6 +126,25 @@ function ProductPage() {
   const stockPct = Math.max(10, Math.min(100, (stock / 30) * 100));
 
   const related = products.filter((p) => p.slug !== product.slug).slice(0, 6);
+
+  const handleAddToCart = () => {
+    const sizeParts = [
+      showClothing ? clothing : "",
+      showShoe ? shoe : "",
+    ].filter(Boolean);
+    addItem(
+      {
+        slug: product.slug,
+        title: product.title,
+        price: product.price,
+        img: currentImage,
+        size: sizeParts.join(" / ") || undefined,
+      },
+      qty,
+    );
+    toast.success("Produto adicionado à sacola");
+  };
+
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -182,7 +217,7 @@ function ProductPage() {
           </p>
 
           <div className="mt-7">
-            <SizeSelector product={product} />
+            <SizeSelector product={product} shoe={shoe} setShoe={setShoe} clothing={clothing} setClothing={setClothing} />
           </div>
 
           {product.kind !== "accessory" && (
@@ -202,10 +237,11 @@ function ProductPage() {
               <span className="w-12 text-center font-bold">{qty}</span>
               <button onClick={() => setQty((q) => q + 1)} className="px-3 h-12 text-sky-900/80 hover:text-sky-900"><Plus className="h-4 w-4" /></button>
             </div>
-            <button className="flex-1 h-12 bg-blue-600 hover:bg-blue-700 text-sky-900 text-sm font-extrabold uppercase tracking-[0.15em]">
+            <button onClick={handleAddToCart} className="flex-1 h-12 bg-blue-600 hover:bg-blue-700 text-white text-sm font-extrabold uppercase tracking-[0.15em]">
               Adicionar ao carrinho
             </button>
           </div>
+
 
           <div className="mt-6 border border-sky-100 p-4">
             <p className="text-center text-[11px] uppercase tracking-[0.15em] text-sky-700 mb-3">
