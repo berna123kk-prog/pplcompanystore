@@ -77,10 +77,15 @@ export const createDeposit = createServerFn({ method: "POST" })
     console.log("[ElitePAY] response status:", res.status, "body:", text.slice(0, 1000));
 
     if (!res.ok) {
-      const msg =
-        (body && typeof body === "object" && body !== null && "message" in body
-          ? String((body as Record<string, unknown>).message)
-          : null) || `Falha na Elite PAY (${res.status}): ${text.slice(0, 200)}`;
+      const apiMsg =
+        body && typeof body === "object" && body !== null
+          ? (body as Record<string, unknown>).message ??
+            (body as Record<string, unknown>).error ??
+            (body as Record<string, unknown>).errors
+          : null;
+      const msg = apiMsg
+        ? `Elite PAY: ${typeof apiMsg === "string" ? apiMsg : JSON.stringify(apiMsg)}`
+        : `Falha na Elite PAY (${res.status}): ${text.slice(0, 200)}`;
       throw new Error(msg);
     }
 
@@ -113,23 +118,28 @@ export const checkTransaction = createServerFn({ method: "POST" })
     z.object({ transactionId: z.string().min(1).max(200) }).parse(input),
   )
   .handler(async ({ data }) => {
-    const res = await fetch(`${BASE_URL}/api/transactions/check`, {
-      method: "POST",
-      headers: authHeaders(),
-      body: JSON.stringify({ transactionId: data.transactionId }),
-    });
-
-    const text = await res.text();
-    let body: unknown = text;
-    try {
-      body = JSON.parse(text);
-    } catch {}
-
-    if (!res.ok) {
-      return { status: "UNKNOWN" };
+    const paths = ["/api/v1/transactions/check", "/api/transactions/check"];
+    for (const p of paths) {
+      try {
+        const res = await fetch(`${BASE_URL}${p}`, {
+          method: "POST",
+          headers: authHeaders(),
+          body: JSON.stringify({ transactionId: data.transactionId }),
+        });
+        const text = await res.text();
+        let body: unknown = text;
+        try {
+          body = JSON.parse(text);
+        } catch {}
+        console.log(`[ElitePAY] check ${p} status:`, res.status, "body:", text.slice(0, 300));
+        if (res.status === 404) continue;
+        if (!res.ok) return { status: "UNKNOWN" };
+        const state =
+          pickString(body, ["transactionState", "status", "state"]) ?? "UNKNOWN";
+        return { status: state.toUpperCase() };
+      } catch (err) {
+        console.error("[ElitePAY] check error:", err);
+      }
     }
-
-    const state =
-      pickString(body, ["transactionState", "status", "state"]) ?? "UNKNOWN";
-    return { status: state.toUpperCase() };
+    return { status: "UNKNOWN" };
   });
