@@ -77,11 +77,9 @@ function CheckoutPage() {
     }
     setLoading(true);
     try {
-      const description = `Pedido ${items.length} item(ns) - ${items.map((i) => i.title).join(", ").slice(0, 150)}`;
       const result = await createDeposit({
         data: {
-          amount: Number(total.toFixed(2)),
-          description,
+          items: items.map((i) => ({ slug: i.slug, qty: i.qty })),
           payerName: name.trim(),
           payerDocument: doc,
         },
