@@ -1,33 +1,36 @@
-## Diagnóstico
+## Objetivo
+Fazer o PIX sempre sair com o mesmo valor do produto exibido na loja — no seu caso, o item de R$ 2,00 deve gerar QR Code de R$ 2,00, nunca R$ 200,00.
 
-Testei o checkout agora no preview clicando em **Gerar PIX** com o produto de R$ 2,00:
+## O que vou implementar
+1. **Tornar o valor do PIX confiável no servidor**
+   - Parar de confiar no `amount` enviado pelo checkout.
+   - Recalcular o total no servidor com base nos itens/slug do produto e quantidade.
 
-- A requisição para `https://api.elitepaybr.com/api/v1/deposit` voltou **HTTP 200**.
-- A Elite PAY devolveu `transactionId`, `qrcodeUrl` e `copyPaste` corretamente.
-- O QR Code apareceu na tela e o status ficou em "AGUARDANDO PAGAMENTO (PENDING)".
+2. **Corrigir o formato enviado para a Elite PAY**
+   - Ajustar o payload para enviar o valor no formato que a API está interpretando corretamente.
+   - Remover a conversão que hoje transforma `2` em `200` dentro do fluxo de depósito.
 
-Ou seja: a correção do payload (valor em centavos + `payer.name`/`payer.document` + `paymentMethod: "PIX"`) **resolveu o 500** que você estava vendo.
+3. **Ajustar o checkout para enviar só os dados necessários**
+   - O frontend vai mandar apenas identificação dos itens e dados do pagador.
+   - O backend calcula o total final antes de gerar o PIX.
 
-O 500 que ainda aparece para você é, com altíssima probabilidade, porque você está testando o **site publicado**, que ainda está com a versão antiga do código (anterior à correção).
+4. **Validar o fluxo do produto de R$ 2,00**
+   - Testar geração do PIX com o produto `slide-lcst-nuvem-branco`.
+   - Confirmar que o QR Code e o valor retornado ficam alinhados com o preço mostrado no pedido.
 
-## O que falta fazer
-
-1. **Republicar o site** para o domínio publicado receber a versão corrigida do checkout.
-2. **Reforçar a chamada de verificação de status** (`/api/transactions/check`) — hoje, se a Elite PAY recusar a rota nesse formato, o front fica preso em "AGUARDANDO". Vou:
-   - Tentar primeiro `POST /api/v1/transactions/check` e cair para `/api/transactions/check` se a primeira retornar 404, registrando a resposta nos logs para confirmarmos o caminho oficial.
-   - Manter o retorno serializável e nunca lançar erro no polling (apenas marcar `UNKNOWN`) para não quebrar a tela.
-3. **Mensagens de erro mais claras no botão Gerar PIX**: quando a Elite PAY responder com erro, mostrar o motivo retornado pela API no toast em vez de só "500", para facilitar diagnóstico futuro.
-4. **Validar de novo** depois de publicar: gerar um PIX no domínio publicado e conferir que o status muda quando o pagamento for confirmado.
+## Arquivos envolvidos
+- `src/lib/elitepay.functions.ts`
+- `src/routes/checkout.tsx`
+- `src/lib/products.ts` (como fonte confiável do preço)
+- possivelmente `src/lib/cart.tsx` apenas se precisar ajustar o formato dos dados enviados
 
 ## Detalhes técnicos
+- O cálculo do carrinho já está interpretando `"2,00"` corretamente como `2`.
+- O problema atual está no servidor, em `createDeposit`, onde o valor está sendo convertido com `Math.round(data.amount * 100)` antes de enviar para a Elite PAY.
+- Isso faz o produto de R$ 2,00 virar `200` no payload, e a API passa a gerar o PIX com R$ 200,00.
+- Além da correção imediata, vou deixar a cobrança protegida contra manipulação do valor no cliente.
 
-- Endpoint de criação: `POST https://api.elitepaybr.com/api/v1/deposit` — confirmado funcionando com payload:
-  ```
-  { amount: <centavos>, description, payer: { name, document }, paymentMethod: "PIX" }
-  ```
-- Endpoint de status: `POST https://api.elitepaybr.com/api/transactions/check` — vou logar a resposta bruta na primeira chamada para confirmar o formato exato esperado e o campo de status (`COMPLETO`, `PAID`, `APPROVED`, etc.).
-- Sem mudanças de schema do banco; sem novos secrets (as duas chaves `ELITEPAY_CLIENT_ID` e `ELITEPAY_CLIENT_SECRET` já estão configuradas).
-
-## Fora do escopo agora
-
-- Criar webhook `/api/public/elitepay-webhook` para a Elite PAY notificar pagamento sem polling. Posso adicionar em seguida se você quiser.
+## Resultado esperado
+- Produto de R$ 2,00 gera PIX de R$ 2,00.
+- O valor cobrado sempre bate com o valor do produto/carrinho.
+- O checkout fica mais seguro e consistente.
