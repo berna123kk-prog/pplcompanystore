@@ -3,6 +3,8 @@ import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, Chevro
 import { useEffect, useState } from "react";
 import { TopBanner, Header, Footer, Section } from "@/components/storefront";
 import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product } from "@/lib/products";
+import { useCart } from "@/lib/cart";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/produtos/$slug")({
   loader: ({ params }) => {
@@ -56,12 +58,21 @@ function SizeGrid({ sizes, value, onChange }: { sizes: string[]; value: string; 
   );
 }
 
-function SizeSelector({ product }: { product: Product }) {
+function SizeSelector({
+  product,
+  shoe,
+  setShoe,
+  clothing,
+  setClothing,
+}: {
+  product: Product;
+  shoe: string;
+  setShoe: (s: string) => void;
+  clothing: string;
+  setClothing: (s: string) => void;
+}) {
   const showShoe = product.kind === "footwear" || product.kind === "kit";
   const showClothing = product.kind === "clothing" || product.kind === "kit";
-
-  const [shoe, setShoe] = useState(showShoe ? "34" : "");
-  const [clothing, setClothing] = useState(showClothing ? "M" : "");
 
   if (product.kind === "accessory") return null;
 
