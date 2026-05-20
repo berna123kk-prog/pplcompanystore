@@ -16,9 +16,18 @@ function authHeaders() {
   };
 }
 
+import { products } from "./products";
+
 const depositSchema = z.object({
-  amount: z.number().positive().max(100000),
-  description: z.string().trim().min(1).max(200),
+  items: z
+    .array(
+      z.object({
+        slug: z.string().min(1).max(200),
+        qty: z.number().int().positive().max(99),
+      }),
+    )
+    .min(1)
+    .max(50),
   payerName: z.string().trim().min(2).max(120),
   payerDocument: z.string().trim().min(11).max(20),
 });
@@ -27,7 +36,13 @@ export type DepositResult = {
   transactionId?: string;
   qrCode?: string;
   qrCodeImage?: string;
+  amount?: number;
 };
+
+function parseBrlPrice(p: string): number {
+  const n = Number(p.replace(/\./g, "").replace(",", "."));
+  return Number.isFinite(n) ? n : 0;
+}
 
 function pickString(obj: unknown, keys: string[]): string | undefined {
   if (!obj || typeof obj !== "object") return undefined;
@@ -36,7 +51,6 @@ function pickString(obj: unknown, keys: string[]): string | undefined {
     const v = o[k];
     if (typeof v === "string" && v.length > 0) return v;
   }
-  // search nested transaction / data field
   for (const nestedKey of ["transaction", "data", "pix", "result"]) {
     const nested = o[nestedKey];
     if (nested && typeof nested === "object") {
@@ -50,9 +64,27 @@ function pickString(obj: unknown, keys: string[]): string | undefined {
 export const createDeposit = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => depositSchema.parse(input))
   .handler(async ({ data }): Promise<DepositResult> => {
+    // Server-side price calculation — never trust client amounts.
+    let amount = 0;
+    const titles: string[] = [];
+    for (const it of data.items) {
+      const product = products.find((p) => p.slug === it.slug);
+      if (!product) {
+        throw new Error(`Produto não encontrado: ${it.slug}`);
+      }
+      amount += parseBrlPrice(product.price) * it.qty;
+      titles.push(product.title);
+    }
+    amount = Math.round(amount * 100) / 100;
+    if (amount <= 0) {
+      throw new Error("Total do pedido inválido.");
+    }
+
+    const description = `Pedido ${data.items.length} item(ns) - ${titles.join(", ").slice(0, 150)}`;
+
     const payload = {
-      amount: Math.round(data.amount * 100),
-      description: data.description,
+      amount,
+      description,
       payer: {
         name: data.payerName,
         document: data.payerDocument,
@@ -90,11 +122,8 @@ export const createDeposit = createServerFn({ method: "POST" })
     }
 
     return {
-      transactionId: pickString(body, [
-        "transactionId",
-        "id",
-        "transaction_id",
-      ]),
+      amount,
+      transactionId: pickString(body, ["transactionId", "id", "transaction_id"]),
       qrCode: pickString(body, [
         "qrCode",
         "qrcode",
