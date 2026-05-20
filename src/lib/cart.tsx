@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { Minus, Plus, Trash2, X } from "lucide-react";
 import {
   Sheet,
@@ -115,6 +115,7 @@ export function useCart() {
 
 function CartDrawer() {
   const { items, isOpen, closeCart, removeItem, updateQty, total, count } = useCart();
+  const navigate = useNavigate();
   return (
     <Sheet open={isOpen} onOpenChange={(o) => (o ? null : closeCart())}>
       <SheetContent side="right" className="w-full sm:max-w-md flex flex-col bg-white">
@@ -164,7 +165,13 @@ function CartDrawer() {
               <span className="text-[11px] font-bold uppercase tracking-[0.15em]">Subtotal</span>
               <span className="text-lg font-extrabold">R$ {total.toFixed(2).replace(".", ",")}</span>
             </div>
-            <button className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white text-sm font-extrabold uppercase tracking-[0.15em]">
+            <button
+              onClick={() => {
+                closeCart();
+                navigate({ to: "/checkout" });
+              }}
+              className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white text-sm font-extrabold uppercase tracking-[0.15em]"
+            >
               Finalizar compra
             </button>
             <button onClick={closeCart} className="w-full h-10 border border-sky-200 text-sky-900 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-sky-50">
