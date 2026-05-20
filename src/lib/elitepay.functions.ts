@@ -91,7 +91,6 @@ export const createDeposit = createServerFn({ method: "POST" })
         "qrcodeImage",
         "image",
       ]),
-      raw: body,
     };
   });
 
