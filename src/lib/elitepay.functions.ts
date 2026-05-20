@@ -122,11 +122,8 @@ export const createDeposit = createServerFn({ method: "POST" })
     }
 
     return {
-      transactionId: pickString(body, [
-        "transactionId",
-        "id",
-        "transaction_id",
-      ]),
+      amount,
+      transactionId: pickString(body, ["transactionId", "id", "transaction_id"]),
       qrCode: pickString(body, [
         "qrCode",
         "qrcode",
