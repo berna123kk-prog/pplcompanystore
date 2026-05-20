@@ -100,8 +100,13 @@ function SizeSelector({
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
+  const { addItem } = useCart();
   const [qty, setQty] = useState(1);
   const [cep, setCep] = useState("");
+  const showShoe = product.kind === "footwear" || product.kind === "kit";
+  const showClothing = product.kind === "clothing" || product.kind === "kit";
+  const [shoe, setShoe] = useState(showShoe ? "38" : "");
+  const [clothing, setClothing] = useState(showClothing ? "M" : "");
   const gallery = product.images && product.images.length > 0 ? product.images : [product.img];
   const [imgIdx, setImgIdx] = useState(0);
   const currentImage = gallery[imgIdx] ?? gallery[0] ?? product.img;
@@ -121,6 +126,25 @@ function ProductPage() {
   const stockPct = Math.max(10, Math.min(100, (stock / 30) * 100));
 
   const related = products.filter((p) => p.slug !== product.slug).slice(0, 6);
+
+  const handleAddToCart = () => {
+    const sizeParts = [
+      showClothing ? clothing : "",
+      showShoe ? shoe : "",
+    ].filter(Boolean);
+    addItem(
+      {
+        slug: product.slug,
+        title: product.title,
+        price: product.price,
+        img: currentImage,
+        size: sizeParts.join(" / ") || undefined,
+      },
+      qty,
+    );
+    toast.success("Produto adicionado à sacola");
+  };
+
 
   return (
     <main className="min-h-screen bg-background text-foreground">
