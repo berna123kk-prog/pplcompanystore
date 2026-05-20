@@ -25,9 +25,8 @@ const depositSchema = z.object({
 
 export type DepositResult = {
   transactionId?: string;
-  qrCode?: string; // raw "copia e cola" string
-  qrCodeImage?: string; // possibly base64 image (data URL or raw base64)
-  raw: unknown;
+  qrCode?: string;
+  qrCodeImage?: string;
 };
 
 function pickString(obj: unknown, keys: string[]): string | undefined {
