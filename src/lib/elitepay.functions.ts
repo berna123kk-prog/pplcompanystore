@@ -50,10 +50,22 @@ function pickString(obj: unknown, keys: string[]): string | undefined {
 export const createDeposit = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => depositSchema.parse(input))
   .handler(async ({ data }): Promise<DepositResult> => {
+    const payload = {
+      amount: Math.round(data.amount * 100),
+      description: data.description,
+      payer: {
+        name: data.payerName,
+        document: data.payerDocument,
+      },
+      paymentMethod: "PIX",
+    };
+
+    console.log("[ElitePAY] POST /api/v1/deposit payload:", JSON.stringify(payload));
+
     const res = await fetch(`${BASE_URL}/api/v1/deposit`, {
       method: "POST",
       headers: authHeaders(),
-      body: JSON.stringify(data),
+      body: JSON.stringify(payload),
     });
 
     const text = await res.text();
@@ -62,11 +74,13 @@ export const createDeposit = createServerFn({ method: "POST" })
       body = JSON.parse(text);
     } catch {}
 
+    console.log("[ElitePAY] response status:", res.status, "body:", text.slice(0, 1000));
+
     if (!res.ok) {
       const msg =
-        (body && typeof body === "object" && "message" in body
+        (body && typeof body === "object" && body !== null && "message" in body
           ? String((body as Record<string, unknown>).message)
-          : null) || `Falha na Elite PAY (${res.status})`;
+          : null) || `Falha na Elite PAY (${res.status}): ${text.slice(0, 200)}`;
       throw new Error(msg);
     }
 
