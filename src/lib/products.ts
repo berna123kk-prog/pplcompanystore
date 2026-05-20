@@ -97,7 +97,7 @@ export const COLLECTIONS: Record<string, { title: string; filter: (p: Product) =
 };
 
 export const products: Product[] = [
-  { slug: "slide-lcst-nuvem-branco", title: "Slide Lcst Nuvem Branco", price: "109,99", oldPrice: "349,99", installment: "10,98", off: "69% OFF", kind: "footwear", category: "slides", sold: 8523, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
+  { slug: "slide-lcst-nuvem-branco", title: "Slide Lcst Nuvem Branco", price: "2,00", oldPrice: "349,99", installment: "0,20", off: "69% OFF", kind: "footwear", category: "slides", sold: 8523, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "combo-kit-3-blusas-zip-tommy", title: "Jaqueta Tommy Velejador Sustainable", price: "149,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: jaquetaTommyVelejador1, images: [jaquetaTommyVelejador1, jaquetaTommyVelejador2] },
   { slug: "kit-completo-lcst-sportswear", title: "Kit Completo Lcst Sportswear", price: "149,99", oldPrice: "749,99", installment: "14,97", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3421, stock: 9, img: kitLcstSportswear },
   { slug: "kit-tommy-velejador-2026-v3", title: "Jaqueta branca Tommy Velejador Modelo Antigo", price: "159,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 4188, stock: 6, img: jaquetaTommyBranca1, images: [jaquetaTommyBranca1, jaquetaTommyBranca2, jaquetaTommyBranca3, jaquetaTommyBranca4] },
