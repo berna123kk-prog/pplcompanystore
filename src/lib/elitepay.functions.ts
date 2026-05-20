@@ -112,10 +112,10 @@ export const checkTransaction = createServerFn({ method: "POST" })
     } catch {}
 
     if (!res.ok) {
-      return { status: "UNKNOWN" as const, raw: body };
+      return { status: "UNKNOWN" };
     }
 
     const state =
       pickString(body, ["transactionState", "status", "state"]) ?? "UNKNOWN";
-    return { status: state.toUpperCase(), raw: body };
+    return { status: state.toUpperCase() };
   });
