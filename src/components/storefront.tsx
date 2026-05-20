@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Search, User, ShoppingBag, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import type { Product } from "@/lib/products";
+import { useCart } from "@/lib/cart";
 import logoPpl from "@/assets/logo-ppl-v3.png";
 
 const banners = [
@@ -68,6 +69,7 @@ export function Logo() {
 
 export function Header() {
   const [open, setOpen] = useState<string | null>(null);
+  const { openCart, count } = useCart();
   return (
     <header className="relative bg-sky-400">
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center justify-between">
@@ -106,8 +108,13 @@ export function Header() {
         <div className="flex items-center gap-5 text-white">
           <button aria-label="Buscar"><Search className="h-5 w-5" /></button>
           <button aria-label="Conta"><User className="h-5 w-5" /></button>
-          <button aria-label="Sacola" className="relative">
+          <button aria-label="Sacola" className="relative" onClick={openCart}>
             <ShoppingBag className="h-5 w-5" />
+            {count > 0 && (
+              <span className="absolute -top-2 -right-2 min-w-[18px] h-[18px] px-1 grid place-items-center rounded-full bg-white text-sky-700 text-[10px] font-extrabold">
+                {count}
+              </span>
+            )}
           </button>
         </div>
       </div>
