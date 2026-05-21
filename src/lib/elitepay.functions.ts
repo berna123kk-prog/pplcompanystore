@@ -79,6 +79,9 @@ export const createDeposit = createServerFn({ method: "POST" })
     if (amount <= 0) {
       throw new Error("Total do pedido inválido.");
     }
+    if (amount < 5) {
+      throw new Error("Valor mínimo para pagamento via PIX é R$ 5,00.");
+    }
 
     const description = `Pedido ${data.items.length} item(ns) - ${titles.join(", ").slice(0, 150)}`;
 
