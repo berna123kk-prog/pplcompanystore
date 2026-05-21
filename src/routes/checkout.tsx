@@ -215,6 +215,18 @@ function CheckoutPage() {
                 <p className="mt-4 text-[11px] text-slate-500">
                   Esta tela atualiza automaticamente quando o pagamento for confirmado.
                 </p>
+
+                <div className="mt-5 mx-auto max-w-md text-left border border-amber-200 bg-amber-50 p-3">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-amber-800">
+                    Pagamento recusado pelo seu banco?
+                  </p>
+                  <p className="mt-1 text-[11px] text-amber-900/80 leading-relaxed">
+                    Alguns bancos (Nubank, Inter, C6, Itaú) bloqueiam automaticamente
+                    PIX para lojas que ainda não conhecem, exibindo uma mensagem de
+                    "possível golpe". O PIX foi gerado corretamente — tente pagar por
+                    outro banco ou aprove o recebedor no app do banco antes de repetir.
+                  </p>
+                </div>
               </div>
             )}
           </div>
