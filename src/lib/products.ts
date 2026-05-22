@@ -321,6 +321,25 @@ import kitPumaBmw1 from "@/assets/kit-puma-bmw-1.png";
 import kitPumaBmw2 from "@/assets/kit-puma-bmw-2.png";
 import kitPumaBmw3 from "@/assets/kit-puma-bmw-3.png";
 
+import kitLacosteMizuno1 from "@/assets/kit-lacoste-mizuno-1.png";
+import kitLacosteMizuno2 from "@/assets/kit-lacoste-mizuno-2.png";
+import kitLacosteMizuno3 from "@/assets/kit-lacoste-mizuno-3.png";
+
+const kitLacosteMizunoProduct: Product = {
+  slug: "kit-lacoste-mizuno-kits",
+  title: "Kit Lacoste + Mizuno",
+  price: "219,99",
+  oldPrice: "999,99",
+  installment: "21,99",
+  off: "78% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1560,
+  stock: 6,
+  img: kitLacosteMizuno1,
+  images: [kitLacosteMizuno1, kitLacosteMizuno2, kitLacosteMizuno3],
+};
+
 const kitPumaBmwProduct: Product = {
   slug: "kit-completo-puma-bmw-kits",
   title: "Kit Completo Puma + BMW",
