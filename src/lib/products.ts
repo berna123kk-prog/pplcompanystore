@@ -328,6 +328,11 @@ import kitLacosteMizuno3 from "@/assets/kit-lacoste-mizuno-3.png";
 import kitLacosteCompleto1 from "@/assets/kit-lacoste-completo-1.png";
 import kitLacosteCompleto2 from "@/assets/kit-lacoste-completo-2.png";
 import kitLacosteCompleto3 from "@/assets/kit-lacoste-completo-3.png";
+import kitLacosteMizunoCompleto1 from "@/assets/kit-lacoste-mizuno-completo-1.png";
+import kitLacosteMizunoCompleto2 from "@/assets/kit-lacoste-mizuno-completo-2.png";
+import kitLacosteMizunoCompleto3 from "@/assets/kit-lacoste-mizuno-completo-3.png";
+import kitLacosteMizunoCompleto4 from "@/assets/kit-lacoste-mizuno-completo-4.png";
+import kitLacosteMizunoCompleto5 from "@/assets/kit-lacoste-mizuno-completo-5.png";
 
 const kitLacosteCompletoProduct: Product = {
   slug: "kit-lacoste-completo-kits",
@@ -342,6 +347,27 @@ const kitLacosteCompletoProduct: Product = {
   stock: 5,
   img: kitLacosteCompleto1,
   images: [kitLacosteCompleto1, kitLacosteCompleto2, kitLacosteCompleto3],
+};
+
+const kitLacosteMizunoCompletoProduct: Product = {
+  slug: "kit-lacoste-mizuno-completo-kits",
+  title: "Kit Lacoste + Mizuno Completo",
+  price: "259,99",
+  oldPrice: "1.199,99",
+  installment: "25,99",
+  off: "78% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1180,
+  stock: 4,
+  img: kitLacosteMizunoCompleto1,
+  images: [
+    kitLacosteMizunoCompleto1,
+    kitLacosteMizunoCompleto2,
+    kitLacosteMizunoCompleto3,
+    kitLacosteMizunoCompleto4,
+    kitLacosteMizunoCompleto5,
+  ],
 };
 
 const kitLacosteMizunoProduct: Product = {
@@ -374,7 +400,6 @@ const kitPumaBmwProduct: Product = {
   images: [kitPumaBmw1, kitPumaBmw2, kitPumaBmw3],
 };
 
-
 const kitRegataLacosteProduct: Product = {
   slug: "kit-regata-lacoste-kits",
   title: "Kit Regata Lacoste",
@@ -390,7 +415,7 @@ const kitRegataLacosteProduct: Product = {
   images: [kitRegataLacoste],
 };
 
-export const kits = [kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+export const kits = [kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
   if (p.slug === "kit-tommy-velejador-2026-v3") {
     return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
   }
