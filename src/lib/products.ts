@@ -325,6 +325,25 @@ import kitLacosteMizuno1 from "@/assets/kit-lacoste-mizuno-1.png";
 import kitLacosteMizuno2 from "@/assets/kit-lacoste-mizuno-2.png";
 import kitLacosteMizuno3 from "@/assets/kit-lacoste-mizuno-3.png";
 
+import kitLacosteCompleto1 from "@/assets/kit-lacoste-completo-1.png";
+import kitLacosteCompleto2 from "@/assets/kit-lacoste-completo-2.png";
+import kitLacosteCompleto3 from "@/assets/kit-lacoste-completo-3.png";
+
+const kitLacosteCompletoProduct: Product = {
+  slug: "kit-lacoste-completo-kits",
+  title: "Kit Lacoste Completo",
+  price: "229,99",
+  oldPrice: "1.099,99",
+  installment: "22,99",
+  off: "79% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1340,
+  stock: 5,
+  img: kitLacosteCompleto1,
+  images: [kitLacosteCompleto1, kitLacosteCompleto2, kitLacosteCompleto3],
+};
+
 const kitLacosteMizunoProduct: Product = {
   slug: "kit-lacoste-mizuno-kits",
   title: "Kit Lacoste + Mizuno",
