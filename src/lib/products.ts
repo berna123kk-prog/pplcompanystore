@@ -333,6 +333,26 @@ import kitLacosteMizunoCompleto2 from "@/assets/kit-lacoste-mizuno-completo-2.pn
 import kitLacosteMizunoCompleto3 from "@/assets/kit-lacoste-mizuno-completo-3.png";
 import kitLacosteMizunoCompleto4 from "@/assets/kit-lacoste-mizuno-completo-4.png";
 import kitLacosteMizunoCompleto5 from "@/assets/kit-lacoste-mizuno-completo-5.png";
+import kitLalaCompleto1 from "@/assets/kit-lala-completo-1.png";
+import kitLalaCompleto2 from "@/assets/kit-lala-completo-2.png";
+import kitLalaCompleto3 from "@/assets/kit-lala-completo-3.png";
+import kitLalaCompleto4 from "@/assets/kit-lala-completo-4.png";
+import kitLalaCompleto5 from "@/assets/kit-lala-completo-5.png";
+
+const kitLalaCompletoProduct: Product = {
+  slug: "kit-lala-completo-kits",
+  title: "Kit Lala Completo",
+  price: "179,99",
+  oldPrice: "899,99",
+  installment: "17,99",
+  off: "80% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1420,
+  stock: 6,
+  img: kitLalaCompleto1,
+  images: [kitLalaCompleto1, kitLalaCompleto2, kitLalaCompleto3, kitLalaCompleto4, kitLalaCompleto5],
+};
 
 const kitLacosteCompletoProduct: Product = {
   slug: "kit-lacoste-completo-kits",
@@ -415,7 +435,7 @@ const kitRegataLacosteProduct: Product = {
   images: [kitRegataLacoste],
 };
 
-export const kits = [kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+export const kits = [kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
   if (p.slug === "kit-tommy-velejador-2026-v3") {
     return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
   }
