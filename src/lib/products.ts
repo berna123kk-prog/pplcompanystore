@@ -316,7 +316,24 @@ export const featured = [
     .map((slug) => products.find((p) => p.slug === slug))
     .filter((p): p is Product => Boolean(p)),
 ];
-export const kits = products.filter((p) => p.kind === "kit").map((p) => {
+import kitRegataLacoste from "@/assets/kit-regata-lacoste.png";
+
+const kitRegataLacosteProduct: Product = {
+  slug: "kit-regata-lacoste-kits",
+  title: "Kit Regata Lacoste",
+  price: "159,99",
+  oldPrice: "699,99",
+  installment: "15,99",
+  off: "77% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 2140,
+  stock: 8,
+  img: kitRegataLacoste,
+  images: [kitRegataLacoste],
+};
+
+export const kits = [kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
   if (p.slug === "kit-tommy-velejador-2026-v3") {
     return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
   }
@@ -324,7 +341,8 @@ export const kits = products.filter((p) => p.kind === "kit").map((p) => {
     return { ...p, slug: "kit-nk-academy-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitTommyVelejadorVermelho, images: undefined };
   }
   return p;
-});
+})];
+
 
 export const SHOE_SIZES = ["33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"];
 export const CLOTHING_SIZES = ["P", "M", "G", "GG"];
