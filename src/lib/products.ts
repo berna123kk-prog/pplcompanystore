@@ -371,7 +371,7 @@ const kitRegataLacosteProduct: Product = {
   images: [kitRegataLacoste],
 };
 
-export const kits = [kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+export const kits = [kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
   if (p.slug === "kit-tommy-velejador-2026-v3") {
     return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
   }
