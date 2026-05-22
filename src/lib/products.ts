@@ -292,14 +292,6 @@ export const featured = [
         images: undefined,
       };
     }
-
-        ...p,
-        slug: "combo-kit-3-blusas-zip-tommy-featured",
-        title: "Combo Kit 3 Blusas Meio Zíper Tommy",
-        img: "https://visionariostore.com.br/cdn/shop/files/IMG_6553.png?v=1775623742&width=1200",
-        images: undefined,
-      };
-    }
     if (p.slug === "jaqueta-tommy-velejador") {
       return {
         ...p,
