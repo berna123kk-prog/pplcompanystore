@@ -317,6 +317,25 @@ export const featured = [
     .filter((p): p is Product => Boolean(p)),
 ];
 import kitRegataLacoste from "@/assets/kit-regata-lacoste.png";
+import kitPumaBmw1 from "@/assets/kit-puma-bmw-1.png";
+import kitPumaBmw2 from "@/assets/kit-puma-bmw-2.png";
+import kitPumaBmw3 from "@/assets/kit-puma-bmw-3.png";
+
+const kitPumaBmwProduct: Product = {
+  slug: "kit-completo-puma-bmw-kits",
+  title: "Kit Completo Puma + BMW",
+  price: "159,99",
+  oldPrice: "799,99",
+  installment: "15,99",
+  off: "80% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1980,
+  stock: 7,
+  img: kitPumaBmw1,
+  images: [kitPumaBmw1, kitPumaBmw2, kitPumaBmw3],
+};
+
 
 const kitRegataLacosteProduct: Product = {
   slug: "kit-regata-lacoste-kits",
@@ -333,7 +352,7 @@ const kitRegataLacosteProduct: Product = {
   images: [kitRegataLacoste],
 };
 
-export const kits = [kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+export const kits = [kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
   if (p.slug === "kit-tommy-velejador-2026-v3") {
     return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
   }
