@@ -260,7 +260,25 @@ const FEATURED_EXTRA_SLUGS = [
   "tenis-nk-court-borough-low-2",
 ];
 
+import brooksfieldDeFrio from "@/assets/brooksfield-de-frio.png";
+
+const brooksfieldFeatured: Product = {
+  slug: "brooksfield-de-frio-featured",
+  title: "BROOKSFILD DE FRIO",
+  price: "99,99",
+  oldPrice: "399,99",
+  installment: "9,99",
+  off: "75% OFF",
+  kind: "clothing",
+  category: "jaquetas-e-moletons",
+  sold: 1820,
+  stock: 10,
+  img: brooksfieldDeFrio,
+  images: [brooksfieldDeFrio],
+};
+
 export const featured = [
+  brooksfieldFeatured,
   ...products.slice(0, 8).map((p) => {
     if (p.slug === "kit-completo-lcst-sportswear") {
       return { ...p, slug: "kit-completo-lcst-sportswear-featured", img: kitLcstFeatured };
