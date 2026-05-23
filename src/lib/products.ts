@@ -610,7 +610,7 @@ const kitTommy2025Product: Product = {
   images: [kitTommy2025_1],
 };
 
-export const kits = [kitTommy2025Product, kitCompletoMizunoProduct, kitLacosteCompletoV2Product, kitLacosteMizunoNovoProduct, kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+export const kits = [kitLacosteLuxoProduct, kitTommy2025Product, kitCompletoMizunoProduct, kitLacosteCompletoV2Product, kitLacosteMizunoNovoProduct, kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
 
 
 
