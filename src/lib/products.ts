@@ -82,6 +82,8 @@ import calcaNkDryFit2 from "@/assets/calca-nk-dry-fit-2.png";
 import calcaNkDryFit3 from "@/assets/calca-nk-dry-fit-3.png";
 import calcaNkDryFit4 from "@/assets/calca-nk-dry-fit-4.png";
 import calcaNkClubReta from "@/assets/calca-nk-club-reta.png";
+import calcaNkTechFleece from "@/assets/calca-nk-tech-fleece.png";
+
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
