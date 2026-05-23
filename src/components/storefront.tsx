@@ -155,7 +155,6 @@ export function Section({ title, items }: { title: string; items: Product[] }) {
     <section className="max-w-[1400px] mx-auto px-6 py-12">
       <div className="flex items-end justify-between mb-6">
         <h2 className="text-xl md:text-2xl font-extrabold uppercase tracking-[0.1em] text-sky-900">{title}</h2>
-        <a href="#" className="text-[11px] font-bold uppercase tracking-[0.2em] text-sky-700 hover:text-sky-900">Ver mais</a>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
         {items.map((p) => <ProductCard key={p.slug} p={p} />)}
