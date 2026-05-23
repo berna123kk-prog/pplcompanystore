@@ -472,9 +472,26 @@ const kitRegataLacosteProduct: Product = {
   stock: 8,
   img: kitRegataLacoste,
   images: [kitRegataLacoste],
+
+import kitLacosteMizunoNovo1 from "@/assets/kit-lacoste-mizuno-novo-1.png";
+
+const kitLacosteMizunoNovoProduct: Product = {
+  slug: "kit-lacoste-mizuno-novo-kits",
+  title: "Kit Lacoste + Mizuno",
+  price: "239,99",
+  oldPrice: "1.099,99",
+  installment: "23,99",
+  off: "78% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1320,
+  stock: 5,
+  img: kitLacosteMizunoNovo1,
+  images: [kitLacosteMizunoNovo1],
 };
 
-export const kits = [kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+export const kits = [kitLacosteMizunoNovoProduct, kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+
   if (p.slug === "kit-tommy-velejador-2026-v3") {
     return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
   }
