@@ -355,6 +355,7 @@ const kitLacosteLuxoProduct: Product = {
 };
 
 import blusaPumaFerrari1 from "@/assets/blusa-puma-ferrari-1.png";
+import kitMizunoBranco2026Featured1 from "@/assets/kit-mizuno-branco-2026-featured-1.webp";
 
 const blusaPumaFerrariFeatured: Product = {
   slug: "blusa-puma-ferrari-featured",
@@ -371,6 +372,21 @@ const blusaPumaFerrariFeatured: Product = {
   images: [blusaPumaFerrari1],
 };
 
+const kitMizunoBranco2026Featured: Product = {
+  slug: "kit-mizuno-branco-2026-featured",
+  title: "Kit Mizuno Branco 2026",
+  price: "279,99",
+  oldPrice: "999,99",
+  installment: "27,99",
+  off: "72% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1180,
+  stock: 5,
+  img: kitMizunoBranco2026Featured1,
+  images: [kitMizunoBranco2026Featured1],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
@@ -378,6 +394,8 @@ export const featured = [
   shortTommyExclusivoFeatured,
   kitLacosteLuxoFeatured,
   blusaPumaFerrariFeatured,
+  kitMizunoBranco2026Featured,
+
   ...products.filter((p) =>
     p.slug !== "kit-3-bones-pma-bmw" &&
     p.slug !== "shorts-nk-praia" &&
