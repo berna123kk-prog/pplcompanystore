@@ -317,10 +317,27 @@ const moletomTommyExclusivoFeatured: Product = {
   images: [moletomTommyExclusivo1, moletomTommyExclusivo2, moletomTommyExclusivo3],
 };
 
+const shortTommyExclusivoFeatured: Product = {
+  slug: "short-tommy-exclusivo-featured",
+  title: "Short Tommy Exclusivo",
+  price: "59,99",
+  oldPrice: "249,99",
+  installment: "5,99",
+  off: "76% OFF",
+  kind: "clothing",
+  category: "bermudas-e-shorts",
+  sold: 1450,
+  stock: 12,
+  img: shortTommyExclusivo1,
+  images: [shortTommyExclusivo1, shortTommyExclusivo2],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
   moletomTommyExclusivoFeatured,
+  shortTommyExclusivoFeatured,
+
 
 
   ...products.filter((p) => p.slug !== "kit-3-bones-pma-bmw" && p.slug !== "shorts-nk-praia").slice(0, 8).map((p) => {
