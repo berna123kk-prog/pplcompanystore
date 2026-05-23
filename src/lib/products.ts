@@ -55,6 +55,7 @@ import calcaJeansDestroyedFrente from "@/assets/calca-jeans-destroyed-frente.png
 import calcaJeansDestroyedDetalhe from "@/assets/calca-jeans-destroyed-detalhe.png";
 import calcaJeansCityDenim2Frente from "@/assets/calca-jeans-city-denim-2-frente.png";
 import calcaJeansCityDenim2Detalhe from "@/assets/calca-jeans-city-denim-2-detalhe.png";
+import calcaJeansSkinnyZaraRespingos from "@/assets/calca-jeans-skinny-zara-respingos.png";
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
