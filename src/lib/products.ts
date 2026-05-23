@@ -46,6 +46,7 @@ import kit5CamisetasNk1 from "@/assets/kit-5-camisetas-nk-1.png";
 import kit5CamisetasNk2 from "@/assets/kit-5-camisetas-nk-2.png";
 import shortTommyExclusivo1 from "@/assets/short-tommy-exclusivo-1.png";
 import shortTommyExclusivo2 from "@/assets/short-tommy-exclusivo-2.png";
+import kitLacosteBrancoMizuno from "@/assets/kit-lacoste-branco-mizuno.png";
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
