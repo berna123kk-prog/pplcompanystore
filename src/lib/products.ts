@@ -472,6 +472,9 @@ const kitRegataLacosteProduct: Product = {
   stock: 8,
   img: kitRegataLacoste,
   images: [kitRegataLacoste],
+};
+
+
 
 import kitLacosteMizunoNovo1 from "@/assets/kit-lacoste-mizuno-novo-1.png";
 
