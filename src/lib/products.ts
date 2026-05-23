@@ -46,6 +46,7 @@ import kit5CamisetasNk1 from "@/assets/kit-5-camisetas-nk-1.png";
 import kit5CamisetasNk2 from "@/assets/kit-5-camisetas-nk-2.png";
 import shortTommyExclusivo1 from "@/assets/short-tommy-exclusivo-1.png";
 import shortTommyExclusivo2 from "@/assets/short-tommy-exclusivo-2.png";
+import kitLacosteBrancoMizuno from "@/assets/kit-lacoste-branco-mizuno.png";
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -403,7 +404,23 @@ const kitLacosteBermudaPoloFeatured: Product = {
   images: [kitLacosteBermudaPoloFeatured1],
 };
 
+const kitLacosteBrancoMizunoFeatured: Product = {
+  slug: "kit-lacoste-branco-mizuno-featured",
+  title: "Kit Lacoste Branco + Mizuno",
+  price: "239,99",
+  oldPrice: "799,99",
+  installment: "23,99",
+  off: "70% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 980,
+  stock: 8,
+  img: kitLacosteBrancoMizuno,
+  images: [kitLacosteBrancoMizuno],
+};
+
 export const featured = [
+  kitLacosteBrancoMizunoFeatured,
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
   moletomTommyExclusivoFeatured,
@@ -412,6 +429,7 @@ export const featured = [
   blusaPumaFerrariFeatured,
   kitMizunoBranco2026Featured,
   kitLacosteBermudaPoloFeatured,
+
 
 
   ...products.filter((p) =>
