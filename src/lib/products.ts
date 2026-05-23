@@ -49,6 +49,7 @@ import shortTommyExclusivo2 from "@/assets/short-tommy-exclusivo-2.png";
 import kitLacosteBrancoMizuno from "@/assets/kit-lacoste-branco-mizuno.png";
 import blusaLacosteFrio from "@/assets/blusa-lacoste-frio.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
+import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -130,6 +131,7 @@ export const products: Product[] = [
   { slug: "kit-4-camisas-nk-academy", title: "Kit 4 Camisas NK Academy", price: "59,99", oldPrice: "299,99", installment: "5,99", off: "80% OFF", kind: "clothing", category: "camisetas", sold: 4200, stock: 30, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
   
   { slug: "tenis-pma-caven-ferrari", title: "Tênis Pma Caven Ferrari", price: "139,99", oldPrice: "549,99", installment: "13,99", off: "75% OFF", kind: "footwear", category: "sneakers", sold: 2800, stock: 8, img: tenisPmaCavenFerrari, images: [tenisPmaCavenFerrari, tenisPmaCavenFerrari2] },
+  { slug: "tenis-nike-air-force-preto-branco", title: "Tênis Nike Air Force Preto com Branco", price: "59,99", oldPrice: "499,99", installment: "5,99", off: "88% OFF", kind: "footwear", category: "sneakers", sold: 4200, stock: 15, img: nikeAirForcePretoBranco, images: [nikeAirForcePretoBranco] },
   { slug: "tenis-nk-court-borough-low-2", title: "Tênis NK Court Borough Low 2", price: "139,99", oldPrice: "449,99", installment: "13,99", off: "69% OFF", kind: "footwear", category: "sneakers", sold: 3100, stock: 11, img: tenisNkCourtBorough1, images: [tenisNkCourtBorough1, tenisNkCourtBorough2, tenisNkCourtBorough3, tenisNkCourtBorough4] },
   { slug: "tenis-pma-ca-pro", title: "Tênis Pma CA Pro", price: "159,99", oldPrice: "599,99", installment: "15,99", off: "73% OFF", kind: "footwear", category: "sneakers", sold: 2200, stock: 9, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
   { slug: "jaqueta-tommy-azul-royal", title: "Boné Tommy Big Logo", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "accessory", category: "acessorios", sold: 1100, stock: 7, img: boneTommyBigLogo },
