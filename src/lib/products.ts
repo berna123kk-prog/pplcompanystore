@@ -332,11 +332,35 @@ const shortTommyExclusivoFeatured: Product = {
   images: [shortTommyExclusivo1, shortTommyExclusivo2],
 };
 
+import kitLacosteLuxo1 from "@/assets/kit-lacoste-luxo-1.png";
+
+const kitLacosteLuxoFeatured: Product = {
+  slug: "kit-lacoste-luxo-featured",
+  title: "Kit Lacoste de Luxo (Limitado)",
+  price: "179,99",
+  oldPrice: "899,99",
+  installment: "17,99",
+  off: "80% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1290,
+  stock: 5,
+  img: kitLacosteLuxo1,
+  images: [kitLacosteLuxo1],
+};
+
+const kitLacosteLuxoProduct: Product = {
+  ...kitLacosteLuxoFeatured,
+  slug: "kit-lacoste-luxo-kits",
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
   moletomTommyExclusivoFeatured,
   shortTommyExclusivoFeatured,
+  kitLacosteLuxoFeatured,
+
 
 
 
@@ -586,7 +610,7 @@ const kitTommy2025Product: Product = {
   images: [kitTommy2025_1],
 };
 
-export const kits = [kitTommy2025Product, kitCompletoMizunoProduct, kitLacosteCompletoV2Product, kitLacosteMizunoNovoProduct, kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+export const kits = [kitLacosteLuxoProduct, kitTommy2025Product, kitCompletoMizunoProduct, kitLacosteCompletoV2Product, kitLacosteMizunoNovoProduct, kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
 
 
 
