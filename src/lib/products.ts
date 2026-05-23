@@ -371,75 +371,6 @@ const blusaPumaFerrariFeatured: Product = {
   images: [blusaPumaFerrari1],
 };
 
-import jaquetaPumaFerrariMochila1 from "@/assets/jaqueta-puma-ferrari-mochila-1.png";
-
-const jaquetaPumaFerrariMochilaFeatured: Product = {
-  slug: "jaqueta-puma-ferrari-mochila-featured",
-  title: "Jaqueta Colab Puma e Ferrari + Mochila Brinde",
-  price: "129,99",
-  oldPrice: "699,99",
-  installment: "12,99",
-  off: "81% OFF",
-  kind: "clothing",
-  category: "jaquetas-e-moletons",
-  sold: 1410,
-  stock: 5,
-  img: jaquetaPumaFerrariMochila1,
-  images: [jaquetaPumaFerrariMochila1],
-};
-
-import kitMizunoBranco2026_1 from "@/assets/kit-mizuno-branco-2026-1.png";
-
-const kitMizunoBranco2026Featured: Product = {
-  slug: "kit-mizuno-branco-2026-featured",
-  title: "Kit Mizuno Branco 2026",
-  price: "279,99",
-  oldPrice: "1.299,99",
-  installment: "27,99",
-  off: "78% OFF",
-  kind: "kit",
-  category: "kits-completos",
-  sold: 1180,
-  stock: 4,
-  img: kitMizunoBranco2026_1,
-  images: [kitMizunoBranco2026_1],
-};
-
-import kitLacosteFrioMesclado1 from "@/assets/kit-lacoste-frio-mesclado-1.png";
-import kitLacosteFrioMesclado2 from "@/assets/kit-lacoste-frio-mesclado-2.png";
-
-const kitLacosteFrioMescladoFeatured: Product = {
-  slug: "kit-lacoste-frio-mesclado-featured",
-  title: "Kit Lacoste de Frio Mesclado 2026",
-  price: "159,99",
-  oldPrice: "799,99",
-  installment: "15,99",
-  off: "80% OFF",
-  kind: "kit",
-  category: "kits-completos",
-  sold: 1260,
-  stock: 6,
-  img: kitLacosteFrioMesclado1,
-  images: [kitLacosteFrioMesclado1, kitLacosteFrioMesclado2],
-};
-
-import kitLacosteBermudaPolo1 from "@/assets/kit-lacoste-bermuda-polo-1.png";
-
-const kitLacosteBermudaPoloFeatured: Product = {
-  slug: "kit-lacoste-bermuda-polo-featured",
-  title: "Kit Lacoste Bermuda e Polo",
-  price: "89,99",
-  oldPrice: "499,99",
-  installment: "8,99",
-  off: "82% OFF",
-  kind: "kit",
-  category: "kits-completos",
-  sold: 1520,
-  stock: 8,
-  img: kitLacosteBermudaPolo1,
-  images: [kitLacosteBermudaPolo1],
-};
-
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
@@ -447,15 +378,6 @@ export const featured = [
   shortTommyExclusivoFeatured,
   kitLacosteLuxoFeatured,
   blusaPumaFerrariFeatured,
-  jaquetaPumaFerrariMochilaFeatured,
-  kitMizunoBranco2026Featured,
-  kitLacosteFrioMescladoFeatured,
-  kitLacosteBermudaPoloFeatured,
-
-
-
-
-
   ...products.filter((p) =>
     p.slug !== "kit-3-bones-pma-bmw" &&
     p.slug !== "shorts-nk-praia" &&
