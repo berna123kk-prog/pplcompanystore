@@ -255,7 +255,6 @@ export const sneakers = [...products.filter(p => p.category === "sneakers").map(
 }), tenisPmaCavenBmw];
 
 const FEATURED_EXTRA_SLUGS = [
-  "tenis-pma-caven-ferrari",
   "bone-lcst-sport-diamante",
   "tenis-nk-court-borough-low-2",
 ];
