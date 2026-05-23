@@ -552,7 +552,25 @@ const kitLacosteCompletoV2Product: Product = {
   images: [kitLacosteCompletoV2_1],
 };
 
-export const kits = [kitLacosteCompletoV2Product, kitLacosteMizunoNovoProduct, kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+import kitCompletoMizuno1 from "@/assets/kit-completo-mizuno-1.png";
+
+const kitCompletoMizunoProduct: Product = {
+  slug: "kit-completo-mizuno-kits",
+  title: "Kit Completo Mizuno",
+  price: "299,99",
+  oldPrice: "1.299,99",
+  installment: "29,99",
+  off: "77% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1180,
+  stock: 4,
+  img: kitCompletoMizuno1,
+  images: [kitCompletoMizuno1],
+};
+
+export const kits = [kitCompletoMizunoProduct, kitLacosteCompletoV2Product, kitLacosteMizunoNovoProduct, kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+
 
 
   if (p.slug === "kit-tommy-velejador-2026-v3") {
