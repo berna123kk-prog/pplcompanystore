@@ -364,7 +364,7 @@ const blusaPumaFerrariFeatured: Product = {
   installment: "12,99",
   off: "78% OFF",
   kind: "clothing",
-  category: "blusas",
+  category: "jaquetas-e-moletons",
   sold: 1340,
   stock: 6,
   img: blusaPumaFerrari1,
