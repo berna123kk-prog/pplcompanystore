@@ -68,6 +68,7 @@ import calcaJeansJogadorAzul from "@/assets/calca-jeans-jogador-azul.png";
 import kit3CalcasJeansJogador from "@/assets/kit-3-calcas-jeans-jogador.png";
 import calcaJeansJogadorPretaDetalhes from "@/assets/calca-jeans-jogador-preta-detalhes.png";
 import calcaJeansJogadorComRasgos from "@/assets/calca-jeans-jogador-com-rasgos.png";
+import calcaJeansJogadorComRasgos2 from "@/assets/calca-jeans-jogador-com-rasgos-2.png";
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -153,6 +154,7 @@ export const products: Product[] = [
   { slug: "kit-3-calcas-jeans-jogador", title: "Kit 3 Calças Jeans Jogador", price: "149,99", oldPrice: "900,00", installment: "14,99", off: "83% OFF", kind: "clothing", category: "calcas", sold: 110, stock: 4, img: kit3CalcasJeansJogador, images: [kit3CalcasJeansJogador] },
   { slug: "calca-jeans-jogador-preta-detalhes", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 132, stock: 6, img: calcaJeansJogadorPretaDetalhes, images: [calcaJeansJogadorPretaDetalhes] },
   { slug: "calca-jeans-jogador-com-rasgos", title: "Calça Jeans Jogador com Rasgos", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 118, stock: 6, img: calcaJeansJogadorComRasgos, images: [calcaJeansJogadorComRasgos] },
+  { slug: "calca-jeans-jogador-com-rasgos-2", title: "Calça Jeans Jogador com Rasgos", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 102, stock: 5, img: calcaJeansJogadorComRasgos2, images: [calcaJeansJogadorComRasgos2] },
   { slug: "sandalia-croc-classic", title: "Sandália Croc Classic", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "crocs", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "chinelo-nk-victori-one", title: "Chinelo NK Slide Victori One", price: "59,99", oldPrice: "190,00", installment: "5,99", off: "70% OFF", kind: "footwear", category: "slides", sold: 3300, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "kit", category: "kits-completos", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
