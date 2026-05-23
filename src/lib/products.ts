@@ -258,6 +258,11 @@ const FEATURED_EXTRA_SLUGS: string[] = [
 ];
 
 import brooksfieldDeFrio from "@/assets/brooksfield-de-frio.png";
+import jaquetaNikeSportwear1 from "@/assets/jaqueta-nike-sportwear-1.png";
+import jaquetaNikeSportwear2 from "@/assets/jaqueta-nike-sportwear-2.png";
+import jaquetaNikeSportwear3 from "@/assets/jaqueta-nike-sportwear-3.png";
+import jaquetaNikeSportwear4 from "@/assets/jaqueta-nike-sportwear-4.png";
+import jaquetaNikeSportwear5 from "@/assets/jaqueta-nike-sportwear-5.png";
 
 const brooksfieldFeatured: Product = {
   slug: "brooksfield-de-frio-featured",
@@ -274,8 +279,25 @@ const brooksfieldFeatured: Product = {
   images: [brooksfieldDeFrio],
 };
 
+const jaquetaNikeSportwearFeatured: Product = {
+  slug: "jaqueta-nike-sportwear-featured",
+  title: "Jaqueta Nike Sportwear (Limitado)",
+  price: "119,99",
+  oldPrice: "599,99",
+  installment: "11,99",
+  off: "80% OFF",
+  kind: "clothing",
+  category: "jaquetas-e-moletons",
+  sold: 1340,
+  stock: 6,
+  img: jaquetaNikeSportwear1,
+  images: [jaquetaNikeSportwear1, jaquetaNikeSportwear2, jaquetaNikeSportwear3, jaquetaNikeSportwear4, jaquetaNikeSportwear5],
+};
+
 export const featured = [
   brooksfieldFeatured,
+  jaquetaNikeSportwearFeatured,
+
   ...products.filter((p) => p.slug !== "kit-3-bones-pma-bmw" && p.slug !== "shorts-nk-praia").slice(0, 8).map((p) => {
     if (p.slug === "kit-completo-lcst-sportswear") {
       return { ...p, slug: "kit-completo-lcst-sportswear-featured", img: kitLcstFeatured };
