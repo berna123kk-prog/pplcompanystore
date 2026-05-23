@@ -356,6 +356,7 @@ const kitLacosteLuxoProduct: Product = {
 
 import blusaPumaFerrari1 from "@/assets/blusa-puma-ferrari-1.png";
 import kitMizunoBranco2026Featured1 from "@/assets/kit-mizuno-branco-2026-featured-1.webp";
+import kitLacosteBermudaPoloFeatured1 from "@/assets/kit-lacoste-bermuda-polo-featured-1.png";
 
 const blusaPumaFerrariFeatured: Product = {
   slug: "blusa-puma-ferrari-featured",
@@ -387,6 +388,21 @@ const kitMizunoBranco2026Featured: Product = {
   images: [kitMizunoBranco2026Featured1],
 };
 
+const kitLacosteBermudaPoloFeatured: Product = {
+  slug: "kit-lacoste-bermuda-polo-featured",
+  title: "Kit Lacoste Bermuda e Polo",
+  price: "89,99",
+  oldPrice: "399,99",
+  installment: "8,99",
+  off: "77% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1420,
+  stock: 9,
+  img: kitLacosteBermudaPoloFeatured1,
+  images: [kitLacosteBermudaPoloFeatured1],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
@@ -395,6 +411,8 @@ export const featured = [
   kitLacosteLuxoFeatured,
   blusaPumaFerrariFeatured,
   kitMizunoBranco2026Featured,
+  kitLacosteBermudaPoloFeatured,
+
 
   ...products.filter((p) =>
     p.slug !== "kit-3-bones-pma-bmw" &&
