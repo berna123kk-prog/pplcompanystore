@@ -44,6 +44,9 @@ import boneTommySince1985_1 from "@/assets/bone-tommy-since-1985-1.png";
 import boneTommySince1985_2 from "@/assets/bone-tommy-since-1985-2.png";
 import kit5CamisetasNk1 from "@/assets/kit-5-camisetas-nk-1.png";
 import kit5CamisetasNk2 from "@/assets/kit-5-camisetas-nk-2.png";
+import shortTommyExclusivo1 from "@/assets/short-tommy-exclusivo-1.png";
+import shortTommyExclusivo2 from "@/assets/short-tommy-exclusivo-2.png";
+
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
 
@@ -131,7 +134,9 @@ export const products: Product[] = [
   { slug: "kit-completo-nk-sportswear-lacoste", title: "KIT COMPLETO NK SPORTSWEAR", price: "159,99", oldPrice: "749,99", installment: "15,97", off: "78% OFF", kind: "kit", category: "kits-completos", sold: 1200, stock: 10, img: kitNkSportswearLacoste1, images: [kitNkSportswearLacoste1, kitNkSportswearLacoste2] },
   
   { slug: "bone-lcst-sport-diamante", title: "Boné Lcst Sport Diamante (Modelo Novo)", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 860, stock: 18, img: boneLcstSportDiamante },
+  { slug: "short-tommy-exclusivo", title: "Short Tommy Exclusivo", price: "59,99", oldPrice: "249,99", installment: "5,99", off: "76% OFF", kind: "clothing", category: "bermudas-e-shorts", sold: 1450, stock: 12, img: shortTommyExclusivo1, images: [shortTommyExclusivo1, shortTommyExclusivo2] },
 ];
+
 
 export const tommyProducts = products.filter(p => /tommy/i.test(p.title));
 import conjuntoNkAcademy1 from "@/assets/conjunto-nk-academy-1.png";
@@ -312,10 +317,27 @@ const moletomTommyExclusivoFeatured: Product = {
   images: [moletomTommyExclusivo1, moletomTommyExclusivo2, moletomTommyExclusivo3],
 };
 
+const shortTommyExclusivoFeatured: Product = {
+  slug: "short-tommy-exclusivo-featured",
+  title: "Short Tommy Exclusivo",
+  price: "59,99",
+  oldPrice: "249,99",
+  installment: "5,99",
+  off: "76% OFF",
+  kind: "clothing",
+  category: "bermudas-e-shorts",
+  sold: 1450,
+  stock: 12,
+  img: shortTommyExclusivo1,
+  images: [shortTommyExclusivo1, shortTommyExclusivo2],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
   moletomTommyExclusivoFeatured,
+  shortTommyExclusivoFeatured,
+
 
 
   ...products.filter((p) => p.slug !== "kit-3-bones-pma-bmw" && p.slug !== "shorts-nk-praia").slice(0, 8).map((p) => {
