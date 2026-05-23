@@ -256,7 +256,6 @@ export const sneakers = [...products.filter(p => p.category === "sneakers").map(
 
 const FEATURED_EXTRA_SLUGS = [
   "bone-lcst-sport-diamante",
-  "tenis-nk-court-borough-low-2",
 ];
 
 import brooksfieldDeFrio from "@/assets/brooksfield-de-frio.png";
