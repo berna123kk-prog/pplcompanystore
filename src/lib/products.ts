@@ -456,7 +456,16 @@ export const featured = [
 
 
 
-  ...products.filter((p) => p.slug !== "kit-3-bones-pma-bmw" && p.slug !== "shorts-nk-praia").slice(0, 8).map((p) => {
+  ...products.filter((p) =>
+    p.slug !== "kit-3-bones-pma-bmw" &&
+    p.slug !== "shorts-nk-praia" &&
+    p.slug !== "slide-lcst-nuvem-branco" &&
+    p.slug !== "kit-completo-lcst-sportswear" &&
+    p.slug !== "kit-tommy-velejador-2026-v3" &&
+    p.slug !== "kit-tommy-velejador-2026" &&
+    p.slug !== "kit-completo-lcst" &&
+    p.slug !== "kit-pma-bmw-m-4-pecas"
+  ).slice(0, 8).map((p) => {
     if (p.slug === "kit-completo-lcst-sportswear") {
       return { ...p, slug: "kit-completo-lcst-sportswear-featured", img: kitLcstFeatured };
     }
