@@ -254,8 +254,7 @@ export const sneakers = [...products.filter(p => p.category === "sneakers").map(
   return p;
 }), tenisPmaCavenBmw];
 
-const FEATURED_EXTRA_SLUGS = [
-  "bone-lcst-sport-diamante",
+const FEATURED_EXTRA_SLUGS: string[] = [
 ];
 
 import brooksfieldDeFrio from "@/assets/brooksfield-de-frio.png";
