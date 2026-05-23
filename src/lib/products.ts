@@ -76,6 +76,7 @@ import calcaJeansJogadorAzulRespingos from "@/assets/calca-jeans-jogador-azul-re
 import calcaJeansJogadorClaraPatches from "@/assets/calca-jeans-jogador-clara-patches.png";
 import calcaJeansJogadorPretaCityDenim from "@/assets/calca-jeans-jogador-preta-city-denim.png";
 import calcaJeansJogadorPretaCityDenimModelo from "@/assets/calca-jeans-jogador-preta-city-denim-modelo.png";
+import calcaNkCargo from "@/assets/calca-nk-cargo.png";
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -166,6 +167,7 @@ export const products: Product[] = [
   { slug: "calca-jeans-jogador-com-respingos", title: "Calça Jeans Jogador com Respingos", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 88, stock: 5, img: calcaJeansJogadorComRespingos, images: [calcaJeansJogadorComRespingos] },
   { slug: "calca-jeans-jogador-clara-com-rasgos", title: "Calça Jeans Jogador Clara com Rasgos", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 78, stock: 5, img: calcaJeansJogadorClaraComRasgos, images: [calcaJeansJogadorClaraComRasgos] },
   { slug: "calca-jeans-jogador-preta-city-denim", title: "Calça Jeans Jogador Preta", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 66, stock: 6, img: calcaJeansJogadorPretaCityDenim, images: [calcaJeansJogadorPretaCityDenim, calcaJeansJogadorPretaCityDenimModelo] },
+  { slug: "calca-nk-cargo", title: "Calça NK Cargo", price: "109,99", oldPrice: "350,00", installment: "10,99", off: "69% OFF", kind: "clothing", category: "calcas", sold: 58, stock: 7, img: calcaNkCargo, images: [calcaNkCargo] },
   { slug: "calca-jeans-jogador-azul-respingos", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 70, stock: 6, img: calcaJeansJogadorAzulRespingos, images: [calcaJeansJogadorAzulRespingos] },
   { slug: "calca-jeans-jogador-clara-patches", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 64, stock: 5, img: calcaJeansJogadorClaraPatches, images: [calcaJeansJogadorClaraPatches] },
   { slug: "sandalia-croc-classic", title: "Sandália Croc Classic", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "crocs", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
