@@ -58,6 +58,7 @@ import calcaJeansCityDenim2Detalhe from "@/assets/calca-jeans-city-denim-2-detal
 import calcaJeansSkinnyZaraRespingos from "@/assets/calca-jeans-skinny-zara-respingos.png";
 import calcaJeansSkinnyModeloJogador from "@/assets/calca-jeans-skinny-modelo-jogador.png";
 import calcaJeansCityDenim3 from "@/assets/calca-jeans-city-denim-3.png";
+import calcaJeansSkinnyZaraPreta from "@/assets/calca-jeans-skinny-zara-preta.png";
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -133,6 +134,7 @@ export const products: Product[] = [
   { slug: "calca-jeans-skinny-zara-respingos", title: "Calça Jeans Skinny Zara com Respingos", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 540, stock: 10, img: calcaJeansSkinnyZaraRespingos, images: [calcaJeansSkinnyZaraRespingos] },
   { slug: "calca-jeans-skinny-modelo-jogador", title: "Calça Jeans Skinny Modelo Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 410, stock: 9, img: calcaJeansSkinnyModeloJogador, images: [calcaJeansSkinnyModeloJogador] },
   { slug: "calca-jeans-city-denim-3", title: "Calça Jeans City Denim", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 320, stock: 8, img: calcaJeansCityDenim3, images: [calcaJeansCityDenim3] },
+  { slug: "calca-jeans-skinny-zara-preta", title: "Calça Jeans Skinny Zara", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 280, stock: 8, img: calcaJeansSkinnyZaraPreta, images: [calcaJeansSkinnyZaraPreta] },
   { slug: "sandalia-croc-classic", title: "Sandália Croc Classic", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "crocs", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "chinelo-nk-victori-one", title: "Chinelo NK Slide Victori One", price: "59,99", oldPrice: "190,00", installment: "5,99", off: "70% OFF", kind: "footwear", category: "slides", sold: 3300, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "kit", category: "kits-completos", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
