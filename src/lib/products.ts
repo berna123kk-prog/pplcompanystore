@@ -256,7 +256,6 @@ export const sneakers = [...products.filter(p => p.category === "sneakers").map(
 
 const FEATURED_EXTRA_SLUGS = [
   "bone-lcst-sport-diamante",
-  "tenis-nk-court-borough-low-2",
 ];
 
 import brooksfieldDeFrio from "@/assets/brooksfield-de-frio.png";
@@ -278,7 +277,7 @@ const brooksfieldFeatured: Product = {
 
 export const featured = [
   brooksfieldFeatured,
-  ...products.slice(0, 8).map((p) => {
+  ...products.filter((p) => p.slug !== "kit-3-bones-pma-bmw").slice(0, 8).map((p) => {
     if (p.slug === "kit-completo-lcst-sportswear") {
       return { ...p, slug: "kit-completo-lcst-sportswear-featured", img: kitLcstFeatured };
     }
