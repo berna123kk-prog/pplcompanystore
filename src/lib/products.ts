@@ -354,12 +354,31 @@ const kitLacosteLuxoProduct: Product = {
   slug: "kit-lacoste-luxo-kits",
 };
 
+import blusaPumaFerrari1 from "@/assets/blusa-puma-ferrari-1.png";
+
+const blusaPumaFerrariFeatured: Product = {
+  slug: "blusa-puma-ferrari-featured",
+  title: "Blusa Colab Puma + Ferrari (Limitado)",
+  price: "129,99",
+  oldPrice: "599,99",
+  installment: "12,99",
+  off: "78% OFF",
+  kind: "clothing",
+  category: "blusas",
+  sold: 1340,
+  stock: 6,
+  img: blusaPumaFerrari1,
+  images: [blusaPumaFerrari1],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
   moletomTommyExclusivoFeatured,
   shortTommyExclusivoFeatured,
   kitLacosteLuxoFeatured,
+  blusaPumaFerrariFeatured,
+
 
 
 
