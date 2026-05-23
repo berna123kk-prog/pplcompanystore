@@ -51,6 +51,8 @@ import blusaLacosteFrio from "@/assets/blusa-lacoste-frio.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
 import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
 import correntinhaPulseirinhaOuro from "@/assets/correntinha-pulseirinha-ouro.png";
+import calcaJeansDestroyedFrente from "@/assets/calca-jeans-destroyed-frente.png";
+import calcaJeansDestroyedDetalhe from "@/assets/calca-jeans-destroyed-detalhe.png";
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -121,7 +123,7 @@ export const products: Product[] = [
   { slug: "kit-nk-academy-slide-bone", title: "Kit NK Academy Completo com Slide e Boné", price: "99,99", oldPrice: "499,00", installment: "9,98", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3501, stock: 11, img: kitNkAcademySlideBone },
   { slug: "camiseta-nk-worldtour", title: "Camiseta NK Worldtour", price: "59,99", oldPrice: "240,00", installment: "5,99", off: "76% OFF", kind: "clothing", category: "camisetas", sold: 1500, stock: 20, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
   { slug: "blusa-polo-lacoste", title: "Blusa Polo Lacoste", price: "59,99", oldPrice: "299,99", installment: "5,99", off: "80% OFF", kind: "clothing", category: "camisetas", sold: 2100, stock: 18, img: blusaPoloLacoste, images: [blusaPoloLacoste] },
-  { slug: "calca-jeans-city-denim", title: "Calça Jeans City Denim", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 900, stock: 15, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6615.png?v=1775625469&width=1200" },
+  { slug: "calca-jeans-city-denim", title: "Calça Jeans City Denim", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 900, stock: 15, img: calcaJeansDestroyedFrente, images: [calcaJeansDestroyedFrente, calcaJeansDestroyedDetalhe] },
   { slug: "sandalia-croc-classic", title: "Sandália Croc Classic", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "crocs", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "chinelo-nk-victori-one", title: "Chinelo NK Slide Victori One", price: "59,99", oldPrice: "190,00", installment: "5,99", off: "70% OFF", kind: "footwear", category: "slides", sold: 3300, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "kit", category: "kits-completos", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
