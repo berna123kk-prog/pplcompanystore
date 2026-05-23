@@ -92,6 +92,7 @@ import calcaNkTechFleeceCinza3 from "@/assets/calca-nk-tech-fleece-cinza-3.png";
 import calcaNkTechFleeceCinza4 from "@/assets/calca-nk-tech-fleece-cinza-4.png";
 import calcaNkTechFleeceCinza5 from "@/assets/calca-nk-tech-fleece-cinza-5.png";
 import calcaNkTechFleeceCinza6 from "@/assets/calca-nk-tech-fleece-cinza-6.png";
+import calcaNkTechFleeceWindrunner from "@/assets/calca-nk-tech-fleece-windrunner.png";
 
 
 
@@ -189,6 +190,7 @@ export const products: Product[] = [
   { slug: "calca-nk-tech-fleece", title: "Calça NK Tech Fleece", price: "129,99", oldPrice: "400,00", installment: "12,99", off: "68% OFF", kind: "clothing", category: "calcas", sold: 48, stock: 6, img: calcaNkTechFleece, images: [calcaNkTechFleece] },
   { slug: "calca-nk-moletom-dry-fit", title: "Calça NK Moletom Dry-Fit", price: "99,99", oldPrice: "330,00", installment: "9,99", off: "70% OFF", kind: "clothing", category: "calcas", sold: 57, stock: 7, img: calcaNkMoletomDryFit1, images: [calcaNkMoletomDryFit1, calcaNkMoletomDryFit2, calcaNkMoletomDryFit3] },
   { slug: "calca-nk-tech-fleece-cinza", title: "Calça NK Tech Fleece Cinza", price: "129,99", oldPrice: "400,00", installment: "12,99", off: "68% OFF", kind: "clothing", category: "calcas", sold: 51, stock: 6, img: calcaNkTechFleeceCinza1, images: [calcaNkTechFleeceCinza1, calcaNkTechFleeceCinza2, calcaNkTechFleeceCinza3, calcaNkTechFleeceCinza4, calcaNkTechFleeceCinza5, calcaNkTechFleeceCinza6] },
+  { slug: "calca-nk-tech-fleece-windrunner", title: "Calça NK Tech Fleece Windrunner", price: "129,99", oldPrice: "400,00", installment: "12,99", off: "68% OFF", kind: "clothing", category: "calcas", sold: 44, stock: 7, img: calcaNkTechFleeceWindrunner, images: [calcaNkTechFleeceWindrunner] },
   { slug: "calca-jeans-jogador-azul-respingos", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 70, stock: 6, img: calcaJeansJogadorAzulRespingos, images: [calcaJeansJogadorAzulRespingos] },
   { slug: "calca-jeans-jogador-clara-patches", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 64, stock: 5, img: calcaJeansJogadorClaraPatches, images: [calcaJeansJogadorClaraPatches] },
   { slug: "sandalia-croc-classic", title: "Sandália Croc Classic", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "crocs", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
