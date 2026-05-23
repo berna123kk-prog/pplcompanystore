@@ -263,6 +263,9 @@ import jaquetaNikeSportwear2 from "@/assets/jaqueta-nike-sportwear-2.png";
 import jaquetaNikeSportwear3 from "@/assets/jaqueta-nike-sportwear-3.png";
 import jaquetaNikeSportwear4 from "@/assets/jaqueta-nike-sportwear-4.png";
 import jaquetaNikeSportwear5 from "@/assets/jaqueta-nike-sportwear-5.png";
+import moletomTommyExclusivo1 from "@/assets/moletom-tommy-exclusivo-1.png";
+import moletomTommyExclusivo2 from "@/assets/moletom-tommy-exclusivo-2.png";
+import moletomTommyExclusivo3 from "@/assets/moletom-tommy-exclusivo-3.png";
 
 const brooksfieldFeatured: Product = {
   slug: "brooksfield-de-frio-featured",
@@ -294,9 +297,26 @@ const jaquetaNikeSportwearFeatured: Product = {
   images: [jaquetaNikeSportwear1, jaquetaNikeSportwear2, jaquetaNikeSportwear3, jaquetaNikeSportwear4, jaquetaNikeSportwear5],
 };
 
+const moletomTommyExclusivoFeatured: Product = {
+  slug: "moletom-tommy-exclusivo-featured",
+  title: "Moletom Tommy Exclusivo",
+  price: "99,99",
+  oldPrice: "499,99",
+  installment: "9,99",
+  off: "80% OFF",
+  kind: "clothing",
+  category: "jaquetas-e-moletons",
+  sold: 1620,
+  stock: 7,
+  img: moletomTommyExclusivo1,
+  images: [moletomTommyExclusivo1, moletomTommyExclusivo2, moletomTommyExclusivo3],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
+  moletomTommyExclusivoFeatured,
+
 
   ...products.filter((p) => p.slug !== "kit-3-bones-pma-bmw" && p.slug !== "shorts-nk-praia").slice(0, 8).map((p) => {
     if (p.slug === "kit-completo-lcst-sportswear") {
