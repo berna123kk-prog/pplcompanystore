@@ -371,6 +371,23 @@ const blusaPumaFerrariFeatured: Product = {
   images: [blusaPumaFerrari1],
 };
 
+import jaquetaPumaFerrariMochila1 from "@/assets/jaqueta-puma-ferrari-mochila-1.png";
+
+const jaquetaPumaFerrariMochilaFeatured: Product = {
+  slug: "jaqueta-puma-ferrari-mochila-featured",
+  title: "Jaqueta Colab Puma e Ferrari + Mochila Brinde",
+  price: "129,99",
+  oldPrice: "699,99",
+  installment: "12,99",
+  off: "81% OFF",
+  kind: "clothing",
+  category: "jaquetas-e-moletons",
+  sold: 1410,
+  stock: 5,
+  img: jaquetaPumaFerrariMochila1,
+  images: [jaquetaPumaFerrariMochila1],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
@@ -378,6 +395,7 @@ export const featured = [
   shortTommyExclusivoFeatured,
   kitLacosteLuxoFeatured,
   blusaPumaFerrariFeatured,
+  jaquetaPumaFerrariMochilaFeatured,
 
 
 
