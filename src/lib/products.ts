@@ -388,6 +388,23 @@ const jaquetaPumaFerrariMochilaFeatured: Product = {
   images: [jaquetaPumaFerrariMochila1],
 };
 
+import kitMizunoBranco2026_1 from "@/assets/kit-mizuno-branco-2026-1.png";
+
+const kitMizunoBranco2026Featured: Product = {
+  slug: "kit-mizuno-branco-2026-featured",
+  title: "Kit Mizuno Branco 2026",
+  price: "279,99",
+  oldPrice: "1.299,99",
+  installment: "27,99",
+  off: "78% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1180,
+  stock: 4,
+  img: kitMizunoBranco2026_1,
+  images: [kitMizunoBranco2026_1],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
@@ -396,6 +413,7 @@ export const featured = [
   kitLacosteLuxoFeatured,
   blusaPumaFerrariFeatured,
   jaquetaPumaFerrariMochilaFeatured,
+  kitMizunoBranco2026Featured,
 
 
 
