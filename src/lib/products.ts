@@ -425,8 +425,9 @@ export const featured = [
     p.slug !== "kit-pma-bmw-m-4-pecas" &&
     p.slug !== "chinelo-nk-victori-one" &&
     p.slug !== "camiseta-nk-worldtour" &&
-    p.slug !== "kit-nk-academy-slide-bone"
-  ).slice(0, 6).map((p) => {
+    p.slug !== "kit-nk-academy-slide-bone" &&
+    p.slug !== "sandalia-croc-classic"
+  ).slice(0, 5).map((p) => {
     if (p.slug === "kit-completo-lcst-sportswear") {
       return { ...p, slug: "kit-completo-lcst-sportswear-featured", img: kitLcstFeatured };
     }
