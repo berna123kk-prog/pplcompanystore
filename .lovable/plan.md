@@ -1,19 +1,18 @@
-## Adicionar produto em "Produtos em Destaque"
+## Adicionar "Blusa Lacoste Frio" em Jaquetas e Moletons
 
-**Novo produto:** Kit Lacoste Branco + Mizuno — R$ 239,99
+**Preço:** R$ 129,99
 
 ### Passos
 
-1. Copiar a imagem enviada para `src/assets/kit-lacoste-branco-mizuno.png`.
+1. Copiar a imagem enviada para `src/assets/blusa-lacoste-frio.png`.
 2. Em `src/lib/products.ts`:
    - Importar a nova imagem.
-   - Criar `kitLacosteBrancoMizunoFeatured: Product` com:
-     - slug: `kit-lacoste-branco-mizuno-featured`
-     - title: `Kit Lacoste Branco + Mizuno`
-     - price: `239,99`
-     - oldPrice/installment/off coerentes com os outros featured (ex.: oldPrice `799,99`, installment `23,99`, off `70% OFF`)
-     - kind: `kit`, category: `kits-completos`
+   - Adicionar um novo produto ao array `products` com:
+     - slug: `blusa-lacoste-frio`
+     - title: `Blusa Lacoste Frio`
+     - price: `129,99`
+     - oldPrice: `799,99`, installment: `12,99`, off: `83% OFF` (coerente com vizinhos)
+     - kind: `clothing`, category: `jaquetas-e-moletons`
      - img/images apontando para a nova imagem
-   - Adicionar ao array `featured` (no início, junto aos outros itens fixos).
 
-Sem mudanças em UI — a página inicial já renderiza `featured` na seção "Produtos em Destaque".
+Sem mudanças em UI — a página `/colecoes/jaquetas-e-moletons` já filtra por categoria.
