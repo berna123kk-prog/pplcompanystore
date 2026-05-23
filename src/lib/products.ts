@@ -50,6 +50,7 @@ import kitLacosteBrancoMizuno from "@/assets/kit-lacoste-branco-mizuno.png";
 import blusaLacosteFrio from "@/assets/blusa-lacoste-frio.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
 import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
+import correntinhaPulseirinhaOuro from "@/assets/correntinha-pulseirinha-ouro.png";
 
 
 export type ProductKind = "footwear" | "clothing" | "kit" | "accessory";
@@ -107,6 +108,7 @@ export const products: Product[] = [
   { slug: "slide-lcst-nuvem-branco", title: "Slide Lcst Nuvem Branco", price: "5,00", oldPrice: "349,99", installment: "0,50", off: "69% OFF", kind: "footwear", category: "slides", sold: 8523, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "combo-kit-3-blusas-zip-tommy", title: "Jaqueta Tommy Velejador Sustainable", price: "149,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: jaquetaTommyVelejador1, images: [jaquetaTommyVelejador1, jaquetaTommyVelejador2] },
   { slug: "blusa-lacoste-frio", title: "Blusa Lacoste Frio", price: "129,99", oldPrice: "799,99", installment: "12,99", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1840, stock: 10, img: blusaLacosteFrio, images: [blusaLacosteFrio] },
+  { slug: "correntinha-pulseirinha-ouro", title: "Correntinha + Pulseirinha de Ouro", price: "99,99", oldPrice: "499,99", installment: "9,99", off: "80% OFF", kind: "accessory", category: "acessorios", sold: 1320, stock: 8, img: correntinhaPulseirinhaOuro, images: [correntinhaPulseirinhaOuro] },
   { slug: "kit-completo-lcst-sportswear", title: "Kit Completo Lcst Sportswear", price: "149,99", oldPrice: "749,99", installment: "14,97", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3421, stock: 9, img: kitLcstSportswear },
   { slug: "kit-tommy-velejador-2026-v3", title: "Jaqueta branca Tommy Velejador Modelo Antigo", price: "159,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 4188, stock: 6, img: jaquetaTommyBranca1, images: [jaquetaTommyBranca1, jaquetaTommyBranca2, jaquetaTommyBranca3, jaquetaTommyBranca4] },
   { slug: "jaqueta-nasa", title: "Jaqueta Nasa - A do Momento", price: "99,99", oldPrice: "", installment: "9,98", off: "", kind: "clothing", category: "jaquetas-e-moletons", sold: 1722, stock: 14, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
