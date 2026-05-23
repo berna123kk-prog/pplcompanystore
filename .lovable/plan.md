@@ -1,18 +1,15 @@
-## Adicionar "Blusa Lacoste Frio" em Jaquetas e Moletons
+## Adicionar "Calça Jeans Skinny Modelo Jogador" em Calças
 
-**Preço:** R$ 129,99
+**Preço:** R$ 79,99
 
 ### Passos
 
-1. Copiar a imagem enviada para `src/assets/blusa-lacoste-frio.png`.
+1. Copiar a imagem enviada para `src/assets/calca-jeans-skinny-modelo-jogador.png`.
 2. Em `src/lib/products.ts`:
    - Importar a nova imagem.
-   - Adicionar um novo produto ao array `products` com:
-     - slug: `blusa-lacoste-frio`
-     - title: `Blusa Lacoste Frio`
-     - price: `129,99`
-     - oldPrice: `799,99`, installment: `12,99`, off: `83% OFF` (coerente com vizinhos)
-     - kind: `clothing`, category: `jaquetas-e-moletons`
+   - Adicionar produto ao array:
+     - slug: `calca-jeans-skinny-modelo-jogador`
+     - title: `Calça Jeans Skinny Modelo Jogador`
+     - price: `79,99`, oldPrice: `300,00`, installment: `7,99`, off: `80% OFF`
+     - kind: `clothing`, category: `calcas`
      - img/images apontando para a nova imagem
-
-Sem mudanças em UI — a página `/colecoes/jaquetas-e-moletons` já filtra por categoria.
