@@ -423,6 +423,23 @@ const kitLacosteFrioMescladoFeatured: Product = {
   images: [kitLacosteFrioMesclado1, kitLacosteFrioMesclado2],
 };
 
+import kitLacosteBermudaPolo1 from "@/assets/kit-lacoste-bermuda-polo-1.png";
+
+const kitLacosteBermudaPoloFeatured: Product = {
+  slug: "kit-lacoste-bermuda-polo-featured",
+  title: "Kit Lacoste Bermuda e Polo",
+  price: "89,99",
+  oldPrice: "499,99",
+  installment: "8,99",
+  off: "82% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1520,
+  stock: 8,
+  img: kitLacosteBermudaPolo1,
+  images: [kitLacosteBermudaPolo1],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
@@ -433,6 +450,7 @@ export const featured = [
   jaquetaPumaFerrariMochilaFeatured,
   kitMizunoBranco2026Featured,
   kitLacosteFrioMescladoFeatured,
+  kitLacosteBermudaPoloFeatured,
 
 
 
