@@ -569,7 +569,25 @@ const kitCompletoMizunoProduct: Product = {
   images: [kitCompletoMizuno1],
 };
 
-export const kits = [kitCompletoMizunoProduct, kitLacosteCompletoV2Product, kitLacosteMizunoNovoProduct, kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+import kitTommy2025_1 from "@/assets/kit-tommy-2025-1.png";
+
+const kitTommy2025Product: Product = {
+  slug: "kit-tommy-2025-kits",
+  title: "Kit da Tommy 2025",
+  price: "169,99",
+  oldPrice: "799,99",
+  installment: "16,99",
+  off: "79% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1380,
+  stock: 6,
+  img: kitTommy2025_1,
+  images: [kitTommy2025_1],
+};
+
+export const kits = [kitTommy2025Product, kitCompletoMizunoProduct, kitLacosteCompletoV2Product, kitLacosteMizunoNovoProduct, kitLacosteRedProduct, kitLalaCompletoProduct, kitLacosteMizunoCompletoProduct, kitLacosteCompletoProduct, kitLacosteMizunoProduct, kitPumaBmwProduct, kitRegataLacosteProduct, ...products.filter((p) => p.kind === "kit").map((p) => {
+
 
 
 
