@@ -405,6 +405,24 @@ const kitMizunoBranco2026Featured: Product = {
   images: [kitMizunoBranco2026_1],
 };
 
+import kitLacosteFrioMesclado1 from "@/assets/kit-lacoste-frio-mesclado-1.png";
+import kitLacosteFrioMesclado2 from "@/assets/kit-lacoste-frio-mesclado-2.png";
+
+const kitLacosteFrioMescladoFeatured: Product = {
+  slug: "kit-lacoste-frio-mesclado-featured",
+  title: "Kit Lacoste de Frio Mesclado 2026",
+  price: "159,99",
+  oldPrice: "799,99",
+  installment: "15,99",
+  off: "80% OFF",
+  kind: "kit",
+  category: "kits-completos",
+  sold: 1260,
+  stock: 6,
+  img: kitLacosteFrioMesclado1,
+  images: [kitLacosteFrioMesclado1, kitLacosteFrioMesclado2],
+};
+
 export const featured = [
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
@@ -414,6 +432,7 @@ export const featured = [
   blusaPumaFerrariFeatured,
   jaquetaPumaFerrariMochilaFeatured,
   kitMizunoBranco2026Featured,
+  kitLacosteFrioMescladoFeatured,
 
 
 
