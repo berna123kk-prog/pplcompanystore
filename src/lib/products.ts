@@ -55,6 +55,7 @@ import shortsNkPraiaAzul1 from "@/assets/shorts-nk-praia-azul-1.png";
 import shortsNkPraiaAzul2 from "@/assets/shorts-nk-praia-azul-2.png";
 import shortsNkPraiaCinza from "@/assets/shorts-nk-praia-cinza.png";
 import shortsNkPraiaChuvaDeNk from "@/assets/shorts-nk-praia-chuva-de-nk.png";
+import bermudaJeansJogadorDestroyed from "@/assets/bermuda-jeans-jogador-destroyed.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
 import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
 import correntinhaPulseirinhaOuro from "@/assets/correntinha-pulseirinha-ouro.png";
