@@ -59,6 +59,7 @@ import bermudaJeansJogadorDestroyed from "@/assets/bermuda-jeans-jogador-destroy
 import bermudaJeansJogadorClara2 from "@/assets/bermuda-jeans-jogador-clara-2.png";
 import bermudaNkBySwoosh1 from "@/assets/bermuda-nk-by-swoosh-1.png";
 import bermudaNkBySwoosh2 from "@/assets/bermuda-nk-by-swoosh-2.png";
+import doisBermudasNkSwoosh from "@/assets/2-bermudas-nk-swoosh.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
 import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
 import correntinhaPulseirinhaOuro from "@/assets/correntinha-pulseirinha-ouro.png";
