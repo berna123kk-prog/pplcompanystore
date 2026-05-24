@@ -48,6 +48,7 @@ import shortTommyExclusivo1 from "@/assets/short-tommy-exclusivo-1.png";
 import shortTommyExclusivo2 from "@/assets/short-tommy-exclusivo-2.png";
 import kitLacosteBrancoMizuno from "@/assets/kit-lacoste-branco-mizuno.png";
 import blusaLacosteFrio from "@/assets/blusa-lacoste-frio.png";
+import bermudaJeansJogador from "@/assets/bermuda-jeans-jogador.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
 import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
 import correntinhaPulseirinhaOuro from "@/assets/correntinha-pulseirinha-ouro.png";
