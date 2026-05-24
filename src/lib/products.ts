@@ -66,6 +66,8 @@ import kit3BermudasNkDriFit1 from "@/assets/kit-3-bermudas-nk-dri-fit-1.png";
 import kit3BermudasNkDriFit2 from "@/assets/kit-3-bermudas-nk-dri-fit-2.png";
 import kit3BermudasNkDriFit3 from "@/assets/kit-3-bermudas-nk-dri-fit-3.png";
 import kit3BermudasNkDriFit4 from "@/assets/kit-3-bermudas-nk-dri-fit-4.png";
+import shortsNkAthletics1 from "@/assets/shorts-nk-athletics-1.png";
+import shortsNkAthletics2 from "@/assets/shorts-nk-athletics-2.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
 import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
 import correntinhaPulseirinhaOuro from "@/assets/correntinha-pulseirinha-ouro.png";
@@ -191,6 +193,7 @@ export const products: Product[] = [
   { slug: "2-bermudas-nk-swoosh", title: "2 Bermudas NK Swoosh", price: "109,99", oldPrice: "", installment: "10,99", off: "", kind: "clothing", category: "bermudas-e-shorts", sold: 0, stock: 10, img: doisBermudasNkSwoosh, images: [doisBermudasNkSwoosh] },
   { slug: "shorts-nk-sportswear", title: "Shorts NK Sportswear", price: "69,99", oldPrice: "", installment: "6,99", off: "", kind: "clothing", category: "bermudas-e-shorts", sold: 0, stock: 10, img: shortsNkSportswear1, images: [shortsNkSportswear1, shortsNkSportswear2] },
   { slug: "kit-3-bermudas-nk-dri-fit", title: "Kit 3 Bermudas NK Dri-FIT", price: "79,99", oldPrice: "", installment: "7,99", off: "", kind: "clothing", category: "bermudas-e-shorts", sold: 0, stock: 10, img: kit3BermudasNkDriFit1, images: [kit3BermudasNkDriFit1, kit3BermudasNkDriFit2, kit3BermudasNkDriFit3, kit3BermudasNkDriFit4] },
+  { slug: "shorts-nk-athletics", title: "Shorts NK Athletics", price: "69,99", oldPrice: "", installment: "6,99", off: "", kind: "clothing", category: "bermudas-e-shorts", sold: 0, stock: 10, img: shortsNkAthletics1, images: [shortsNkAthletics1, shortsNkAthletics2] },
   { slug: "kit-3-bones-pma-bmw", title: "Kit 3 Bonés Pma BMW Motosport", price: "129,99", oldPrice: "259,99", installment: "12,98", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 22, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
   { slug: "jaqueta-tommy-velejador", title: "Jaqueta Tommy Velejador Modelo Antigo", price: "139,99", oldPrice: "999,00", installment: "13,97", off: "86% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 3088, stock: 8, img: jaquetaTommyModeloAntigo1, images: [jaquetaTommyModeloAntigo1, jaquetaTommyModeloAntigo2, jaquetaTommyModeloAntigo3, jaquetaTommyModeloAntigo4] },
   { slug: "kit-tommy-velejador-2026", title: "Kit Completo hilfiger  Velejador 2026", price: "179,99", oldPrice: "1.350,00", installment: "17,97", off: "87% OFF", kind: "kit", category: "kits-completos", sold: 1455, stock: 5, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
