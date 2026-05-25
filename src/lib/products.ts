@@ -101,6 +101,8 @@ import bagNkElementalPremiumCrossbody from "@/assets/bag-nk-elemental-premium-cr
 import boneLcstSportAbaRetaRedinha from "@/assets/bone-lcst-sport-aba-reta-redinha.png";
 import boneLcstSportAbaRetaRedinhaPreto1 from "@/assets/bone-lcst-sport-aba-reta-redinha-preto-1.png";
 import boneLcstSportAbaRetaRedinhaPreto2 from "@/assets/bone-lcst-sport-aba-reta-redinha-preto-2.png";
+import boneLcstSportAbaRetaRedinhaMint1 from "@/assets/bone-lcst-sport-aba-reta-redinha-mint-1.png";
+import boneLcstSportAbaRetaRedinhaMint2 from "@/assets/bone-lcst-sport-aba-reta-redinha-mint-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
 import boneNkBranco from "@/assets/bone-nk-branco.png";
 import boneNkRafaNadal1 from "@/assets/bone-nk-rafa-nadal-1.png";
@@ -295,6 +297,7 @@ export const products: Product[] = [
   { slug: "bag-nk-elemental-premium-crossbody", title: "Bag NK Elemental Premium Crossbody Bag (4L)", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: bagNkElementalPremiumCrossbody, images: [bagNkElementalPremiumCrossbody] },
   { slug: "bone-lcst-sport-aba-reta-redinha", title: "Boné Lcst Sport Aba Reta Redinha", price: "189,99", oldPrice: "499,99", installment: "18,99", off: "62% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportAbaRetaRedinha, images: [boneLcstSportAbaRetaRedinha] },
   { slug: "bone-lcst-sport-aba-reta-redinha-preto", title: "Boné Lcst Sport Aba Reta Redinha Preto", price: "189,99", oldPrice: "499,99", installment: "18,99", off: "62% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportAbaRetaRedinhaPreto1, images: [boneLcstSportAbaRetaRedinhaPreto1, boneLcstSportAbaRetaRedinhaPreto2] },
+  { slug: "bone-lcst-sport-aba-reta-redinha-mint", title: "Boné Lcst Sport Aba Reta Redinha Mint", price: "189,99", oldPrice: "499,99", installment: "18,99", off: "62% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportAbaRetaRedinhaMint1, images: [boneLcstSportAbaRetaRedinhaMint1, boneLcstSportAbaRetaRedinhaMint2] },
   { slug: "bone-lcst-five-panel-monograma", title: "Boné Lcst Five Panel Monograma", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstFivePanelMonograma, images: [boneLcstFivePanelMonograma] },
   { slug: "bone-nk-branco", title: "Boné NK", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkBranco, images: [boneNkBranco] },
   { slug: "bone-nk-rafa-nadal", title: "Boné NK Rafa Nadal Modelo Antigo", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkRafaNadal1, images: [boneNkRafaNadal1, boneNkRafaNadal2] },
