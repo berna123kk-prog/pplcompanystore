@@ -69,6 +69,8 @@ import kit3BermudasNkDriFit4 from "@/assets/kit-3-bermudas-nk-dri-fit-4.png";
 import shortsNkAthletics1 from "@/assets/shorts-nk-athletics-1.png";
 import shortsNkAthletics2 from "@/assets/shorts-nk-athletics-2.png";
 import bonePmaMotosportBmw from "@/assets/bone-pma-motosport-bmw.png";
+import boneLcstMiamiOpen1 from "@/assets/bone-lcst-miami-open-1.png";
+import boneLcstMiamiOpen2 from "@/assets/bone-lcst-miami-open-2.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
 import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
 import correntinhaPulseirinhaOuro from "@/assets/correntinha-pulseirinha-ouro.png";
