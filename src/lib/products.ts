@@ -94,6 +94,8 @@ import boneLcstSportBranco2 from "@/assets/bone-lcst-sport-branco-2.png";
 import boneLcstSportBranco3 from "@/assets/bone-lcst-sport-branco-3.png";
 import boneLcstRolandGarros1 from "@/assets/bone-lcst-roland-garros-1.png";
 import boneLcstRolandGarros2 from "@/assets/bone-lcst-roland-garros-2.png";
+import boneLcstRene3d1 from "@/assets/bone-lcst-rene-3d-1.png";
+import boneLcstRene3d2 from "@/assets/bone-lcst-rene-3d-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
 import boneNkBranco from "@/assets/bone-nk-branco.png";
 import boneNkRafaNadal1 from "@/assets/bone-nk-rafa-nadal-1.png";
@@ -283,6 +285,7 @@ export const products: Product[] = [
   { slug: "bolsa-jordan-monogram-duffle", title: "Bolsa Jordan Monogram Duffle", price: "139,99", oldPrice: "449,99", installment: "13,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 5, img: bolsaJordanMonogramDuffle1, images: [bolsaJordanMonogramDuffle1, bolsaJordanMonogramDuffle2] },
   { slug: "bone-lcst-sport-branco", title: "Boné Lcst Sport", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportBranco1, images: [boneLcstSportBranco1, boneLcstSportBranco2, boneLcstSportBranco3] },
   { slug: "bone-lcst-roland-garros", title: "Boné Lcst Roland Garros", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstRolandGarros1, images: [boneLcstRolandGarros1, boneLcstRolandGarros2] },
+  { slug: "bone-lcst-rene-3d", title: "Boné Lcst Renê Lcst 3D", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstRene3d1, images: [boneLcstRene3d1, boneLcstRene3d2] },
   { slug: "bone-lcst-five-panel-monograma", title: "Boné Lcst Five Panel Monograma", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstFivePanelMonograma, images: [boneLcstFivePanelMonograma] },
   { slug: "bone-nk-branco", title: "Boné NK", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkBranco, images: [boneNkBranco] },
   { slug: "bone-nk-rafa-nadal", title: "Boné NK Rafa Nadal Modelo Antigo", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkRafaNadal1, images: [boneNkRafaNadal1, boneNkRafaNadal2] },
