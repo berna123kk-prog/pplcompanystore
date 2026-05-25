@@ -16,7 +16,7 @@ function authHeaders() {
   };
 }
 
-import { products } from "./products";
+import { getProduct } from "./products";
 
 const depositSchema = z.object({
   items: z
