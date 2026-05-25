@@ -74,6 +74,9 @@ import boneLcstMiamiOpen2 from "@/assets/bone-lcst-miami-open-2.png";
 import boneLcstSport2Faixas1 from "@/assets/bone-lcst-sport-2-faixas-1.png";
 import boneLcstSport2Faixas2 from "@/assets/bone-lcst-sport-2-faixas-2.png";
 import boneLcstSport2Faixas3 from "@/assets/bone-lcst-sport-2-faixas-3.png";
+import relogioBapexClassic1 from "@/assets/relogio-bapex-classic-1.png";
+import relogioBapexClassic2 from "@/assets/relogio-bapex-classic-2.png";
+import relogioBapexClassic3 from "@/assets/relogio-bapex-classic-3.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
 import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
 import correntinhaPulseirinhaOuro from "@/assets/correntinha-pulseirinha-ouro.png";
@@ -244,6 +247,7 @@ export const products: Product[] = [
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
+  { slug: "relogio-bapex-classic-type-1", title: "Relógio BAPEX A Bathing Ape Classic Type 1", price: "179,99", oldPrice: "599,99", installment: "17,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: relogioBapexClassic1, images: [relogioBapexClassic1, relogioBapexClassic2, relogioBapexClassic3] },
   { slug: "bone-pma-motosport-bmw", title: "Boné Pma Motosport BMW", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 760, stock: 18, img: bonePmaMotosportBmw, images: [bonePmaMotosportBmw] },
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
