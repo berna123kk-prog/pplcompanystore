@@ -74,6 +74,8 @@ import boneLcstMiamiOpen2 from "@/assets/bone-lcst-miami-open-2.png";
 import boneLcstSport2Faixas1 from "@/assets/bone-lcst-sport-2-faixas-1.png";
 import boneLcstSport2Faixas2 from "@/assets/bone-lcst-sport-2-faixas-2.png";
 import boneLcstSport2Faixas3 from "@/assets/bone-lcst-sport-2-faixas-3.png";
+import boneNkRafaNadal1 from "@/assets/bone-nk-rafa-nadal-1.png";
+import boneNkRafaNadal2 from "@/assets/bone-nk-rafa-nadal-2.png";
 import kitCordaoPulseiraTrevo from "@/assets/kit-cordao-pulseira-trevo.png";
 import relogioBapexClassic1 from "@/assets/relogio-bapex-classic-1.png";
 import relogioBapexClassic2 from "@/assets/relogio-bapex-classic-2.png";
@@ -248,6 +250,7 @@ export const products: Product[] = [
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
+  { slug: "bone-nk-rafa-nadal", title: "Boné NK Rafa Nadal Modelo Antigo", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkRafaNadal1, images: [boneNkRafaNadal1, boneNkRafaNadal2] },
   { slug: "kit-cordao-pulseira-trevo", title: "Kit Cordão e Pulseira Trevo", price: "89,99", oldPrice: "269,99", installment: "8,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: kitCordaoPulseiraTrevo, images: [kitCordaoPulseiraTrevo] },
   { slug: "relogio-bapex-classic-type-1", title: "Relógio BAPEX A Bathing Ape Classic Type 1", price: "179,99", oldPrice: "599,99", installment: "17,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: relogioBapexClassic1, images: [relogioBapexClassic1, relogioBapexClassic2, relogioBapexClassic3] },
   { slug: "bone-pma-motosport-bmw", title: "Boné Pma Motosport BMW", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 760, stock: 18, img: bonePmaMotosportBmw, images: [bonePmaMotosportBmw] },
