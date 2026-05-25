@@ -68,7 +68,7 @@ export const createDeposit = createServerFn({ method: "POST" })
     let amount = 0;
     const titles: string[] = [];
     for (const it of data.items) {
-      const product = products.find((p) => p.slug === it.slug);
+      const product = getProduct(it.slug);
       if (!product) {
         throw new Error(`Produto não encontrado: ${it.slug}`);
       }
