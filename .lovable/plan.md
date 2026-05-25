@@ -1,11 +1,10 @@
-Adicionar "Kit Cordão e Pulseira Trevo" (R$ 89,99) em **Acessórios**.
+Adicionar "Boné NK Rafa Nadal Modelo Antigo" (R$ 59,99) em **Acessórios**.
 
 ## Passos
-1. Copiar imagem para `src/assets/kit-cordao-pulseira-trevo.png`.
+1. Copiar 2 imagens para `src/assets/bone-nk-rafa-nadal-1.png` e `bone-nk-rafa-nadal-2.png`.
 2. Em `src/lib/products.ts`:
-   - Adicionar import da imagem
+   - Adicionar imports
    - Adicionar produto:
-     - slug: `kit-cordao-pulseira-trevo`
-     - title: `Kit Cordão e Pulseira Trevo`
-     - price: `89,99` / installment: `8,99` / oldPrice: `269,99` / off: `67% OFF`
+     - slug: `bone-nk-rafa-nadal`
+     - price: `59,99` / installment: `5,99` / oldPrice: `199,99` / off: `70% OFF`
      - category: `acessorios`, kind: `accessory`
