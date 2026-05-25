@@ -81,6 +81,7 @@ import boneLcstSportMeshDonJuanPreto1 from "@/assets/bone-lcst-sport-mesh-don-ju
 import boneLcstSportMeshDonJuanPreto2 from "@/assets/bone-lcst-sport-mesh-don-juan-preto-2.png";
 import boneMizunoBranco from "@/assets/bone-mizuno-branco.png";
 import boneNkFutura from "@/assets/bone-nk-futura.png";
+import boneNkMetal from "@/assets/bone-nk-metal.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
 import boneNkBranco from "@/assets/bone-nk-branco.png";
 import boneNkRafaNadal1 from "@/assets/bone-nk-rafa-nadal-1.png";
@@ -263,6 +264,7 @@ export const products: Product[] = [
   { slug: "bone-lcst-sport-mesh-don-juan-preto", title: "Boné Lcst Sport Mesh Don Juan Preto", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuanPreto1, images: [boneLcstSportMeshDonJuanPreto1, boneLcstSportMeshDonJuanPreto2] },
   { slug: "bone-mizuno-branco", title: "Boné Mizuno Branco", price: "119,99", oldPrice: "349,99", installment: "11,99", off: "65% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneMizunoBranco, images: [boneMizunoBranco] },
   { slug: "bone-nk-futura", title: "Boné NK", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkFutura, images: [boneNkFutura] },
+  { slug: "bone-nk-metal", title: "Boné NK Metal", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkMetal, images: [boneNkMetal] },
   { slug: "bone-lcst-five-panel-monograma", title: "Boné Lcst Five Panel Monograma", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstFivePanelMonograma, images: [boneLcstFivePanelMonograma] },
   { slug: "bone-nk-branco", title: "Boné NK", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkBranco, images: [boneNkBranco] },
   { slug: "bone-nk-rafa-nadal", title: "Boné NK Rafa Nadal Modelo Antigo", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkRafaNadal1, images: [boneNkRafaNadal1, boneNkRafaNadal2] },
