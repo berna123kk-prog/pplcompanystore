@@ -68,6 +68,7 @@ import kit3BermudasNkDriFit3 from "@/assets/kit-3-bermudas-nk-dri-fit-3.png";
 import kit3BermudasNkDriFit4 from "@/assets/kit-3-bermudas-nk-dri-fit-4.png";
 import shortsNkAthletics1 from "@/assets/shorts-nk-athletics-1.png";
 import shortsNkAthletics2 from "@/assets/shorts-nk-athletics-2.png";
+import bonePmaMotosportBmw from "@/assets/bone-pma-motosport-bmw.png";
 import blusaPoloLacoste from "@/assets/blusa-polo-lacoste.png";
 import nikeAirForcePretoBranco from "@/assets/nike-air-force-preto-branco.png";
 import correntinhaPulseirinhaOuro from "@/assets/correntinha-pulseirinha-ouro.png";
@@ -237,7 +238,7 @@ export const products: Product[] = [
   { slug: "chinelo-nk-victori-one", title: "Chinelo NK Slide Victori One", price: "59,99", oldPrice: "190,00", installment: "5,99", off: "70% OFF", kind: "footwear", category: "slides", sold: 3300, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
-  { slug: "bone-pma-motosport-bmw", title: "Boné Pma Motosport BMW", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 760, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
+  { slug: "bone-pma-motosport-bmw", title: "Boné Pma Motosport BMW", price: "99,99", oldPrice: "199,99", installment: "9,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 760, stock: 18, img: bonePmaMotosportBmw, images: [bonePmaMotosportBmw] },
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   { slug: "kit-5-camisetas-nk-academy", title: "Kit 5 Camisetas NK Academy Dri-Fit", price: "99,99", oldPrice: "899,99", installment: "9,99", off: "89% OFF", kind: "clothing", category: "camisetas", sold: 3400, stock: 22, img: kit5CamisetasNk1, images: [kit5CamisetasNk1, kit5CamisetasNk2] },
