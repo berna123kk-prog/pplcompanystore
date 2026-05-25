@@ -76,6 +76,7 @@ import boneLcstSport2Faixas2 from "@/assets/bone-lcst-sport-2-faixas-2.png";
 import boneLcstSport2Faixas3 from "@/assets/bone-lcst-sport-2-faixas-3.png";
 import boneLcstSportMeshDonJuan1 from "@/assets/bone-lcst-sport-mesh-don-juan-1.png";
 import boneLcstSportMeshDonJuan2 from "@/assets/bone-lcst-sport-mesh-don-juan-2.png";
+import boneLcstSportMeshDonJuan3 from "@/assets/bone-lcst-sport-mesh-don-juan-3.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
 import boneNkBranco from "@/assets/bone-nk-branco.png";
 import boneNkRafaNadal1 from "@/assets/bone-nk-rafa-nadal-1.png";
