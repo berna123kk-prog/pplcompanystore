@@ -143,6 +143,11 @@ import jaquetaNkTechFleeceWindrunner1 from "@/assets/jaqueta-nk-tech-fleece-wind
 import jaquetaNkTechFleeceWindrunner2Img from "@/assets/jaqueta-nk-tech-fleece-windrunner-2.png";
 import jaquetaNkTechFleeceWindrunner3Img from "@/assets/jaqueta-nk-tech-fleece-windrunner-3.png";
 import jaquetaNkTechFleeceWindrunnerCinza from "@/assets/jaqueta-nk-tech-fleece-windrunner-cinza.png";
+import moletomNkAthletics1 from "@/assets/moletom-nk-athletics-1.png";
+import moletomNkAthletics2 from "@/assets/moletom-nk-athletics-2.png";
+import moletomNkAthletics3 from "@/assets/moletom-nk-athletics-3.png";
+import moletomNkAthletics4 from "@/assets/moletom-nk-athletics-4.png";
+import moletomNkAthletics5 from "@/assets/moletom-nk-athletics-5.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
 import boneNkBranco from "@/assets/bone-nk-branco.png";
 import boneNkRafaNadal1 from "@/assets/bone-nk-rafa-nadal-1.png";
@@ -342,6 +347,7 @@ export const products: Product[] = [
   { slug: "casaco-jaqueta-nylon-casual-tommy", title: "Casaco Jaqueta Nylon Casual Tommy", price: "139,99", oldPrice: "349,99", installment: "13,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: casacoJaquetaNylonCasualTommy1, images: [casacoJaquetaNylonCasualTommy1, casacoJaquetaNylonCasualTommy2] },
   { slug: "jaqueta-nk-tech-fleece-windrunner-preta", title: "Jaqueta NK Tech Fleece Windrunner", price: "149,99", oldPrice: "379,99", installment: "14,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaNkTechFleeceWindrunner1, images: [jaquetaNkTechFleeceWindrunner1, jaquetaNkTechFleeceWindrunner2Img, jaquetaNkTechFleeceWindrunner3Img] },
   { slug: "jaqueta-nk-tech-fleece-windrunner-cinza", title: "Jaqueta NK Tech Fleece Windrunner", price: "149,99", oldPrice: "379,99", installment: "14,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaNkTechFleeceWindrunnerCinza, images: [jaquetaNkTechFleeceWindrunnerCinza] },
+  { slug: "moletom-nk-athletics", title: "Moletom NK Athletics", price: "149,99", oldPrice: "379,99", installment: "14,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomNkAthletics1, images: [moletomNkAthletics1, moletomNkAthletics2, moletomNkAthletics3, moletomNkAthletics4, moletomNkAthletics5] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
