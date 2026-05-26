@@ -26,14 +26,7 @@ const navItems: { label: string; slug: string; sub?: { label: string; slug: stri
   },
   { label: "Kits", slug: "kits-completos" },
   { label: "Acessórios", slug: "acessorios" },
-  {
-    label: "Slides",
-    slug: "slides",
-    sub: [
-      { label: "Slides", slug: "slides" },
-      { label: "Crocs", slug: "crocs" },
-    ],
-  },
+  { label: "Crocs", slug: "crocs" },
   { label: "Sneakers", slug: "sneakers" },
   { label: "Perfumes", slug: "perfumes" },
 ];
