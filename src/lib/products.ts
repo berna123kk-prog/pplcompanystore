@@ -221,6 +221,7 @@ import camisaLacosteParis1 from "@/assets/camisa-lacoste-paris-1.png";
 import poloLacoste1 from "@/assets/polo-lacoste-1.png";
 import poloLacoste2 from "@/assets/polo-lacoste-2.png";
 import poloLacosteVermelha1 from "@/assets/polo-lacoste-vermelha-1.png";
+import camisetaZaraSlimFit1 from "@/assets/camiseta-zara-slim-fit-1.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
@@ -467,6 +468,7 @@ export const products: Product[] = [
   { slug: "camisa-lacoste-paris", title: "Camisa Lacoste Paris", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLacosteParis1, images: [camisaLacosteParis1] },
   { slug: "polo-lacoste", title: "Polo Lacoste", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloLacoste1, images: [poloLacoste1, poloLacoste2] },
   { slug: "polo-lacoste-vermelha", title: "Polo Lacoste Vermelha", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloLacosteVermelha1, images: [poloLacosteVermelha1] },
+  { slug: "camiseta-zara-slim-fit", title: "Camiseta Zara Slim Fit", price: "49,99", oldPrice: "129,99", installment: "4,99", off: "62% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaZaraSlimFit1, images: [camisetaZaraSlimFit1] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
