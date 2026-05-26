@@ -173,6 +173,7 @@ import jaquetaAdiRealMadridReliquia1 from "@/assets/jaqueta-adi-real-madrid-reli
 import jaquetaAdiRealMadridReliquia2 from "@/assets/jaqueta-adi-real-madrid-reliquia-2.png";
 import blusaoNkClub1 from "@/assets/blusao-nk-club-1.png";
 import blusaoNkClub2 from "@/assets/blusao-nk-club-2.png";
+import jaquetaNkClub1 from "@/assets/jaqueta-nk-club-1.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
@@ -384,6 +385,7 @@ export const products: Product[] = [
   { slug: "jaqueta-nk-academy", title: "Jaqueta NK Academy", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaNkAcademy1, images: [jaquetaNkAcademy1] },
   { slug: "jaqueta-adi-real-madrid-reliquia", title: "Jaqueta Adi Real Madrid Reliquia", price: "149,99", oldPrice: "379,99", installment: "14,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaAdiRealMadridReliquia1, images: [jaquetaAdiRealMadridReliquia1, jaquetaAdiRealMadridReliquia2] },
   { slug: "blusao-nk-club", title: "Blusão NK Club", price: "149,99", oldPrice: "379,99", installment: "14,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaoNkClub1, images: [blusaoNkClub1, blusaoNkClub2] },
+  { slug: "jaqueta-nk-club", title: "Jaqueta NK Club", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaNkClub1, images: [jaquetaNkClub1] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
