@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "VSN Store — Direto para sua casa" },
-      { name: "description", content: "Vestuário, sneakers, slides, acessórios e perfumes com até 12x sem juros." },
+      { name: "description", content: "Vestuário, sneakers, acessórios e perfumes com até 12x sem juros." },
     ],
   }),
 });
