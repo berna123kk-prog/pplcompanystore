@@ -244,6 +244,8 @@ import camisetaLcstSportNavy2 from "@/assets/camiseta-lcst-sport-navy-2.png";
 import camisetaLcstSportNavy3 from "@/assets/camiseta-lcst-sport-navy-3.png";
 import camisetaNkTripleSwoosh1 from "@/assets/camiseta-nk-triple-swoosh-1.png";
 import camisetaNkTripleSwoosh2 from "@/assets/camiseta-nk-triple-swoosh-2.png";
+import camisetaNkTripleSwooshVermelha1 from "@/assets/camiseta-nk-triple-swoosh-vermelha-1.png";
+import camisetaNkTripleSwooshVermelha2 from "@/assets/camiseta-nk-triple-swoosh-vermelha-2.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
@@ -505,6 +507,7 @@ export const products: Product[] = [
   { slug: "camiseta-lcst-sport", title: "Camiseta Lcst Sport", price: "89,99", oldPrice: "249,99", installment: "8,99", off: "64% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaLcstSport1, images: [camisetaLcstSport1] },
   { slug: "camiseta-lcst-sport-navy", title: "Camiseta Lcst Sport Navy", price: "109,99", oldPrice: "299,99", installment: "10,99", off: "63% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaLcstSportNavy1, images: [camisetaLcstSportNavy1, camisetaLcstSportNavy2, camisetaLcstSportNavy3] },
   { slug: "camiseta-nk-triple-swoosh", title: "Camiseta NK Triple Swoosh", price: "89,99", oldPrice: "249,99", installment: "8,99", off: "64% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaNkTripleSwoosh1, images: [camisetaNkTripleSwoosh1, camisetaNkTripleSwoosh2] },
+  { slug: "camiseta-nk-triple-swoosh-vermelha", title: "Camiseta NK Triple Swoosh Vermelha", price: "89,99", oldPrice: "249,99", installment: "8,99", off: "64% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaNkTripleSwooshVermelha1, images: [camisetaNkTripleSwooshVermelha1, camisetaNkTripleSwooshVermelha2] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
