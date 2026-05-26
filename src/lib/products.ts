@@ -355,7 +355,7 @@ export const COLLECTIONS: Record<string, { title: string; filter: (p: Product) =
   calcas: { title: "Calças", filter: (p) => p.category === "calcas" },
   "bermudas-e-shorts": { title: "Bermudas e Shorts", filter: (p) => p.category === "bermudas-e-shorts" },
   "kits-completos": { title: "Kits Completos", filter: (p) => p.category === "kits-completos" },
-  crocs: { title: "Crocs", filter: (p) => p.category === "crocs" },
+  slides: { title: "Slides", filter: (p) => p.category === "slides" },
   sneakers: { title: "Sneakers", filter: (p) => p.category === "sneakers" },
   acessorios: { title: "Acessórios", filter: (p) => p.category === "acessorios" },
   perfumes: { title: "Perfumes", filter: (p) => p.category === "perfumes" },
