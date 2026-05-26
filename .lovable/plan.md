@@ -1,9 +1,14 @@
-Remover todos os produtos da categoria "camisetas" do array `products` em `src/lib/products.ts`.
+Adicionar novo produto "Camiseta Casa Blanca de Luxo" na categoria **camisetas** (conforme última instrução do usuário).
 
-Produtos a remover (4 itens):
-1. `camiseta-nk-worldtour` — Camiseta NK Worldtour (R$ 59,99)
-2. `blusa-polo-lacoste` — Blusa Polo Lacoste (R$ 59,99)
-3. `kit-5-camisetas-nk-academy` — Kit 5 Camisetas NK Academy Dri-Fit (R$ 99,99)
-4. `kit-4-camisas-nk-academy` — Kit 4 Camisas NK Academy (R$ 59,99)
+## Passos
 
-Apenas esses 4 registros serão removidos do array `products`. Nenhuma outra seção, coleção ou categoria será alterada. A coleção "camisetas" continuará existindo, mas ficará vazia até novos produtos serem adicionados.
+1. Copiar as 2 imagens enviadas para `src/assets/`:
+   - `camiseta-casa-blanca-luxo-1.png` (look completo)
+   - `camiseta-casa-blanca-luxo-2.png` (detalhe do estampado)
+2. Adicionar entrada em `src/lib/products.ts`:
+   - id: `camiseta-casa-blanca-luxo`
+   - name: "Camiseta Casa Blanca de Luxo"
+   - price: 59,99
+   - category: `camisetas`
+   - images: as duas importadas acima
+3. Produto aparecerá automaticamente em `/colecoes/camisetas`.
