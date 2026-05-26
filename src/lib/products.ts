@@ -222,6 +222,8 @@ import poloLacoste1 from "@/assets/polo-lacoste-1.png";
 import poloLacoste2 from "@/assets/polo-lacoste-2.png";
 import poloLacosteVermelha1 from "@/assets/polo-lacoste-vermelha-1.png";
 import camisetaZaraSlimFit1 from "@/assets/camiseta-zara-slim-fit-1.png";
+import camisetaZaraSlimFitBranca1 from "@/assets/camiseta-zara-slim-fit-branca-1.png";
+import camisetaZaraSlimFitBranca2 from "@/assets/camiseta-zara-slim-fit-branca-2.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
