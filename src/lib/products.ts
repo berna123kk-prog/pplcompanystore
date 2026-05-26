@@ -320,7 +320,7 @@ export type CategorySlug =
   | "calcas"
   | "bermudas-e-shorts"
   | "kits-completos"
-  | "crocs"
+  | "slides"
   | "sneakers"
   | "acessorios"
   | "perfumes";
