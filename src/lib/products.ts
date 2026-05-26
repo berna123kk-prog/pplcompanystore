@@ -197,6 +197,7 @@ import camisetaCasaBlancaLuxoPreta1 from "@/assets/camiseta-casa-blanca-luxo-pre
 import poloMiamiOpenLacoste1 from "@/assets/polo-miami-open-lacoste-1.png";
 import camisaAtleticoMineiro1 from "@/assets/camisa-atletico-mineiro-1.png";
 import regataShortCruzeiro1 from "@/assets/regata-short-cruzeiro-1.png";
+import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
