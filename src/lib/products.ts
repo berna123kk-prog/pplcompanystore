@@ -211,6 +211,7 @@ import blusaPoloLacosteParisAzul1 from "@/assets/blusa-polo-lacoste-paris-azul-1
 import blusaPoloLacosteParisAzul2 from "@/assets/blusa-polo-lacoste-paris-azul-2.png";
 import blusaPoloLacosteParisBranca1 from "@/assets/blusa-polo-lacoste-paris-branca-1.png";
 import blusaPoloLacosteParisBranca2 from "@/assets/blusa-polo-lacoste-paris-branca-2.png";
+import blusaPoloLacosteParisVermelha1 from "@/assets/blusa-polo-lacoste-paris-vermelha-1.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
