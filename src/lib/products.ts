@@ -229,6 +229,8 @@ import camisetaCollegeSynaWorld1 from "@/assets/camiseta-college-syna-world-1.pn
 import camisetaCollegeSynaWorld2 from "@/assets/camiseta-college-syna-world-2.png";
 import camisetaCollegeSynaWorldCreme1 from "@/assets/camiseta-college-syna-world-creme-1.png";
 import camisetaCollegeSynaWorldCreme2 from "@/assets/camiseta-college-syna-world-creme-2.png";
+import camisetaCollegeSynaWorldAzul1 from "@/assets/camiseta-college-syna-world-azul-1.png";
+import camisetaCollegeSynaWorldAzul2 from "@/assets/camiseta-college-syna-world-azul-2.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
@@ -480,6 +482,7 @@ export const products: Product[] = [
   { slug: "combo-4-camisetas-dry-fit", title: "Combo 4 Camisetas Dry Fit", price: "109,99", oldPrice: "399,99", installment: "10,99", off: "72% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: combo4CamisetasDryFit1, images: [combo4CamisetasDryFit1] },
   { slug: "camiseta-college-syna-world", title: "Camiseta College Syna World", price: "69,99", oldPrice: "199,99", installment: "6,99", off: "65% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaCollegeSynaWorld1, images: [camisetaCollegeSynaWorld1, camisetaCollegeSynaWorld2] },
   { slug: "camiseta-college-syna-world-creme", title: "Camiseta College Syna World Creme", price: "69,99", oldPrice: "199,99", installment: "6,99", off: "65% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaCollegeSynaWorldCreme1, images: [camisetaCollegeSynaWorldCreme1, camisetaCollegeSynaWorldCreme2] },
+  { slug: "camiseta-college-syna-world-azul", title: "Camiseta College Syna World Azul", price: "59,99", oldPrice: "179,99", installment: "5,99", off: "67% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaCollegeSynaWorldAzul1, images: [camisetaCollegeSynaWorldAzul1, camisetaCollegeSynaWorldAzul2] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
