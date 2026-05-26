@@ -124,6 +124,7 @@ import blusaoBmwMMotosport from "@/assets/blusao-bmw-m-motosport.png";
 import jaquetaCortaVentoCorinthians1 from "@/assets/jaqueta-corta-vento-corinthians-nk-1.png";
 import jaquetaCortaVentoCorinthians2 from "@/assets/jaqueta-corta-vento-corinthians-nk-2.png";
 import jaquetaTommyVelejadorAzulMarinho from "@/assets/jaqueta-tommy-velejador-azul-marinho.png";
+import jaquetaTommyVelejadorBranca from "@/assets/jaqueta-tommy-velejador-modelo-antigo-branca.png";
 import jaquetaPmaBmwMMotorsport1 from "@/assets/jaqueta-pma-bmw-m-motorsport-1.png";
 import jaquetaPmaBmwMMotorsport2 from "@/assets/jaqueta-pma-bmw-m-motorsport-2.png";
 import jaquetaPmaBmwMMotorsport3 from "@/assets/jaqueta-pma-bmw-m-motorsport-3.png";
@@ -312,6 +313,7 @@ export const products: Product[] = [
   { slug: "blusao-mercedes-amg-cinza", title: "Blusão Mercedes AMG - Cinza", price: "109,99", oldPrice: "279,99", installment: "10,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaoMercedesAmgCinza, images: [blusaoMercedesAmgCinza] },
   { slug: "blusao-mercedes-amg-preto", title: "Blusão Mercedes AMG - Preto", price: "109,99", oldPrice: "279,99", installment: "10,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaoMercedesAmgPreto, images: [blusaoMercedesAmgPreto] },
   { slug: "jaqueta-pma-bmw-motosport", title: "Jaqueta Pma BMW Motosport", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaPmaBmwMotosport, images: [jaquetaPmaBmwMotosport] },
+  { slug: "jaqueta-tommy-velejador-modelo-antigo-branca", title: "Jaqueta Tommy Velejador Modelo Antigo", price: "199,99", oldPrice: "499,99", installment: "19,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaTommyVelejadorBranca, images: [jaquetaTommyVelejadorBranca] },
   { slug: "blusao-pma-bmw-motosport", title: "Blusão Pma BMW Motosport", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaoPmaBmwMotosport, images: [blusaoPmaBmwMotosport] },
   { slug: "blusao-pma-bmw-motosport-azul", title: "Blusão Pma BMW Motosport - Azul", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaoPmaBmwMotosportAzul1, images: [blusaoPmaBmwMotosportAzul1, blusaoPmaBmwMotosportAzul2] },
   { slug: "blusao-bmw-m-motosport", title: "Blusão BMW M Motosport", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaoBmwMMotosport, images: [blusaoBmwMMotosport] },
