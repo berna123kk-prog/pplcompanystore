@@ -132,6 +132,9 @@ import blusaoTommyStripeBlockHoodie1 from "@/assets/blusao-tommy-stripe-block-ho
 import blusaoTommyStripeBlockHoodie2 from "@/assets/blusao-tommy-stripe-block-hoodie-2.png";
 import jaquetaTommyVelejadorSustainable1 from "@/assets/jaqueta-tommy-velejador-sustainable-1.png";
 import jaquetaTommyVelejadorSustainable2 from "@/assets/jaqueta-tommy-velejador-sustainable-2.png";
+import jaquetaTommyVelejadorSustainableVermelha1 from "@/assets/jaqueta-tommy-velejador-sustainable-vermelha-1.png";
+import jaquetaTommyVelejadorSustainableVermelha2 from "@/assets/jaqueta-tommy-velejador-sustainable-vermelha-2.png";
+import jaquetaTommyVelejadorSustainableVermelha3 from "@/assets/jaqueta-tommy-velejador-sustainable-vermelha-3.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
 import boneNkBranco from "@/assets/bone-nk-branco.png";
 import boneNkRafaNadal1 from "@/assets/bone-nk-rafa-nadal-1.png";
@@ -326,6 +329,7 @@ export const products: Product[] = [
   { slug: "jaqueta-pma-bmw-m-motorsport", title: "Jaqueta Pma BMW M Motorsport", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaPmaBmwMMotorsport1, images: [jaquetaPmaBmwMMotorsport1, jaquetaPmaBmwMMotorsport2, jaquetaPmaBmwMMotorsport3] },
   { slug: "blusao-tommy-stripe-block-hoodie", title: "Blusão Tommy Stripe Block Hoodie", price: "119,99", oldPrice: "299,99", installment: "11,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaoTommyStripeBlockHoodie1, images: [blusaoTommyStripeBlockHoodie1, blusaoTommyStripeBlockHoodie2] },
   { slug: "jaqueta-tommy-velejador-sustainable", title: "Jaqueta Tommy Velejador Sustainable", price: "199,99", oldPrice: "499,99", installment: "19,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaTommyVelejadorSustainable1, images: [jaquetaTommyVelejadorSustainable1, jaquetaTommyVelejadorSustainable2] },
+  { slug: "jaqueta-tommy-velejador-sustainable-vermelha", title: "Jaqueta Tommy Velejador Sustainable", price: "199,99", oldPrice: "499,99", installment: "19,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaTommyVelejadorSustainableVermelha1, images: [jaquetaTommyVelejadorSustainableVermelha1, jaquetaTommyVelejadorSustainableVermelha2, jaquetaTommyVelejadorSustainableVermelha3] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
