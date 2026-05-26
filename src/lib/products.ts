@@ -55,6 +55,11 @@ import slideMizunoOriginalPrateado1 from "@/assets/slide-mizuno-original-pratead
 import slideMizunoOriginalPretoBranco1 from "@/assets/slide-mizuno-original-preto-branco-1.png";
 import slideMizunoOriginalBranco1 from "@/assets/slide-mizuno-original-branco-1.png";
 import slideMizunoOriginalPrateadoRoxo1 from "@/assets/slide-mizuno-original-prateado-roxo-1.png";
+import slideLacoste10_1 from "@/assets/slide-lacoste-1-0-1.png";
+import slideLacoste10_2 from "@/assets/slide-lacoste-1-0-2.png";
+import slideLacoste10_3 from "@/assets/slide-lacoste-1-0-3.png";
+import slideLacoste10_4 from "@/assets/slide-lacoste-1-0-4.png";
+import slideLacoste10_5 from "@/assets/slide-lacoste-1-0-5.png";
 import bermudaJeansJogador from "@/assets/bermuda-jeans-jogador.png";
 import bermudaJeansJogador2 from "@/assets/bermuda-jeans-jogador-2.png";
 import bermudaJeansJogadorClara from "@/assets/bermuda-jeans-jogador-clara.png";
@@ -432,6 +437,7 @@ export const products: Product[] = [
   { slug: "slide-mizuno-original-preto-branco", title: "Slide Mizuno Original Preto com Branco", price: "139,99", oldPrice: "349,99", installment: "13,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideMizunoOriginalPretoBranco1, images: [slideMizunoOriginalPretoBranco1] },
   { slug: "slide-mizuno-original-branco", title: "Slide Mizuno Original Branco", price: "139,99", oldPrice: "349,99", installment: "13,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideMizunoOriginalBranco1, images: [slideMizunoOriginalBranco1] },
   { slug: "slide-mizuno-original-prateado-roxo", title: "Slide Mizuno Original Prateado Roxo", price: "139,99", oldPrice: "349,99", installment: "13,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideMizunoOriginalPrateadoRoxo1, images: [slideMizunoOriginalPrateadoRoxo1] },
+  { slug: "slide-lacoste-1-0", title: "Slide Lacoste 1.0", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideLacoste10_1, images: [slideLacoste10_1, slideLacoste10_2, slideLacoste10_3, slideLacoste10_4, slideLacoste10_5] },
   
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   { slug: "moletom-bmw-motosport", title: "Moletom BMW Motosport", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomBmwMotosport, images: [moletomBmwMotosport] },
