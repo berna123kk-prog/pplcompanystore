@@ -52,6 +52,7 @@ import slideLcstNuvemPreto1 from "@/assets/slide-lcst-nuvem-preto-1.png";
 import slideLcstNuvemPreto2 from "@/assets/slide-lcst-nuvem-preto-2.png";
 import slideLcstNuvemPreto3 from "@/assets/slide-lcst-nuvem-preto-3.png";
 import slideMizunoOriginalPrateado1 from "@/assets/slide-mizuno-original-prateado-1.png";
+import slideMizunoOriginalPretoBranco1 from "@/assets/slide-mizuno-original-preto-branco-1.png";
 import bermudaJeansJogador from "@/assets/bermuda-jeans-jogador.png";
 import bermudaJeansJogador2 from "@/assets/bermuda-jeans-jogador-2.png";
 import bermudaJeansJogadorClara from "@/assets/bermuda-jeans-jogador-clara.png";
@@ -426,6 +427,7 @@ export const products: Product[] = [
   { slug: "sandalia-croc-classic", title: "Slide lcst branco", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "slides", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   { slug: "slide-lcst-nuvem-preto", title: "Slide Lcst Nuvem Preto", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideLcstNuvemPreto1, images: [slideLcstNuvemPreto1, slideLcstNuvemPreto2, slideLcstNuvemPreto3] },
   { slug: "slide-mizuno-original-prateado", title: "Slide Mizuno Original Prateado", price: "139,99", oldPrice: "349,99", installment: "13,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideMizunoOriginalPrateado1, images: [slideMizunoOriginalPrateado1] },
+  { slug: "slide-mizuno-original-preto-branco", title: "Slide Mizuno Original Preto com Branco", price: "139,99", oldPrice: "349,99", installment: "13,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideMizunoOriginalPretoBranco1, images: [slideMizunoOriginalPretoBranco1] },
   
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   { slug: "moletom-bmw-motosport", title: "Moletom BMW Motosport", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomBmwMotosport, images: [moletomBmwMotosport] },
