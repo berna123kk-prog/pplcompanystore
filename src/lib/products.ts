@@ -110,6 +110,7 @@ import moletomBmwMotosport from "@/assets/moletom-bmw-motosport.png";
 import jaquetaBmwMotosport from "@/assets/jaqueta-bmw-motosport.png";
 import jaquetaPmaBmw1 from "@/assets/jaqueta-pma-bmw-1.png";
 import jaquetaPmaBmw2 from "@/assets/jaqueta-pma-bmw-2.png";
+import jaquetaPmaBmwHdd from "@/assets/jaqueta-pma-bmw-hdd.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
 import boneNkBranco from "@/assets/bone-nk-branco.png";
 import boneNkRafaNadal1 from "@/assets/bone-nk-rafa-nadal-1.png";
@@ -289,6 +290,7 @@ export const products: Product[] = [
   { slug: "moletom-bmw-motosport", title: "Moletom BMW Motosport", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomBmwMotosport, images: [moletomBmwMotosport] },
   { slug: "jaqueta-bmw-motosport", title: "Jaqueta BMW Motosport", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaBmwMotosport, images: [jaquetaBmwMotosport] },
   { slug: "jaqueta-pma-bmw", title: "Jaqueta Pma BMW", price: "189,99", oldPrice: "479,99", installment: "18,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaPmaBmw1, images: [jaquetaPmaBmw1, jaquetaPmaBmw2] },
+  { slug: "jaqueta-pma-bmw-hdd", title: "Jaqueta Pma BMW HDD", price: "149,99", oldPrice: "379,99", installment: "14,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaPmaBmwHdd, images: [jaquetaPmaBmwHdd] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
