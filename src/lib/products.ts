@@ -106,6 +106,7 @@ import boneLcstSportAbaRetaRedinhaMint2 from "@/assets/bone-lcst-sport-aba-reta-
 import duasBagsNkEssentials from "@/assets/2-bags-nk-essentials.png";
 import doisBonesNkTn from "@/assets/2-bones-nk-tn.png";
 import chaveiroPplCompanyStore from "@/assets/chaveiro-ppl-company-store.png";
+import moletomBmwMotosport from "@/assets/moletom-bmw-motosport.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
 import boneNkBranco from "@/assets/bone-nk-branco.png";
 import boneNkRafaNadal1 from "@/assets/bone-nk-rafa-nadal-1.png";
