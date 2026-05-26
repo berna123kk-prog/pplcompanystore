@@ -320,7 +320,6 @@ export type CategorySlug =
   | "calcas"
   | "bermudas-e-shorts"
   | "kits-completos"
-  | "slides"
   | "crocs"
   | "sneakers"
   | "acessorios"
@@ -356,7 +355,6 @@ export const COLLECTIONS: Record<string, { title: string; filter: (p: Product) =
   calcas: { title: "Calças", filter: (p) => p.category === "calcas" },
   "bermudas-e-shorts": { title: "Bermudas e Shorts", filter: (p) => p.category === "bermudas-e-shorts" },
   "kits-completos": { title: "Kits Completos", filter: (p) => p.category === "kits-completos" },
-  slides: { title: "Slides", filter: (p) => p.category === "slides" },
   crocs: { title: "Crocs", filter: (p) => p.category === "crocs" },
   sneakers: { title: "Sneakers", filter: (p) => p.category === "sneakers" },
   acessorios: { title: "Acessórios", filter: (p) => p.category === "acessorios" },
@@ -364,7 +362,7 @@ export const COLLECTIONS: Record<string, { title: string; filter: (p: Product) =
 };
 
 export const products: Product[] = [
-  { slug: "slide-lcst-nuvem-branco", title: "Slide Lcst Nuvem Branco", price: "5,00", oldPrice: "349,99", installment: "0,50", off: "69% OFF", kind: "footwear", category: "slides", sold: 8523, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
+  
   { slug: "combo-kit-3-blusas-zip-tommy", title: "Jaqueta Tommy Velejador Sustainable", price: "149,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: jaquetaTommyVelejador1, images: [jaquetaTommyVelejador1, jaquetaTommyVelejador2] },
   { slug: "blusa-lacoste-frio", title: "Blusa Lacoste Frio", price: "129,99", oldPrice: "799,99", installment: "12,99", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1840, stock: 10, img: blusaLacosteFrio, images: [blusaLacosteFrio] },
   { slug: "correntinha-pulseirinha-ouro", title: "Correntinha + Pulseirinha de Ouro", price: "99,99", oldPrice: "499,99", installment: "9,99", off: "80% OFF", kind: "accessory", category: "acessorios", sold: 1320, stock: 8, img: correntinhaPulseirinhaOuro, images: [correntinhaPulseirinhaOuro] },
@@ -422,7 +420,7 @@ export const products: Product[] = [
   { slug: "calca-jeans-jogador-azul-respingos", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 70, stock: 6, img: calcaJeansJogadorAzulRespingos, images: [calcaJeansJogadorAzulRespingos] },
   { slug: "calca-jeans-jogador-clara-patches", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 64, stock: 5, img: calcaJeansJogadorClaraPatches, images: [calcaJeansJogadorClaraPatches] },
   { slug: "sandalia-croc-classic", title: "Sandália Croc Classic", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "crocs", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
-  { slug: "chinelo-nk-victori-one", title: "Chinelo NK Slide Victori One", price: "59,99", oldPrice: "190,00", installment: "5,99", off: "70% OFF", kind: "footwear", category: "slides", sold: 3300, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
+  
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   { slug: "moletom-bmw-motosport", title: "Moletom BMW Motosport", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomBmwMotosport, images: [moletomBmwMotosport] },
   { slug: "jaqueta-bmw-motosport", title: "Jaqueta BMW Motosport", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaBmwMotosport, images: [jaquetaBmwMotosport] },
