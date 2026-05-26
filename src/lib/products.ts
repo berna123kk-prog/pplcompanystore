@@ -231,6 +231,7 @@ import camisetaCollegeSynaWorldCreme1 from "@/assets/camiseta-college-syna-world
 import camisetaCollegeSynaWorldCreme2 from "@/assets/camiseta-college-syna-world-creme-2.png";
 import camisetaCollegeSynaWorldAzul1 from "@/assets/camiseta-college-syna-world-azul-1.png";
 import camisetaCollegeSynaWorldAzul2 from "@/assets/camiseta-college-syna-world-azul-2.png";
+import poloBmwMotorsport1 from "@/assets/polo-bmw-motorsport-1.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
