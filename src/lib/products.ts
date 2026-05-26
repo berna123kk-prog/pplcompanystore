@@ -180,6 +180,8 @@ import jaquetaJordanBrooklyn1 from "@/assets/jaqueta-jordan-brooklyn-1.png";
 import jaquetaJordanBrooklyn2 from "@/assets/jaqueta-jordan-brooklyn-2.png";
 import jaquetaNkAcademyDriFit1 from "@/assets/jaqueta-nk-academy-dri-fit-1.png";
 import jaquetaNkAcademyDriFit2 from "@/assets/jaqueta-nk-academy-dri-fit-2.png";
+import jaquetaNkAcademyDriFitBranca1 from "@/assets/jaqueta-nk-academy-dri-fit-branca-1.png";
+import jaquetaNkAcademyDriFitBranca2 from "@/assets/jaqueta-nk-academy-dri-fit-branca-2.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
@@ -395,6 +397,7 @@ export const products: Product[] = [
   { slug: "blusa-sportswear-swoosh", title: "Blusa Sportswear Swoosh", price: "149,99", oldPrice: "379,99", installment: "14,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaSportswearSwoosh1, images: [blusaSportswearSwoosh1, blusaSportswearSwoosh2] },
   { slug: "jaqueta-jordan-brooklyn", title: "Jaqueta Jordan Brooklyn", price: "159,99", oldPrice: "399,99", installment: "15,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaJordanBrooklyn1, images: [jaquetaJordanBrooklyn1, jaquetaJordanBrooklyn2] },
   { slug: "jaqueta-nk-academy-dri-fit", title: "Jaqueta NK Academy Dri-FIT", price: "79,99", oldPrice: "199,99", installment: "7,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaNkAcademyDriFit1, images: [jaquetaNkAcademyDriFit1, jaquetaNkAcademyDriFit2] },
+  { slug: "jaqueta-nk-academy-dri-fit-branca", title: "Jaqueta NK Academy Dri-FIT Branca", price: "79,99", oldPrice: "199,99", installment: "7,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaNkAcademyDriFitBranca1, images: [jaquetaNkAcademyDriFitBranca1, jaquetaNkAcademyDriFitBranca2] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
