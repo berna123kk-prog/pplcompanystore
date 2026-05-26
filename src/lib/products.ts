@@ -190,6 +190,7 @@ import blusaCruzeiro1 from "@/assets/blusa-cruzeiro-1.png";
 import blusaAtletico1 from "@/assets/blusa-atletico-1.png";
 import camisetaCasaBlancaLuxo1 from "@/assets/camiseta-casa-blanca-luxo-1.png";
 import camisetaCasaBlancaLuxo2 from "@/assets/camiseta-casa-blanca-luxo-2.png";
+import camisetaLacostePretaStreetClub1 from "@/assets/camiseta-lacoste-preta-street-club-1.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
@@ -411,6 +412,7 @@ export const products: Product[] = [
   { slug: "blusa-cruzeiro", title: "Blusa Cruzeiro", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaCruzeiro1, images: [blusaCruzeiro1] },
   { slug: "blusa-atletico", title: "Blusa Atlético", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaAtletico1, images: [blusaAtletico1] },
   { slug: "camiseta-casa-blanca-luxo", title: "Camiseta Casa Blanca de Luxo", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaCasaBlancaLuxo1, images: [camisetaCasaBlancaLuxo1, camisetaCasaBlancaLuxo2] },
+  { slug: "camiseta-lacoste-preta-street-club", title: "Camiseta Lacoste Preta Street Club", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacostePretaStreetClub1, images: [camisetaLacostePretaStreetClub1] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
