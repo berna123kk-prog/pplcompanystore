@@ -237,6 +237,7 @@ import camisetaMercedesAmg1 from "@/assets/camiseta-mercedes-amg-1.png";
 import camisetaMercedesAmgCinza1 from "@/assets/camiseta-mercedes-amg-cinza-1.png";
 import camisetaMercedesAmgCinza2 from "@/assets/camiseta-mercedes-amg-cinza-2.png";
 import combo4CamisasNkAcademy2021 from "@/assets/combo-4-camisas-nk-academy-2021-1.png";
+import camisetaCorteizBrazilWhite1 from "@/assets/camiseta-corteiz-brazil-white-1.png";
 import jaquetaCortaVentoAlpinestars1 from "@/assets/jaqueta-corta-vento-alpinestars-1.png";
 import jaquetaCortaVentoAlpinestars2 from "@/assets/jaqueta-corta-vento-alpinestars-2.png";
 import boneLcstFivePanelMonograma from "@/assets/bone-lcst-five-panel-monograma.png";
@@ -494,6 +495,7 @@ export const products: Product[] = [
   { slug: "camiseta-mercedes-amg", title: "Camiseta Mercedes AMG", price: "69,99", oldPrice: "199,99", installment: "6,99", off: "65% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaMercedesAmg1, images: [camisetaMercedesAmg1] },
   { slug: "camiseta-mercedes-amg-cinza", title: "Camiseta Mercedes AMG Cinza", price: "69,99", oldPrice: "199,99", installment: "6,99", off: "65% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaMercedesAmgCinza1, images: [camisetaMercedesAmgCinza1, camisetaMercedesAmgCinza2] },
   { slug: "combo-4-camisas-nk-academy-2021", title: "Combo 4 Camisas NK Academy 2021", price: "99,99", oldPrice: "349,99", installment: "9,99", off: "71% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: combo4CamisasNkAcademy2021, images: [combo4CamisasNkAcademy2021] },
+  { slug: "camiseta-corteiz-brazil-white", title: "Camiseta Corteiz Brazil White", price: "89,99", oldPrice: "249,99", installment: "8,99", off: "64% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaCorteizBrazilWhite1, images: [camisetaCorteizBrazilWhite1] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
