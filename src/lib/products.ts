@@ -320,7 +320,7 @@ export type CategorySlug =
   | "calcas"
   | "bermudas-e-shorts"
   | "kits-completos"
-  | "crocs"
+  | "slides"
   | "sneakers"
   | "acessorios"
   | "perfumes";
@@ -355,7 +355,7 @@ export const COLLECTIONS: Record<string, { title: string; filter: (p: Product) =
   calcas: { title: "Calças", filter: (p) => p.category === "calcas" },
   "bermudas-e-shorts": { title: "Bermudas e Shorts", filter: (p) => p.category === "bermudas-e-shorts" },
   "kits-completos": { title: "Kits Completos", filter: (p) => p.category === "kits-completos" },
-  crocs: { title: "Crocs", filter: (p) => p.category === "crocs" },
+  slides: { title: "Slides", filter: (p) => p.category === "slides" },
   sneakers: { title: "Sneakers", filter: (p) => p.category === "sneakers" },
   acessorios: { title: "Acessórios", filter: (p) => p.category === "acessorios" },
   perfumes: { title: "Perfumes", filter: (p) => p.category === "perfumes" },
@@ -419,7 +419,7 @@ export const products: Product[] = [
   { slug: "calca-nk-dri-fit-masculina", title: "Calça NK Dri-FIT Masculina", price: "99,99", oldPrice: "330,00", installment: "9,99", off: "70% OFF", kind: "clothing", category: "calcas", sold: 46, stock: 9, img: calcaNkDriFitMasculina1, images: [calcaNkDriFitMasculina1, calcaNkDriFitMasculina2, calcaNkDriFitMasculina3, calcaNkDriFitMasculina4, calcaNkDriFitMasculina5] },
   { slug: "calca-jeans-jogador-azul-respingos", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 70, stock: 6, img: calcaJeansJogadorAzulRespingos, images: [calcaJeansJogadorAzulRespingos] },
   { slug: "calca-jeans-jogador-clara-patches", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 64, stock: 5, img: calcaJeansJogadorClaraPatches, images: [calcaJeansJogadorClaraPatches] },
-  { slug: "sandalia-croc-classic", title: "Sandália Croc Classic", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "crocs", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
+  { slug: "sandalia-croc-classic", title: "Sandália Croc Classic", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "slides", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
   
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   { slug: "moletom-bmw-motosport", title: "Moletom BMW Motosport", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomBmwMotosport, images: [moletomBmwMotosport] },
