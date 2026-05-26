@@ -48,6 +48,9 @@ import shortTommyExclusivo1 from "@/assets/short-tommy-exclusivo-1.png";
 import shortTommyExclusivo2 from "@/assets/short-tommy-exclusivo-2.png";
 import kitLacosteBrancoMizuno from "@/assets/kit-lacoste-branco-mizuno.png";
 import blusaLacosteFrio from "@/assets/blusa-lacoste-frio.png";
+import slideLcstNuvemPreto1 from "@/assets/slide-lcst-nuvem-preto-1.png";
+import slideLcstNuvemPreto2 from "@/assets/slide-lcst-nuvem-preto-2.png";
+import slideLcstNuvemPreto3 from "@/assets/slide-lcst-nuvem-preto-3.png";
 import bermudaJeansJogador from "@/assets/bermuda-jeans-jogador.png";
 import bermudaJeansJogador2 from "@/assets/bermuda-jeans-jogador-2.png";
 import bermudaJeansJogadorClara from "@/assets/bermuda-jeans-jogador-clara.png";
@@ -420,6 +423,7 @@ export const products: Product[] = [
   { slug: "calca-jeans-jogador-azul-respingos", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 70, stock: 6, img: calcaJeansJogadorAzulRespingos, images: [calcaJeansJogadorAzulRespingos] },
   { slug: "calca-jeans-jogador-clara-patches", title: "Calça Jeans Jogador", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 64, stock: 5, img: calcaJeansJogadorClaraPatches, images: [calcaJeansJogadorClaraPatches] },
   { slug: "sandalia-croc-classic", title: "Slide lcst branco", price: "59,90", oldPrice: "190,00", installment: "5,98", off: "70% OFF", kind: "footwear", category: "slides", sold: 4200, stock: 25, img: "https://visionariostore.com.br/cdn/shop/files/71E96DDB-DFE6-4E3E-91DE-A27B21911C46.jpg?v=1774982966&width=1200" },
+  { slug: "slide-lcst-nuvem-preto", title: "Slide Lcst Nuvem Preto", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideLcstNuvemPreto1, images: [slideLcstNuvemPreto1, slideLcstNuvemPreto2, slideLcstNuvemPreto3] },
   
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   { slug: "moletom-bmw-motosport", title: "Moletom BMW Motosport", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomBmwMotosport, images: [moletomBmwMotosport] },
