@@ -1,17 +1,9 @@
-Add new product "Moletom BMW Motosport" to the **Jaquetas e Moletons** category in `src/lib/products.ts`.
+Remover todos os produtos da categoria "camisetas" do array `products` em `src/lib/products.ts`.
 
-## Steps
-1. Copy `user-uploads://image-237.png` → `src/assets/moletom-bmw-motosport.png`
-2. In `src/lib/products.ts`:
-   - Add import for the new image
-   - Add product entry:
-     - slug: `moletom-bmw-motosport`
-     - title: `Moletom BMW Motosport`
-     - price: `99,99`
-     - installment: `9,99`
-     - oldPrice: `249,99`
-     - off: `60% OFF`
-     - kind: `hoodie`
-     - category: `jaquetas-e-moletons`
-     - sold: 1, stock: 20
-     - img/images: new asset
+Produtos a remover (4 itens):
+1. `camiseta-nk-worldtour` — Camiseta NK Worldtour (R$ 59,99)
+2. `blusa-polo-lacoste` — Blusa Polo Lacoste (R$ 59,99)
+3. `kit-5-camisetas-nk-academy` — Kit 5 Camisetas NK Academy Dri-Fit (R$ 99,99)
+4. `kit-4-camisas-nk-academy` — Kit 4 Camisas NK Academy (R$ 59,99)
+
+Apenas esses 4 registros serão removidos do array `products`. Nenhuma outra seção, coleção ou categoria será alterada. A coleção "camisetas" continuará existindo, mas ficará vazia até novos produtos serem adicionados.
