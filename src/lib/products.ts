@@ -280,6 +280,7 @@ import perfume212MenHeroes2 from "@/assets/perfume-212-men-heroes-2.png";
 import perfumeLightBlue1 from "@/assets/perfume-light-blue-1.png";
 import perfumeBleuDeChanel1 from "@/assets/perfume-bleu-de-chanel-1.png";
 import perfumeBleuDeChanel2 from "@/assets/perfume-bleu-de-chanel-2.png";
+import kit212VipBlackNyc1 from "@/assets/kit-212-vip-black-nyc-1.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
@@ -596,6 +597,7 @@ export const products: Product[] = [
   { slug: "perfume-212-men-heroes", title: "212 Men Heroes Perfume EDT 100ml", price: "299,98", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfume212MenHeroes1, images: [perfume212MenHeroes1, perfume212MenHeroes2] },
   { slug: "perfume-light-blue-dolce-gabbana", title: "Dolce & Gabbana Light Blue Eau de Toilette - 100ML", price: "299,98", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeLightBlue1, images: [perfumeLightBlue1] },
   { slug: "perfume-bleu-de-chanel", title: "Perfume Bleu de Chanel 100ml", price: "498,95", oldPrice: "", installment: "49,90", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeBleuDeChanel1, images: [perfumeBleuDeChanel1, perfumeBleuDeChanel2] },
+  { slug: "kit-212-vip-black-nyc", title: "Kit 212 VIP Black NYC com Creme e Perfume 220ml", price: "249,99", oldPrice: "", installment: "25,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: kit212VipBlackNyc1, images: [kit212VipBlackNyc1] },
   { slug: "camiseta-lacoste-all-black-2026", title: "Camiseta Lacoste All Black 2026", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAllBlack2026_1, images: [camisetaLacosteAllBlack2026_1] },
   { slug: "polo-versace-dourada", title: "Polo de Luxo Versace Dourada", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloVersaceDourada1, images: [poloVersaceDourada1, poloVersaceDourada2] },
   { slug: "camisa-lv-all-black", title: "Camisa LV All Black", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLvAllBlack1, images: [camisaLvAllBlack1] },
