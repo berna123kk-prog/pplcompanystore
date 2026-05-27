@@ -251,6 +251,10 @@ import camisetaLacosteSportWorld2 from "@/assets/camiseta-lacoste-sport-world-2.
 import camisetaLacosteJacareEstampado1 from "@/assets/camiseta-lacoste-jacare-estampado-1.png";
 import camisetaFredPerryLaurelPreta1 from "@/assets/camiseta-fred-perry-laurel-preta-1.png";
 import camisetaFredPerryLaurelPreta2 from "@/assets/camiseta-fred-perry-laurel-preta-2.png";
+import camisetaLouisVuittonLvoers1 from "@/assets/camiseta-louis-vuitton-lvoers-1.png";
+import camisetaLouisVuittonLvoers2 from "@/assets/camiseta-louis-vuitton-lvoers-2.png";
+import camisetaLouisVuittonLvoers3 from "@/assets/camiseta-louis-vuitton-lvoers-3.png";
+import camisetaLouisVuittonLvoers4 from "@/assets/camiseta-louis-vuitton-lvoers-4.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
@@ -549,6 +553,7 @@ export const products: Product[] = [
   { slug: "camiseta-lacoste-sport-world", title: "Camiseta Lacoste Sport World", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteSportWorld1, images: [camisetaLacosteSportWorld1, camisetaLacosteSportWorld2] },
   { slug: "camiseta-lacoste-jacare-estampado", title: "Camiseta Lacoste Jacaré Estampado", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteJacareEstampado1, images: [camisetaLacosteJacareEstampado1] },
   { slug: "camiseta-fred-perry-laurel-preta", title: "Camiseta Fred Perry Laurel Preta", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaFredPerryLaurelPreta1, images: [camisetaFredPerryLaurelPreta1, camisetaFredPerryLaurelPreta2] },
+  { slug: "camiseta-louis-vuitton-lvoers", title: "Camiseta Louis Vuitton LVoers", price: "89,99", oldPrice: "249,99", installment: "8,99", off: "64% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLouisVuittonLvoers1, images: [camisetaLouisVuittonLvoers1, camisetaLouisVuittonLvoers2, camisetaLouisVuittonLvoers3, camisetaLouisVuittonLvoers4] },
   { slug: "camiseta-lacoste-all-black-2026", title: "Camiseta Lacoste All Black 2026", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAllBlack2026_1, images: [camisetaLacosteAllBlack2026_1] },
   { slug: "polo-versace-dourada", title: "Polo de Luxo Versace Dourada", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloVersaceDourada1, images: [poloVersaceDourada1, poloVersaceDourada2] },
   { slug: "camisa-lv-all-black", title: "Camisa LV All Black", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLvAllBlack1, images: [camisaLvAllBlack1] },
