@@ -265,6 +265,7 @@ import perfumeGoodGirlCarolinaHerrera1 from "@/assets/perfume-good-girl-carolina
 import perfumePhantomPacoRabanne1 from "@/assets/perfume-phantom-paco-rabanne-1.png";
 import perfumePhantomPacoRabanne2 from "@/assets/perfume-phantom-paco-rabanne-2.png";
 import perfumeBadBoyCarolinaHerrera1 from "@/assets/perfume-bad-boy-carolina-herrera-1.png";
+import perfumeBossBottled1 from "@/assets/perfume-boss-bottled-1.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
@@ -571,6 +572,7 @@ export const products: Product[] = [
   { slug: "perfume-good-girl-carolina-herrera", title: "Good Girl - Perfume Feminino - Eau de Parfum, Carolina Herrera", price: "299,98", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeGoodGirlCarolinaHerrera1, images: [perfumeGoodGirlCarolinaHerrera1] },
   { slug: "perfume-phantom-paco-rabanne", title: "Phantom Paco Rabanne Perfume EDT - 100ml", price: "319,99", oldPrice: "", installment: "32,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumePhantomPacoRabanne1, images: [perfumePhantomPacoRabanne1, perfumePhantomPacoRabanne2] },
   { slug: "perfume-bad-boy-carolina-herrera", title: "Bad Boy Carolina Herrera Eau de Toilette - Perfume Masculino 150ml", price: "299,98", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeBadBoyCarolinaHerrera1, images: [perfumeBadBoyCarolinaHerrera1] },
+  { slug: "perfume-boss-bottled-hugo-boss", title: "Boss Bottled Hugo Boss Eau de Toilette - Perfume Masculino 100ml", price: "199,99", oldPrice: "", installment: "20,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeBossBottled1, images: [perfumeBossBottled1] },
   { slug: "camiseta-lacoste-all-black-2026", title: "Camiseta Lacoste All Black 2026", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAllBlack2026_1, images: [camisetaLacosteAllBlack2026_1] },
   { slug: "polo-versace-dourada", title: "Polo de Luxo Versace Dourada", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloVersaceDourada1, images: [poloVersaceDourada1, poloVersaceDourada2] },
   { slug: "camisa-lv-all-black", title: "Camisa LV All Black", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLvAllBlack1, images: [camisaLvAllBlack1] },
