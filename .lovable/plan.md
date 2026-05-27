@@ -1,10 +1,8 @@
-## Adicionar produto: Camiseta Louis Vuitton Damier Preta
+## Atualizar regra padrão de categoria
 
-1. Copiar as 3 imagens enviadas para `src/assets/camiseta-louis-vuitton-damier-preta-1.png` até `-3.png`.
-2. Em `src/lib/products.ts`: adicionar imports e o novo produto em `camisetas`, abaixo de "Camiseta Louis Vuitton LVoers".
+Atualizar `mem://index.md` para registrar a nova regra:
 
-Detalhes:
-- slug: `camiseta-louis-vuitton-damier-preta`
-- title: `Camiseta Louis Vuitton Damier Preta`
-- price: `79,99` / installment: `7,99` / oldPrice: `199,99` / off: `60% OFF`
-- kind: `clothing`, category: `camisetas`, sold: 1, stock: 20
+- **Antes:** novos produtos enviados pelo usuário vão para a categoria `camisetas`.
+- **Depois:** novos produtos enviados pelo usuário vão para a categoria `perfumes`, até instrução em contrário.
+
+Nenhuma alteração em código nesta etapa. A regra passa a valer no próximo produto que você enviar — ele será adicionado em `src/lib/products.ts` dentro da categoria `perfumes`, seguindo o mesmo padrão já usado (imports de imagens em `src/assets/`, slug, title, price, installment, oldPrice, off, kind, sold, stock).
