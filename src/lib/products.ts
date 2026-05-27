@@ -270,6 +270,7 @@ import perfumeInvictusVictoryElixir1 from "@/assets/perfume-invictus-victory-eli
 import perfumeInvictusVictoryElixir2 from "@/assets/perfume-invictus-victory-elixir-2.png";
 import perfumeSauvageDior1 from "@/assets/perfume-sauvage-dior-1.png";
 import perfumeSauvageDior2 from "@/assets/perfume-sauvage-dior-2.png";
+import perfumeCoffretInvictusVictoryElixirKit1 from "@/assets/perfume-coffret-invictus-victory-elixir-kit-1.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
@@ -579,6 +580,7 @@ export const products: Product[] = [
   { slug: "perfume-boss-bottled-hugo-boss", title: "Boss Bottled Hugo Boss Eau de Toilette - Perfume Masculino 100ml", price: "199,99", oldPrice: "", installment: "20,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeBossBottled1, images: [perfumeBossBottled1] },
   { slug: "perfume-invictus-victory-elixir", title: "Invictus Victory Elixir Paco Rabanne Parfum Intense", price: "309,97", oldPrice: "", installment: "30,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeInvictusVictoryElixir1, images: [perfumeInvictusVictoryElixir1, perfumeInvictusVictoryElixir2] },
   { slug: "perfume-sauvage-dior", title: "Perfume Sauvage de Dior - Eau de Toilette", price: "399,98", oldPrice: "", installment: "40,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeSauvageDior1, images: [perfumeSauvageDior1, perfumeSauvageDior2] },
+  { slug: "perfume-coffret-invictus-victory-elixir-kit", title: "Coffret Rabanne Invictus Victory Elixir Kit - Perfume Masculino + Desodorante + Travel Size", price: "299,94", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeCoffretInvictusVictoryElixirKit1, images: [perfumeCoffretInvictusVictoryElixirKit1] },
   { slug: "camiseta-lacoste-all-black-2026", title: "Camiseta Lacoste All Black 2026", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAllBlack2026_1, images: [camisetaLacosteAllBlack2026_1] },
   { slug: "polo-versace-dourada", title: "Polo de Luxo Versace Dourada", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloVersaceDourada1, images: [poloVersaceDourada1, poloVersaceDourada2] },
   { slug: "camisa-lv-all-black", title: "Camisa LV All Black", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLvAllBlack1, images: [camisaLvAllBlack1] },
