@@ -1,14 +1,7 @@
-Adicionar novo produto "Camiseta Casa Blanca de Luxo" na categoria **camisetas** (conforme última instrução do usuário).
+## Nova regra padrão
 
-## Passos
+A partir de agora, todo produto que você enviar será adicionado na categoria **camisetas** em `src/lib/products.ts` (até nova instrução).
 
-1. Copiar as 2 imagens enviadas para `src/assets/`:
-   - `camiseta-casa-blanca-luxo-1.png` (look completo)
-   - `camiseta-casa-blanca-luxo-2.png` (detalhe do estampado)
-2. Adicionar entrada em `src/lib/products.ts`:
-   - id: `camiseta-casa-blanca-luxo`
-   - name: "Camiseta Casa Blanca de Luxo"
-   - price: 59,99
-   - category: `camisetas`
-   - images: as duas importadas acima
-3. Produto aparecerá automaticamente em `/colecoes/camisetas`.
+- Atualizo a memória do projeto com a nova regra (substitui o padrão antigo de "calcas / 79,99").
+- Preço continua sendo o que você informar na mensagem (ex.: "camiseta lacoste 59,99" → price `59,99`).
+- A "Camiseta Lacoste" da mensagem anterior será incluída na categoria camisetas por R$ 59,99 com as 2 imagens enviadas.
