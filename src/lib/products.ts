@@ -84,6 +84,8 @@ import chineloNkOffcourtPv1 from "@/assets/chinelo-nk-offcourt-pv-1.png";
 import chineloNkOffcourtPv2 from "@/assets/chinelo-nk-offcourt-pv-2.png";
 import chineloNkOffcourtPv3 from "@/assets/chinelo-nk-offcourt-pv-3.png";
 import chineloNkOffcourtPv4 from "@/assets/chinelo-nk-offcourt-pv-4.png";
+import chineloLcstNuvemCinza1 from "@/assets/chinelo-lcst-nuvem-cinza-1.png";
+import chineloLcstNuvemCinza2 from "@/assets/chinelo-lcst-nuvem-cinza-2.png";
 import bermudaJeansJogador from "@/assets/bermuda-jeans-jogador.png";
 import bermudaJeansJogador2 from "@/assets/bermuda-jeans-jogador-2.png";
 import bermudaJeansJogadorClara from "@/assets/bermuda-jeans-jogador-clara.png";
@@ -467,6 +469,7 @@ export const products: Product[] = [
   { slug: "chinelo-nk-slide-benassi", title: "Chinelo NK Slide Benassi", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: chineloNkBenassi1, images: [chineloNkBenassi1, chineloNkBenassi2, chineloNkBenassi3, chineloNkBenassi4] },
   { slug: "chinelo-nk-offcourt-preto-branco", title: "Chinelo NK Offcourt Preto e Branco", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: chineloNkOffcourtPb1, images: [chineloNkOffcourtPb1, chineloNkOffcourtPb2, chineloNkOffcourtPb3, chineloNkOffcourtPb4, chineloNkOffcourtPb5, chineloNkOffcourtPb6] },
   { slug: "chinelo-nk-offcourt-preto-vermelho", title: "Chinelo NK Offcourt Preto e Vermelho", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: chineloNkOffcourtPv1, images: [chineloNkOffcourtPv1, chineloNkOffcourtPv2, chineloNkOffcourtPv3, chineloNkOffcourtPv4] },
+  { slug: "slide-lcst-nuvem-cinza", title: "Slide Lcst Nuvem Cinza", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: chineloLcstNuvemCinza1, images: [chineloLcstNuvemCinza1, chineloLcstNuvemCinza2] },
   { slug: "slide-lacoste-1-0", title: "Slide Lacoste 1.0", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideLacoste10_1, images: [slideLacoste10_1, slideLacoste10_2, slideLacoste10_3, slideLacoste10_4, slideLacoste10_5] },
   
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
