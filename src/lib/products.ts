@@ -285,6 +285,7 @@ import kit212NycMen1 from "@/assets/kit-212-nyc-men-1.png";
 import kit212NycMen2 from "@/assets/kit-212-nyc-men-2.png";
 import kitOneMillionPacoRabanne1 from "@/assets/kit-one-million-paco-rabanne-1.png";
 import perfumeAcquaDiGio1 from "@/assets/perfume-acqua-di-gio-1.png";
+import perfumeYYsl1 from "@/assets/perfume-y-ysl-1.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
@@ -605,6 +606,7 @@ export const products: Product[] = [
   { slug: "kit-212-nyc-men-carolina-herrera", title: "Kit 212 NYC Men Carolina Herrera 100ml", price: "289,99", oldPrice: "", installment: "29,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: kit212NycMen1, images: [kit212NycMen1, kit212NycMen2] },
   { slug: "kit-paco-rabanne-one-million", title: "Kit Paco Rabanne One Million com Creme e Perfume 220ml", price: "249,99", oldPrice: "", installment: "25,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: kitOneMillionPacoRabanne1, images: [kitOneMillionPacoRabanne1] },
   { slug: "perfume-acqua-di-gio-giorgio-armani", title: "Acqua di Giò Pour Homme Giorgio Armani Eau de Toilette - Perfume Masculino 200ml", price: "299,98", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeAcquaDiGio1, images: [perfumeAcquaDiGio1] },
+  { slug: "perfume-y-yves-saint-laurent", title: "Y Yves Saint Laurent Eau de Parfum - Perfume Masculino 100ml", price: "299,98", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeYYsl1, images: [perfumeYYsl1] },
   { slug: "camiseta-lacoste-all-black-2026", title: "Camiseta Lacoste All Black 2026", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAllBlack2026_1, images: [camisetaLacosteAllBlack2026_1] },
   { slug: "polo-versace-dourada", title: "Polo de Luxo Versace Dourada", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloVersaceDourada1, images: [poloVersaceDourada1, poloVersaceDourada2] },
   { slug: "camisa-lv-all-black", title: "Camisa LV All Black", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLvAllBlack1, images: [camisaLvAllBlack1] },
