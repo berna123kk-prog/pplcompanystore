@@ -262,6 +262,8 @@ import perfume212VipBlack1 from "@/assets/perfume-212-vip-black-1.png";
 import perfumeInvictusPacoRabanne1 from "@/assets/perfume-invictus-paco-rabanne-1.png";
 import perfume1MillionPacoRabanne1 from "@/assets/perfume-1-million-paco-rabanne-1.png";
 import perfumeGoodGirlCarolinaHerrera1 from "@/assets/perfume-good-girl-carolina-herrera-1.png";
+import perfumePhantomPacoRabanne1 from "@/assets/perfume-phantom-paco-rabanne-1.png";
+import perfumePhantomPacoRabanne2 from "@/assets/perfume-phantom-paco-rabanne-2.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
