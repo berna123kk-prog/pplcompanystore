@@ -246,6 +246,8 @@ import camisetaLacosteGarrosClub1 from "@/assets/camiseta-lacoste-garros-club-1.
 import camisetaLacosteGarrosClub2 from "@/assets/camiseta-lacoste-garros-club-2.png";
 import camisetaLacosteGarrosClub3 from "@/assets/camiseta-lacoste-garros-club-3.png";
 import camisetaLacosteGarrosClub4 from "@/assets/camiseta-lacoste-garros-club-4.png";
+import camisetaLacosteSportWorld1 from "@/assets/camiseta-lacoste-sport-world-1.png";
+import camisetaLacosteSportWorld2 from "@/assets/camiseta-lacoste-sport-world-2.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
@@ -541,6 +543,7 @@ export const products: Product[] = [
   { slug: "regata-short-cruzeiro", title: "Regata + Short Cruzeiro", price: "69,99", oldPrice: "179,99", installment: "6,99", off: "61% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: regataShortCruzeiro1, images: [regataShortCruzeiro1] },
   { slug: "camiseta-lacoste-sport-globo", title: "Camiseta Lacoste Sport Globo", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteSportGlobo1, images: [camisetaLacosteSportGlobo1, camisetaLacosteSportGlobo2] },
   { slug: "camiseta-lacoste-garros-club", title: "Camiseta Lacoste Garros Club", price: "69,99", oldPrice: "179,99", installment: "6,99", off: "61% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteGarrosClub1, images: [camisetaLacosteGarrosClub1, camisetaLacosteGarrosClub2, camisetaLacosteGarrosClub3, camisetaLacosteGarrosClub4] },
+  { slug: "camiseta-lacoste-sport-world", title: "Camiseta Lacoste Sport World", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteSportWorld1, images: [camisetaLacosteSportWorld1, camisetaLacosteSportWorld2] },
   { slug: "camiseta-lacoste-all-black-2026", title: "Camiseta Lacoste All Black 2026", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAllBlack2026_1, images: [camisetaLacosteAllBlack2026_1] },
   { slug: "polo-versace-dourada", title: "Polo de Luxo Versace Dourada", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloVersaceDourada1, images: [poloVersaceDourada1, poloVersaceDourada2] },
   { slug: "camisa-lv-all-black", title: "Camisa LV All Black", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLvAllBlack1, images: [camisaLvAllBlack1] },

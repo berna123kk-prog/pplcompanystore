@@ -1,18 +1,7 @@
-## Adicionar novo produto em camisetas
+## Adicionar nova camiseta
 
-Vou cadastrar o produto **Camiseta Lacoste Garros Club** na seção **camisetas** com preço **R$ 69,99**, usando as imagens enviadas.
+**Produto:** Camiseta Lacoste Sport World — R$ 59,99 (5x R$ 5,99), oldPrice R$ 149,99, 60% OFF, categoria `camisetas`.
 
-### O que será feito
-- Copiar as 4 imagens enviadas para `src/assets/`.
-- Adicionar os imports dessas imagens em `src/lib/products.ts`.
-- Criar o novo item no catálogo com:
-  - `title`: `Camiseta Lacoste Garros Club`
-  - `price`: `69,99`
-  - `category`: `camisetas`
-  - `kind`: `clothing`
-  - galeria com as imagens enviadas
-- Manter o padrão recente do projeto: novos produtos enviados por você entram em **camisetas** até nova instrução.
-
-### Detalhes técnicos
-- O produto será incluído no array de produtos existente em `src/lib/products.ts`.
-- Vou seguir o mesmo formato dos outros itens de camisetas já cadastrados para preço antigo, parcela, estoque e desconto.
+### Passos
+1. Copiar as 2 imagens enviadas para `src/assets/camiseta-lacoste-sport-world-1.png` e `-2.png`.
+2. Em `src/lib/products.ts`: adicionar 2 imports e novo produto seguindo o mesmo padrão das outras camisetas Lacoste (slug `camiseta-lacoste-sport-world`, kind `clothing`, sold 1, stock 20, img + images com as 2 fotos), posicionado abaixo da "Camiseta Lacoste Garros Club".
