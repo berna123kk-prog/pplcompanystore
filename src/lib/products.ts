@@ -240,6 +240,8 @@ import camisetaCasaBlancaLuxoPreta1 from "@/assets/camiseta-casa-blanca-luxo-pre
 import poloMiamiOpenLacoste1 from "@/assets/polo-miami-open-lacoste-1.png";
 import camisaAtleticoMineiro1 from "@/assets/camisa-atletico-mineiro-1.png";
 import regataShortCruzeiro1 from "@/assets/regata-short-cruzeiro-1.png";
+import camisetaLacosteSportGlobo1 from "@/assets/camiseta-lacoste-sport-globo-1.png";
+import camisetaLacosteSportGlobo2 from "@/assets/camiseta-lacoste-sport-globo-2.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
@@ -533,6 +535,7 @@ export const products: Product[] = [
   { slug: "polo-miami-open-lacoste", title: "Polo Miami Open Lacoste", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloMiamiOpenLacoste1, images: [poloMiamiOpenLacoste1] },
   { slug: "camisa-atletico-mineiro", title: "Camisa Atlético Mineiro", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaAtleticoMineiro1, images: [camisaAtleticoMineiro1] },
   { slug: "regata-short-cruzeiro", title: "Regata + Short Cruzeiro", price: "69,99", oldPrice: "179,99", installment: "6,99", off: "61% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: regataShortCruzeiro1, images: [regataShortCruzeiro1] },
+  { slug: "camiseta-lacoste-sport-globo", title: "Camiseta Lacoste Sport Globo", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteSportGlobo1, images: [camisetaLacosteSportGlobo1, camisetaLacosteSportGlobo2] },
   { slug: "camiseta-lacoste-all-black-2026", title: "Camiseta Lacoste All Black 2026", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAllBlack2026_1, images: [camisetaLacosteAllBlack2026_1] },
   { slug: "polo-versace-dourada", title: "Polo de Luxo Versace Dourada", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloVersaceDourada1, images: [poloVersaceDourada1, poloVersaceDourada2] },
   { slug: "camisa-lv-all-black", title: "Camisa LV All Black", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLvAllBlack1, images: [camisaLvAllBlack1] },
