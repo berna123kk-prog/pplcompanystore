@@ -1,7 +1,18 @@
-## Nova regra padrão
+## Adicionar novo produto em camisetas
 
-A partir de agora, todo produto que você enviar será adicionado na categoria **camisetas** em `src/lib/products.ts` (até nova instrução).
+Vou cadastrar o produto **Camiseta Lacoste Garros Club** na seção **camisetas** com preço **R$ 69,99**, usando as imagens enviadas.
 
-- Atualizo a memória do projeto com a nova regra (substitui o padrão antigo de "calcas / 79,99").
-- Preço continua sendo o que você informar na mensagem (ex.: "camiseta lacoste 59,99" → price `59,99`).
-- A "Camiseta Lacoste" da mensagem anterior será incluída na categoria camisetas por R$ 59,99 com as 2 imagens enviadas.
+### O que será feito
+- Copiar as 4 imagens enviadas para `src/assets/`.
+- Adicionar os imports dessas imagens em `src/lib/products.ts`.
+- Criar o novo item no catálogo com:
+  - `title`: `Camiseta Lacoste Garros Club`
+  - `price`: `69,99`
+  - `category`: `camisetas`
+  - `kind`: `clothing`
+  - galeria com as imagens enviadas
+- Manter o padrão recente do projeto: novos produtos enviados por você entram em **camisetas** até nova instrução.
+
+### Detalhes técnicos
+- O produto será incluído no array de produtos existente em `src/lib/products.ts`.
+- Vou seguir o mesmo formato dos outros itens de camisetas já cadastrados para preço antigo, parcela, estoque e desconto.
