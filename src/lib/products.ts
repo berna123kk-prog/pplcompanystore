@@ -273,6 +273,8 @@ import perfumeSauvageDior2 from "@/assets/perfume-sauvage-dior-2.png";
 import perfumeCoffretInvictusVictoryElixirKit1 from "@/assets/perfume-coffret-invictus-victory-elixir-kit-1.png";
 import perfume212VipMen1 from "@/assets/perfume-212-vip-men-1.png";
 import perfumeXerjoffErbaPura1 from "@/assets/perfume-xerjoff-erba-pura-1.png";
+import perfumeScandalJpg1 from "@/assets/perfume-scandal-jpg-1.png";
+import perfumeScandalJpg2 from "@/assets/perfume-scandal-jpg-2.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
