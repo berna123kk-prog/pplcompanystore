@@ -90,6 +90,7 @@ import slidePmaFeminino1 from "@/assets/slide-pma-feminino-1.png";
 import slidePmaFeminino2 from "@/assets/slide-pma-feminino-2.png";
 import slideNkOffcourtAdjust1 from "@/assets/slide-nk-offcourt-adjust-1.png";
 import slideNkOffcourtAdjust2 from "@/assets/slide-nk-offcourt-adjust-2.png";
+import chineloNkCourt1 from "@/assets/chinelo-nk-court-1.png";
 import bermudaJeansJogador from "@/assets/bermuda-jeans-jogador.png";
 import bermudaJeansJogador2 from "@/assets/bermuda-jeans-jogador-2.png";
 import bermudaJeansJogadorClara from "@/assets/bermuda-jeans-jogador-clara.png";
@@ -476,6 +477,7 @@ export const products: Product[] = [
   { slug: "slide-lcst-nuvem-cinza", title: "Slide Lcst Nuvem Cinza", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: chineloLcstNuvemCinza1, images: [chineloLcstNuvemCinza1, chineloLcstNuvemCinza2] },
   { slug: "slide-pma-feminino", title: "Slide Pma Feminino", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slidePmaFeminino1, images: [slidePmaFeminino1, slidePmaFeminino2] },
   { slug: "slide-nk-offcourt-adjust", title: "Slide NK Offcourt Adjust", price: "89,99", oldPrice: "269,99", installment: "8,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideNkOffcourtAdjust1, images: [slideNkOffcourtAdjust1, slideNkOffcourtAdjust2] },
+  { slug: "chinelo-nk-court", title: "Chinelo NK Court", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: chineloNkCourt1, images: [chineloNkCourt1] },
   { slug: "slide-lacoste-1-0", title: "Slide Lacoste 1.0", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideLacoste10_1, images: [slideLacoste10_1, slideLacoste10_2, slideLacoste10_3, slideLacoste10_4, slideLacoste10_5] },
   
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
