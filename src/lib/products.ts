@@ -273,6 +273,8 @@ import perfumeSauvageDior2 from "@/assets/perfume-sauvage-dior-2.png";
 import perfumeCoffretInvictusVictoryElixirKit1 from "@/assets/perfume-coffret-invictus-victory-elixir-kit-1.png";
 import perfume212VipMen1 from "@/assets/perfume-212-vip-men-1.png";
 import perfumeXerjoffErbaPura1 from "@/assets/perfume-xerjoff-erba-pura-1.png";
+import perfumeScandalJpg1 from "@/assets/perfume-scandal-jpg-1.png";
+import perfumeScandalJpg2 from "@/assets/perfume-scandal-jpg-2.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
@@ -585,6 +587,7 @@ export const products: Product[] = [
   { slug: "perfume-coffret-invictus-victory-elixir-kit", title: "Coffret Rabanne Invictus Victory Elixir Kit - Perfume Masculino + Desodorante + Travel Size", price: "299,94", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeCoffretInvictusVictoryElixirKit1, images: [perfumeCoffretInvictusVictoryElixirKit1] },
   { slug: "perfume-212-vip-men-carolina-herrera", title: "212 VIP Men Carolina Herrera Eau de Toilette - Perfume Masculino 200ml", price: "299,98", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfume212VipMen1, images: [perfume212VipMen1] },
   { slug: "perfume-xerjoff-erba-pura", title: "Perfume Xerjoff Erba Pura Spray", price: "109,99", oldPrice: "", installment: "11,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeXerjoffErbaPura1, images: [perfumeXerjoffErbaPura1] },
+  { slug: "perfume-scandal-jean-paul-gaultier", title: "Scandal Pour Homme – Jean Paul Gaultier Perfume", price: "389,97", oldPrice: "", installment: "39,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeScandalJpg1, images: [perfumeScandalJpg1, perfumeScandalJpg2] },
   { slug: "camiseta-lacoste-all-black-2026", title: "Camiseta Lacoste All Black 2026", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAllBlack2026_1, images: [camisetaLacosteAllBlack2026_1] },
   { slug: "polo-versace-dourada", title: "Polo de Luxo Versace Dourada", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloVersaceDourada1, images: [poloVersaceDourada1, poloVersaceDourada2] },
   { slug: "camisa-lv-all-black", title: "Camisa LV All Black", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLvAllBlack1, images: [camisaLvAllBlack1] },
