@@ -1,7 +1,11 @@
-## Adicionar nova camiseta
+## Adicionar produto: Camiseta Fred Perry Laurel Preta
 
-**Produto:** Camiseta Lacoste Jacaré Estampado — R$ 59,99 (5x R$ 5,99), oldPrice R$ 149,99, 60% OFF, categoria `camisetas`.
+1. Copiar as 2 imagens enviadas para `src/assets/camiseta-fred-perry-laurel-preta-1.png` e `-2.png`.
+2. Em `src/lib/products.ts`: adicionar imports e um novo produto na categoria `camisetas`, abaixo de "Camiseta Lacoste Jacaré Estampado".
 
-### Passos
-1. Copiar a imagem enviada para `src/assets/camiseta-lacoste-jacare-estampado-1.png`.
-2. Em `src/lib/products.ts`: adicionar import e novo produto (slug `camiseta-lacoste-jacare-estampado`, kind `clothing`, sold 1, stock 20), posicionado abaixo da "Camiseta Lacoste Sport World".
+Detalhes do produto:
+- slug: `camiseta-fred-perry-laurel-preta`
+- title: `Camiseta Fred Perry Laurel Preta`
+- price: `59,99` / installment: `5,99` / oldPrice: `149,99` / off: `60% OFF`
+- kind: `clothing`, category: `camisetas`, sold: 1, stock: 20
+- img/images: as duas imagens copiadas
