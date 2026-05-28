@@ -288,6 +288,7 @@ import perfumeAcquaDiGio1 from "@/assets/perfume-acqua-di-gio-1.png";
 import perfumeYYsl1 from "@/assets/perfume-y-ysl-1.png";
 import perfumeScandalFeminino1 from "@/assets/perfume-scandal-feminino-1.png";
 import kitPhantom1 from "@/assets/kit-phantom-1.png";
+import kit212VipNyc1 from "@/assets/kit-212-vip-nyc-1.png";
 import camisetaLacosteAllBlack2026_1 from "@/assets/camiseta-lacoste-all-black-2026-1.png";
 import poloVersaceDourada1 from "@/assets/polo-versace-dourada-1.png";
 import poloVersaceDourada2 from "@/assets/polo-versace-dourada-2.png";
@@ -611,6 +612,7 @@ export const products: Product[] = [
   { slug: "perfume-y-yves-saint-laurent", title: "Y Yves Saint Laurent Eau de Parfum - Perfume Masculino 100ml", price: "299,98", oldPrice: "", installment: "29,99", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeYYsl1, images: [perfumeYYsl1] },
   { slug: "perfume-scandal-feminino-jean-paul-gaultier", title: "Scandal - Perfume Feminino Eau de Parfum, Jean Paul Gaultier", price: "229,90", oldPrice: "", installment: "23,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: perfumeScandalFeminino1, images: [perfumeScandalFeminino1] },
   { slug: "kit-phantom-paco-rabanne", title: "Kit Phantom Paco Rabanne com Creme e Perfume 220ml", price: "249,99", oldPrice: "", installment: "25,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: kitPhantom1, images: [kitPhantom1] },
+  { slug: "kit-212-vip-nyc", title: "Kit 212 VIP NYC com Creme e Perfume 220ml", price: "249,99", oldPrice: "", installment: "25,00", off: "", kind: "accessory", category: "perfumes", sold: 1, stock: 20, img: kit212VipNyc1, images: [kit212VipNyc1] },
   { slug: "camiseta-lacoste-all-black-2026", title: "Camiseta Lacoste All Black 2026", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAllBlack2026_1, images: [camisetaLacosteAllBlack2026_1] },
   { slug: "polo-versace-dourada", title: "Polo de Luxo Versace Dourada", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: poloVersaceDourada1, images: [poloVersaceDourada1, poloVersaceDourada2] },
   { slug: "camisa-lv-all-black", title: "Camisa LV All Black", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisaLvAllBlack1, images: [camisaLvAllBlack1] },
