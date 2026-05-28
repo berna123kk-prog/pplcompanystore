@@ -111,6 +111,18 @@ export function Header() {
           </button>
         </div>
       </div>
+      <nav className="md:hidden max-w-[1400px] mx-auto px-4 pb-3 -mt-2 flex items-center justify-center gap-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+        {navItems.map((item) => (
+          <Link
+            key={item.label}
+            to="/colecoes/$slug"
+            params={{ slug: item.slug }}
+            className="text-[11px] font-bold uppercase tracking-[0.15em] text-white hover:text-white/80 py-1"
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
       <div className="max-w-[1400px] mx-auto px-6">
           <div className="h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
       </div>
