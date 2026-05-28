@@ -1,32 +1,8 @@
-## Problema
+## Mudança
 
-No mobile o `<nav>` do `Header` (src/components/storefront.tsx) tem `hidden md:flex`, então as categorias (Vestuário, Kits, Acessórios, Slides, Sneakers, Perfumes) só aparecem no desktop.
+No menu mobile do `Header` (src/components/storefront.tsx):
 
-## Solução
+1. Remover o item "Kits" do array `navItems` (linha 27). Isso remove tanto do desktop quanto do mobile — "Kits Completos" continua acessível pelo dropdown de "Vestuário" no desktop e pela URL `/colecoes/kits-completos`.
+2. No `<nav>` mobile (linhas 113-125), reduzir o `gap-5` para `gap-4` e remover o `overflow-x-auto` / `whitespace-nowrap`, deixando os 5 itens restantes (Vestuário, Acessórios, Slides, Sneakers, Perfumes) realmente centralizados e visíveis sem rolagem em ~384px.
 
-Adicionar uma segunda `<nav>` visível apenas no mobile (`md:hidden`) dentro da própria faixa azul do header, logo abaixo da linha do logo + ícones, centralizada como no desktop. Como são 6 itens e o viewport é ~384px, usar rolagem horizontal discreta (sem barra visível) para garantir que tudo caiba sem quebrar.
-
-### Edição em `src/components/storefront.tsx` (função `Header`)
-
-Inserir, entre o `</div>` da linha do logo/ícones e a `<div>` da linha divisória branca, o seguinte nav mobile:
-
-```tsx
-<nav className="md:hidden max-w-[1400px] mx-auto px-4 pb-3 -mt-2 flex items-center justify-center gap-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-  {navItems.map((item) => (
-    <Link
-      key={item.label}
-      to="/colecoes/$slug"
-      params={{ slug: item.slug }}
-      className="text-[11px] font-bold uppercase tracking-[0.15em] text-white hover:text-white/80 py-1"
-    >
-      {item.label}
-    </Link>
-  ))}
-</nav>
-```
-
-- Reaproveita o array `navItems` já existente.
-- No mobile, subitens de "Vestuário" continuam acessíveis pela página da coleção (sem dropdown no mobile para manter simples).
-- Desktop (`md:flex`) continua intocado.
-
-Nenhuma alteração de rotas, dados ou lógica.
+Desktop continua intocado fora da remoção do item "Kits".

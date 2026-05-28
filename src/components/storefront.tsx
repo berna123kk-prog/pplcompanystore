@@ -24,7 +24,7 @@ const navItems: { label: string; slug: string; sub?: { label: string; slug: stri
       { label: "Kits Completos", slug: "kits-completos" },
     ],
   },
-  { label: "Kits", slug: "kits-completos" },
+  
   { label: "Acessórios", slug: "acessorios" },
   { label: "Slides", slug: "slides" },
   { label: "Sneakers", slug: "sneakers" },
@@ -111,7 +111,7 @@ export function Header() {
           </button>
         </div>
       </div>
-      <nav className="md:hidden max-w-[1400px] mx-auto px-4 pb-3 -mt-2 flex items-center justify-center gap-5 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      <nav className="md:hidden max-w-[1400px] mx-auto px-3 pb-3 -mt-2 flex items-center justify-center gap-3">
         {navItems.map((item) => (
           <Link
             key={item.label}
