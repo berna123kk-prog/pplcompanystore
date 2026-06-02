@@ -1,0 +1,19 @@
+# VSN Store
+
+> Loja de moda masculina com vestuário, sneakers, acessórios, slides e perfumes de marcas premium. Entrega direto para sua casa com parcelamento em até 12x sem juros.
+
+VSN Store (Visionario Style Hub) é um e-commerce especializado em moda masculina. Oferece produtos originais de marcas como Nike, Lacoste, Tommy Hilfiger, Puma, Mizuno e outras, incluindo camisetas, jaquetas, moletons, bermudas, shorts, tênis, slides, bonés, bolsas e perfumes.
+
+## Pages
+
+- [Home](/): Página inicial com produtos em destaque, kits completos, Tommy, bonés, Nike Academy e sneakers.
+- [Vestuário](/colecoes/vestuario): Coleção de roupas masculinas — camisetas, jaquetas, moletons, calças, bermudas, shorts e kits completos.
+- [Sneakers](/colecoes/sneakers): Tênis masculinos de marcas premium.
+- [Perfumes](/colecoes/perfumes): Fragrâncias masculinas importadas.
+- [Acessórios](/colecoes/acessorios): Bonés, bolsas e outros acessórios.
+- [Slides](/colecoes/slides): Chinelos e slides masculinos.
+- [Checkout](/checkout): Finalização de compra com resumo do pedido.
+
+## Optional
+
+- [Produto](/produtos/kit-lacoste-sportswear): Exemplo de página de produto com galeria de imagens, tamanhos e botão de adicionar ao carrinho.
