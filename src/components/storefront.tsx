@@ -54,6 +54,11 @@ export function Logo() {
       <img
         src={logoPpl}
         alt="PPL Company"
+        width={448}
+        height={448}
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
         className="h-20 md:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(30,127,255,0.25)]"
       />
     </Link>
