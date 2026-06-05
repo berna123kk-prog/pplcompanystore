@@ -56,6 +56,7 @@ import slideMizunoOriginalPretoBranco1 from "@/assets/slide-mizuno-original-pret
 import slideMizunoOriginalBranco1 from "@/assets/slide-mizuno-original-branco-1.png";
 import slideMizunoOriginalPrateadoRoxo1 from "@/assets/slide-mizuno-original-prateado-roxo-1.png";
 import slideLacoste10_1 from "@/assets/slide-lacoste-1-0-1.png";
+import slideLacoste10AzulMarinho1 from "@/assets/slide-lacoste-1-0-azul-marinho-1.png.asset.json";
 import slideLacoste10_2 from "@/assets/slide-lacoste-1-0-2.png";
 import slideLacoste10_3 from "@/assets/slide-lacoste-1-0-3.png";
 import slideLacoste10_4 from "@/assets/slide-lacoste-1-0-4.png";
@@ -528,6 +529,7 @@ export const products: Product[] = [
   { slug: "slide-nk-offcourt-adjust", title: "Slide NK Offcourt Adjust", price: "89,99", oldPrice: "269,99", installment: "8,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideNkOffcourtAdjust1, images: [slideNkOffcourtAdjust1, slideNkOffcourtAdjust2] },
   { slug: "chinelo-nk-court", title: "Chinelo NK Court", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: chineloNkCourt1, images: [chineloNkCourt1] },
   { slug: "slide-lacoste-1-0", title: "Slide Lacoste 1.0", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideLacoste10_1, images: [slideLacoste10_1, slideLacoste10_2, slideLacoste10_3, slideLacoste10_4, slideLacoste10_5] },
+  { slug: "slide-lacoste-1-0-azul-marinho", title: "Slide Lacoste 1.0 Azul Marinho", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "footwear", category: "slides", sold: 1, stock: 20, img: slideLacoste10AzulMarinho1.url, images: [slideLacoste10AzulMarinho1.url] },
   
   { slug: "kit-nk-academy", title: "Jaqueta vermelha Tommy Velejador Modelo Antigo", price: "129,99", oldPrice: "199,99", installment: "12,99", off: "35% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2100, stock: 14, img: jaquetaTommyVermelha1, images: [jaquetaTommyVermelha1, jaquetaTommyVermelha2, jaquetaTommyVermelha3, jaquetaTommyVermelha4] },
   { slug: "moletom-bmw-motosport", title: "Moletom BMW Motosport", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomBmwMotosport, images: [moletomBmwMotosport] },
