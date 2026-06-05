@@ -117,6 +117,10 @@ import shortsNkAthletics2 from "@/assets/shorts-nk-athletics-2.png";
 import bonePmaMotosportBmw from "@/assets/bone-pma-motosport-bmw.png";
 import boneLcstMiamiOpen1 from "@/assets/bone-lcst-miami-open-1.png";
 import boneLcstMiamiOpen2 from "@/assets/bone-lcst-miami-open-2.png";
+import boneLcstLBordado1 from "@/assets/bone-lcst-l-bordado-1.png.asset.json";
+import boneLcstLBordado2 from "@/assets/bone-lcst-l-bordado-2.png.asset.json";
+import boneLcstLBordado3 from "@/assets/bone-lcst-l-bordado-3.png.asset.json";
+import boneLcstLBordado4 from "@/assets/bone-lcst-l-bordado-4.png.asset.json";
 import boneLcstSport2Faixas1 from "@/assets/bone-lcst-sport-2-faixas-1.png";
 import boneLcstSport2Faixas2 from "@/assets/bone-lcst-sport-2-faixas-2.png";
 import boneLcstSport2Faixas3 from "@/assets/bone-lcst-sport-2-faixas-3.png";
@@ -655,6 +659,7 @@ export const products: Product[] = [
   { slug: "camiseta-nk-dri-fit-swoosh", title: "Camiseta NK Dri-FIT Swoosh", price: "49,99", oldPrice: "149,99", installment: "4,99", off: "67% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaNkDriFitSwoosh1, images: [camisetaNkDriFitSwoosh1] },
   { slug: "camisa-manga-longa-nk-dri-fit-swoosh", title: "Camisa Manga Longa NK Dri-FIT Swoosh", price: "89,99", oldPrice: "249,99", installment: "8,99", off: "64% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisaMangaLongaNkDriFitSwoosh1, images: [camisaMangaLongaNkDriFitSwoosh1] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
+  { slug: "bone-lcst-l-bordado", title: "Boné Lacoste L Bordado", price: "219,99", oldPrice: "549,99", installment: "21,99", off: "60% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 20, img: boneLcstLBordado1.url, images: [boneLcstLBordado1.url, boneLcstLBordado2.url, boneLcstLBordado3.url, boneLcstLBordado4.url] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
   { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
   { slug: "bone-lcst-sport-mesh-don-juan-preto", title: "Boné Lcst Sport Mesh Don Juan Preto", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuanPreto1, images: [boneLcstSportMeshDonJuanPreto1, boneLcstSportMeshDonJuanPreto2] },
