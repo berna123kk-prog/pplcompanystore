@@ -184,6 +184,9 @@ import tenisNkEbernonLow2 from "@/assets/tenis-nk-ebernon-low-2.png.asset.json";
 import tenisNb5501 from "@/assets/tenis-nb-550-1.png.asset.json";
 import tenisNb5502 from "@/assets/tenis-nb-550-2.png.asset.json";
 import tenisNb5503 from "@/assets/tenis-nb-550-3.png.asset.json";
+import tenisNb550WhiteGrey1 from "@/assets/tenis-nb-550-white-grey-1.png.asset.json";
+import tenisNb550WhiteGrey2 from "@/assets/tenis-nb-550-white-grey-2.png.asset.json";
+import tenisNb550WhiteGrey3 from "@/assets/tenis-nb-550-white-grey-3.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -866,6 +869,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nb-550-white-grey", title: "Tênis NB 550 White Grey", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNb550WhiteGrey1.url, images: [tenisNb550WhiteGrey1.url, tenisNb550WhiteGrey2.url, tenisNb550WhiteGrey3.url] },
   { slug: "tenis-nb-550", title: "Tênis NB 550", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNb5501.url, images: [tenisNb5501.url, tenisNb5502.url, tenisNb5503.url] },
   { slug: "tenis-nk-ebernon-low", title: "Tênis NK Ebernon Low", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkEbernonLow1.url, images: [tenisNkEbernonLow1.url, tenisNkEbernonLow2.url] },
   { slug: "tenis-nk-shox-ride-2-iron-grey", title: "Tênis NK Shox Ride 2 Iron Grey and Anthracite", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxRide2IronGrey1.url, images: [tenisNkShoxRide2IronGrey1.url, tenisNkShoxRide2IronGrey2.url, tenisNkShoxRide2IronGrey3.url, tenisNkShoxRide2IronGrey4.url] },
