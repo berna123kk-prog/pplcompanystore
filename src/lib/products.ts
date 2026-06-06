@@ -46,6 +46,7 @@ import tenisNkAirJordan1LowPink1 from "@/assets/tenis-nk-air-jordan-1-low-pink-1
 import tenisNkAirJordan1LowPink2 from "@/assets/tenis-nk-air-jordan-1-low-pink-2.png.asset.json";
 import tenisNkAirMaxPlusRosaPreto1 from "@/assets/tenis-nk-air-max-plus-rosa-preto-1.png.asset.json";
 import tenisNkAirMaxPlusRosaPreto2 from "@/assets/tenis-nk-air-max-plus-rosa-preto-2.png.asset.json";
+import tenisNkAirJordan1LowCrimsonTint1 from "@/assets/tenis-nk-air-jordan-1-low-crimson-tint-1.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -728,6 +729,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-jordan-1-low-crimson-tint", title: "Tênis NK Air Jordan 1 Low Crimson Tint", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowCrimsonTint1.url, images: [tenisNkAirJordan1LowCrimsonTint1.url] },
   { slug: "tenis-nk-air-max-plus-rosa-preto", title: "Tênis NK Air Max Plus", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusRosaPreto1.url, images: [tenisNkAirMaxPlusRosaPreto1.url, tenisNkAirMaxPlusRosaPreto2.url] },
   { slug: "tenis-nk-air-jordan-1-low-pink", title: "Tênis NK Air Jordan 1 Low", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowPink1.url, images: [tenisNkAirJordan1LowPink1.url, tenisNkAirJordan1LowPink2.url] },
   { slug: "tenis-nk-air-jordan-1-low-gold", title: "Tênis NK Air Jordan 1 Low", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowGold1.url, images: [tenisNkAirJordan1LowGold1.url, tenisNkAirJordan1LowGold2.url] },
