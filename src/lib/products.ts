@@ -103,6 +103,8 @@ import tenisNkAirForce1White1 from "@/assets/tenis-nk-air-force-1-white-1.png.as
 import tenisNkAirForce1White2 from "@/assets/tenis-nk-air-force-1-white-2.png.asset.json";
 import tenisNkAirForce1White3 from "@/assets/tenis-nk-air-force-1-white-3.png.asset.json";
 import tenisNkAirForce1White4 from "@/assets/tenis-nk-air-force-1-white-4.png.asset.json";
+import tenisNkAirMaxPlusSunrise1 from "@/assets/tenis-nk-air-max-plus-sunrise-1.png.asset.json";
+import tenisNkAirMaxPlusSunrise2 from "@/assets/tenis-nk-air-max-plus-sunrise-2.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -785,6 +787,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-max-plus-sunrise", title: "Tênis NK Air Max Plus \"Sunrise\"", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusSunrise1.url, images: [tenisNkAirMaxPlusSunrise1.url, tenisNkAirMaxPlusSunrise2.url] },
   { slug: "tenis-nk-air-force-1-white", title: "Tênis NK Air Force 1 White", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirForce1White1.url, images: [tenisNkAirForce1White1.url, tenisNkAirForce1White2.url, tenisNkAirForce1White3.url, tenisNkAirForce1White4.url] },
   { slug: "tenis-nk-dunk-low-paisley", title: "Tênis NK Dunk Low \"Paisley\"", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkDunkLowPaisley1.url, images: [tenisNkDunkLowPaisley1.url, tenisNkDunkLowPaisley2.url] },
   { slug: "tenis-nk-dunk-low-court-purple", title: "Tênis NK Dunk Low Retro \"Court Purple\"", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkDunkLowCourtPurple1.url, images: [tenisNkDunkLowCourtPurple1.url, tenisNkDunkLowCourtPurple2.url, tenisNkDunkLowCourtPurple3.url] },
