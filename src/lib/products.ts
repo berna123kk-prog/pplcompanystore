@@ -112,6 +112,8 @@ import tenisNkAirJordan4Thunder4 from "@/assets/tenis-nk-air-jordan-4-thunder-4.
 import tenisNkAirJordan1LowParis1 from "@/assets/tenis-nk-air-jordan-1-low-paris-1.png.asset.json";
 import tenisNkAirJordan1LowParis2 from "@/assets/tenis-nk-air-jordan-1-low-paris-2.png.asset.json";
 import tenisNkAirJordan1LowParis3 from "@/assets/tenis-nk-air-jordan-1-low-paris-3.png.asset.json";
+import tenisNkAf1SupremeWhiteLace1 from "@/assets/tenis-nk-af1-supreme-white-lace-1.png.asset.json";
+import tenisNkAf1SupremeWhiteLace2 from "@/assets/tenis-nk-af1-supreme-white-lace-2.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
