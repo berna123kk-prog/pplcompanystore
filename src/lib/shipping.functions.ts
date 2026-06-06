@@ -12,10 +12,15 @@ const REGION_BY_UF: Record<string, "SE" | "S" | "CO" | "NE" | "N"> = {
   PA: "N", AP: "N", AM: "N", RR: "N", AC: "N", RO: "N", TO: "N",
 };
 
-const PRICING = {
-  PAC:   { SE: { base: 18.9, perKg: 4.5, days: "4 a 7 dias" }, S:  { base: 22.5, perKg: 5.2, days: "5 a 9 dias" }, CO: { base: 24.9, perKg: 5.9, days: "6 a 10 dias" }, NE: { base: 28.9, perKg: 7.1, days: "7 a 12 dias" }, N:  { base: 34.9, perKg: 8.4, days: "9 a 15 dias" } },
-  SEDEX: { SE: { base: 32.5, perKg: 6.5, days: "2 a 3 dias" }, S:  { base: 38.9, perKg: 7.8, days: "3 a 5 dias" }, CO: { base: 42.9, perKg: 8.5, days: "3 a 5 dias" }, NE: { base: 48.9, perKg: 9.8, days: "4 a 7 dias" }, N:  { base: 56.9, perKg: 11.2, days: "5 a 9 dias" } },
-} as const;
+type Region = "SE" | "S" | "CO" | "NE" | "N";
+
+const REGION_PRICES: Record<Region, { pac: number; sedex: number; motoboy: number; uber: number }> = {
+  SE: { pac: 13.98, sedex: 28.70, motoboy: 31.99, uber: 44.50 },
+  S:  { pac: 19.45, sedex: 34.20, motoboy: 38.90, uber: 47.80 },
+  CO: { pac: 22.60, sedex: 41.15, motoboy: 43.25, uber: 49.90 },
+  NE: { pac: 26.85, sedex: 46.90, motoboy: 48.10, uber: 51.20 },
+  N:  { pac: 29.95, sedex: 49.30, motoboy: 50.50, uber: 52.00 },
+};
 
 const inputSchema = z.object({
   cep: z.string().trim().regex(/^\d{8}$/, "CEP inválido"),
@@ -33,7 +38,6 @@ export type ShippingOption = {
 export const getShippingOptions = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => inputSchema.parse(input))
   .handler(async ({ data }): Promise<{ options: ShippingOption[]; uf?: string }> => {
-    // Descobre UF via BrasilAPI (sem necessidade de credenciais).
     let uf: string | undefined;
     try {
       const r = await fetch(`https://brasilapi.com.br/api/cep/v1/${data.cep}`);
@@ -43,21 +47,17 @@ export const getShippingOptions = createServerFn({ method: "POST" })
       }
     } catch {}
 
-    const region: "SE" | "S" | "CO" | "NE" | "N" = (uf && REGION_BY_UF[uf]) || "SE";
-    // Peso estimado: 0.6kg por item (calçados/roupas).
-    const weight = Math.max(0.5, data.itemsCount * 0.6);
-
-    const round = (n: number) => Math.round(n * 100) / 100;
-    const pac = PRICING.PAC[region];
-    const sedex = PRICING.SEDEX[region];
+    const region: Region = (uf && REGION_BY_UF[uf]) || "SE";
+    const p = REGION_PRICES[region];
 
     return {
       uf,
       options: [
-        { id: "MOTOBOY", name: "Motoboy Loggi", price: 31.99, days: "Receba no mesmo dia", badge: "FULL" },
-        { id: "UBER", name: "Frete Uber Expresso", price: 59.08, days: "Receba em 30min (Válido para sua região)", badge: "FULL" },
-        { id: "PAC", name: "Correios PAC", price: round(pac.base + pac.perKg * weight), days: pac.days },
-        { id: "SEDEX", name: "Correios Sedex", price: round(sedex.base + sedex.perKg * weight), days: sedex.days },
+        { id: "MOTOBOY", name: "Motoboy Loggi", price: p.motoboy, days: "Receba no mesmo dia", badge: "FULL" },
+        { id: "UBER", name: "Frete Uber Expresso", price: p.uber, days: "Receba em 30min (Válido para sua região)", badge: "FULL" },
+        { id: "PAC", name: "Correios PAC", price: p.pac, days: "4 a 7 dias" },
+        { id: "SEDEX", name: "Correios Sedex", price: p.sedex, days: "2 a 3 dias" },
       ],
     };
   });
+
