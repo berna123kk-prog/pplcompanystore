@@ -26,6 +26,7 @@ import tenisNkAirMaxPlusIiiTunedPreto1 from "@/assets/tenis-nk-air-max-plus-iii-
 import tenisNkAirMaxPlusIiiTunedPreto2 from "@/assets/tenis-nk-air-max-plus-iii-tuned-preto-2.png.asset.json";
 import tenisNkAirMaxPlusIiiTunedAzul1 from "@/assets/tenis-nk-air-max-plus-iii-tuned-azul-1.png.asset.json";
 import tenisNkAirMaxPlusIiiTunedAzul2 from "@/assets/tenis-nk-air-max-plus-iii-tuned-azul-2.png.asset.json";
+import tenisNkAirMaxPlusRoxo1 from "@/assets/tenis-nk-air-max-plus-roxo-1.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -708,6 +709,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-max-plus-roxo", title: "Tênis NK Air Max Plus Roxo Voltage", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusRoxo1.url, images: [tenisNkAirMaxPlusRoxo1.url] },
   { slug: "tenis-nk-air-max-plus-iii-tuned-azul", title: "Tênis NK Air Max Plus III Tuned Preto com Azul", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusIiiTunedAzul1.url, images: [tenisNkAirMaxPlusIiiTunedAzul1.url, tenisNkAirMaxPlusIiiTunedAzul2.url] },
   { slug: "tenis-nk-air-max-plus-iii-tuned-preto", title: "Tênis NK Air Max Plus III Tuned Preto", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusIiiTunedPreto1.url, images: [tenisNkAirMaxPlusIiiTunedPreto1.url, tenisNkAirMaxPlusIiiTunedPreto2.url] },
   { slug: "tenis-nk-air-max-plus-iii-tuned", title: "Tênis NK Air Max Plus III Tuned", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusIiiTuned1.url, images: [tenisNkAirMaxPlusIiiTuned1.url] },
