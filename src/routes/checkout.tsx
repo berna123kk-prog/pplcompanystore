@@ -377,8 +377,16 @@ function StepDelivery({
                     <label key={opt.id} className={`flex items-center gap-3 border-2 px-4 py-3.5 rounded-xl cursor-pointer transition-all ${isSel ? "border-sky-500 bg-sky-50/50" : "border-slate-200 hover:border-slate-300"}`}>
                       <input type="radio" name="ship" checked={isSel} onChange={() => setSelected(opt)} className="accent-sky-500" />
                       <div className="flex-1">
-                        <p className="text-sm font-bold text-sky-900">{opt.name}</p>
-                        <p className="text-[11px] text-slate-500">{opt.days}</p>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <p className="text-sm font-bold text-slate-900">{opt.name}</p>
+                          {opt.badge === "FULL" && (
+                            <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider text-emerald-600 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded">
+                              <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+                              FULL
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">{opt.days}</p>
                       </div>
                       <p className="text-sm font-extrabold text-sky-900">R$ {opt.price.toFixed(2).replace(".", ",")}</p>
                     </label>

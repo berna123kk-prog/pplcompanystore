@@ -23,10 +23,11 @@ const inputSchema = z.object({
 });
 
 export type ShippingOption = {
-  id: "PAC" | "SEDEX";
+  id: "PAC" | "SEDEX" | "MOTOBOY" | "UBER";
   name: string;
   price: number;
   days: string;
+  badge?: "FULL";
 };
 
 export const getShippingOptions = createServerFn({ method: "POST" })
@@ -53,6 +54,8 @@ export const getShippingOptions = createServerFn({ method: "POST" })
     return {
       uf,
       options: [
+        { id: "MOTOBOY", name: "Motoboy Loggi", price: 31.99, days: "Receba no mesmo dia", badge: "FULL" },
+        { id: "UBER", name: "Frete Uber Expresso", price: 59.08, days: "Receba em 30min (Válido para sua região)", badge: "FULL" },
         { id: "PAC", name: "Correios PAC", price: round(pac.base + pac.perKg * weight), days: pac.days },
         { id: "SEDEX", name: "Correios Sedex", price: round(sedex.base + sedex.perKg * weight), days: sedex.days },
       ],
