@@ -35,6 +35,8 @@ import tenisNkAirMaxPlusAllBlack1 from "@/assets/tenis-nk-air-max-plus-all-black
 import tenisNkAirMaxPlusAllBlack2 from "@/assets/tenis-nk-air-max-plus-all-black-2.png.asset.json";
 import tenisNkAirMaxPlusAllWhite1 from "@/assets/tenis-nk-air-max-plus-all-white-1.png.asset.json";
 import tenisNkAirMaxPlusAllWhite2 from "@/assets/tenis-nk-air-max-plus-all-white-2.png.asset.json";
+import tenisNkAirMaxPlusPretoVolt1 from "@/assets/tenis-nk-air-max-plus-preto-volt-1.png.asset.json";
+import tenisNkAirMaxPlusPretoVolt2 from "@/assets/tenis-nk-air-max-plus-preto-volt-2.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -717,6 +719,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-max-plus-preto-volt", title: "Tênis NK Air Max Plus Preto com Detalhes Volt", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusPretoVolt1.url, images: [tenisNkAirMaxPlusPretoVolt1.url, tenisNkAirMaxPlusPretoVolt2.url] },
   { slug: "tenis-nk-air-max-plus-all-white", title: "Tênis NK Air Max Plus All White", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusAllWhite1.url, images: [tenisNkAirMaxPlusAllWhite1.url, tenisNkAirMaxPlusAllWhite2.url] },
   { slug: "tenis-nk-air-max-plus-all-black", title: "Tênis NK Air Max Plus All Black", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusAllBlack1.url, images: [tenisNkAirMaxPlusAllBlack1.url, tenisNkAirMaxPlusAllBlack2.url] },
   { slug: "tenis-nk-air-max-plus-branco-prata", title: "Tênis NK Air Max Plus Branco com Prata", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusBrancoPrata1.url, images: [tenisNkAirMaxPlusBrancoPrata1.url, tenisNkAirMaxPlusBrancoPrata2.url] },
