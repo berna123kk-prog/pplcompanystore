@@ -15,6 +15,7 @@ import tenisNkDunkTwist4 from "@/assets/tenis-nk-dunk-twist-4.png.asset.json";
 import tenisNkDunkTwist5 from "@/assets/tenis-nk-dunk-twist-5.png.asset.json";
 import tenisNkDunkTwist6 from "@/assets/tenis-nk-dunk-twist-6.png.asset.json";
 import tenisNkDunkTwist7 from "@/assets/tenis-nk-dunk-twist-7.png.asset.json";
+import tenisNkAirMaxPlus1 from "@/assets/tenis-nk-air-max-plus-1.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -697,6 +698,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-max-plus", title: "Tênis NK Air Max Plus", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlus1.url, images: [tenisNkAirMaxPlus1.url] },
   { slug: "tenis-nk-dunk-twist", title: "Tênis Nike Dunk Twist", price: "99,99", oldPrice: "499,99", installment: "9,99", off: "80% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkDunkTwist1.url, images: [tenisNkDunkTwist1.url, tenisNkDunkTwist2.url, tenisNkDunkTwist3.url, tenisNkDunkTwist4.url, tenisNkDunkTwist5.url, tenisNkDunkTwist6.url, tenisNkDunkTwist7.url] },
   { slug: "tenis-pma-caven-ferrari", title: "Tênis Pma Caven Ferrari", price: "139,99", oldPrice: "549,99", installment: "13,99", off: "75% OFF", kind: "footwear", category: "sneakers", sold: 2800, stock: 8, img: tenisPmaCavenFerrari, images: [tenisPmaCavenFerrari, tenisPmaCavenFerrari2] },
   { slug: "tenis-nike-air-force-preto-branco", title: "Tênis Nike Air Force Preto com Branco", price: "59,99", oldPrice: "499,99", installment: "5,99", off: "88% OFF", kind: "footwear", category: "sneakers", sold: 4200, stock: 15, img: nikeAirForcePretoBranco, images: [nikeAirForcePretoBranco] },
