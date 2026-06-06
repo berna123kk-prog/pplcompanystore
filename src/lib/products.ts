@@ -972,7 +972,7 @@ const kitLacosteBermudaPoloFeatured: Product = {
 
 const kitLacosteBrancoMizunoFeatured: Product = {
   slug: "kit-lacoste-branco-mizuno-featured",
-  title: "KIT LACOSTE + MIZUNO 2 PEÇAS",
+  title: "KIT LACOSTE + MIZUNO 4 PEÇAS",
   price: "439,99",
   oldPrice: "799,99",
   installment: "23,99",
