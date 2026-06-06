@@ -30,7 +30,9 @@ const depositSchema = z.object({
     .max(50),
   payerName: z.string().trim().min(2).max(120),
   payerDocument: z.string().trim().min(11).max(20),
+  shippingAmount: z.number().min(0).max(500).optional(),
 });
+
 
 export type DepositResult = {
   transactionId?: string;
@@ -75,6 +77,9 @@ export const createDeposit = createServerFn({ method: "POST" })
       amount += parseBrlPrice(product.price) * it.qty;
       titles.push(product.title);
     }
+    if (data.shippingAmount && data.shippingAmount > 0) {
+      amount += data.shippingAmount;
+    }
     amount = Math.round(amount * 100) / 100;
     if (amount <= 0) {
       throw new Error("Total do pedido inválido.");
@@ -82,6 +87,7 @@ export const createDeposit = createServerFn({ method: "POST" })
     if (amount < 5) {
       throw new Error("Valor mínimo para pagamento via PIX é R$ 5,00.");
     }
+
 
     const description = `Pedido ${data.items.length} item(ns) - ${titles.join(", ").slice(0, 150)}`;
 
