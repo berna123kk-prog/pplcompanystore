@@ -66,6 +66,10 @@ import tenisLvSkateGreen1 from "@/assets/tenis-lv-skate-green-1.png.asset.json";
 import tenisLvSkateRed1 from "@/assets/tenis-lv-skate-red-1.png.asset.json";
 import tenisNkAirMaxPlusPretoCream1 from "@/assets/tenis-nk-air-max-plus-preto-cream-1.png.asset.json";
 import tenisNkAirMaxPlusPretoCream2 from "@/assets/tenis-nk-air-max-plus-preto-cream-2.png.asset.json";
+import tenisLvSkateNavy1 from "@/assets/tenis-lv-skate-navy-1.png.asset.json";
+import tenisLvSkateNavy2 from "@/assets/tenis-lv-skate-navy-2.png.asset.json";
+import tenisLvSkateNavy3 from "@/assets/tenis-lv-skate-navy-3.png.asset.json";
+import tenisLvSkateNavy4 from "@/assets/tenis-lv-skate-navy-4.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -748,6 +752,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-lv-skate-navy", title: "Tênis LV Skate", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLvSkateNavy1.url, images: [tenisLvSkateNavy1.url, tenisLvSkateNavy2.url, tenisLvSkateNavy3.url, tenisLvSkateNavy4.url] },
   { slug: "tenis-nk-air-max-plus-preto-cream", title: "Tênis NK Air Max Plus", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusPretoCream1.url, images: [tenisNkAirMaxPlusPretoCream1.url, tenisNkAirMaxPlusPretoCream2.url] },
   { slug: "tenis-lv-skate-red", title: "Tênis LV Skate", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLvSkateRed1.url, images: [tenisLvSkateRed1.url] },
   { slug: "tenis-lv-skate-green", title: "Tênis LV Skate", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLvSkateGreen1.url, images: [tenisLvSkateGreen1.url] },
