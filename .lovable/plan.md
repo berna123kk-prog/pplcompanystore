@@ -1,32 +1,34 @@
-## Objetivo
+## Regra de ordenação (memória)
 
-Substituir o cálculo atual de frete por uma tabela fixa por região (5 regiões do Brasil), aplicada às 4 modalidades. Os preços não dependerão mais de peso/quantidade de itens — apenas da região do CEP.
+Salvar na memória do projeto: **cada novo produto enviado entra como o PRIMEIRO da lista de sneakers**, empurrando os anteriores para a direita. Assim, o produto mais recente aparece primeiro, e o anterior fica logo ao lado.
 
-## Tabela aplicada
+> Resultado visual em `/colecoes/sneakers`: produto 1 (mais novo) → produto 2 (enviado antes) → produto 3 → ...
 
-| Região (UFs) | PAC (4–7d) | Sedex (2–3d) | Motoboy Loggi (mesmo dia) | Uber Expresso (30min) |
-|---|---|---|---|---|
-| Sudeste (SP, RJ, MG, ES) | R$ 13,98 | R$ 28,70 | R$ 31,99 | R$ 44,50 |
-| Sul (PR, SC, RS) | R$ 19,45 | R$ 34,20 | R$ 38,90 | R$ 47,80 |
-| Centro-Oeste (DF, GO, MT, MS) | R$ 22,60 | R$ 41,15 | R$ 43,25 | R$ 49,90 |
-| Nordeste (AL, BA, CE, MA, PB, PE, PI, RN, SE) | R$ 26,85 | R$ 46,90 | R$ 48,10 | R$ 51,20 |
-| Norte (AC, AM, AP, PA, RO, RR, TO) | R$ 29,95 | R$ 49,30 | R$ 50,50 | R$ 52,00 |
+## Produto a adicionar agora
 
-Obs.: você pediu granularidade por UF, mas a tabela enviada está em nível de região. Vou aplicar por região (todos os estados dentro de uma região recebem o mesmo preço). Se quiser variar preço entre UFs da mesma região depois, é só mandar os valores específicos.
+**Tênis Nike Dunk Twist** — R$ 99,99 — categoria `sneakers`
 
-## Mudanças
+- 7 imagens enviadas (image-484 a image-490) → upload via `lovable-assets` para `src/assets/tenis-nk-dunk-twist-{1..7}.png.asset.json`
+- Imagem principal: image-484 (look usando o tênis)
+- Galeria na ordem das uploads
 
-**`src/lib/shipping.functions.ts`**
-- Substituir o objeto `PRICING` por uma tabela única `REGION_PRICES` com os 4 preços + prazos por região.
-- Remover cálculo por peso (`itemsCount * 0.6`, `base + perKg * weight`) — preços passam a ser fixos por região.
-- Manter detecção de UF via BrasilAPI e fallback para Sudeste quando CEP não for resolvido.
-- Motoboy e Uber também passam a variar por região (antes eram fixos em R$ 31,99 e R$ 59,08).
-- Textos de prazo: "4 a 7 dias", "2 a 3 dias", "Receba no mesmo dia", "Receba em 30min (Válido para sua região)".
+## Mudanças em `src/lib/products.ts`
 
-Nenhuma mudança em `checkout.tsx` — ele já consome `options[].price` e `options[].days` direto do servidor.
+1. Adicionar os 7 imports dos `.asset.json` no topo (junto com outros imports de sneakers).
+2. Inserir o novo produto como **primeira linha** do bloco de sneakers (antes de `tenis-pma-caven-ferrari`, linha 693):
+
+```ts
+{ slug: "tenis-nk-dunk-twist", title: "Tênis Nike Dunk Twist", price: "99,99", oldPrice: "499,99", installment: "9,99", off: "80% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkDunkTwist1, images: [tenisNkDunkTwist1, tenisNkDunkTwist2, tenisNkDunkTwist3, tenisNkDunkTwist4, tenisNkDunkTwist5, tenisNkDunkTwist6, tenisNkDunkTwist7] },
+```
+
+Como a coleção `sneakers` é derivada de `products.filter(category === "sneakers")` mantendo a ordem do array, inserir no topo já garante que ele apareça em primeiro na grade. Próximos produtos seguirão a mesma regra (inserir no topo do bloco).
+
+## Memória a atualizar
+
+Adicionar ao Core de `mem://index.md`:
+> Novos produtos são inseridos no TOPO da lista de sneakers em `src/lib/products.ts` (antes da linha de `tenis-pma-caven-ferrari`), para que o mais recente apareça primeiro e os anteriores fiquem ao lado na ordem de envio.
 
 ## Fora do escopo
 
-- Persistir escolha de frete em tabela de pedidos (não solicitado agora).
-- Variar preços entre estados da mesma região.
-- Restringir Motoboy/Uber a cidades específicas.
+- Mudar a ordem dos produtos sneakers já existentes.
+- Adicionar variantes/tamanhos.
