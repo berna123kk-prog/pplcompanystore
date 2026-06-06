@@ -42,7 +42,7 @@ export const getShippingOptions = createServerFn({ method: "POST" })
       }
     } catch {}
 
-    const region = (uf && REGION_BY_UF[uf]) ?? "SE";
+    const region: "SE" | "S" | "CO" | "NE" | "N" = (uf && REGION_BY_UF[uf]) || "SE";
     // Peso estimado: 0.6kg por item (calçados/roupas).
     const weight = Math.max(0.5, data.itemsCount * 0.6);
 
