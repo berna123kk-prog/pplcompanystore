@@ -109,6 +109,9 @@ import tenisNkAirJordan4Thunder1 from "@/assets/tenis-nk-air-jordan-4-thunder-1.
 import tenisNkAirJordan4Thunder2 from "@/assets/tenis-nk-air-jordan-4-thunder-2.png.asset.json";
 import tenisNkAirJordan4Thunder3 from "@/assets/tenis-nk-air-jordan-4-thunder-3.png.asset.json";
 import tenisNkAirJordan4Thunder4 from "@/assets/tenis-nk-air-jordan-4-thunder-4.png.asset.json";
+import tenisNkAirJordan1LowParis1 from "@/assets/tenis-nk-air-jordan-1-low-paris-1.png.asset.json";
+import tenisNkAirJordan1LowParis2 from "@/assets/tenis-nk-air-jordan-1-low-paris-2.png.asset.json";
+import tenisNkAirJordan1LowParis3 from "@/assets/tenis-nk-air-jordan-1-low-paris-3.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -791,6 +794,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-jordan-1-low-paris", title: "Tênis NK Air Jordan 1 Low \"Paris\"", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowParis1.url, images: [tenisNkAirJordan1LowParis1.url, tenisNkAirJordan1LowParis2.url, tenisNkAirJordan1LowParis3.url] },
   { slug: "tenis-nk-air-jordan-4-thunder", title: "Tênis NK Air Jordan 4 Retro \"Thunder\"", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan4Thunder1.url, images: [tenisNkAirJordan4Thunder1.url, tenisNkAirJordan4Thunder2.url, tenisNkAirJordan4Thunder3.url, tenisNkAirJordan4Thunder4.url] },
   { slug: "tenis-nk-air-max-plus-sunrise", title: "Tênis NK Air Max Plus \"Sunrise\"", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusSunrise1.url, images: [tenisNkAirMaxPlusSunrise1.url, tenisNkAirMaxPlusSunrise2.url] },
   { slug: "tenis-nk-air-force-1-white", title: "Tênis NK Air Force 1 White", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirForce1White1.url, images: [tenisNkAirForce1White1.url, tenisNkAirForce1White2.url, tenisNkAirForce1White3.url, tenisNkAirForce1White4.url] },
