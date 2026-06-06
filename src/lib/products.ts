@@ -216,6 +216,8 @@ import tenisPmaCaProClassicBlueBlack2 from "@/assets/tenis-pma-ca-pro-classic-bl
 import tenisPmaCaProClassicWhiteGrey1 from "@/assets/tenis-pma-ca-pro-classic-white-grey-1.png.asset.json";
 import tenisPmaCaProClassicWhiteGrey2 from "@/assets/tenis-pma-ca-pro-classic-white-grey-2.png.asset.json";
 import tenisNikeCourtBoroughMidPink1 from "@/assets/tenis-nike-court-borough-mid-pink-1.png.asset.json";
+import tenisPmaCavenBmwNew1 from "@/assets/tenis-pma-caven-bmw-1.png.asset.json";
+import tenisPmaCavenBmwNew2 from "@/assets/tenis-pma-caven-bmw-2.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -898,6 +900,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-pma-caven-bmw-white", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwNew1.url, images: [tenisPmaCavenBmwNew1.url, tenisPmaCavenBmwNew2.url] },
   { slug: "tenis-nike-court-borough-mid-pink", title: "Tênis Nike Court Borough Mid", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNikeCourtBoroughMidPink1.url, images: [tenisNikeCourtBoroughMidPink1.url] },
   { slug: "tenis-nk-court-vision-low-v2", title: "Tênis NK Court Vision Low", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkCourtVisionLow1.url, images: [tenisNkCourtVisionLow1.url, tenisNkCourtVisionLow2.url] },
   { slug: "tenis-pma-ca-pro-classic-white-grey", title: "Tênis Pma Ca Pro Classic", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCaProClassicWhiteGrey1.url, images: [tenisPmaCaProClassicWhiteGrey1.url, tenisPmaCaProClassicWhiteGrey2.url] },
