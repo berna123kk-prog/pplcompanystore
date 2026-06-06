@@ -532,40 +532,98 @@ function StepPayment({
 
 // ---------- Order summary ----------
 function OrderSummary({
-  items, itemsTotal, shipping, total,
+  items, itemsTotal, shipping, total, count,
 }: {
   items: ReturnType<typeof useCart>["items"];
   itemsTotal: number;
   shipping: ShippingOption | null;
   total: number;
+  count: number;
 }) {
   return (
-    <aside className="border border-sky-100 p-6 bg-white h-fit">
-      <p className={labelCls}>Resumo do pedido</p>
-      <ul className="divide-y divide-sky-100">
-        {items.map((it, idx) => (
-          <li key={`${it.slug}-${idx}`} className="py-3 flex gap-3">
-            <img src={it.img} alt={it.title} className="h-14 w-14 object-contain border border-sky-100 bg-white" />
-            <div className="flex-1 min-w-0">
-              <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-sky-900 line-clamp-2">{it.title}</p>
-              {it.size && <p className="text-[10px] uppercase tracking-[0.15em] text-slate-500 mt-1">Tam: {it.size}</p>}
-              <p className="text-[11px] text-sky-700 mt-1">{it.qty} × R$ {it.price}</p>
+    <div className="space-y-6">
+      <aside className="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden">
+        <header className="px-6 py-5 border-b border-slate-100 flex items-center justify-between">
+          <h2 className="text-[11px] font-bold tracking-[0.25em] text-slate-900 uppercase">
+            Resumo do pedido
+          </h2>
+          {count > 0 && (
+            <span className="bg-slate-100 text-slate-500 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+              {count} {count === 1 ? "item" : "itens"}
+            </span>
+          )}
+        </header>
+
+        <div className="p-6">
+          {items.length === 0 ? (
+            <p className="py-6 text-center text-xs text-slate-400 uppercase tracking-widest font-bold">
+              Sacola vazia
+            </p>
+          ) : (
+            <ul className="space-y-5 max-h-72 overflow-y-auto pr-1">
+              {items.map((it, idx) => (
+                <li key={`${it.slug}-${idx}`} className="flex gap-4">
+                  <div className="w-20 h-20 bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex-shrink-0 grid place-items-center">
+                    <img src={it.img} alt={it.title} className="h-full w-full object-contain" />
+                  </div>
+                  <div className="flex-1 min-w-0 flex flex-col justify-center">
+                    <h4 className="text-xs font-bold uppercase text-slate-900 tracking-tight leading-snug line-clamp-2">
+                      {it.title}
+                    </h4>
+                    <p className="text-[10px] text-slate-400 font-bold tracking-widest uppercase mt-1">
+                      {it.size ? `Tam: ${it.size} • ` : ""}Qtd: {it.qty}
+                    </p>
+                    <span className="text-sm font-bold text-sky-600 mt-1">
+                      R$ {it.price}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <div className="space-y-3 pt-6 mt-6 border-t border-slate-100">
+            <div className="flex justify-between text-xs">
+              <span className="text-slate-500 font-medium">Subtotal</span>
+              <span className="text-slate-900 font-bold">
+                R$ {itemsTotal.toFixed(2).replace(".", ",")}
+              </span>
             </div>
-          </li>
-        ))}
-        {items.length === 0 && <li className="py-4 text-center text-xs text-slate-500">Sacola vazia</li>}
-      </ul>
-      <div className="border-t border-sky-100 mt-4 pt-4 space-y-2 text-sm">
-        <div className="flex justify-between text-slate-600"><span>Subtotal</span><span>R$ {itemsTotal.toFixed(2).replace(".", ",")}</span></div>
-        <div className="flex justify-between text-slate-600">
-          <span>Frete</span>
-          <span>{shipping ? `R$ ${shipping.price.toFixed(2).replace(".", ",")}` : "—"}</span>
+            <div className="flex justify-between text-xs">
+              <span className="text-slate-500 font-medium">Frete</span>
+              <span className="text-slate-900 font-bold">
+                {shipping ? `R$ ${shipping.price.toFixed(2).replace(".", ",")}` : "—"}
+              </span>
+            </div>
+            <div className="pt-5 mt-2 border-t border-slate-100 flex justify-between items-end">
+              <span className="text-[10px] font-bold tracking-widest text-slate-400 uppercase">
+                Total
+              </span>
+              <span className="text-2xl font-black text-slate-900 tracking-tighter">
+                R$ {total.toFixed(2).replace(".", ",")}
+              </span>
+            </div>
+          </div>
+
+          <div className="mt-6 p-4 bg-sky-50 rounded-xl border border-sky-100">
+            <div className="flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
+              <p className="text-[10px] text-sky-700 font-bold uppercase tracking-[0.15em]">
+                Pague com PIX e receba mais rápido
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex justify-between text-sky-900 pt-2 border-t border-sky-100">
-          <span className="text-[11px] font-bold uppercase tracking-[0.15em]">Total</span>
-          <span className="text-xl font-extrabold">R$ {total.toFixed(2).replace(".", ",")}</span>
+      </aside>
+
+      <div className="flex items-center justify-center gap-4 text-slate-400">
+        <div className="flex items-center gap-1.5">
+          <Lock className="w-3 h-3" />
+          <span className="text-[9px] font-bold tracking-widest uppercase">SSL Seguro</span>
         </div>
+        <span className="w-px h-3 bg-slate-200" />
+        <span className="text-[9px] font-bold tracking-widest uppercase">PPL Company Verified</span>
       </div>
-    </aside>
+    </div>
   );
 }
