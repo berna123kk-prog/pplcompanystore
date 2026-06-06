@@ -45,32 +45,57 @@ function StepCard({
   n: number; title: string; done: boolean; active: boolean;
   onEdit?: () => void; children: React.ReactNode;
 }) {
+  const activeChrome = active
+    ? "bg-white border-2 border-sky-500 shadow-lg shadow-sky-500/10"
+    : done
+      ? "bg-white border border-slate-200"
+      : "bg-slate-50/60 border border-slate-100 opacity-60";
   return (
-    <div className={`border bg-white p-6 ${active ? "border-sky-900" : "border-sky-100"} ${!active && !done ? "opacity-60" : ""}`}>
-      <div className="flex items-center gap-3 mb-4">
-        <div className={`w-8 h-8 grid place-items-center text-white font-extrabold text-sm ${done ? "bg-green-600" : "bg-slate-800"}`}>
-          {n}
-        </div>
-        <h2 className={`text-lg font-extrabold uppercase tracking-[0.1em] ${done ? "text-green-600" : "text-slate-700"}`}>
+    <section className={`rounded-2xl overflow-hidden transition-all duration-300 ${activeChrome}`}>
+      <header className="px-6 sm:px-8 py-5 flex items-center gap-4 border-b border-slate-100">
+        <span
+          className={`flex-shrink-0 w-10 h-10 grid place-items-center font-bold text-base rounded-lg ${
+            done
+              ? "bg-emerald-500 text-white shadow-md shadow-emerald-500/20"
+              : active
+                ? "bg-sky-500 text-white shadow-lg shadow-sky-500/30"
+                : "bg-slate-200 text-slate-500"
+          }`}
+        >
+          {done ? <Check className="h-5 w-5 stroke-[3]" /> : n}
+        </span>
+        <h2
+          className={`text-sm font-bold tracking-[0.25em] uppercase ${
+            active || done ? "text-slate-900" : "text-slate-400"
+          }`}
+        >
           {title}
-          {done && <Check className="inline ml-2 h-4 w-4 stroke-[3]" />}
         </h2>
         {done && onEdit && (
-          <button onClick={onEdit} className="ml-auto text-slate-400 hover:text-sky-700" aria-label="Editar">
+          <button
+            onClick={onEdit}
+            className="ml-auto text-slate-400 hover:text-sky-600 transition-colors"
+            aria-label="Editar"
+          >
             <Pencil className="h-4 w-4" />
           </button>
         )}
-      </div>
-      {children}
-    </div>
+      </header>
+      {(active || done) ? (
+        <div className="p-6 sm:p-8">{children}</div>
+      ) : (
+        <div className="px-6 sm:px-8 pb-5 -mt-1 text-xs text-slate-400">{children}</div>
+      )}
+    </section>
   );
 }
 
 const inputCls =
-  "w-full border border-sky-200 px-4 py-3 text-sm text-sky-900 placeholder:text-slate-400 focus:outline-none focus:border-sky-400 rounded-full";
-const labelCls = "block text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-2";
+  "w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-sky-500/10 focus:border-sky-500 focus:bg-white transition-all";
+const labelCls =
+  "block text-[10px] font-bold tracking-[0.15em] text-slate-400 uppercase mb-2";
 const primaryBtn =
-  "w-full h-12 bg-blue-700 hover:bg-blue-800 disabled:opacity-60 disabled:cursor-not-allowed text-white text-sm font-extrabold uppercase tracking-[0.15em] inline-flex items-center justify-center gap-2 rounded-full";
+  "w-full md:w-auto px-12 py-4 bg-sky-500 hover:bg-sky-600 disabled:opacity-60 disabled:cursor-not-allowed text-white text-xs font-bold uppercase tracking-[0.25em] inline-flex items-center justify-center gap-2 rounded-xl shadow-xl shadow-sky-500/20 hover:scale-[1.02] active:scale-95 transition-all";
 
 // ---------- main ----------
 function CheckoutPage() {
@@ -85,57 +110,57 @@ function CheckoutPage() {
   const grandTotal = itemsTotal + (shipping?.price ?? 0);
 
   return (
-    <main className="min-h-screen bg-slate-50 text-foreground">
+    <main className="min-h-screen bg-slate-50/50 text-foreground">
       <TopBanner />
       <Header />
 
-      <div className="max-w-[1180px] mx-auto px-6 py-10">
-        <Link to="/" className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.15em] font-bold text-sky-700 hover:text-sky-900 mb-6">
-          <ArrowLeft className="h-3.5 w-3.5" /> Continuar comprando
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-slate-400 hover:text-sky-600 transition-colors"
+        >
+          <ArrowLeft className="h-3 w-3" /> Continuar comprando
         </Link>
 
-        <h1 className="text-2xl md:text-3xl font-extrabold text-sky-900 uppercase tracking-[0.1em]">
+        <h1 className="mt-4 text-3xl md:text-4xl font-bold tracking-tighter text-slate-900 uppercase">
           Finalizar compra
         </h1>
 
-        <div className="mt-8 grid lg:grid-cols-[1fr_380px] gap-8">
-          <div className="grid md:grid-cols-2 gap-5 content-start">
-            {/* Step 1 */}
-            <div className="md:col-span-1">
-              <StepIdentify
-                step={step}
-                customer={customer}
-                onEdit={() => setStep(1)}
-                onContinue={(c) => { setCustomer(c); setStep(2); }}
-              />
-            </div>
-
-            {/* Step 3 placeholder (shows at top-right like in the screenshots) */}
-            <div className="md:col-span-1">
-              <StepPayment
-                step={step}
-                items={items}
-                customer={customer}
-                shipping={shipping}
-                total={grandTotal}
-                onPaid={() => { clear(); setTimeout(() => navigate({ to: "/" }), 1500); }}
-              />
-            </div>
-
-            {/* Step 2 full width below */}
-            <div className="md:col-span-2">
-              <StepDelivery
-                step={step}
-                address={address}
-                shipping={shipping}
-                itemsCount={count}
-                onEdit={() => setStep(2)}
-                onContinue={(addr, ship) => { setAddress(addr); setShipping(ship); setStep(3); }}
-              />
-            </div>
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="lg:col-span-8 space-y-6">
+            <StepIdentify
+              step={step}
+              customer={customer}
+              onEdit={() => setStep(1)}
+              onContinue={(c) => { setCustomer(c); setStep(2); }}
+            />
+            <StepDelivery
+              step={step}
+              address={address}
+              shipping={shipping}
+              itemsCount={count}
+              onEdit={() => setStep(2)}
+              onContinue={(addr, ship) => { setAddress(addr); setShipping(ship); setStep(3); }}
+            />
+            <StepPayment
+              step={step}
+              items={items}
+              customer={customer}
+              shipping={shipping}
+              total={grandTotal}
+              onPaid={() => { clear(); setTimeout(() => navigate({ to: "/" }), 1500); }}
+            />
           </div>
 
-          <OrderSummary items={items} itemsTotal={itemsTotal} shipping={shipping} total={grandTotal} />
+          <div className="lg:col-span-4 lg:sticky lg:top-8">
+            <OrderSummary
+              items={items}
+              itemsTotal={itemsTotal}
+              shipping={shipping}
+              total={grandTotal}
+              count={count}
+            />
+          </div>
         </div>
       </div>
 
