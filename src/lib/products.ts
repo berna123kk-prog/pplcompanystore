@@ -55,6 +55,11 @@ import tenisNkCourtVisionLowBlackSwoosh1 from "@/assets/tenis-nk-court-vision-lo
 import tenisNkCourtVisionLowBlackSwoosh2 from "@/assets/tenis-nk-court-vision-low-black-swoosh-2.png.asset.json";
 import tenisNkCourtVisionLowBlack1 from "@/assets/tenis-nk-court-vision-low-black-1.png.asset.json";
 import tenisNkCourtVisionLowBlack2 from "@/assets/tenis-nk-court-vision-low-black-2.png.asset.json";
+import tenisNkAirJordan1LowBred1 from "@/assets/tenis-nk-air-jordan-1-low-bred-1.png.asset.json";
+import tenisNkAirJordan1LowBred2 from "@/assets/tenis-nk-air-jordan-1-low-bred-2.png.asset.json";
+import tenisNkAirJordan1LowBred3 from "@/assets/tenis-nk-air-jordan-1-low-bred-3.png.asset.json";
+import tenisNkAirJordan1LowBred4 from "@/assets/tenis-nk-air-jordan-1-low-bred-4.png.asset.json";
+import tenisNkAirJordan1LowBred5 from "@/assets/tenis-nk-air-jordan-1-low-bred-5.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -737,6 +742,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-jordan-1-low-bred", title: "Tênis NK Air Jordan 1 Low", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowBred1.url, images: [tenisNkAirJordan1LowBred1.url, tenisNkAirJordan1LowBred2.url, tenisNkAirJordan1LowBred3.url, tenisNkAirJordan1LowBred4.url, tenisNkAirJordan1LowBred5.url] },
   { slug: "tenis-nk-court-vision-low-black", title: "Tênis NK Court Vision Low", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkCourtVisionLowBlack1.url, images: [tenisNkCourtVisionLowBlack1.url, tenisNkCourtVisionLowBlack2.url] },
   { slug: "tenis-nk-court-vision-low-black-swoosh", title: "Tênis NK Court Vision Low", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkCourtVisionLowBlackSwoosh1.url, images: [tenisNkCourtVisionLowBlackSwoosh1.url, tenisNkCourtVisionLowBlackSwoosh2.url] },
   { slug: "tenis-nk-court-vision-low", title: "Tênis NK Court Vision Low", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkCourtVisionLow1.url, images: [tenisNkCourtVisionLow1.url, tenisNkCourtVisionLow2.url] },
