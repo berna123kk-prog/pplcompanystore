@@ -374,8 +374,8 @@ function StepDelivery({
                 {options.map((opt) => {
                   const isSel = selected?.id === opt.id;
                   return (
-                    <label key={opt.id} className={`flex items-center gap-3 border px-4 py-3 cursor-pointer ${isSel ? "border-sky-900 bg-sky-50" : "border-sky-200"}`}>
-                      <input type="radio" name="ship" checked={isSel} onChange={() => setSelected(opt)} className="accent-sky-900" />
+                    <label key={opt.id} className={`flex items-center gap-3 border-2 px-4 py-3.5 rounded-xl cursor-pointer transition-all ${isSel ? "border-sky-500 bg-sky-50/50" : "border-slate-200 hover:border-slate-300"}`}>
+                      <input type="radio" name="ship" checked={isSel} onChange={() => setSelected(opt)} className="accent-sky-500" />
                       <div className="flex-1">
                         <p className="text-sm font-bold text-sky-900">{opt.name}</p>
                         <p className="text-[11px] text-slate-500">{opt.days}</p>
