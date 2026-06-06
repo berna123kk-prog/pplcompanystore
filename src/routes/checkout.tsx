@@ -45,32 +45,57 @@ function StepCard({
   n: number; title: string; done: boolean; active: boolean;
   onEdit?: () => void; children: React.ReactNode;
 }) {
+  const activeChrome = active
+    ? "bg-white border-2 border-sky-500 shadow-lg shadow-sky-500/10"
+    : done
+      ? "bg-white border border-slate-200"
+      : "bg-slate-50/60 border border-slate-100 opacity-60";
   return (
-    <div className={`border bg-white p-6 ${active ? "border-sky-900" : "border-sky-100"} ${!active && !done ? "opacity-60" : ""}`}>
-      <div className="flex items-center gap-3 mb-4">
-        <div className={`w-8 h-8 grid place-items-center text-white font-extrabold text-sm ${done ? "bg-green-600" : "bg-slate-800"}`}>
-          {n}
-        </div>
-        <h2 className={`text-lg font-extrabold uppercase tracking-[0.1em] ${done ? "text-green-600" : "text-slate-700"}`}>
+    <section className={`rounded-2xl overflow-hidden transition-all duration-300 ${activeChrome}`}>
+      <header className="px-6 sm:px-8 py-5 flex items-center gap-4 border-b border-slate-100">
+        <span
+          className={`flex-shrink-0 w-10 h-10 grid place-items-center font-bold text-base rounded-lg ${
+            done
+              ? "bg-emerald-500 text-white shadow-md shadow-emerald-500/20"
+              : active
+                ? "bg-sky-500 text-white shadow-lg shadow-sky-500/30"
+                : "bg-slate-200 text-slate-500"
+          }`}
+        >
+          {done ? <Check className="h-5 w-5 stroke-[3]" /> : n}
+        </span>
+        <h2
+          className={`text-sm font-bold tracking-[0.25em] uppercase ${
+            active || done ? "text-slate-900" : "text-slate-400"
+          }`}
+        >
           {title}
-          {done && <Check className="inline ml-2 h-4 w-4 stroke-[3]" />}
         </h2>
         {done && onEdit && (
-          <button onClick={onEdit} className="ml-auto text-slate-400 hover:text-sky-700" aria-label="Editar">
+          <button
+            onClick={onEdit}
+            className="ml-auto text-slate-400 hover:text-sky-600 transition-colors"
+            aria-label="Editar"
+          >
             <Pencil className="h-4 w-4" />
           </button>
         )}
-      </div>
-      {children}
-    </div>
+      </header>
+      {(active || done) ? (
+        <div className="p-6 sm:p-8">{children}</div>
+      ) : (
+        <div className="px-6 sm:px-8 pb-5 -mt-1 text-xs text-slate-400">{children}</div>
+      )}
+    </section>
   );
 }
 
 const inputCls =
-  "w-full border border-sky-200 px-4 py-3 text-sm text-sky-900 placeholder:text-slate-400 focus:outline-none focus:border-sky-400 rounded-full";
-const labelCls = "block text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-2";
+  "w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-sky-500/10 focus:border-sky-500 focus:bg-white transition-all";
+const labelCls =
+  "block text-[10px] font-bold tracking-[0.15em] text-slate-400 uppercase mb-2";
 const primaryBtn =
-  "w-full h-12 bg-blue-700 hover:bg-blue-800 disabled:opacity-60 disabled:cursor-not-allowed text-white text-sm font-extrabold uppercase tracking-[0.15em] inline-flex items-center justify-center gap-2 rounded-full";
+  "w-full md:w-auto px-12 py-4 bg-sky-500 hover:bg-sky-600 disabled:opacity-60 disabled:cursor-not-allowed text-white text-xs font-bold uppercase tracking-[0.25em] inline-flex items-center justify-center gap-2 rounded-xl shadow-xl shadow-sky-500/20 hover:scale-[1.02] active:scale-95 transition-all";
 
 // ---------- main ----------
 function CheckoutPage() {
@@ -85,57 +110,57 @@ function CheckoutPage() {
   const grandTotal = itemsTotal + (shipping?.price ?? 0);
 
   return (
-    <main className="min-h-screen bg-slate-50 text-foreground">
+    <main className="min-h-screen bg-slate-50/50 text-foreground">
       <TopBanner />
       <Header />
 
-      <div className="max-w-[1180px] mx-auto px-6 py-10">
-        <Link to="/" className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.15em] font-bold text-sky-700 hover:text-sky-900 mb-6">
-          <ArrowLeft className="h-3.5 w-3.5" /> Continuar comprando
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-slate-400 hover:text-sky-600 transition-colors"
+        >
+          <ArrowLeft className="h-3 w-3" /> Continuar comprando
         </Link>
 
-        <h1 className="text-2xl md:text-3xl font-extrabold text-sky-900 uppercase tracking-[0.1em]">
+        <h1 className="mt-4 text-3xl md:text-4xl font-bold tracking-tighter text-slate-900 uppercase">
           Finalizar compra
         </h1>
 
-        <div className="mt-8 grid lg:grid-cols-[1fr_380px] gap-8">
-          <div className="grid md:grid-cols-2 gap-5 content-start">
-            {/* Step 1 */}
-            <div className="md:col-span-1">
-              <StepIdentify
-                step={step}
-                customer={customer}
-                onEdit={() => setStep(1)}
-                onContinue={(c) => { setCustomer(c); setStep(2); }}
-              />
-            </div>
-
-            {/* Step 3 placeholder (shows at top-right like in the screenshots) */}
-            <div className="md:col-span-1">
-              <StepPayment
-                step={step}
-                items={items}
-                customer={customer}
-                shipping={shipping}
-                total={grandTotal}
-                onPaid={() => { clear(); setTimeout(() => navigate({ to: "/" }), 1500); }}
-              />
-            </div>
-
-            {/* Step 2 full width below */}
-            <div className="md:col-span-2">
-              <StepDelivery
-                step={step}
-                address={address}
-                shipping={shipping}
-                itemsCount={count}
-                onEdit={() => setStep(2)}
-                onContinue={(addr, ship) => { setAddress(addr); setShipping(ship); setStep(3); }}
-              />
-            </div>
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="lg:col-span-8 space-y-6">
+            <StepIdentify
+              step={step}
+              customer={customer}
+              onEdit={() => setStep(1)}
+              onContinue={(c) => { setCustomer(c); setStep(2); }}
+            />
+            <StepDelivery
+              step={step}
+              address={address}
+              shipping={shipping}
+              itemsCount={count}
+              onEdit={() => setStep(2)}
+              onContinue={(addr, ship) => { setAddress(addr); setShipping(ship); setStep(3); }}
+            />
+            <StepPayment
+              step={step}
+              items={items}
+              customer={customer}
+              shipping={shipping}
+              total={grandTotal}
+              onPaid={() => { clear(); setTimeout(() => navigate({ to: "/" }), 1500); }}
+            />
           </div>
 
-          <OrderSummary items={items} itemsTotal={itemsTotal} shipping={shipping} total={grandTotal} />
+          <div className="lg:col-span-4 lg:sticky lg:top-8">
+            <OrderSummary
+              items={items}
+              itemsTotal={itemsTotal}
+              shipping={shipping}
+              total={grandTotal}
+              count={count}
+            />
+          </div>
         </div>
       </div>
 
@@ -185,30 +210,34 @@ function StepIdentify({
           <p>CPF {customer?.cpf}</p>
         </div>
       ) : active ? (
-        <form onSubmit={submit} className="space-y-4">
-          <p className="text-xs text-slate-500">
-            Utilizaremos seu e-mail para: identificar seu perfil, histórico de compra, notificação de pedidos e carrinho de compras.
+        <form onSubmit={submit} className="space-y-6">
+          <p className="text-xs text-slate-500 leading-relaxed">
+            Utilizaremos seu e-mail para identificar seu perfil, histórico de compra e notificação de pedidos.
           </p>
-          <div>
-            <label className={labelCls}>Nome completo</label>
-            <input className={inputCls} value={name} onChange={(e) => setName(e.target.value)} required />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
+            <div className="md:col-span-2">
+              <label className={labelCls}>Nome completo</label>
+              <input className={inputCls} value={name} onChange={(e) => setName(e.target.value)} placeholder="Insira seu nome" required />
+            </div>
+            <div className="md:col-span-2">
+              <label className={labelCls}>E-mail</label>
+              <input className={inputCls} type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="seu@email.com" required />
+            </div>
+            <div>
+              <label className={labelCls}>CPF</label>
+              <input className={inputCls} value={cpf} onChange={(e) => setCpf(formatCpf(e.target.value))} placeholder="000.000.000-00" inputMode="numeric" required />
+            </div>
+            <div>
+              <label className={labelCls}>Celular / WhatsApp</label>
+              <input className={inputCls} value={phone} onChange={(e) => setPhone(formatPhone(e.target.value))} placeholder="(00) 00000-0000" inputMode="tel" required />
+            </div>
           </div>
-          <div>
-            <label className={labelCls}>E-mail</label>
-            <input className={inputCls} type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <div className="pt-2">
+            <button type="submit" className={primaryBtn}>Continuar →</button>
           </div>
-          <div>
-            <label className={labelCls}>CPF</label>
-            <input className={inputCls} value={cpf} onChange={(e) => setCpf(formatCpf(e.target.value))} placeholder="000.000.000-00" inputMode="numeric" required />
-          </div>
-          <div>
-            <label className={labelCls}>Celular / WhatsApp</label>
-            <input className={inputCls} value={phone} onChange={(e) => setPhone(formatPhone(e.target.value))} placeholder="(00) 00000-0000" inputMode="tel" required />
-          </div>
-          <button type="submit" className={primaryBtn}>Continuar →</button>
         </form>
       ) : (
-        <p className="text-xs text-slate-500">Preencha suas informações pessoais para continuar</p>
+        <span>Preencha suas informações pessoais para continuar</span>
       )}
     </StepCard>
   );
@@ -291,7 +320,7 @@ function StepDelivery({
   return (
     <StepCard n={2} title="Entrega" done={done} active={active} onEdit={onEdit}>
       {!enabled ? (
-        <p className="text-xs text-slate-500">Conclua a identificação para continuar</p>
+        <span>Conclua a identificação para continuar</span>
       ) : done && !active ? (
         <div className="text-sm text-slate-700 space-y-1">
           <p>{address?.street}, {address?.number}{address?.complement ? ` - ${address.complement}` : ""}</p>
@@ -345,8 +374,8 @@ function StepDelivery({
                 {options.map((opt) => {
                   const isSel = selected?.id === opt.id;
                   return (
-                    <label key={opt.id} className={`flex items-center gap-3 border px-4 py-3 cursor-pointer ${isSel ? "border-sky-900 bg-sky-50" : "border-sky-200"}`}>
-                      <input type="radio" name="ship" checked={isSel} onChange={() => setSelected(opt)} className="accent-sky-900" />
+                    <label key={opt.id} className={`flex items-center gap-3 border-2 px-4 py-3.5 rounded-xl cursor-pointer transition-all ${isSel ? "border-sky-500 bg-sky-50/50" : "border-slate-200 hover:border-slate-300"}`}>
+                      <input type="radio" name="ship" checked={isSel} onChange={() => setSelected(opt)} className="accent-sky-500" />
                       <div className="flex-1">
                         <p className="text-sm font-bold text-sky-900">{opt.name}</p>
                         <p className="text-[11px] text-slate-500">{opt.days}</p>
@@ -443,23 +472,25 @@ function StepPayment({
   return (
     <StepCard n={3} title="Pagamento" done={done} active={active}>
       {!enabled ? (
-        <p className="text-xs text-slate-500">Preencha suas informações pessoais para continuar</p>
+        <span>Preencha suas informações pessoais para continuar</span>
       ) : !pix ? (
-        <div className="space-y-4">
-          <div className="border border-sky-200 p-4">
-            <div className="flex items-center gap-2">
-              <input type="radio" checked readOnly className="accent-sky-900" />
-              <span className="text-sm font-bold text-sky-900">Pix</span>
-              <span className="ml-auto text-[9px] font-extrabold uppercase tracking-[0.1em] bg-fuchsia-600 text-white px-2 py-1">
-                Pagamento instantâneo
+        <div className="space-y-5">
+          <div className="border-2 border-sky-500 bg-sky-50/40 rounded-xl p-5">
+            <div className="flex items-center gap-3">
+              <input type="radio" checked readOnly className="accent-sky-500 h-4 w-4" />
+              <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">Pix</span>
+              <span className="ml-auto text-[9px] font-bold uppercase tracking-[0.15em] bg-emerald-500 text-white px-2.5 py-1 rounded-full">
+                Instantâneo
               </span>
             </div>
-            <p className="text-xs text-slate-600 mt-3">
-              A confirmação de pagamento é realizada em poucos minutos. Utilize o aplicativo do seu banco para pagar.
+            <p className="text-xs text-slate-600 mt-3 leading-relaxed">
+              A confirmação é realizada em poucos minutos. Use o app do seu banco para pagar.
             </p>
-            <p className="text-green-600 font-extrabold mt-3">Valor no pix: R$ {total.toFixed(2).replace(".", ",")}</p>
+            <p className="mt-4 text-lg font-black text-emerald-600 tracking-tight">
+              R$ {total.toFixed(2).replace(".", ",")}
+            </p>
           </div>
-          <button onClick={generate} disabled={loading} className="w-full h-12 bg-green-600 hover:bg-green-700 disabled:opacity-60 text-white text-sm font-extrabold uppercase tracking-[0.15em] inline-flex items-center justify-center gap-2 rounded-full">
+          <button onClick={generate} disabled={loading} className="w-full md:w-auto px-12 py-4 bg-emerald-500 hover:bg-emerald-600 disabled:opacity-60 text-white text-xs font-bold uppercase tracking-[0.25em] inline-flex items-center justify-center gap-2 rounded-xl shadow-xl shadow-emerald-500/20 hover:scale-[1.02] active:scale-95 transition-all">
             {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Lock className="h-4 w-4" />}
             {loading ? "Gerando PIX..." : "Finalizar agora"}
           </button>
@@ -501,40 +532,98 @@ function StepPayment({
 
 // ---------- Order summary ----------
 function OrderSummary({
-  items, itemsTotal, shipping, total,
+  items, itemsTotal, shipping, total, count,
 }: {
   items: ReturnType<typeof useCart>["items"];
   itemsTotal: number;
   shipping: ShippingOption | null;
   total: number;
+  count: number;
 }) {
   return (
-    <aside className="border border-sky-100 p-6 bg-white h-fit">
-      <p className={labelCls}>Resumo do pedido</p>
-      <ul className="divide-y divide-sky-100">
-        {items.map((it, idx) => (
-          <li key={`${it.slug}-${idx}`} className="py-3 flex gap-3">
-            <img src={it.img} alt={it.title} className="h-14 w-14 object-contain border border-sky-100 bg-white" />
-            <div className="flex-1 min-w-0">
-              <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-sky-900 line-clamp-2">{it.title}</p>
-              {it.size && <p className="text-[10px] uppercase tracking-[0.15em] text-slate-500 mt-1">Tam: {it.size}</p>}
-              <p className="text-[11px] text-sky-700 mt-1">{it.qty} × R$ {it.price}</p>
+    <div className="space-y-6">
+      <aside className="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden">
+        <header className="px-6 py-5 border-b border-slate-100 flex items-center justify-between">
+          <h2 className="text-[11px] font-bold tracking-[0.25em] text-slate-900 uppercase">
+            Resumo do pedido
+          </h2>
+          {count > 0 && (
+            <span className="bg-slate-100 text-slate-500 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+              {count} {count === 1 ? "item" : "itens"}
+            </span>
+          )}
+        </header>
+
+        <div className="p-6">
+          {items.length === 0 ? (
+            <p className="py-6 text-center text-xs text-slate-400 uppercase tracking-widest font-bold">
+              Sacola vazia
+            </p>
+          ) : (
+            <ul className="space-y-5 max-h-72 overflow-y-auto pr-1">
+              {items.map((it, idx) => (
+                <li key={`${it.slug}-${idx}`} className="flex gap-4">
+                  <div className="w-20 h-20 bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex-shrink-0 grid place-items-center">
+                    <img src={it.img} alt={it.title} className="h-full w-full object-contain" />
+                  </div>
+                  <div className="flex-1 min-w-0 flex flex-col justify-center">
+                    <h4 className="text-xs font-bold uppercase text-slate-900 tracking-tight leading-snug line-clamp-2">
+                      {it.title}
+                    </h4>
+                    <p className="text-[10px] text-slate-400 font-bold tracking-widest uppercase mt-1">
+                      {it.size ? `Tam: ${it.size} • ` : ""}Qtd: {it.qty}
+                    </p>
+                    <span className="text-sm font-bold text-sky-600 mt-1">
+                      R$ {it.price}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <div className="space-y-3 pt-6 mt-6 border-t border-slate-100">
+            <div className="flex justify-between text-xs">
+              <span className="text-slate-500 font-medium">Subtotal</span>
+              <span className="text-slate-900 font-bold">
+                R$ {itemsTotal.toFixed(2).replace(".", ",")}
+              </span>
             </div>
-          </li>
-        ))}
-        {items.length === 0 && <li className="py-4 text-center text-xs text-slate-500">Sacola vazia</li>}
-      </ul>
-      <div className="border-t border-sky-100 mt-4 pt-4 space-y-2 text-sm">
-        <div className="flex justify-between text-slate-600"><span>Subtotal</span><span>R$ {itemsTotal.toFixed(2).replace(".", ",")}</span></div>
-        <div className="flex justify-between text-slate-600">
-          <span>Frete</span>
-          <span>{shipping ? `R$ ${shipping.price.toFixed(2).replace(".", ",")}` : "—"}</span>
+            <div className="flex justify-between text-xs">
+              <span className="text-slate-500 font-medium">Frete</span>
+              <span className="text-slate-900 font-bold">
+                {shipping ? `R$ ${shipping.price.toFixed(2).replace(".", ",")}` : "—"}
+              </span>
+            </div>
+            <div className="pt-5 mt-2 border-t border-slate-100 flex justify-between items-end">
+              <span className="text-[10px] font-bold tracking-widest text-slate-400 uppercase">
+                Total
+              </span>
+              <span className="text-2xl font-black text-slate-900 tracking-tighter">
+                R$ {total.toFixed(2).replace(".", ",")}
+              </span>
+            </div>
+          </div>
+
+          <div className="mt-6 p-4 bg-sky-50 rounded-xl border border-sky-100">
+            <div className="flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
+              <p className="text-[10px] text-sky-700 font-bold uppercase tracking-[0.15em]">
+                Pague com PIX e receba mais rápido
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex justify-between text-sky-900 pt-2 border-t border-sky-100">
-          <span className="text-[11px] font-bold uppercase tracking-[0.15em]">Total</span>
-          <span className="text-xl font-extrabold">R$ {total.toFixed(2).replace(".", ",")}</span>
+      </aside>
+
+      <div className="flex items-center justify-center gap-4 text-slate-400">
+        <div className="flex items-center gap-1.5">
+          <Lock className="w-3 h-3" />
+          <span className="text-[9px] font-bold tracking-widest uppercase">SSL Seguro</span>
         </div>
+        <span className="w-px h-3 bg-slate-200" />
+        <span className="text-[9px] font-bold tracking-widest uppercase">PPL Company Verified</span>
       </div>
-    </aside>
+    </div>
   );
 }

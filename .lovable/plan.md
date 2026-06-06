@@ -1,63 +1,27 @@
-## Objetivo
+# Refinar visualmente o checkout
 
-Substituir a página `/checkout` atual por um fluxo em **3 etapas numeradas** (Identifique-se → Entrega → Pagamento), no estilo das imagens enviadas, mantendo o checkout como convidado (sem cadastro) e sem persistir dados em banco. O PIX continua sendo gerado pelo Elite PAY como já é feito hoje.
+Aplicar a direção "Refinado moderno" mantendo toda a lógica existente (ViaCEP, frete Correios, PIX Elite PAY, polling de status). Apenas refatorar layout/estilos.
 
-## Layout (estilo das imagens)
+## Mudanças em `src/routes/checkout.tsx`
 
-```text
-┌───────────────────────────┐  ┌──────────────────────────┐
-│ [1] Identifique-se        │  │ [3] Pagamento            │
-│  Nome / E-mail / CPF /    │  │ (bloqueado até passo 2)  │
-│  Celular  → [Continuar]   │  │                          │
-└───────────────────────────┘  └──────────────────────────┘
-┌───────────────────────────┐
-│ [2] Entrega               │
-│  CEP → endereço (ViaCEP)  │
-│  Opções de frete Correios │
-│  → [Continuar]            │
-└───────────────────────────┘
-```
+- Trocar layout para grid de 12 colunas: `lg:col-span-8` para a coluna dos passos e `lg:col-span-4` para o resumo. Resumo `sticky top-8`.
+- Cards de passo com `rounded-2xl`, borda fina; passo ativo ganha `border-2 border-primary` + sombra suave; passos inativos ficam em `bg-muted/40` com opacidade reduzida e número em cinza.
+- Header do passo: badge quadrado arredondado (10x10) com número, título all-caps com tracking 0.25em, separador inferior.
+- Inputs em grid 2 colunas (md+), `bg-muted/30`, `rounded-xl`, padding generoso, focus com ring cyan suave.
+- Botão "Continuar" full-width no mobile, `w-auto` no desktop, com `rounded-xl`, sombra colorida e hover scale.
+- Reordenar JSX para que os 3 passos fiquem empilhados verticalmente na coluna principal (corrigir bug atual de Step 2 aparecer abaixo do resumo).
+- Sidebar resumo: header com badge de "N ITENS", lista de itens com thumbnail 24x24 `rounded-xl`, nome em bold uppercase, variação em caps muted, preço em primary; subtotal/frete em linhas, total destacado grande em `font-black tracking-tighter`; banner promo PIX com bullet pulsante; badges SSL abaixo.
+- Substituir cores hard-coded `#00B6F0` por tokens existentes do projeto (`primary` / `--brand`) — verificar `src/styles.css` para usar o token correto.
+- Manter breadcrumb "Continuar Comprando" + título "FINALIZAR COMPRA" no topo.
 
-- Cada card mostra número em quadrado escuro + título; quando concluído vira verde com check (igual às telas).
-- Etapas seguintes ficam visualmente desabilitadas até a anterior ser concluída.
-- À direita, resumo do pedido com itens, subtotal, frete e total (já existe parcialmente).
-- Botão "Editar" (lápis) em cada etapa concluída para voltar e ajustar.
-- Estilo visual mantém o tema atual do site (azul/sky); botões "Continuar" em azul escuro arredondados e "Finalizar agora" em verde, como nas imagens.
+## Responsivo
 
-## Etapa 1 — Identifique-se
+- `< lg`: grid colapsa para 1 coluna, resumo vai para baixo, sticky desativa.
+- Inputs em 1 coluna no mobile, 2 no md+.
+- Padding reduzido em telas pequenas (`p-6` → `p-8` em md+).
 
-Campos: **Nome completo**, **E-mail**, **CPF** (com máscara), **Celular/WhatsApp** (com máscara `+55 (DD) 9XXXX-XXXX`).
-Validação com Zod no submit. Ao clicar Continuar, fecha o card e mostra resumo (nome, e-mail, CPF) + ícone de editar.
+## Arquivos
 
-## Etapa 2 — Entrega
+- `src/routes/checkout.tsx` — único arquivo alterado.
 
-1. Campo **CEP** com máscara `00000-000`.
-2. Ao completar 8 dígitos, chama **ViaCEP** (`https://viacep.com.br/ws/{cep}/json/`) e preenche rua, bairro, cidade, UF.
-3. Campos editáveis: rua, número, complemento, bairro, cidade, UF.
-4. Em paralelo ao retorno do CEP, chama uma **server function nova** `getShippingOptions` que consulta os **Correios reais** e devolve as opções:
-   - Correios PAC (com prazo)
-   - Correios Sedex (com prazo)
-5. Usuário escolhe uma opção (radio cards), clica Continuar.
-
-> Observação sobre Correios: a antiga API pública dos Correios foi descontinuada. Vou implementar via um provider gratuito amplamente usado (ex.: `frenet`/`melhorenvio`/`brasilapi`) que repassa as tarifas oficiais. Isso exige **uma chave/credencial gratuita** — vou pedir somente se necessário ao implementar; se não houver, deixo um fallback transparente que mostra PAC/Sedex com valores estimados e marca como "estimado".
-
-## Etapa 3 — Pagamento
-
-Mostra apenas **PIX** (como nas imagens), valor total = itens + frete escolhido.
-Botão verde **"Finalizar agora"** chama `createDeposit` (já existente) passando os itens + nome + CPF do usuário. Após gerar, exibe QR Code + Copia e Cola + status, como já está implementado hoje.
-
-## Detalhes técnicos
-
-- Refatorar `src/routes/checkout.tsx` em um componente principal + 3 sub-componentes (`StepIdentify`, `StepDelivery`, `StepPayment`) no mesmo arquivo (ou em `src/components/checkout/`).
-- Estado local com `useState` para `step` (1|2|3), `customer`, `address`, `shipping`.
-- ViaCEP é chamado direto do browser (API pública, CORS liberado).
-- Nova server function `src/lib/shipping.functions.ts` → `getShippingOptions({ cepDestino, items })`. Calcula peso total a partir dos itens e devolve `[{ service: "PAC", price, days }, { service: "SEDEX", price, days }]`.
-- Atualizar `createDeposit` para aceitar opcionalmente `shippingAmount` somado ao total (mantém validação server-side de preço, sem confiar no cliente).
-- O resumo do pedido passa a mostrar linha **Frete** quando definido.
-- Sem alterações de banco; sem login.
-- Mobile: cards empilham em coluna única.
-
-## O que NÃO muda
-
-- `products.ts`, páginas de produto, sacola, integrações Elite PAY existentes.
-- Memória do projeto (novos produtos continuam indo para "sneakers").
+Sem mudanças em server functions, schema, cart ou produtos.
