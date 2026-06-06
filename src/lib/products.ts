@@ -114,6 +114,10 @@ import tenisNkAirJordan1LowParis2 from "@/assets/tenis-nk-air-jordan-1-low-paris
 import tenisNkAirJordan1LowParis3 from "@/assets/tenis-nk-air-jordan-1-low-paris-3.png.asset.json";
 import tenisNkAf1SupremeWhiteLace1 from "@/assets/tenis-nk-af1-supreme-white-lace-1.png.asset.json";
 import tenisNkAf1SupremeWhiteLace2 from "@/assets/tenis-nk-af1-supreme-white-lace-2.png.asset.json";
+import tenisNkShoxTl1 from "@/assets/tenis-nk-shox-tl-1.png.asset.json";
+import tenisNkShoxTl2 from "@/assets/tenis-nk-shox-tl-2.png.asset.json";
+import tenisNkShoxTl3 from "@/assets/tenis-nk-shox-tl-3.png.asset.json";
+import tenisNkShoxTl4 from "@/assets/tenis-nk-shox-tl-4.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -796,6 +800,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-shox-tl", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTl1.url, images: [tenisNkShoxTl1.url, tenisNkShoxTl2.url, tenisNkShoxTl3.url, tenisNkShoxTl4.url] },
   { slug: "tenis-nk-af1-supreme-white-lace", title: "Tênis NK Air Force 1 Supreme White Lace", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAf1SupremeWhiteLace1.url, images: [tenisNkAf1SupremeWhiteLace1.url, tenisNkAf1SupremeWhiteLace2.url] },
   { slug: "tenis-nk-air-jordan-1-low-paris", title: "Tênis NK Air Jordan 1 Low \"Paris\"", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowParis1.url, images: [tenisNkAirJordan1LowParis1.url, tenisNkAirJordan1LowParis2.url, tenisNkAirJordan1LowParis3.url] },
   { slug: "tenis-nk-air-jordan-4-thunder", title: "Tênis NK Air Jordan 4 Retro \"Thunder\"", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan4Thunder1.url, images: [tenisNkAirJordan4Thunder1.url, tenisNkAirJordan4Thunder2.url, tenisNkAirJordan4Thunder3.url, tenisNkAirJordan4Thunder4.url] },
