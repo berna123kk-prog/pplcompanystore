@@ -53,6 +53,8 @@ import tenisNkCourtVisionLow1 from "@/assets/tenis-nk-court-vision-low-1.png.ass
 import tenisNkCourtVisionLow2 from "@/assets/tenis-nk-court-vision-low-2.png.asset.json";
 import tenisNkCourtVisionLowBlackSwoosh1 from "@/assets/tenis-nk-court-vision-low-black-swoosh-1.png.asset.json";
 import tenisNkCourtVisionLowBlackSwoosh2 from "@/assets/tenis-nk-court-vision-low-black-swoosh-2.png.asset.json";
+import tenisNkCourtVisionLowBlack1 from "@/assets/tenis-nk-court-vision-low-black-1.png.asset.json";
+import tenisNkCourtVisionLowBlack2 from "@/assets/tenis-nk-court-vision-low-black-2.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -735,6 +737,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-court-vision-low-black", title: "Tênis NK Court Vision Low", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkCourtVisionLowBlack1.url, images: [tenisNkCourtVisionLowBlack1.url, tenisNkCourtVisionLowBlack2.url] },
   { slug: "tenis-nk-court-vision-low-black-swoosh", title: "Tênis NK Court Vision Low", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkCourtVisionLowBlackSwoosh1.url, images: [tenisNkCourtVisionLowBlackSwoosh1.url, tenisNkCourtVisionLowBlackSwoosh2.url] },
   { slug: "tenis-nk-court-vision-low", title: "Tênis NK Court Vision Low", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkCourtVisionLow1.url, images: [tenisNkCourtVisionLow1.url, tenisNkCourtVisionLow2.url] },
   { slug: "tenis-nk-air-jordan-low-grey-sail", title: "Tênis NK Air Jordan Low", price: "199,99", oldPrice: "899,99", installment: "19,99", off: "78% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordanLowGreySail1.url, images: [tenisNkAirJordanLowGreySail1.url, tenisNkAirJordanLowGreySail2.url] },
