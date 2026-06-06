@@ -210,30 +210,34 @@ function StepIdentify({
           <p>CPF {customer?.cpf}</p>
         </div>
       ) : active ? (
-        <form onSubmit={submit} className="space-y-4">
-          <p className="text-xs text-slate-500">
-            Utilizaremos seu e-mail para: identificar seu perfil, histórico de compra, notificação de pedidos e carrinho de compras.
+        <form onSubmit={submit} className="space-y-6">
+          <p className="text-xs text-slate-500 leading-relaxed">
+            Utilizaremos seu e-mail para identificar seu perfil, histórico de compra e notificação de pedidos.
           </p>
-          <div>
-            <label className={labelCls}>Nome completo</label>
-            <input className={inputCls} value={name} onChange={(e) => setName(e.target.value)} required />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
+            <div className="md:col-span-2">
+              <label className={labelCls}>Nome completo</label>
+              <input className={inputCls} value={name} onChange={(e) => setName(e.target.value)} placeholder="Insira seu nome" required />
+            </div>
+            <div className="md:col-span-2">
+              <label className={labelCls}>E-mail</label>
+              <input className={inputCls} type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="seu@email.com" required />
+            </div>
+            <div>
+              <label className={labelCls}>CPF</label>
+              <input className={inputCls} value={cpf} onChange={(e) => setCpf(formatCpf(e.target.value))} placeholder="000.000.000-00" inputMode="numeric" required />
+            </div>
+            <div>
+              <label className={labelCls}>Celular / WhatsApp</label>
+              <input className={inputCls} value={phone} onChange={(e) => setPhone(formatPhone(e.target.value))} placeholder="(00) 00000-0000" inputMode="tel" required />
+            </div>
           </div>
-          <div>
-            <label className={labelCls}>E-mail</label>
-            <input className={inputCls} type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <div className="pt-2">
+            <button type="submit" className={primaryBtn}>Continuar →</button>
           </div>
-          <div>
-            <label className={labelCls}>CPF</label>
-            <input className={inputCls} value={cpf} onChange={(e) => setCpf(formatCpf(e.target.value))} placeholder="000.000.000-00" inputMode="numeric" required />
-          </div>
-          <div>
-            <label className={labelCls}>Celular / WhatsApp</label>
-            <input className={inputCls} value={phone} onChange={(e) => setPhone(formatPhone(e.target.value))} placeholder="(00) 00000-0000" inputMode="tel" required />
-          </div>
-          <button type="submit" className={primaryBtn}>Continuar →</button>
         </form>
       ) : (
-        <p className="text-xs text-slate-500">Preencha suas informações pessoais para continuar</p>
+        <span>Preencha suas informações pessoais para continuar</span>
       )}
     </StepCard>
   );
