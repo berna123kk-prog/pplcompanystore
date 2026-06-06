@@ -199,6 +199,8 @@ import tenisMizunoWaveProphecy14GreyTiffany2 from "@/assets/tenis-mizuno-wave-pr
 import tenisMizunoWaveProphecy14GreyTiffany3 from "@/assets/tenis-mizuno-wave-prophecy-14-grey-tiffany-3.png.asset.json";
 import tenisMizunoWaveProphecy14GreyTiffany4 from "@/assets/tenis-mizuno-wave-prophecy-14-grey-tiffany-4.png.asset.json";
 import tenisMizunoWaveProphecy14GreyTiffany5 from "@/assets/tenis-mizuno-wave-prophecy-14-grey-tiffany-5.png.asset.json";
+import tenisLcstMonograma1 from "@/assets/tenis-lcst-monograma-1.png.asset.json";
+import tenisLcstMonograma2 from "@/assets/tenis-lcst-monograma-2.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -881,6 +883,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-lcst-monograma", title: "Tênis Lcst Monograma", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLcstMonograma1.url, images: [tenisLcstMonograma1.url, tenisLcstMonograma2.url] },
   { slug: "tenis-mizuno-wave-prophecy-14-grey-tiffany", title: "Tênis Mizuno Wave Prophecy 14", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMizunoWaveProphecy14GreyTiffany1.url, images: [tenisMizunoWaveProphecy14GreyTiffany1.url, tenisMizunoWaveProphecy14GreyTiffany2.url, tenisMizunoWaveProphecy14GreyTiffany3.url, tenisMizunoWaveProphecy14GreyTiffany4.url, tenisMizunoWaveProphecy14GreyTiffany5.url] },
   { slug: "tenis-mizuno-wave-prophecy-14-marinho-prata", title: "Tênis Mizuno Wave Prophecy 14 - Marinho+Prata", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMizunoWaveProphecy14MarinhoPrata1.url, images: [tenisMizunoWaveProphecy14MarinhoPrata1.url, tenisMizunoWaveProphecy14MarinhoPrata2.url, tenisMizunoWaveProphecy14MarinhoPrata3.url, tenisMizunoWaveProphecy14MarinhoPrata4.url, tenisMizunoWaveProphecy14MarinhoPrata5.url] },
   { slug: "tenis-nk-air-jordan-1-low-black-white-v2", title: "Tênis NK Air Jordan 1 Low", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowBlackWhiteV2_1.url, images: [tenisNkAirJordan1LowBlackWhiteV2_1.url, tenisNkAirJordan1LowBlackWhiteV2_2.url] },
