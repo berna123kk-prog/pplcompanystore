@@ -74,6 +74,13 @@ import tenisLvSkateBeige1 from "@/assets/tenis-lv-skate-beige-1.png.asset.json";
 import tenisLvSkateBeige2 from "@/assets/tenis-lv-skate-beige-2.png.asset.json";
 import tenisLvSkateBeige3 from "@/assets/tenis-lv-skate-beige-3.png.asset.json";
 import tenisLvSkateBeige4 from "@/assets/tenis-lv-skate-beige-4.png.asset.json";
+import tenisNkAirMaxPlusRosaCream1 from "@/assets/tenis-nk-air-max-plus-rosa-cream-1.png.asset.json";
+import tenisNkAirMaxPlusRosaCream2 from "@/assets/tenis-nk-air-max-plus-rosa-cream-2.png.asset.json";
+import tenisNkAirMaxPlusRosaCream3 from "@/assets/tenis-nk-air-max-plus-rosa-cream-3.png.asset.json";
+import tenisNkAirMaxPlusRosaCream4 from "@/assets/tenis-nk-air-max-plus-rosa-cream-4.png.asset.json";
+import tenisNkAirMaxPlusRosaCream5 from "@/assets/tenis-nk-air-max-plus-rosa-cream-5.png.asset.json";
+import tenisNkAirMaxPlusRosaCream6 from "@/assets/tenis-nk-air-max-plus-rosa-cream-6.png.asset.json";
+import tenisNkAirMaxPlusRosaCream7 from "@/assets/tenis-nk-air-max-plus-rosa-cream-7.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -756,6 +763,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-max-plus-rosa-cream", title: "Tênis NK Air Max Plus", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusRosaCream1.url, images: [tenisNkAirMaxPlusRosaCream1.url, tenisNkAirMaxPlusRosaCream2.url, tenisNkAirMaxPlusRosaCream3.url, tenisNkAirMaxPlusRosaCream4.url, tenisNkAirMaxPlusRosaCream5.url, tenisNkAirMaxPlusRosaCream6.url, tenisNkAirMaxPlusRosaCream7.url] },
   { slug: "tenis-lv-skate-beige", title: "Tênis LV Skate", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLvSkateBeige1.url, images: [tenisLvSkateBeige1.url, tenisLvSkateBeige2.url, tenisLvSkateBeige3.url, tenisLvSkateBeige4.url] },
   { slug: "tenis-lv-skate-navy", title: "Tênis LV Skate", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLvSkateNavy1.url, images: [tenisLvSkateNavy1.url, tenisLvSkateNavy2.url, tenisLvSkateNavy3.url, tenisLvSkateNavy4.url] },
   { slug: "tenis-nk-air-max-plus-preto-cream", title: "Tênis NK Air Max Plus", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusPretoCream1.url, images: [tenisNkAirMaxPlusPretoCream1.url, tenisNkAirMaxPlusPretoCream2.url] },
