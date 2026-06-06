@@ -158,6 +158,9 @@ import tenisNkAirMaxPlusSwarovski3 from "@/assets/tenis-nk-air-max-plus-swarovsk
 import tenisNkAirMaxPlusSwarovski4 from "@/assets/tenis-nk-air-max-plus-swarovski-4.png.asset.json";
 import tenisNkAirMaxPlusSwarovski5 from "@/assets/tenis-nk-air-max-plus-swarovski-5.png.asset.json";
 import tenisLcstLineshot1 from "@/assets/tenis-lcst-lineshot-1.png.asset.json";
+import tenisNkAirJordan1LowSe1 from "@/assets/tenis-nk-air-jordan-1-low-se-1.png.asset.json";
+import tenisNkAirJordan1LowSe2 from "@/assets/tenis-nk-air-jordan-1-low-se-2.png.asset.json";
+import tenisNkAirJordan1LowSe3 from "@/assets/tenis-nk-air-jordan-1-low-se-3.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -840,6 +843,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-jordan-1-low-se", title: "Tênis NK Air Jordan 1 Low SE", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowSe1.url, images: [tenisNkAirJordan1LowSe1.url, tenisNkAirJordan1LowSe2.url, tenisNkAirJordan1LowSe3.url] },
   { slug: "tenis-lcst-lineshot", title: "Tênis Lcst Lineshot", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLcstLineshot1.url, images: [tenisLcstLineshot1.url] },
   { slug: "tenis-nk-air-max-plus-swarovski", title: "Tênis NK Air Max Plus Swarovski® crystals", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusSwarovski1.url, images: [tenisNkAirMaxPlusSwarovski1.url, tenisNkAirMaxPlusSwarovski2.url, tenisNkAirMaxPlusSwarovski3.url, tenisNkAirMaxPlusSwarovski4.url, tenisNkAirMaxPlusSwarovski5.url] },
   { slug: "tenis-lv-trainer-black", title: "Tênis LV Trainer", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLvTrainerBlack1.url, images: [tenisLvTrainerBlack1.url, tenisLvTrainerBlack2.url, tenisLvTrainerBlack3.url] },
