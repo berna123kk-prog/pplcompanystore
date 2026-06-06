@@ -97,6 +97,8 @@ import tenisNkAirForce1Black7 from "@/assets/tenis-nk-air-force-1-black-7.png.as
 import tenisNkDunkLowCourtPurple1 from "@/assets/tenis-nk-dunk-low-court-purple-1.png.asset.json";
 import tenisNkDunkLowCourtPurple2 from "@/assets/tenis-nk-dunk-low-court-purple-2.png.asset.json";
 import tenisNkDunkLowCourtPurple3 from "@/assets/tenis-nk-dunk-low-court-purple-3.png.asset.json";
+import tenisNkDunkLowPaisley1 from "@/assets/tenis-nk-dunk-low-paisley-1.png.asset.json";
+import tenisNkDunkLowPaisley2 from "@/assets/tenis-nk-dunk-low-paisley-2.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -779,6 +781,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-dunk-low-paisley", title: "Tênis NK Dunk Low \"Paisley\"", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkDunkLowPaisley1.url, images: [tenisNkDunkLowPaisley1.url, tenisNkDunkLowPaisley2.url] },
   { slug: "tenis-nk-dunk-low-court-purple", title: "Tênis NK Dunk Low Retro \"Court Purple\"", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkDunkLowCourtPurple1.url, images: [tenisNkDunkLowCourtPurple1.url, tenisNkDunkLowCourtPurple2.url, tenisNkDunkLowCourtPurple3.url] },
   { slug: "tenis-nk-air-force-1-black", title: "Tênis NK Air Force 1 Black", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirForce1Black1.url, images: [tenisNkAirForce1Black1.url, tenisNkAirForce1Black2.url, tenisNkAirForce1Black3.url, tenisNkAirForce1Black4.url, tenisNkAirForce1Black5.url, tenisNkAirForce1Black6.url, tenisNkAirForce1Black7.url] },
   { slug: "tenis-nk-air-max-plus-brasil", title: "Tênis NK Air Max Plus", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusBrasil1.url, images: [tenisNkAirMaxPlusBrasil1.url, tenisNkAirMaxPlusBrasil2.url, tenisNkAirMaxPlusBrasil3.url, tenisNkAirMaxPlusBrasil4.url, tenisNkAirMaxPlusBrasil5.url, tenisNkAirMaxPlusBrasil6.url] },
