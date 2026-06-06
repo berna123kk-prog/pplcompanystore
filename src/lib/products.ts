@@ -149,6 +149,9 @@ import tenisNkAirJordan1LowRoyal3 from "@/assets/tenis-nk-air-jordan-1-low-royal
 import tenisLvTrainer1 from "@/assets/tenis-lv-trainer-1.png.asset.json";
 import tenisLvTrainer2 from "@/assets/tenis-lv-trainer-2.png.asset.json";
 import tenisLvTrainer3 from "@/assets/tenis-lv-trainer-3.png.asset.json";
+import tenisLvTrainerBlack1 from "@/assets/tenis-lv-trainer-black-1.png.asset.json";
+import tenisLvTrainerBlack2 from "@/assets/tenis-lv-trainer-black-2.png.asset.json";
+import tenisLvTrainerBlack3 from "@/assets/tenis-lv-trainer-black-3.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -831,6 +834,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-lv-trainer-black", title: "Tênis LV Trainer", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLvTrainerBlack1.url, images: [tenisLvTrainerBlack1.url, tenisLvTrainerBlack2.url, tenisLvTrainerBlack3.url] },
   { slug: "tenis-lv-trainer", title: "Tênis LV Trainer", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLvTrainer1.url, images: [tenisLvTrainer1.url, tenisLvTrainer2.url, tenisLvTrainer3.url] },
   { slug: "tenis-nk-air-jordan-1-low-royal", title: "Tênis NK Air Jordan 1 Low", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowRoyal1.url, images: [tenisNkAirJordan1LowRoyal1.url, tenisNkAirJordan1LowRoyal2.url, tenisNkAirJordan1LowRoyal3.url] },
   { slug: "tenis-nk-air-jordan-1-low", title: "Tênis NK Air Jordan 1 Low", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1Low1.url, images: [tenisNkAirJordan1Low1.url, tenisNkAirJordan1Low2.url, tenisNkAirJordan1Low3.url] },
