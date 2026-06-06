@@ -202,6 +202,7 @@ import tenisMizunoWaveProphecy14GreyTiffany5 from "@/assets/tenis-mizuno-wave-pr
 import tenisLcstMonograma1 from "@/assets/tenis-lcst-monograma-1.png.asset.json";
 import tenisLcstMonograma2 from "@/assets/tenis-lcst-monograma-2.png.asset.json";
 import tenisLcstL0011 from "@/assets/tenis-lcst-l001-1.png.asset.json";
+import tenisLcstL001Black1 from "@/assets/tenis-lcst-l001-black-1.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -884,6 +885,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-lcst-l001-black", title: "Tênis Lcst L001", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLcstL001Black1.url, images: [tenisLcstL001Black1.url] },
   { slug: "tenis-lcst-l001", title: "Tênis Lcst L001", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLcstL0011.url, images: [tenisLcstL0011.url] },
   { slug: "tenis-lcst-monograma", title: "Tênis Lcst Monograma", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLcstMonograma1.url, images: [tenisLcstMonograma1.url, tenisLcstMonograma2.url] },
   { slug: "tenis-mizuno-wave-prophecy-14-grey-tiffany", title: "Tênis Mizuno Wave Prophecy 14", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMizunoWaveProphecy14GreyTiffany1.url, images: [tenisMizunoWaveProphecy14GreyTiffany1.url, tenisMizunoWaveProphecy14GreyTiffany2.url, tenisMizunoWaveProphecy14GreyTiffany3.url, tenisMizunoWaveProphecy14GreyTiffany4.url, tenisMizunoWaveProphecy14GreyTiffany5.url] },
