@@ -465,8 +465,8 @@ export const products: Product[] = [
   { slug: "combo-kit-3-blusas-zip-tommy", title: "Jaqueta Tommy Velejador Sustainable", price: "149,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: jaquetaTommyVelejador1, images: [jaquetaTommyVelejador1, jaquetaTommyVelejador2] },
   { slug: "blusa-lacoste-frio", title: "Blusa Lacoste Frio", price: "129,99", oldPrice: "799,99", installment: "12,99", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1840, stock: 10, img: blusaLacosteFrio, images: [blusaLacosteFrio] },
   { slug: "correntinha-pulseirinha-ouro", title: "Correntinha + Pulseirinha de Ouro", price: "99,99", oldPrice: "499,99", installment: "9,99", off: "80% OFF", kind: "accessory", category: "acessorios", sold: 1320, stock: 8, img: correntinhaPulseirinhaOuro, images: [correntinhaPulseirinhaOuro] },
-  { slug: "kit-completo-lcst-sportswear", title: "Kit Completo Lcst Sportswear", price: "149,99", oldPrice: "749,99", installment: "14,97", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3421, stock: 9, img: kitLcstSportswear },
-  { slug: "kit-tommy-velejador-2026-v3", title: "Jaqueta branca Tommy Velejador Modelo Antigo", price: "159,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 4188, stock: 6, img: jaquetaTommyBranca1, images: [jaquetaTommyBranca1, jaquetaTommyBranca2, jaquetaTommyBranca3, jaquetaTommyBranca4] },
+  { slug: "kit-completo-lcst-sportswear", title: "KIT COMPLETO LCST SPORTSWEAR 4 PEÇAS", price: "199,99", oldPrice: "749,99", installment: "14,97", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3421, stock: 9, img: kitLcstSportswear },
+  { slug: "kit-tommy-velejador-2026-v3", title: "KIT COMPLETO TOMMY 2026 4 PEÇAS", price: "239,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 4188, stock: 6, img: jaquetaTommyBranca1, images: [jaquetaTommyBranca1, jaquetaTommyBranca2, jaquetaTommyBranca3, jaquetaTommyBranca4] },
   { slug: "jaqueta-nasa", title: "Jaqueta Nasa - A do Momento", price: "99,99", oldPrice: "", installment: "9,98", off: "", kind: "clothing", category: "jaquetas-e-moletons", sold: 1722, stock: 14, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
   { slug: "shorts-nk-praia", title: "Shorts Nk Praia", price: "99,99", oldPrice: "289,99", installment: "9,98", off: "66% OFF", kind: "clothing", category: "bermudas-e-shorts", sold: 2603, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
   { slug: "bermuda-jeans-jogador", title: "Bermuda Jeans Jogador", price: "69,99", oldPrice: "", installment: "6,99", off: "", kind: "clothing", category: "bermudas-e-shorts", sold: 0, stock: 10, img: bermudaJeansJogador, images: [bermudaJeansJogador, bermudaJeansJogador2] },
@@ -483,10 +483,10 @@ export const products: Product[] = [
   { slug: "shorts-nk-athletics", title: "Shorts NK Athletics", price: "69,99", oldPrice: "", installment: "6,99", off: "", kind: "clothing", category: "bermudas-e-shorts", sold: 0, stock: 10, img: shortsNkAthletics1, images: [shortsNkAthletics1, shortsNkAthletics2] },
   { slug: "kit-3-bones-pma-bmw", title: "Kit 3 Bonés Pma BMW Motosport", price: "129,99", oldPrice: "259,99", installment: "12,98", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 22, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6607.png?v=1775624965&width=1200" },
   { slug: "jaqueta-tommy-velejador", title: "Jaqueta Tommy Velejador Modelo Antigo", price: "139,99", oldPrice: "999,00", installment: "13,97", off: "86% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 3088, stock: 8, img: jaquetaTommyModeloAntigo1, images: [jaquetaTommyModeloAntigo1, jaquetaTommyModeloAntigo2, jaquetaTommyModeloAntigo3, jaquetaTommyModeloAntigo4] },
-  { slug: "kit-tommy-velejador-2026", title: "Kit Completo hilfiger  Velejador 2026", price: "179,99", oldPrice: "1.350,00", installment: "17,97", off: "87% OFF", kind: "kit", category: "kits-completos", sold: 1455, stock: 5, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
-  { slug: "kit-completo-lcst", title: "Kit Completo Pma BMW Motosport", price: "139,99", oldPrice: "899,00", installment: "13,97", off: "84% OFF", kind: "kit", category: "kits-completos", sold: 1899, stock: 7, img: kitPmaBmwMotosportJeans },
-  { slug: "kit-pma-bmw-m-4-pecas", title: "Kit Completo Pma BMW Motosport", price: "139,99", oldPrice: "999,00", installment: "13,97", off: "86% OFF", kind: "kit", category: "kits-completos", sold: 2244, stock: 10, img: kitPmaBmwMotosportCinza1, images: [kitPmaBmwMotosportCinza1, kitPmaBmwMotosportCinza2] },
-  { slug: "kit-nk-academy-slide-bone", title: "Kit NK Academy Completo com Slide e Boné", price: "99,99", oldPrice: "499,00", installment: "9,98", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3501, stock: 11, img: kitNkAcademySlideBone },
+  { slug: "kit-tommy-velejador-2026", title: "KIT DA TOMMY 2025 3 PEÇAS", price: "239,99", oldPrice: "1.350,00", installment: "17,97", off: "87% OFF", kind: "kit", category: "kits-completos", sold: 1455, stock: 5, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6622.png?v=1775625999&width=1200" },
+  { slug: "kit-completo-lcst", title: "KIT COMPLETO PMA BMW MOTOSPORT 4 PCS", price: "239,99", oldPrice: "899,00", installment: "13,97", off: "84% OFF", kind: "kit", category: "kits-completos", sold: 1899, stock: 7, img: kitPmaBmwMotosportJeans },
+  { slug: "kit-pma-bmw-m-4-pecas", title: "KIT COMPLETO PMA BMW MOTOSPORT 3 PCS", price: "239,99", oldPrice: "999,00", installment: "13,97", off: "86% OFF", kind: "kit", category: "kits-completos", sold: 2244, stock: 10, img: kitPmaBmwMotosportCinza1, images: [kitPmaBmwMotosportCinza1, kitPmaBmwMotosportCinza2] },
+  { slug: "kit-nk-academy-slide-bone", title: "KIT NK ACADEMY COMPLETO COM SLIDE E BONÉ 4 PCS", price: "149,99", oldPrice: "499,00", installment: "9,98", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3501, stock: 11, img: kitNkAcademySlideBone },
   { slug: "calca-jeans-city-denim", title: "Calça Jeans City Denim", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 900, stock: 15, img: calcaJeansDestroyedFrente, images: [calcaJeansDestroyedFrente, calcaJeansDestroyedDetalhe] },
   { slug: "calca-jeans-city-denim-2", title: "Calça Jeans City Denim", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 720, stock: 12, img: calcaJeansCityDenim2Frente, images: [calcaJeansCityDenim2Frente, calcaJeansCityDenim2Detalhe] },
   { slug: "calca-jeans-skinny-zara-respingos", title: "Calça Jeans Skinny Zara com Respingos", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 540, stock: 10, img: calcaJeansSkinnyZaraRespingos, images: [calcaJeansSkinnyZaraRespingos] },
@@ -650,7 +650,7 @@ export const products: Product[] = [
   { slug: "polo-bmw-motorsport-azul", title: "Polo BMW Motorsport Azul", price: "69,99", oldPrice: "199,99", installment: "6,99", off: "65% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: poloBmwMotorsportAzul1, images: [poloBmwMotorsportAzul1] },
   { slug: "camiseta-mercedes-amg", title: "Camiseta Mercedes AMG", price: "69,99", oldPrice: "199,99", installment: "6,99", off: "65% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaMercedesAmg1, images: [camisetaMercedesAmg1] },
   { slug: "camiseta-mercedes-amg-cinza", title: "Camiseta Mercedes AMG Cinza", price: "69,99", oldPrice: "199,99", installment: "6,99", off: "65% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaMercedesAmgCinza1, images: [camisetaMercedesAmgCinza1, camisetaMercedesAmgCinza2] },
-  { slug: "combo-4-camisas-nk-academy-2021", title: "Combo 4 Camisas NK Academy 2021", price: "99,99", oldPrice: "349,99", installment: "9,99", off: "71% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: combo4CamisasNkAcademy2021, images: [combo4CamisasNkAcademy2021] },
+  { slug: "combo-4-camisas-nk-academy-2021", title: "KIT COMPLETO NK ACADEMY 4 PEÇAS ", price: "189,99", oldPrice: "349,99", installment: "9,99", off: "71% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: combo4CamisasNkAcademy2021, images: [combo4CamisasNkAcademy2021] },
   { slug: "camiseta-corteiz-brazil-white", title: "Camiseta Corteiz Brazil White", price: "89,99", oldPrice: "249,99", installment: "8,99", off: "64% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaCorteizBrazilWhite1, images: [camisetaCorteizBrazilWhite1] },
   { slug: "camiseta-lcst-sport", title: "Camiseta Lcst Sport", price: "89,99", oldPrice: "249,99", installment: "8,99", off: "64% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaLcstSport1, images: [camisetaLcstSport1] },
   { slug: "camiseta-lcst-sport-navy", title: "Camiseta Lcst Sport Navy", price: "109,99", oldPrice: "299,99", installment: "10,99", off: "63% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaLcstSportNavy1, images: [camisetaLcstSportNavy1, camisetaLcstSportNavy2, camisetaLcstSportNavy3] },
@@ -659,10 +659,10 @@ export const products: Product[] = [
   { slug: "camiseta-nk-dri-fit-swoosh", title: "Camiseta NK Dri-FIT Swoosh", price: "49,99", oldPrice: "149,99", installment: "4,99", off: "67% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaNkDriFitSwoosh1, images: [camisetaNkDriFitSwoosh1] },
   { slug: "camisa-manga-longa-nk-dri-fit-swoosh", title: "Camisa Manga Longa NK Dri-FIT Swoosh", price: "89,99", oldPrice: "249,99", installment: "8,99", off: "64% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisaMangaLongaNkDriFitSwoosh1, images: [camisaMangaLongaNkDriFitSwoosh1] },
   { slug: "bone-lcst-miami-open", title: "Boné Lcst Miami Open 2026", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 980, stock: 25, img: boneLcstMiamiOpen1, images: [boneLcstMiamiOpen1, boneLcstMiamiOpen2] },
-  { slug: "bone-lcst-l-bordado", title: "BONÉ LACOSTE L PRETO", price: "219,99", oldPrice: "549,99", installment: "21,99", off: "60% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 20, img: boneLcstLBordado1.url, images: [boneLcstLBordado1.url, boneLcstLBordado2.url, boneLcstLBordado3.url, boneLcstLBordado4.url] },
+  { slug: "bone-lcst-l-bordado", title: "BONÉ LACOSTE L PRETO", price: "319,99", oldPrice: "549,99", installment: "21,99", off: "60% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 20, img: boneLcstLBordado1.url, images: [boneLcstLBordado1.url, boneLcstLBordado2.url, boneLcstLBordado3.url, boneLcstLBordado4.url] },
   { slug: "bone-lcst-sport-2-faixas", title: "Boné Lcst Sport 2 Faixas Original (Peça única)", price: "79,99", oldPrice: "249,99", installment: "7,99", off: "68% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 1, img: boneLcstSport2Faixas1, images: [boneLcstSport2Faixas1, boneLcstSport2Faixas2, boneLcstSport2Faixas3] },
-  { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
-  { slug: "bone-lcst-sport-mesh-don-juan-preto", title: "Boné Lcst Sport Mesh Don Juan Preto", price: "249,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuanPreto1, images: [boneLcstSportMeshDonJuanPreto1, boneLcstSportMeshDonJuanPreto2] },
+  { slug: "bone-lcst-sport-mesh-don-juan", title: "Boné Lcst Sport Mesh Don Juan", price: "339,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuan1, images: [boneLcstSportMeshDonJuan1, boneLcstSportMeshDonJuan2, boneLcstSportMeshDonJuan3] },
+  { slug: "bone-lcst-sport-mesh-don-juan-preto", title: "Boné Lcst Sport Mesh Don Juan Preto", price: "339,99", oldPrice: "499,99", installment: "24,99", off: "50% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneLcstSportMeshDonJuanPreto1, images: [boneLcstSportMeshDonJuanPreto1, boneLcstSportMeshDonJuanPreto2] },
   { slug: "bone-mizuno-branco", title: "Boné Mizuno Branco", price: "119,99", oldPrice: "349,99", installment: "11,99", off: "65% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneMizunoBranco, images: [boneMizunoBranco] },
   { slug: "bone-nk-futura", title: "Boné NK", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkFutura, images: [boneNkFutura] },
   { slug: "bone-nk-metal", title: "Boné NK Metal", price: "59,99", oldPrice: "199,99", installment: "5,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1, stock: 10, img: boneNkMetal, images: [boneNkMetal] },
@@ -696,9 +696,9 @@ export const products: Product[] = [
   { slug: "tenis-pma-ca-pro", title: "Tênis Pma CA Pro", price: "159,99", oldPrice: "599,99", installment: "15,99", off: "73% OFF", kind: "footwear", category: "sneakers", sold: 2200, stock: 9, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
   { slug: "jaqueta-tommy-azul-royal", title: "Boné Tommy Big Logo", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "accessory", category: "acessorios", sold: 1100, stock: 7, img: boneTommyBigLogo },
   { slug: "jaqueta-tommy-corta-vento", title: "Boné Tommy Since 1985", price: "149,99", oldPrice: "799,99", installment: "14,99", off: "81% OFF", kind: "accessory", category: "acessorios", sold: 1340, stock: 6, img: boneTommySince1985_1, images: [boneTommySince1985_1, boneTommySince1985_2] },
-  { slug: "kit-completo-nk-sportswear", title: "Kit Completo NK Sportswear", price: "149,99", oldPrice: "799,99", installment: "14,97", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 1620, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6603.png?v=1775624725&width=1200" },
-  { slug: "kit-completo-nk-academy-4-pecas", title: "Kit Completo NK Academy 4 Peças", price: "159,99", oldPrice: "699,99", installment: "15,97", off: "77% OFF", kind: "kit", category: "kits-completos", sold: 1480, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6618.png?v=1775625574&width=1200" },
-  { slug: "kit-completo-nk-sportswear-lacoste", title: "KIT COMPLETO NK SPORTSWEAR", price: "159,99", oldPrice: "749,99", installment: "15,97", off: "78% OFF", kind: "kit", category: "kits-completos", sold: 1200, stock: 10, img: kitNkSportswearLacoste1, images: [kitNkSportswearLacoste1, kitNkSportswearLacoste2] },
+  { slug: "kit-completo-nk-sportswear", title: "KIT COMPLETO NK SPORTSWEAR 4 PCS", price: "249,99", oldPrice: "799,99", installment: "14,97", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 1620, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6603.png?v=1775624725&width=1200" },
+  { slug: "kit-completo-nk-academy-4-pecas", title: "KIT COMPLETO NK ACADEMY 4 PEÇAS ", price: "239,99", oldPrice: "699,99", installment: "15,97", off: "77% OFF", kind: "kit", category: "kits-completos", sold: 1480, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6618.png?v=1775625574&width=1200" },
+  { slug: "kit-completo-nk-sportswear-lacoste", title: "KIT COMPLETO NK SPORTSWEAR 4 PCS", price: "219,99", oldPrice: "749,99", installment: "15,97", off: "78% OFF", kind: "kit", category: "kits-completos", sold: 1200, stock: 10, img: kitNkSportswearLacoste1, images: [kitNkSportswearLacoste1, kitNkSportswearLacoste2] },
   
   { slug: "bone-lcst-sport-diamante", title: "Boné Lcst Sport Diamante (Modelo Novo)", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 860, stock: 18, img: boneLcstSportDiamante },
   { slug: "short-tommy-exclusivo", title: "Short Tommy Exclusivo", price: "59,99", oldPrice: "249,99", installment: "5,99", off: "76% OFF", kind: "clothing", category: "bermudas-e-shorts", sold: 1450, stock: 12, img: shortTommyExclusivo1, images: [shortTommyExclusivo1, shortTommyExclusivo2] },
@@ -942,8 +942,8 @@ const blusaPumaFerrariFeatured: Product = {
 
 const kitMizunoBranco2026Featured: Product = {
   slug: "kit-mizuno-branco-2026-featured",
-  title: "Kit Mizuno Branco 2026",
-  price: "279,99",
+  title: "KIT COMPLETO MIZUNO 4 PEÇAS",
+  price: "299,99",
   oldPrice: "999,99",
   installment: "27,99",
   off: "72% OFF",
@@ -972,8 +972,8 @@ const kitLacosteBermudaPoloFeatured: Product = {
 
 const kitLacosteBrancoMizunoFeatured: Product = {
   slug: "kit-lacoste-branco-mizuno-featured",
-  title: "Kit Lacoste Branco + Mizuno",
-  price: "239,99",
+  title: "KIT LACOSTE + MIZUNO 2 PEÇAS",
+  price: "439,99",
   oldPrice: "799,99",
   installment: "23,99",
   off: "70% OFF",
@@ -1038,7 +1038,7 @@ export const featured = [
       return {
         ...p,
         slug: "kit-tommy-velejador-2026-v3-featured",
-        title: "KIT COMPLETO TOMMY VELEJADOR 2026",
+        title: "KIT COMPLETO TOMMY 2026 4 PEÇAS",
         img: kitHilfigerNavy1,
         images: [kitHilfigerNavy1, kitHilfigerNavy2],
       };
@@ -1079,8 +1079,8 @@ import kitLacosteRed5 from "@/assets/kit-lacoste-red-5.png";
 
 const kitLacosteRedProduct: Product = {
   slug: "kit-lacoste-red-kits",
-  title: "Kit Lacoste Red",
-  price: "179,99",
+  title: "KIT LACOSTE RED 5 PEÇAS",
+  price: "349,99",
   oldPrice: "899,99",
   installment: "17,99",
   off: "80% OFF",
@@ -1094,8 +1094,8 @@ const kitLacosteRedProduct: Product = {
 
 const kitLalaCompletoProduct: Product = {
   slug: "kit-lala-completo-kits",
-  title: "Kit Lala Completo",
-  price: "179,99",
+  title: "KIT LALA COMPLETO 5 PEÇAS",
+  price: "339,99",
   oldPrice: "899,99",
   installment: "17,99",
   off: "80% OFF",
@@ -1109,8 +1109,8 @@ const kitLalaCompletoProduct: Product = {
 
 const kitLacosteCompletoProduct: Product = {
   slug: "kit-lacoste-completo-kits",
-  title: "Kit Lacoste Completo",
-  price: "229,99",
+  title: "KIT LACOSTE COMPLETO 4 PEÇAS",
+  price: "339,99",
   oldPrice: "1.099,99",
   installment: "22,99",
   off: "79% OFF",
@@ -1124,8 +1124,8 @@ const kitLacosteCompletoProduct: Product = {
 
 const kitLacosteMizunoCompletoProduct: Product = {
   slug: "kit-lacoste-mizuno-completo-kits",
-  title: "Kit Lacoste + Mizuno Completo",
-  price: "259,99",
+  title: "KIT LACOSTE + MIZUNO COMPLETO 5 PEÇAS",
+  price: "219,99",
   oldPrice: "1.199,99",
   installment: "25,99",
   off: "78% OFF",
@@ -1145,8 +1145,8 @@ const kitLacosteMizunoCompletoProduct: Product = {
 
 const kitLacosteMizunoProduct: Product = {
   slug: "kit-lacoste-mizuno-kits",
-  title: "Kit Lacoste + Mizuno",
-  price: "219,99",
+  title: "KIT LACOSTE + MIZUNO 4 PEÇAS",
+  price: "319,99",
   oldPrice: "999,99",
   installment: "21,99",
   off: "78% OFF",
@@ -1160,8 +1160,8 @@ const kitLacosteMizunoProduct: Product = {
 
 const kitPumaBmwProduct: Product = {
   slug: "kit-completo-puma-bmw-kits",
-  title: "Kit Completo Puma + BMW",
-  price: "159,99",
+  title: "KIT COMPLETO PUMA + BMW 5 PEÇAS",
+  price: "219,99",
   oldPrice: "799,99",
   installment: "15,99",
   off: "80% OFF",
@@ -1175,8 +1175,8 @@ const kitPumaBmwProduct: Product = {
 
 const kitRegataLacosteProduct: Product = {
   slug: "kit-regata-lacoste-kits",
-  title: "Kit Regata Lacoste",
-  price: "159,99",
+  title: "KIT REGATA LACOSTE 4 PEÇAS",
+  price: "219,99",
   oldPrice: "699,99",
   installment: "15,99",
   off: "77% OFF",
@@ -1194,8 +1194,8 @@ import kitLacosteMizunoNovo1 from "@/assets/kit-lacoste-mizuno-novo-1.png";
 
 const kitLacosteMizunoNovoProduct: Product = {
   slug: "kit-lacoste-mizuno-novo-kits",
-  title: "Kit Lacoste + Mizuno",
-  price: "239,99",
+  title: "KIT LACOSTE + MIZUNO 4 PEÇAS",
+  price: "249,99",
   oldPrice: "1.099,99",
   installment: "23,99",
   off: "78% OFF",
@@ -1211,8 +1211,8 @@ import kitLacosteCompletoV2_1 from "@/assets/kit-lacoste-completo-v2-1.png";
 
 const kitLacosteCompletoV2Product: Product = {
   slug: "kit-lacoste-completo-v2-kits",
-  title: "Kit Lacoste Completo",
-  price: "219,99",
+  title: "KIT LACOSTE COMPLETO 4 PEÇAS",
+  price: "339,99",
   oldPrice: "1.099,99",
   installment: "21,99",
   off: "80% OFF",
@@ -1228,8 +1228,8 @@ import kitCompletoMizuno1 from "@/assets/kit-completo-mizuno-1.png";
 
 const kitCompletoMizunoProduct: Product = {
   slug: "kit-completo-mizuno-kits",
-  title: "Kit Completo Mizuno",
-  price: "299,99",
+  title: "KIT COMPLETO MIZUNO 4 PEÇAS",
+  price: "349,99",
   oldPrice: "1.299,99",
   installment: "29,99",
   off: "77% OFF",
@@ -1245,8 +1245,8 @@ import kitTommy2025_1 from "@/assets/kit-tommy-2025-1.png";
 
 const kitTommy2025Product: Product = {
   slug: "kit-tommy-2025-kits",
-  title: "Kit da Tommy 2025",
-  price: "169,99",
+  title: "KIT DA TOMMY 2025 3 PEÇAS",
+  price: "239,99",
   oldPrice: "799,99",
   installment: "16,99",
   off: "79% OFF",
@@ -1262,8 +1262,8 @@ import kitLacoste2025_1 from "@/assets/kit-lacoste-2025-1.png";
 
 const kitLacoste2025Product: Product = {
   slug: "kit-lacoste-2025-kits",
-  title: "Kit da Lacoste 2025",
-  price: "209,99",
+  title: "KIT DA LACOSTE 2025 4 PEÇAS",
+  price: "249,99",
   oldPrice: "999,99",
   installment: "20,99",
   off: "79% OFF",
@@ -1281,10 +1281,10 @@ export const kits = [kitLacoste2025Product, kitLacosteLuxoProduct, kitTommy2025P
 
 
   if (p.slug === "kit-tommy-velejador-2026-v3") {
-    return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
+    return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY 2026 4 PEÇAS", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
   }
   if (p.slug === "kit-nk-academy") {
-    return { ...p, slug: "kit-nk-academy-kits", title: "KIT COMPLETO TOMMY VELEJADOR 2026", img: kitTommyVelejadorVermelho, images: undefined };
+    return { ...p, slug: "kit-nk-academy-kits", title: "KIT COMPLETO TOMMY 2026 4 PEÇAS", img: kitTommyVelejadorVermelho, images: undefined };
   }
   return p;
 })];
