@@ -320,7 +320,7 @@ function StepDelivery({
   return (
     <StepCard n={2} title="Entrega" done={done} active={active} onEdit={onEdit}>
       {!enabled ? (
-        <p className="text-xs text-slate-500">Conclua a identificação para continuar</p>
+        <span>Conclua a identificação para continuar</span>
       ) : done && !active ? (
         <div className="text-sm text-slate-700 space-y-1">
           <p>{address?.street}, {address?.number}{address?.complement ? ` - ${address.complement}` : ""}</p>
