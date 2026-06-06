@@ -472,23 +472,25 @@ function StepPayment({
   return (
     <StepCard n={3} title="Pagamento" done={done} active={active}>
       {!enabled ? (
-        <p className="text-xs text-slate-500">Preencha suas informações pessoais para continuar</p>
+        <span>Preencha suas informações pessoais para continuar</span>
       ) : !pix ? (
-        <div className="space-y-4">
-          <div className="border border-sky-200 p-4">
-            <div className="flex items-center gap-2">
-              <input type="radio" checked readOnly className="accent-sky-900" />
-              <span className="text-sm font-bold text-sky-900">Pix</span>
-              <span className="ml-auto text-[9px] font-extrabold uppercase tracking-[0.1em] bg-fuchsia-600 text-white px-2 py-1">
-                Pagamento instantâneo
+        <div className="space-y-5">
+          <div className="border-2 border-sky-500 bg-sky-50/40 rounded-xl p-5">
+            <div className="flex items-center gap-3">
+              <input type="radio" checked readOnly className="accent-sky-500 h-4 w-4" />
+              <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">Pix</span>
+              <span className="ml-auto text-[9px] font-bold uppercase tracking-[0.15em] bg-emerald-500 text-white px-2.5 py-1 rounded-full">
+                Instantâneo
               </span>
             </div>
-            <p className="text-xs text-slate-600 mt-3">
-              A confirmação de pagamento é realizada em poucos minutos. Utilize o aplicativo do seu banco para pagar.
+            <p className="text-xs text-slate-600 mt-3 leading-relaxed">
+              A confirmação é realizada em poucos minutos. Use o app do seu banco para pagar.
             </p>
-            <p className="text-green-600 font-extrabold mt-3">Valor no pix: R$ {total.toFixed(2).replace(".", ",")}</p>
+            <p className="mt-4 text-lg font-black text-emerald-600 tracking-tight">
+              R$ {total.toFixed(2).replace(".", ",")}
+            </p>
           </div>
-          <button onClick={generate} disabled={loading} className="w-full h-12 bg-green-600 hover:bg-green-700 disabled:opacity-60 text-white text-sm font-extrabold uppercase tracking-[0.15em] inline-flex items-center justify-center gap-2 rounded-full">
+          <button onClick={generate} disabled={loading} className="w-full md:w-auto px-12 py-4 bg-emerald-500 hover:bg-emerald-600 disabled:opacity-60 text-white text-xs font-bold uppercase tracking-[0.25em] inline-flex items-center justify-center gap-2 rounded-xl shadow-xl shadow-emerald-500/20 hover:scale-[1.02] active:scale-95 transition-all">
             {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Lock className="h-4 w-4" />}
             {loading ? "Gerando PIX..." : "Finalizar agora"}
           </button>
