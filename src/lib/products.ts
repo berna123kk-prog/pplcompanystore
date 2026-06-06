@@ -15,6 +15,7 @@ import tenisNkDunkTwist4 from "@/assets/tenis-nk-dunk-twist-4.png.asset.json";
 import tenisNkDunkTwist5 from "@/assets/tenis-nk-dunk-twist-5.png.asset.json";
 import tenisNkDunkTwist6 from "@/assets/tenis-nk-dunk-twist-6.png.asset.json";
 import tenisNkDunkTwist7 from "@/assets/tenis-nk-dunk-twist-7.png.asset.json";
+import tenisNkAirMaxPlus1 from "@/assets/tenis-nk-air-max-plus-1.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
