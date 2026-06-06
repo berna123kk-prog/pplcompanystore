@@ -122,6 +122,9 @@ import tenisNkShoxTlSilverBlue1 from "@/assets/tenis-nk-shox-tl-silver-blue-1.pn
 import tenisNkShoxTlSilverBlue2 from "@/assets/tenis-nk-shox-tl-silver-blue-2.png.asset.json";
 import tenisNkShoxTlSilverBlue3 from "@/assets/tenis-nk-shox-tl-silver-blue-3.png.asset.json";
 import tenisNkShoxTlSilverBlue4 from "@/assets/tenis-nk-shox-tl-silver-blue-4.png.asset.json";
+import tenisNkAirMaxPlusDrift1 from "@/assets/tenis-nk-air-max-plus-drift-1.png.asset.json";
+import tenisNkAirMaxPlusDrift2 from "@/assets/tenis-nk-air-max-plus-drift-2.png.asset.json";
+import tenisNkAirMaxPlusDrift3 from "@/assets/tenis-nk-air-max-plus-drift-3.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -804,6 +807,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-air-max-plus-drift", title: "Tênis NK Air Max Plus Drift", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusDrift1.url, images: [tenisNkAirMaxPlusDrift1.url, tenisNkAirMaxPlusDrift2.url, tenisNkAirMaxPlusDrift3.url] },
   { slug: "tenis-nk-shox-tl-silver-blue", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTlSilverBlue1.url, images: [tenisNkShoxTlSilverBlue1.url, tenisNkShoxTlSilverBlue2.url, tenisNkShoxTlSilverBlue3.url, tenisNkShoxTlSilverBlue4.url] },
   { slug: "tenis-nk-shox-tl", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTl1.url, images: [tenisNkShoxTl1.url, tenisNkShoxTl2.url, tenisNkShoxTl3.url, tenisNkShoxTl4.url] },
   { slug: "tenis-nk-af1-supreme-white-lace", title: "Tênis NK Air Force 1 Supreme White Lace", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAf1SupremeWhiteLace1.url, images: [tenisNkAf1SupremeWhiteLace1.url, tenisNkAf1SupremeWhiteLace2.url] },
