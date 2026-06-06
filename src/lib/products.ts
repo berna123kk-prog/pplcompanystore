@@ -134,6 +134,12 @@ import tenisNkShoxTlBlue1 from "@/assets/tenis-nk-shox-tl-blue-1.png.asset.json"
 import tenisNkShoxTlBlue2 from "@/assets/tenis-nk-shox-tl-blue-2.png.asset.json";
 import tenisNkShoxTlBlue3 from "@/assets/tenis-nk-shox-tl-blue-3.png.asset.json";
 import tenisNkShoxTlBlue4 from "@/assets/tenis-nk-shox-tl-blue-4.png.asset.json";
+import tenisMzunoWaveProphecyLsShinzo1 from "@/assets/tenis-mzuno-wave-prophecy-ls-shinzo-1.png.asset.json";
+import tenisMzunoWaveProphecyLsShinzo2 from "@/assets/tenis-mzuno-wave-prophecy-ls-shinzo-2.png.asset.json";
+import tenisMzunoWaveProphecyLsShinzo3 from "@/assets/tenis-mzuno-wave-prophecy-ls-shinzo-3.png.asset.json";
+import tenisMzunoWaveProphecyLsShinzo4 from "@/assets/tenis-mzuno-wave-prophecy-ls-shinzo-4.png.asset.json";
+import tenisMzunoWaveProphecyLsShinzo5 from "@/assets/tenis-mzuno-wave-prophecy-ls-shinzo-5.png.asset.json";
+import tenisMzunoWaveProphecyLsShinzo6 from "@/assets/tenis-mzuno-wave-prophecy-ls-shinzo-6.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -816,6 +822,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-mzuno-wave-prophecy-ls-shinzo", title: "Tênis Mzuno Wave Prophecy LS Shinzo", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMzunoWaveProphecyLsShinzo1.url, images: [tenisMzunoWaveProphecyLsShinzo1.url, tenisMzunoWaveProphecyLsShinzo2.url, tenisMzunoWaveProphecyLsShinzo3.url, tenisMzunoWaveProphecyLsShinzo4.url, tenisMzunoWaveProphecyLsShinzo5.url, tenisMzunoWaveProphecyLsShinzo6.url] },
   { slug: "tenis-nk-shox-tl-blue", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTlBlue1.url, images: [tenisNkShoxTlBlue1.url, tenisNkShoxTlBlue2.url, tenisNkShoxTlBlue3.url, tenisNkShoxTlBlue4.url] },
   { slug: "tenis-nk-shox-tl-black-blue", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTlBlackBlue1.url, images: [tenisNkShoxTlBlackBlue1.url, tenisNkShoxTlBlackBlue2.url, tenisNkShoxTlBlackBlue3.url, tenisNkShoxTlBlackBlue4.url, tenisNkShoxTlBlackBlue5.url] },
   { slug: "tenis-nk-air-max-plus-drift", title: "Tênis NK Air Max Plus Drift", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusDrift1.url, images: [tenisNkAirMaxPlusDrift1.url, tenisNkAirMaxPlusDrift2.url, tenisNkAirMaxPlusDrift3.url] },
