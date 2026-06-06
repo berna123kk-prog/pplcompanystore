@@ -125,6 +125,11 @@ import tenisNkShoxTlSilverBlue4 from "@/assets/tenis-nk-shox-tl-silver-blue-4.pn
 import tenisNkAirMaxPlusDrift1 from "@/assets/tenis-nk-air-max-plus-drift-1.png.asset.json";
 import tenisNkAirMaxPlusDrift2 from "@/assets/tenis-nk-air-max-plus-drift-2.png.asset.json";
 import tenisNkAirMaxPlusDrift3 from "@/assets/tenis-nk-air-max-plus-drift-3.png.asset.json";
+import tenisNkShoxTlBlackBlue1 from "@/assets/tenis-nk-shox-tl-black-blue-1.png.asset.json";
+import tenisNkShoxTlBlackBlue2 from "@/assets/tenis-nk-shox-tl-black-blue-2.png.asset.json";
+import tenisNkShoxTlBlackBlue3 from "@/assets/tenis-nk-shox-tl-black-blue-3.png.asset.json";
+import tenisNkShoxTlBlackBlue4 from "@/assets/tenis-nk-shox-tl-black-blue-4.png.asset.json";
+import tenisNkShoxTlBlackBlue5 from "@/assets/tenis-nk-shox-tl-black-blue-5.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -807,6 +812,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-shox-tl-black-blue", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTlBlackBlue1.url, images: [tenisNkShoxTlBlackBlue1.url, tenisNkShoxTlBlackBlue2.url, tenisNkShoxTlBlackBlue3.url, tenisNkShoxTlBlackBlue4.url, tenisNkShoxTlBlackBlue5.url] },
   { slug: "tenis-nk-air-max-plus-drift", title: "Tênis NK Air Max Plus Drift", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusDrift1.url, images: [tenisNkAirMaxPlusDrift1.url, tenisNkAirMaxPlusDrift2.url, tenisNkAirMaxPlusDrift3.url] },
   { slug: "tenis-nk-shox-tl-silver-blue", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTlSilverBlue1.url, images: [tenisNkShoxTlSilverBlue1.url, tenisNkShoxTlSilverBlue2.url, tenisNkShoxTlSilverBlue3.url, tenisNkShoxTlSilverBlue4.url] },
   { slug: "tenis-nk-shox-tl", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTl1.url, images: [tenisNkShoxTl1.url, tenisNkShoxTl2.url, tenisNkShoxTl3.url, tenisNkShoxTl4.url] },
