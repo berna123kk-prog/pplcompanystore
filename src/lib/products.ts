@@ -171,6 +171,10 @@ import tenisZaraMonocromatico3 from "@/assets/tenis-zara-monocromatico-3.png.ass
 import tenisZaraMultipecas1 from "@/assets/tenis-zara-multipecas-1.png.asset.json";
 import tenisZaraMultipecas2 from "@/assets/tenis-zara-multipecas-2.png.asset.json";
 import tenisZaraMultipecas3 from "@/assets/tenis-zara-multipecas-3.png.asset.json";
+import tenisNkShoxTlSunrise1 from "@/assets/tenis-nk-shox-tl-sunrise-1.png.asset.json";
+import tenisNkShoxTlSunrise2 from "@/assets/tenis-nk-shox-tl-sunrise-2.png.asset.json";
+import tenisNkShoxTlSunrise3 from "@/assets/tenis-nk-shox-tl-sunrise-3.png.asset.json";
+import tenisNkShoxTlSunrise4 from "@/assets/tenis-nk-shox-tl-sunrise-4.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -853,6 +857,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-nk-shox-tl-sunrise", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTlSunrise1.url, images: [tenisNkShoxTlSunrise1.url, tenisNkShoxTlSunrise2.url, tenisNkShoxTlSunrise3.url, tenisNkShoxTlSunrise4.url] },
   { slug: "tenis-zara-multipecas", title: "Tênis Zara Multipeças", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisZaraMultipecas1.url, images: [tenisZaraMultipecas1.url, tenisZaraMultipecas2.url, tenisZaraMultipecas3.url] },
   { slug: "tenis-zara-monocromatico", title: "Tênis Zara Monocromático", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisZaraMonocromatico1.url, images: [tenisZaraMonocromatico1.url, tenisZaraMonocromatico2.url, tenisZaraMonocromatico3.url] },
   { slug: "tenis-nk-air-jordan-1-low-se-navy", title: "Tênis NK Air Jordan 1 Low SE", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowSeNavy1.url, images: [tenisNkAirJordan1LowSeNavy1.url, tenisNkAirJordan1LowSeNavy2.url, tenisNkAirJordan1LowSeNavy3.url, tenisNkAirJordan1LowSeNavy4.url] },
