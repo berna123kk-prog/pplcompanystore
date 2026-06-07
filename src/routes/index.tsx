@@ -42,7 +42,7 @@ function Index() {
       <Section title="Bonés" items={bones} />
       <BannerStrip title="As Famosas Dri-Fit" subtitle="As mais procuradas Nike Academy" note="as mais procuradas e sucesso de vendas na nossa loja!" />
       <Section title="Nike Academy" items={nikeAcademy} />
-      <Section title="CA Pro e Caven" items={caProECaven} />
+      <Section title="SNEACKERS" items={caProECaven} />
       <Section title="Outros Sneakers" items={outrosSneakers} />
       <Footer />
     </main>
