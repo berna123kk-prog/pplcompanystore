@@ -269,6 +269,11 @@ import tenisMizunoWaveProphecy14BlackGold2 from "@/assets/tenis-mizuno-wave-prop
 import tenisMizunoWaveProphecy14BlackGold3 from "@/assets/tenis-mizuno-wave-prophecy-14-black-gold-3.png.asset.json";
 import tenisMizunoWaveProphecy14BlackGold4 from "@/assets/tenis-mizuno-wave-prophecy-14-black-gold-4.png.asset.json";
 import tenisMizunoWaveProphecy14BlackGold5 from "@/assets/tenis-mizuno-wave-prophecy-14-black-gold-5.png.asset.json";
+import tenisMizunoWaveProphecy14BlackRedMint1 from "@/assets/tenis-mizuno-wave-prophecy-14-black-red-mint-1.png.asset.json";
+import tenisMizunoWaveProphecy14BlackRedMint2 from "@/assets/tenis-mizuno-wave-prophecy-14-black-red-mint-2.png.asset.json";
+import tenisMizunoWaveProphecy14BlackRedMint3 from "@/assets/tenis-mizuno-wave-prophecy-14-black-red-mint-3.png.asset.json";
+import tenisMizunoWaveProphecy14BlackRedMint4 from "@/assets/tenis-mizuno-wave-prophecy-14-black-red-mint-4.png.asset.json";
+import tenisMizunoWaveProphecy14BlackRedMint5 from "@/assets/tenis-mizuno-wave-prophecy-14-black-red-mint-5.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -951,6 +956,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-mizuno-wave-prophecy-14-black-red-mint", title: "Tênis Mizuno Wave Prophecy 14", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMizunoWaveProphecy14BlackRedMint1.url, images: [tenisMizunoWaveProphecy14BlackRedMint1.url, tenisMizunoWaveProphecy14BlackRedMint2.url, tenisMizunoWaveProphecy14BlackRedMint3.url, tenisMizunoWaveProphecy14BlackRedMint4.url, tenisMizunoWaveProphecy14BlackRedMint5.url] },
   { slug: "tenis-mizuno-wave-prophecy-14-black-gold", title: "Tênis Mizuno Wave Prophecy 14", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMizunoWaveProphecy14BlackGold1.url, images: [tenisMizunoWaveProphecy14BlackGold1.url, tenisMizunoWaveProphecy14BlackGold2.url, tenisMizunoWaveProphecy14BlackGold3.url, tenisMizunoWaveProphecy14BlackGold4.url, tenisMizunoWaveProphecy14BlackGold5.url] },
   { slug: "tenis-mizun-prophecy-15-se-red", title: "Tênis Mizun Prophecy 15 SE", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMizunProphecy15SeRed1.url, images: [tenisMizunProphecy15SeRed1.url, tenisMizunProphecy15SeRed2.url, tenisMizunProphecy15SeRed3.url] },
   { slug: "tenis-mizun-prophecy-15-se-white", title: "Tênis Mizun Prophecy 15 SE", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMizunProphecy15SeWhite1.url, images: [tenisMizunProphecy15SeWhite1.url, tenisMizunProphecy15SeWhite2.url, tenisMizunProphecy15SeWhite3.url] },
