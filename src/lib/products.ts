@@ -251,6 +251,8 @@ import tenisNkCourtVisionAltaBlue1 from "@/assets/tenis-nk-court-vision-alta-blu
 import tenisNkCourtVisionAltaBlue2 from "@/assets/tenis-nk-court-vision-alta-blue-2.png.asset.json";
 import tenisMzunoWaveProphecy14Black1 from "@/assets/tenis-mzuno-wave-prophecy-14-black-1.png.asset.json";
 import tenisMzunoWaveProphecy14Black2 from "@/assets/tenis-mzuno-wave-prophecy-14-black-2.png.asset.json";
+import tenisMzunoWaveProphecy14Purple1 from "@/assets/tenis-mzuno-wave-prophecy-14-purple-1.png.asset.json";
+import tenisMzunoWaveProphecy14Purple2 from "@/assets/tenis-mzuno-wave-prophecy-14-purple-2.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -933,6 +935,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-mzuno-wave-prophecy-14-purple", title: "Tênis Mzuno Wave Prophecy 14", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMzunoWaveProphecy14Purple1.url, images: [tenisMzunoWaveProphecy14Purple1.url, tenisMzunoWaveProphecy14Purple2.url] },
   { slug: "tenis-mzuno-wave-prophecy-14-black", title: "Tênis Mzuno Wave Prophecy 14", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisMzunoWaveProphecy14Black1.url, images: [tenisMzunoWaveProphecy14Black1.url, tenisMzunoWaveProphecy14Black2.url] },
   { slug: "tenis-nk-court-vision-alta-blue", title: "Tênis NK Court Vision Alta", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkCourtVisionAltaBlue1.url, images: [tenisNkCourtVisionAltaBlue1.url, tenisNkCourtVisionAltaBlue2.url] },
   { slug: "tenis-nk-court-vision-alta-grey", title: "Tênis NK Court Vision Alta", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkCourtVisionAltaGrey1.url, images: [tenisNkCourtVisionAltaGrey1.url, tenisNkCourtVisionAltaGrey2.url] },
