@@ -7,9 +7,10 @@ quando detecta falhas de re-otimização de dependências, como:
 
 - `504 (Outdated Optimize Dep)` em `/node_modules/.vite/deps/*`
 - `ERR_OUTDATED_OPTIMIZED_DEP`
-- `Failed to reload`
-- `optimized dependencies changed. reloading`
-- `Pre-transform error`
+- `Failed to fetch dynamically imported module: .../node_modules/.vite/deps/*`
+
+Ao detectar esses erros, o watchdog limpa `node_modules/.vite`,
+`node_modules/.vite-temp` e `.vite` antes de reiniciar o dev server.
 
 ### Como usar
 
