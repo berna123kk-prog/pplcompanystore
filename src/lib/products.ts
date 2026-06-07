@@ -232,9 +232,12 @@ import tenisPmaCavenBmwWhiteV2_2 from "@/assets/tenis-pma-caven-bmw-white-v2-2.p
 import tenisPmaCavenBmwWhiteV2_3 from "@/assets/tenis-pma-caven-bmw-white-v2-3.png.asset.json";
 import tenisPmaCaProMercedes1 from "@/assets/tenis-pma-ca-pro-mercedes-1.png.asset.json";
 import tenisPmaCaProMercedes2 from "@/assets/tenis-pma-ca-pro-mercedes-2.png.asset.json";
+import tenisPmaCaProMercedesBlack1 from "@/assets/tenis-pma-ca-pro-mercedes-black-1.png.asset.json";
+import tenisPmaCaProMercedesBlack2 from "@/assets/tenis-pma-ca-pro-mercedes-black-2.png.asset.json";
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-pma-ca-pro-mercedes-black", title: "Tênis Pma Ca Pro Mercedes", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCaProMercedesBlack1.url, images: [tenisPmaCaProMercedesBlack1.url, tenisPmaCaProMercedesBlack2.url] },
   { slug: "tenis-pma-ca-pro-mercedes", title: "Tênis Pma Ca Pro Mercedes", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCaProMercedes1.url, images: [tenisPmaCaProMercedes1.url, tenisPmaCaProMercedes2.url] },
   { slug: "tenis-pma-caven-bmw-white-v2", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwWhiteV2_1.url, images: [tenisPmaCavenBmwWhiteV2_1.url, tenisPmaCavenBmwWhiteV2_2.url, tenisPmaCavenBmwWhiteV2_3.url] },
   { slug: "tenis-pma-caven-bmw-black-side", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwBlackSide1.url, images: [tenisPmaCavenBmwBlackSide1.url] },
