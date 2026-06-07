@@ -232,9 +232,6 @@ import tenisPmaCavenBmwWhiteV2_2 from "@/assets/tenis-pma-caven-bmw-white-v2-2.p
 import tenisPmaCavenBmwWhiteV2_3 from "@/assets/tenis-pma-caven-bmw-white-v2-3.png.asset.json";
 import tenisPmaCaProMercedes1 from "@/assets/tenis-pma-ca-pro-mercedes-1.png.asset.json";
 import tenisPmaCaProMercedes2 from "@/assets/tenis-pma-ca-pro-mercedes-2.png.asset.json";
-import tenisPmaCaProMercedes1 from "@/assets/tenis-pma-ca-pro-mercedes-1.png.asset.json";
-import tenisPmaCaProMercedes2 from "@/assets/tenis-pma-ca-pro-mercedes-2.png.asset.json";
-...
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
