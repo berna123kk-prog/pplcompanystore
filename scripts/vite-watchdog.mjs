@@ -10,19 +10,19 @@
  */
 import { spawn, spawnSync } from "node:child_process";
 import { existsSync, appendFileSync, mkdirSync } from "node:fs";
-import { dirname } from "node:path";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const LOG_FILE = "/tmp/dev-server-logs/dev-server.log";
 const SQLITE_DB = "/tmp/sandbox-state.db";
 const OUT_LOG = "/tmp/vite-watchdog.log";
+const ROOT_DIR = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 const TRIGGERS = [
   /504\s*\(?Outdated Optimize Dep\)?/i,
   /ERR_OUTDATED_OPTIMIZED_DEP/i,
-  /Failed to reload/i,
-  /optimized dependencies changed\.?\s*reloading/i,
-  /Pre-transform error/i,
   /504 .* \/node_modules\/\.vite\/deps\//i,
+  /Failed to fetch dynamically imported module: .*\/node_modules\/\.vite\/deps\//i,
 ];
 
 const DEBOUNCE_MS = 5_000;
@@ -59,6 +59,18 @@ function restartVite() {
     log(`circuit breaker: ${MAX_RESTARTS_IN_WINDOW} restarts em ${WINDOW_MS / 60000}min; aguardando`);
     return;
   }
+
+  log("limpando cache otimizado do Vite antes do restart");
+  const reset = spawnSync("node", [resolve(ROOT_DIR, "scripts/reset-vite-cache.mjs")], {
+    cwd: ROOT_DIR,
+    encoding: "utf8",
+  });
+  if (reset.stdout?.trim()) log(`reset stdout: ${reset.stdout.trim()}`);
+  if (reset.status !== 0) {
+    log(`reset falhou: ${reset.stderr || reset.status}`);
+    return;
+  }
+
   lastRestart = now;
   restarts.push(now);
   log("reiniciando dev server (pkill -f vite)");
