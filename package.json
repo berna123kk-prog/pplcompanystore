@@ -11,6 +11,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "watchdog": "node scripts/vite-watchdog.mjs",
+    "dev:reset": "node scripts/reset-vite-cache.mjs",
+    "dev:fresh": "node scripts/reset-vite-cache.mjs --run",
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install --with-deps chromium"
   },
