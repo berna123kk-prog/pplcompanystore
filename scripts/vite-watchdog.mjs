@@ -29,10 +29,13 @@ const DEBOUNCE_MS = 5_000;
 const COOLDOWN_MS = 30_000;
 const WINDOW_MS = 10 * 60_000;
 const MAX_RESTARTS_IN_WINDOW = 5;
+const HEALTHCHECK_TIMEOUT_MS = 4_000;
+const DEV_SERVER_ORIGIN = "http://127.0.0.1:8080";
 
 let lastRestart = 0;
 let pendingTimer = null;
 const restarts = []; // timestamps
+let pendingIncident = null;
 
 function log(msg) {
   const line = `[${new Date().toISOString()}] ${msg}\n`;
@@ -49,6 +52,32 @@ function withinLimit() {
   return restarts.length < MAX_RESTARTS_IN_WINDOW;
 }
 
+function extractDepUrl(line) {
+  const depPathMatch = line.match(/\/node_modules\/\.vite\/deps\/[^\s'"`)]*/i);
+  if (depPathMatch) {
+    return depPathMatch[0].startsWith("http")
+      ? depPathMatch[0]
+      : `${DEV_SERVER_ORIGIN}${depPathMatch[0]}`;
+  }
+
+  const fullUrlMatch = line.match(/https?:\/\/[^\s'"`)]*\/node_modules\/\.vite\/deps\/[^\s'"`)]*/i);
+  return fullUrlMatch?.[0] ?? null;
+}
+
+function checkUrl(url) {
+  const res = spawnSync(
+    "curl",
+    ["-sS", "-L", "-o", "/dev/null", "-w", "%{http_code}", url],
+    { encoding: "utf8", timeout: HEALTHCHECK_TIMEOUT_MS },
+  );
+
+  if (res.status !== 0) {
+    return { ok: false, code: "000", error: res.stderr?.trim() || String(res.status) };
+  }
+
+  return { ok: /^2\d\d$/.test(res.stdout.trim()), code: res.stdout.trim() || "000" };
+}
+
 function restartVite() {
   const now = Date.now();
   if (now - lastRestart < COOLDOWN_MS) {
@@ -60,6 +89,21 @@ function restartVite() {
     return;
   }
 
+  const incident = pendingIncident;
+  const rootCheck = checkUrl(`${DEV_SERVER_ORIGIN}/`);
+  const depCheck = incident?.url ? checkUrl(incident.url) : null;
+
+  if (rootCheck.ok && (!depCheck || depCheck.ok)) {
+    log(
+      `servidor recuperado sem restart${depCheck ? ` (root=${rootCheck.code}, dep=${depCheck.code})` : ` (root=${rootCheck.code})`}`,
+    );
+    pendingIncident = null;
+    return;
+  }
+
+  log(
+    `falha persistente confirmada${incident?.url ? ` para ${incident.url}` : ""} (root=${rootCheck.code}${depCheck ? `, dep=${depCheck.code}` : ""})`,
+  );
   log("limpando cache otimizado do Vite antes do restart");
   const reset = spawnSync("node", [resolve(ROOT_DIR, "scripts/reset-vite-cache.mjs")], {
     cwd: ROOT_DIR,
@@ -80,6 +124,8 @@ function restartVite() {
   } else {
     log("processo do vite encerrado; supervisor do sandbox deve subir novamente");
   }
+
+  pendingIncident = null;
 }
 
 function schedule() {
@@ -93,6 +139,11 @@ function schedule() {
 function handleLine(line) {
   for (const re of TRIGGERS) {
     if (re.test(line)) {
+      pendingIncident = {
+        line,
+        url: extractDepUrl(line),
+        seenAt: Date.now(),
+      };
       log(`gatilho: ${re} | linha: ${line.slice(0, 200)}`);
       schedule();
       return;

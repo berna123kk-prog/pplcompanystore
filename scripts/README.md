@@ -29,6 +29,9 @@ bun run watchdog
 ### Comportamento
 
 - Debounce de 5s para agrupar erros em sequência.
+- Antes de reiniciar, o watchdog faz um healthcheck do `/` e do chunk com erro.
+  Se ambos já responderem `200`, ele considera a recuperação automática do Vite
+  e **não reinicia** o servidor.
 - Cooldown de 30s entre reinícios.
 - Circuit breaker: no máximo 5 reinícios em 10 minutos.
 - Restart feito via `pkill -f vite` — o supervisor do sandbox sobe o Vite
