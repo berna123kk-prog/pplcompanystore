@@ -279,6 +279,11 @@ import tenisMizunoWaveProphecy14NavySilver2 from "@/assets/tenis-mizuno-wave-pro
 import tenisMizunoWaveProphecy14NavySilver3 from "@/assets/tenis-mizuno-wave-prophecy-14-navy-silver-3.png.asset.json";
 import tenisMizunoWaveProphecy14NavySilver4 from "@/assets/tenis-mizuno-wave-prophecy-14-navy-silver-4.png.asset.json";
 import tenisMizunoWaveProphecy14NavySilver5 from "@/assets/tenis-mizuno-wave-prophecy-14-navy-silver-5.png.asset.json";
+import tenisMizunoWaveProphecy14AllBlack1 from "@/assets/tenis-mizuno-wave-prophecy-14-all-black-1.png.asset.json";
+import tenisMizunoWaveProphecy14AllBlack2 from "@/assets/tenis-mizuno-wave-prophecy-14-all-black-2.png.asset.json";
+import tenisMizunoWaveProphecy14AllBlack3 from "@/assets/tenis-mizuno-wave-prophecy-14-all-black-3.png.asset.json";
+import tenisMizunoWaveProphecy14AllBlack4 from "@/assets/tenis-mizuno-wave-prophecy-14-all-black-4.png.asset.json";
+import tenisMizunoWaveProphecy14AllBlack5 from "@/assets/tenis-mizuno-wave-prophecy-14-all-black-5.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
