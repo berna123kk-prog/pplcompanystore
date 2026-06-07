@@ -234,6 +234,7 @@ import tenisPmaCaProMercedes1 from "@/assets/tenis-pma-ca-pro-mercedes-1.png.ass
 import tenisPmaCaProMercedes2 from "@/assets/tenis-pma-ca-pro-mercedes-2.png.asset.json";
 import tenisPmaCaProMercedesBlack1 from "@/assets/tenis-pma-ca-pro-mercedes-black-1.png.asset.json";
 import tenisPmaCaProMercedesBlack2 from "@/assets/tenis-pma-ca-pro-mercedes-black-2.png.asset.json";
+const products = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
