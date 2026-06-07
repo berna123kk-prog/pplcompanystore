@@ -1132,6 +1132,9 @@ export const sneakers = [...products.filter(p => p.category === "sneakers").map(
   return p;
 }), tenisPmaCavenBmw];
 
+export const caProECaven = sneakers.filter(p => /^tenis-pma-(ca-pro|caven)/.test(p.slug));
+export const outrosSneakers = sneakers.filter(p => !caProECaven.includes(p));
+
 const FEATURED_EXTRA_SLUGS: string[] = [
 ];
 
