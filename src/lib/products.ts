@@ -239,6 +239,8 @@ import tenisPmaCavenFerrariBlack2 from "@/assets/tenis-pma-caven-ferrari-black-2
 import tenisPmaCavenFerrariBlack3 from "@/assets/tenis-pma-caven-ferrari-black-3.png.asset.json";
 import tenisPmaCaven2FerrariWhite1 from "@/assets/tenis-pma-caven-2-ferrari-white-1.png.asset.json";
 import tenisPmaCaven2FerrariWhite2 from "@/assets/tenis-pma-caven-2-ferrari-white-2.png.asset.json";
+import tenisPmaCavenFerrariRed1 from "@/assets/tenis-pma-caven-ferrari-red-1.png.asset.json";
+import tenisPmaCavenFerrariRed2 from "@/assets/tenis-pma-caven-ferrari-red-2.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
