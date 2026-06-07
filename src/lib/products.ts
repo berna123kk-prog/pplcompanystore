@@ -274,6 +274,11 @@ import tenisMizunoWaveProphecy14BlackRedMint2 from "@/assets/tenis-mizuno-wave-p
 import tenisMizunoWaveProphecy14BlackRedMint3 from "@/assets/tenis-mizuno-wave-prophecy-14-black-red-mint-3.png.asset.json";
 import tenisMizunoWaveProphecy14BlackRedMint4 from "@/assets/tenis-mizuno-wave-prophecy-14-black-red-mint-4.png.asset.json";
 import tenisMizunoWaveProphecy14BlackRedMint5 from "@/assets/tenis-mizuno-wave-prophecy-14-black-red-mint-5.png.asset.json";
+import tenisMizunoWaveProphecy14NavySilver1 from "@/assets/tenis-mizuno-wave-prophecy-14-navy-silver-1.png.asset.json";
+import tenisMizunoWaveProphecy14NavySilver2 from "@/assets/tenis-mizuno-wave-prophecy-14-navy-silver-2.png.asset.json";
+import tenisMizunoWaveProphecy14NavySilver3 from "@/assets/tenis-mizuno-wave-prophecy-14-navy-silver-3.png.asset.json";
+import tenisMizunoWaveProphecy14NavySilver4 from "@/assets/tenis-mizuno-wave-prophecy-14-navy-silver-4.png.asset.json";
+import tenisMizunoWaveProphecy14NavySilver5 from "@/assets/tenis-mizuno-wave-prophecy-14-navy-silver-5.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
