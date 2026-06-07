@@ -232,11 +232,11 @@ import tenisPmaCavenBmwWhiteV2_2 from "@/assets/tenis-pma-caven-bmw-white-v2-2.p
 import tenisPmaCavenBmwWhiteV2_3 from "@/assets/tenis-pma-caven-bmw-white-v2-3.png.asset.json";
 import tenisPmaCaProMercedes1 from "@/assets/tenis-pma-ca-pro-mercedes-1.png.asset.json";
 import tenisPmaCaProMercedes2 from "@/assets/tenis-pma-ca-pro-mercedes-2.png.asset.json";
-  { slug: "tenis-pma-caven-bmw-white-v2", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwWhiteV2_1.url, images: [tenisPmaCavenBmwWhiteV2_1.url, tenisPmaCavenBmwWhiteV2_2.url, tenisPmaCavenBmwWhiteV2_3.url] },
-  { slug: "tenis-pma-caven-bmw-black-side", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwBlackSide1.url, images: [tenisPmaCavenBmwBlackSide1.url] },
-  { slug: "tenis-pma-caven-bmw-black-red-blue", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwBlackRedBlue1.url, images: [tenisPmaCavenBmwBlackRedBlue1.url, tenisPmaCavenBmwBlackRedBlue2.url] },
-  { slug: "tenis-pma-caven-bmw-stripes", title: "Tênis Pma Caven BMW", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwStripes1.url, images: [tenisPmaCavenBmwStripes1.url] },
-  { slug: "tenis-pma-ca-pro-bmw", title: "Tênis Pma Ca Pro BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCaProBmw1.url, images: [tenisPmaCaProBmw1.url, tenisPmaCaProBmw2.url, tenisPmaCaProBmw3.url] },
+import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
+import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
+import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
+import kitPmaBmwM2 from "@/assets/kit-pma-bmw-m-2.png";
+import kitTommyHilfiger1 from "@/assets/kit-tommy-hilfiger-1.png";
   { slug: "tenis-pma-caven-bmw-black", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwBlack1.url, images: [tenisPmaCavenBmwBlack1.url, tenisPmaCavenBmwBlack2.url] },
   { slug: "tenis-pma-caven-bmw-white", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwNew1.url, images: [tenisPmaCavenBmwNew1.url, tenisPmaCavenBmwNew2.url] },
   { slug: "tenis-nike-court-borough-mid-pink", title: "Tênis Nike Court Borough Mid", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNikeCourtBoroughMidPink1.url, images: [tenisNikeCourtBoroughMidPink1.url] },
