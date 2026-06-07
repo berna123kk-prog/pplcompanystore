@@ -234,6 +234,9 @@ import tenisPmaCavenMercedes1 from "@/assets/tenis-pma-caven-mercedes-1.png.asse
 import tenisPmaCavenMercedes2 from "@/assets/tenis-pma-caven-mercedes-2.png.asset.json";
 import tenisPmaCavenFerrariV2_1 from "@/assets/tenis-pma-caven-ferrari-v2-1.png.asset.json";
 import tenisPmaCavenFerrariV2_2 from "@/assets/tenis-pma-caven-ferrari-v2-2.png.asset.json";
+import tenisPmaCavenFerrariBlack1 from "@/assets/tenis-pma-caven-ferrari-black-1.png.asset.json";
+import tenisPmaCavenFerrariBlack2 from "@/assets/tenis-pma-caven-ferrari-black-2.png.asset.json";
+import tenisPmaCavenFerrariBlack3 from "@/assets/tenis-pma-caven-ferrari-black-3.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -916,6 +919,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-pma-caven-ferrari-black", title: "Tênis Pma Caven Ferrari", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenFerrariBlack1.url, images: [tenisPmaCavenFerrariBlack1.url, tenisPmaCavenFerrariBlack2.url, tenisPmaCavenFerrariBlack3.url] },
   { slug: "tenis-pma-caven-ferrari-v2", title: "Tênis Pma Caven Ferrari", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenFerrariV2_1.url, images: [tenisPmaCavenFerrariV2_1.url, tenisPmaCavenFerrariV2_2.url] },
   { slug: "tenis-pma-caven-mercedes", title: "Tênis Pma Caven Mercedes", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenMercedes1.url, images: [tenisPmaCavenMercedes1.url, tenisPmaCavenMercedes2.url] },
   { slug: "tenis-pma-caven-bmw-white-v2", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwWhiteV2_1.url, images: [tenisPmaCavenBmwWhiteV2_1.url, tenisPmaCavenBmwWhiteV2_2.url, tenisPmaCavenBmwWhiteV2_3.url] },
