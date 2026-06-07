@@ -1,34 +1,16 @@
-## Regra de ordenação (memória)
+# Filtrar a seção "CA Pro e Caven" para mostrar só esses modelos
 
-Salvar na memória do projeto: **cada novo produto enviado entra como o PRIMEIRO da lista de sneakers**, empurrando os anteriores para a direita. Assim, o produto mais recente aparece primeiro, e o anterior fica logo ao lado.
+## Problema
+Em `src/routes/index.tsx` linha 45 a seção `"CA Pro e Caven"` recebe `items={sneakers}` — o array inteiro de 89 tênis. Por isso Nike, Mizuno, NB, Lacoste, LV, Zara etc. caem ali junto.
 
-> Resultado visual em `/colecoes/sneakers`: produto 1 (mais novo) → produto 2 (enviado antes) → produto 3 → ...
+## Solução
+1. Em `src/lib/products.ts`, criar uma lista derivada `caProECaven` filtrando do array `sneakers` apenas os slugs que começam com `tenis-pma-ca-pro` ou `tenis-pma-caven` (inclui todas as variantes BMW, Ferrari, Classic, etc. das linhas CA Pro e Caven da Puma).
+2. Em `src/routes/index.tsx`, trocar `items={sneakers}` por `items={caProECaven}` na seção "CA Pro e Caven".
+3. Criar uma segunda seção logo abaixo, `"Outros Sneakers"`, com o restante (`sneakers.filter(p => !caProECaven.includes(p))`), para que os demais tênis (Nike, Mizuno, NB, Lacoste, LV, Zara) continuem visíveis na home — senão eles somem da página inicial.
 
-## Produto a adicionar agora
-
-**Tênis Nike Dunk Twist** — R$ 99,99 — categoria `sneakers`
-
-- 7 imagens enviadas (image-484 a image-490) → upload via `lovable-assets` para `src/assets/tenis-nk-dunk-twist-{1..7}.png.asset.json`
-- Imagem principal: image-484 (look usando o tênis)
-- Galeria na ordem das uploads
-
-## Mudanças em `src/lib/products.ts`
-
-1. Adicionar os 7 imports dos `.asset.json` no topo (junto com outros imports de sneakers).
-2. Inserir o novo produto como **primeira linha** do bloco de sneakers (antes de `tenis-pma-caven-ferrari`, linha 693):
-
-```ts
-{ slug: "tenis-nk-dunk-twist", title: "Tênis Nike Dunk Twist", price: "99,99", oldPrice: "499,99", installment: "9,99", off: "80% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkDunkTwist1, images: [tenisNkDunkTwist1, tenisNkDunkTwist2, tenisNkDunkTwist3, tenisNkDunkTwist4, tenisNkDunkTwist5, tenisNkDunkTwist6, tenisNkDunkTwist7] },
-```
-
-Como a coleção `sneakers` é derivada de `products.filter(category === "sneakers")` mantendo a ordem do array, inserir no topo já garante que ele apareça em primeiro na grade. Próximos produtos seguirão a mesma regra (inserir no topo do bloco).
-
-## Memória a atualizar
-
-Adicionar ao Core de `mem://index.md`:
-> Novos produtos são inseridos no TOPO da lista de sneakers em `src/lib/products.ts` (antes da linha de `tenis-pma-caven-ferrari`), para que o mais recente apareça primeiro e os anteriores fiquem ao lado na ordem de envio.
+## Regra de ordenação preservada
+O array `sneakers` continua sendo a fonte única, e novos produtos seguem entrando na primeira linha. A ordem dentro de cada bucket é a mesma do array original.
 
 ## Fora do escopo
-
-- Mudar a ordem dos produtos sneakers já existentes.
-- Adicionar variantes/tamanhos.
+- Não muda categorias, slugs, imagens, páginas de detalhe nem checkout.
+- Não renomeia o título "CA Pro e Caven".

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { TopBanner, Header, Section, Footer } from "@/components/storefront";
-import { featured, kits, tommyProducts, nikeAcademy, bones, sneakers } from "@/lib/products";
+import { featured, kits, tommyProducts, nikeAcademy, bones, caProECaven, outrosSneakers } from "@/lib/products";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -42,7 +42,8 @@ function Index() {
       <Section title="Bonés" items={bones} />
       <BannerStrip title="As Famosas Dri-Fit" subtitle="As mais procuradas Nike Academy" note="as mais procuradas e sucesso de vendas na nossa loja!" />
       <Section title="Nike Academy" items={nikeAcademy} />
-      <Section title="CA Pro e Caven" items={sneakers} />
+      <Section title="CA Pro e Caven" items={caProECaven} />
+      <Section title="Outros Sneakers" items={outrosSneakers} />
       <Footer />
     </main>
   );
