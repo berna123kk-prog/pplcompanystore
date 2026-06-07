@@ -226,6 +226,7 @@ import tenisPmaCaProBmw2 from "@/assets/tenis-pma-ca-pro-bmw-2.png.asset.json";
 import tenisPmaCaProBmw3 from "@/assets/tenis-pma-ca-pro-bmw-3.png.asset.json";
 import tenisPmaCavenBmwBlackRedBlue1 from "@/assets/tenis-pma-caven-bmw-black-red-blue-1.png.asset.json";
 import tenisPmaCavenBmwBlackRedBlue2 from "@/assets/tenis-pma-caven-bmw-black-red-blue-2.png.asset.json";
+import tenisPmaCavenBmwBlackSide1 from "@/assets/tenis-pma-caven-bmw-black-side-1.png.asset.json";
 import kitPmaMercedes1 from "@/assets/kit-pma-mercedes-1.png";
 import kitPmaMercedes2 from "@/assets/kit-pma-mercedes-2.png";
 import kitPmaBmwM1 from "@/assets/kit-pma-bmw-m-1.png";
@@ -908,6 +909,7 @@ export const products: Product[] = [
   { slug: "bone-tommy-plaquinha", title: "Boné Tommy Plaquinha", price: "89,99", oldPrice: "299,99", installment: "8,99", off: "70% OFF", kind: "accessory", category: "acessorios", sold: 1200, stock: 30, img: boneTommyVermelho1, images: [boneTommyVermelho1, boneTommyVermelho2] },
   
   
+  { slug: "tenis-pma-caven-bmw-black-side", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwBlackSide1.url, images: [tenisPmaCavenBmwBlackSide1.url] },
   { slug: "tenis-pma-caven-bmw-black-red-blue", title: "Tênis Pma Caven BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwBlackRedBlue1.url, images: [tenisPmaCavenBmwBlackRedBlue1.url, tenisPmaCavenBmwBlackRedBlue2.url] },
   { slug: "tenis-pma-caven-bmw-stripes", title: "Tênis Pma Caven BMW", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCavenBmwStripes1.url, images: [tenisPmaCavenBmwStripes1.url] },
   { slug: "tenis-pma-ca-pro-bmw", title: "Tênis Pma Ca Pro BMW", price: "139,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisPmaCaProBmw1.url, images: [tenisPmaCaProBmw1.url, tenisPmaCaProBmw2.url, tenisPmaCaProBmw3.url] },
