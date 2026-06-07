@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "watchdog": "node scripts/vite-watchdog.mjs"
+    "watchdog": "node scripts/vite-watchdog.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install --with-deps chromium"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
