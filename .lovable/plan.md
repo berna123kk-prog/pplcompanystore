@@ -1,16 +1,26 @@
-# Filtrar a seção "CA Pro e Caven" para mostrar só esses modelos
+## Objetivo
 
-## Problema
-Em `src/routes/index.tsx` linha 45 a seção `"CA Pro e Caven"` recebe `items={sneakers}` — o array inteiro de 89 tênis. Por isso Nike, Mizuno, NB, Lacoste, LV, Zara etc. caem ali junto.
+Criar um único arquivo de configuração onde você edita os rótulos dos seletores de tamanho (ex.: "TAMANHO DA ROUPA", "TAMANHO DO CALÇADO") sem precisar mexer na lógica da página de produto.
 
-## Solução
-1. Em `src/lib/products.ts`, criar uma lista derivada `caProECaven` filtrando do array `sneakers` apenas os slugs que começam com `tenis-pma-ca-pro` ou `tenis-pma-caven` (inclui todas as variantes BMW, Ferrari, Classic, etc. das linhas CA Pro e Caven da Puma).
-2. Em `src/routes/index.tsx`, trocar `items={sneakers}` por `items={caProECaven}` na seção "CA Pro e Caven".
-3. Criar uma segunda seção logo abaixo, `"Outros Sneakers"`, com o restante (`sneakers.filter(p => !caProECaven.includes(p))`), para que os demais tênis (Nike, Mizuno, NB, Lacoste, LV, Zara) continuem visíveis na home — senão eles somem da página inicial.
+## O que será feito
 
-## Regra de ordenação preservada
-O array `sneakers` continua sendo a fonte única, e novos produtos seguem entrando na primeira linha. A ordem dentro de cada bucket é a mesma do array original.
+1. **Criar `src/lib/size-labels.ts`** — arquivo simples com os rótulos por tipo de produto:
 
-## Fora do escopo
-- Não muda categorias, slugs, imagens, páginas de detalhe nem checkout.
-- Não renomeia o título "CA Pro e Caven".
+   ```ts
+   export const SIZE_LABELS = {
+     clothing: "TAMANHO DA ROUPA",
+     footwear: "TAMANHO",
+     kitClothing: "TAMANHO DA ROUPA",
+     kitFootwear: "TAMANHO DO CALÇADO",
+   };
+   ```
+
+   Para alterar qualquer rótulo, basta editar as strings desse arquivo.
+
+2. **Atualizar `src/routes/produtos.$slug.tsx`** — o componente `SizeSelector` passa a importar `SIZE_LABELS` e usar os valores em vez das strings fixas atuais.
+
+Nenhuma mudança em outras páginas, estilos ou comportamento. Só o ponto de leitura dos rótulos muda.
+
+## Como você usa depois
+
+Abrir `src/lib/size-labels.ts`, trocar o texto entre aspas, salvar. O site reflete imediatamente.

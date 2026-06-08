@@ -3,6 +3,7 @@ import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, Chevro
 import { useEffect, useState } from "react";
 import { TopBanner, Header, Footer, Section } from "@/components/storefront";
 import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product } from "@/lib/products";
+import { SIZE_LABELS } from "@/lib/size-labels";
 import { useCart } from "@/lib/cart";
 import { toast } from "sonner";
 
@@ -81,7 +82,7 @@ function SizeSelector({
       {showClothing && (
         <div>
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
-            TAMANHO DA ROUPA: <span className="text-sky-900">{clothing}</span>
+            {product.kind === "kit" ? SIZE_LABELS.kitClothing : SIZE_LABELS.clothing}: <span className="text-sky-900">{clothing}</span>
           </p>
           <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} />
         </div>
@@ -89,7 +90,7 @@ function SizeSelector({
       {showShoe && (
         <div>
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
-            {product.kind === "kit" ? "Tamanho do calçado" : "Tamanho"}: <span className="text-sky-900">{shoe}</span>
+            {product.kind === "kit" ? SIZE_LABELS.kitFootwear : SIZE_LABELS.footwear}: <span className="text-sky-900">{shoe}</span>
           </p>
           <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} />
         </div>
