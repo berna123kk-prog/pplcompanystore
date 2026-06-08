@@ -81,7 +81,7 @@ function SizeSelector({
       {showClothing && (
         <div>
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
-            TAMANHO DO SHORT: <span className="text-sky-900">{clothing}</span>
+            TAMANHO DA ROUPA: <span className="text-sky-900">{clothing}</span>
           </p>
           <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} />
         </div>
