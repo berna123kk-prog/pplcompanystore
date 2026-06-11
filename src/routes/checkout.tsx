@@ -146,9 +146,28 @@ function CheckoutPage() {
               step={step}
               items={items}
               customer={customer}
+              address={address}
               shipping={shipping}
+              itemsTotal={itemsTotal}
               total={grandTotal}
-              onPaid={() => { clear(); setTimeout(() => navigate({ to: "/" }), 1500); }}
+              onPaid={(transactionId) => {
+                try {
+                  const order = {
+                    orderId: (transactionId || Date.now().toString()).slice(-8).toUpperCase(),
+                    paidAt: new Date().toISOString(),
+                    total: grandTotal,
+                    itemsTotal,
+                    shipping: shipping ? { name: shipping.name, days: shipping.days, price: shipping.price } : null,
+                    items: items.map((i) => ({ slug: i.slug, title: i.title, img: i.img, price: i.price, qty: i.qty, size: i.size })),
+                    customer: customer!,
+                    address: address!,
+                    transactionId,
+                  };
+                  sessionStorage.setItem("ppl:last-order", JSON.stringify(order));
+                } catch {}
+                clear();
+                navigate({ to: "/pedido-confirmado" });
+              }}
             />
           </div>
 
@@ -406,14 +425,16 @@ function StepDelivery({
 
 // ---------- Step 3 ----------
 function StepPayment({
-  step, items, customer, shipping, total, onPaid,
+  step, items, customer, address, shipping, itemsTotal, total, onPaid,
 }: {
   step: 1 | 2 | 3;
   items: ReturnType<typeof useCart>["items"];
   customer: Customer | null;
+  address: Address | null;
   shipping: ShippingOption | null;
+  itemsTotal: number;
   total: number;
-  onPaid: () => void;
+  onPaid: (transactionId?: string) => void;
 }) {
   const done = step > 3;
   const active = step === 3;
@@ -437,7 +458,7 @@ function StepPayment({
         if (["COMPLETO", "COMPLETED", "PAID", "APPROVED"].includes(r.status)) {
           if (pollRef.current) clearInterval(pollRef.current);
           toast.success("Pagamento confirmado!");
-          onPaid();
+          onPaid(pix.transactionId);
         }
       } catch {}
     }, 4000);

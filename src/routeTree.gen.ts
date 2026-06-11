@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PedidoConfirmadoRouteImport } from './routes/pedido-confirmado'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProdutosSlugRouteImport } from './routes/produtos.$slug'
@@ -18,6 +19,11 @@ import { Route as ColecoesSlugRouteImport } from './routes/colecoes.$slug'
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PedidoConfirmadoRoute = PedidoConfirmadoRouteImport.update({
+  id: '/pedido-confirmado',
+  path: '/pedido-confirmado',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CheckoutRoute = CheckoutRouteImport.update({
@@ -44,6 +50,7 @@ const ColecoesSlugRoute = ColecoesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/checkout': typeof CheckoutRoute
+  '/pedido-confirmado': typeof PedidoConfirmadoRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/colecoes/$slug': typeof ColecoesSlugRoute
   '/produtos/$slug': typeof ProdutosSlugRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/checkout': typeof CheckoutRoute
+  '/pedido-confirmado': typeof PedidoConfirmadoRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/colecoes/$slug': typeof ColecoesSlugRoute
   '/produtos/$slug': typeof ProdutosSlugRoute
@@ -59,6 +67,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/checkout': typeof CheckoutRoute
+  '/pedido-confirmado': typeof PedidoConfirmadoRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/colecoes/$slug': typeof ColecoesSlugRoute
   '/produtos/$slug': typeof ProdutosSlugRoute
@@ -68,15 +77,23 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/checkout'
+    | '/pedido-confirmado'
     | '/sitemap.xml'
     | '/colecoes/$slug'
     | '/produtos/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/checkout' | '/sitemap.xml' | '/colecoes/$slug' | '/produtos/$slug'
+  to:
+    | '/'
+    | '/checkout'
+    | '/pedido-confirmado'
+    | '/sitemap.xml'
+    | '/colecoes/$slug'
+    | '/produtos/$slug'
   id:
     | '__root__'
     | '/'
     | '/checkout'
+    | '/pedido-confirmado'
     | '/sitemap.xml'
     | '/colecoes/$slug'
     | '/produtos/$slug'
@@ -85,6 +102,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CheckoutRoute: typeof CheckoutRoute
+  PedidoConfirmadoRoute: typeof PedidoConfirmadoRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ColecoesSlugRoute: typeof ColecoesSlugRoute
   ProdutosSlugRoute: typeof ProdutosSlugRoute
@@ -97,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pedido-confirmado': {
+      id: '/pedido-confirmado'
+      path: '/pedido-confirmado'
+      fullPath: '/pedido-confirmado'
+      preLoaderRoute: typeof PedidoConfirmadoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/checkout': {
@@ -133,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CheckoutRoute: CheckoutRoute,
+  PedidoConfirmadoRoute: PedidoConfirmadoRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ColecoesSlugRoute: ColecoesSlugRoute,
   ProdutosSlugRoute: ProdutosSlugRoute,
@@ -140,13 +166,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
