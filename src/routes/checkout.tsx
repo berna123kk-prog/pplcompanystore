@@ -458,7 +458,7 @@ function StepPayment({
         if (["COMPLETO", "COMPLETED", "PAID", "APPROVED"].includes(r.status)) {
           if (pollRef.current) clearInterval(pollRef.current);
           toast.success("Pagamento confirmado!");
-          onPaid();
+          onPaid(pix.transactionId);
         }
       } catch {}
     }, 4000);
