@@ -146,9 +146,28 @@ function CheckoutPage() {
               step={step}
               items={items}
               customer={customer}
+              address={address}
               shipping={shipping}
+              itemsTotal={itemsTotal}
               total={grandTotal}
-              onPaid={() => { clear(); setTimeout(() => navigate({ to: "/" }), 1500); }}
+              onPaid={(transactionId) => {
+                try {
+                  const order = {
+                    orderId: (transactionId || Date.now().toString()).slice(-8).toUpperCase(),
+                    paidAt: new Date().toISOString(),
+                    total: grandTotal,
+                    itemsTotal,
+                    shipping: shipping ? { name: shipping.name, days: shipping.days, price: shipping.price } : null,
+                    items: items.map((i) => ({ slug: i.slug, title: i.title, img: i.img, price: i.price, qty: i.qty, size: i.size })),
+                    customer: customer!,
+                    address: address!,
+                    transactionId,
+                  };
+                  sessionStorage.setItem("ppl:last-order", JSON.stringify(order));
+                } catch {}
+                clear();
+                navigate({ to: "/pedido-confirmado" });
+              }}
             />
           </div>
 
