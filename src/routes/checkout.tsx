@@ -425,14 +425,16 @@ function StepDelivery({
 
 // ---------- Step 3 ----------
 function StepPayment({
-  step, items, customer, shipping, total, onPaid,
+  step, items, customer, address, shipping, itemsTotal, total, onPaid,
 }: {
   step: 1 | 2 | 3;
   items: ReturnType<typeof useCart>["items"];
   customer: Customer | null;
+  address: Address | null;
   shipping: ShippingOption | null;
+  itemsTotal: number;
   total: number;
-  onPaid: () => void;
+  onPaid: (transactionId?: string) => void;
 }) {
   const done = step > 3;
   const active = step === 3;
