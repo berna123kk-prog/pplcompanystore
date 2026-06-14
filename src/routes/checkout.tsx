@@ -1,12 +1,13 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
-import { Copy, Check, Loader2, ArrowLeft, Pencil, Lock } from "lucide-react";
+import { Copy, Check, Loader2, ArrowLeft, Pencil, Lock, Tag, X, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import { TopBanner, Header, Footer } from "@/components/storefront";
 import { useCart } from "@/lib/cart";
 import { createDeposit, checkTransaction, type DepositResult } from "@/lib/elitepay.functions";
 import { getShippingOptions, type ShippingOption } from "@/lib/shipping.functions";
+import { findCoupon, calcDiscount, FIRST_PURCHASE_FLAG, type Coupon } from "@/lib/coupons";
 
 export const Route = createFileRoute("/checkout")({
   component: CheckoutPage,
@@ -106,8 +107,26 @@ function CheckoutPage() {
   const [customer, setCustomer] = useState<Customer | null>(null);
   const [address, setAddress] = useState<Address | null>(null);
   const [shipping, setShipping] = useState<ShippingOption | null>(null);
+  const [coupon, setCoupon] = useState<Coupon | null>(null);
+  const [isFirstPurchase, setIsFirstPurchase] = useState(false);
 
-  const grandTotal = itemsTotal + (shipping?.price ?? 0);
+  // Detecta primeira compra e aplica PRIMEIRA20 automaticamente
+  useEffect(() => {
+    try {
+      const purchased = localStorage.getItem(FIRST_PURCHASE_FLAG);
+      if (!purchased) {
+        setIsFirstPurchase(true);
+        const c = findCoupon("PRIMEIRA20");
+        if (c) setCoupon(c);
+      }
+    } catch {}
+  }, []);
+
+  const discount = useMemo(
+    () => (coupon ? calcDiscount(coupon, itemsTotal) : 0),
+    [coupon, itemsTotal],
+  );
+  const grandTotal = Math.max(0, itemsTotal - discount) + (shipping?.price ?? 0);
 
   return (
     <main className="min-h-screen bg-slate-50/50 text-foreground">
@@ -150,6 +169,8 @@ function CheckoutPage() {
               shipping={shipping}
               itemsTotal={itemsTotal}
               total={grandTotal}
+              coupon={coupon}
+              discount={discount}
               onPaid={(transactionId) => {
                 try {
                   const order = {
@@ -157,6 +178,8 @@ function CheckoutPage() {
                     paidAt: new Date().toISOString(),
                     total: grandTotal,
                     itemsTotal,
+                    discount,
+                    coupon: coupon ? { code: coupon.code, label: coupon.label } : null,
                     shipping: shipping ? { name: shipping.name, days: shipping.days, price: shipping.price } : null,
                     items: items.map((i) => ({ slug: i.slug, title: i.title, img: i.img, price: i.price, qty: i.qty, size: i.size })),
                     customer: customer!,
@@ -164,6 +187,7 @@ function CheckoutPage() {
                     transactionId,
                   };
                   sessionStorage.setItem("ppl:last-order", JSON.stringify(order));
+                  localStorage.setItem(FIRST_PURCHASE_FLAG, "1");
                 } catch {}
                 clear();
                 navigate({ to: "/pedido-confirmado" });
@@ -178,6 +202,24 @@ function CheckoutPage() {
               shipping={shipping}
               total={grandTotal}
               count={count}
+              coupon={coupon}
+              discount={discount}
+              isFirstPurchase={isFirstPurchase}
+              onApplyCoupon={(code) => {
+                const c = findCoupon(code);
+                if (!c) {
+                  toast.error("Cupom inválido");
+                  return false;
+                }
+                if (c.firstPurchaseOnly && !isFirstPurchase) {
+                  toast.error("Este cupom é apenas para a primeira compra");
+                  return false;
+                }
+                setCoupon(c);
+                toast.success(`Cupom ${c.code} aplicado!`);
+                return true;
+              }}
+              onRemoveCoupon={() => setCoupon(null)}
             />
           </div>
         </div>
@@ -425,7 +467,7 @@ function StepDelivery({
 
 // ---------- Step 3 ----------
 function StepPayment({
-  step, items, customer, address, shipping, itemsTotal, total, onPaid,
+  step, items, customer, address, shipping, itemsTotal, total, coupon, discount, onPaid,
 }: {
   step: 1 | 2 | 3;
   items: ReturnType<typeof useCart>["items"];
@@ -434,6 +476,8 @@ function StepPayment({
   shipping: ShippingOption | null;
   itemsTotal: number;
   total: number;
+  coupon: Coupon | null;
+  discount: number;
   onPaid: (transactionId?: string) => void;
 }) {
   const done = step > 3;
@@ -476,6 +520,7 @@ function StepPayment({
           payerName: customer.name,
           payerDocument: onlyDigits(customer.cpf),
           shippingAmount: shipping?.price ?? 0,
+          couponCode: coupon?.code,
         },
       });
       if (!result.qrCode && !result.qrCodeImage) throw new Error("Gateway não retornou o código PIX.");
@@ -561,14 +606,31 @@ function StepPayment({
 
 // ---------- Order summary ----------
 function OrderSummary({
-  items, itemsTotal, shipping, total, count,
+  items, itemsTotal, shipping, total, count, coupon, discount, isFirstPurchase, onApplyCoupon, onRemoveCoupon,
 }: {
   items: ReturnType<typeof useCart>["items"];
   itemsTotal: number;
   shipping: ShippingOption | null;
   total: number;
   count: number;
+  coupon: Coupon | null;
+  discount: number;
+  isFirstPurchase: boolean;
+  onApplyCoupon: (code: string) => boolean;
+  onRemoveCoupon: () => void;
 }) {
+  const [code, setCode] = useState("");
+  const [open, setOpen] = useState(false);
+
+  const handleApply = () => {
+    if (!code.trim()) return;
+    const ok = onApplyCoupon(code);
+    if (ok) {
+      setCode("");
+      setOpen(false);
+    }
+  };
+
   return (
     <div className="space-y-6">
       <aside className="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden">
@@ -611,6 +673,76 @@ function OrderSummary({
             </ul>
           )}
 
+          {/* Banner primeira compra */}
+          {isFirstPurchase && items.length > 0 && (
+            <div className="mt-6 p-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 text-white relative overflow-hidden">
+              <Sparkles className="absolute -right-2 -top-2 h-16 w-16 opacity-20" />
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-90">
+                Promoção primeira compra
+              </p>
+              <p className="text-sm font-extrabold mt-1">
+                20% OFF com o cupom <span className="font-mono">PRIMEIRA20</span>
+              </p>
+              <p className="text-[11px] opacity-90 mt-0.5">
+                {coupon?.code === "PRIMEIRA20"
+                  ? "Cupom aplicado automaticamente 🎉"
+                  : "Aplique no campo abaixo para garantir o desconto."}
+              </p>
+            </div>
+          )}
+
+          {/* Cupom */}
+          {items.length > 0 && (
+            <div className="mt-5">
+              {coupon ? (
+                <div className="flex items-center gap-3 p-3 rounded-xl border-2 border-dashed border-emerald-300 bg-emerald-50">
+                  <Tag className="h-4 w-4 text-emerald-600 flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[11px] font-bold text-emerald-700 uppercase tracking-wider truncate">
+                      {coupon.code}
+                    </p>
+                    <p className="text-[10px] text-emerald-600/80 truncate">{coupon.label}</p>
+                  </div>
+                  <button
+                    onClick={onRemoveCoupon}
+                    className="text-emerald-600 hover:text-emerald-800"
+                    aria-label="Remover cupom"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+              ) : open ? (
+                <div className="space-y-2">
+                  <label className={labelCls}>Código do cupom</label>
+                  <div className="flex gap-2">
+                    <input
+                      value={code}
+                      onChange={(e) => setCode(e.target.value.toUpperCase())}
+                      onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), handleApply())}
+                      placeholder="Ex.: PRIMEIRA20"
+                      className={inputCls}
+                      maxLength={40}
+                    />
+                    <button
+                      onClick={handleApply}
+                      className="px-4 bg-slate-900 hover:bg-slate-800 text-white text-[11px] font-bold uppercase tracking-wider rounded-xl"
+                    >
+                      Aplicar
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <button
+                  onClick={() => setOpen(true)}
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-dashed border-slate-300 hover:border-sky-400 hover:bg-sky-50 text-[11px] font-bold uppercase tracking-[0.15em] text-slate-600 hover:text-sky-700 transition-colors"
+                >
+                  <Tag className="h-3.5 w-3.5" />
+                  Inserir cupom de desconto
+                </button>
+              )}
+            </div>
+          )}
+
           <div className="space-y-3 pt-6 mt-6 border-t border-slate-100">
             <div className="flex justify-between text-xs">
               <span className="text-slate-500 font-medium">Subtotal</span>
@@ -618,6 +750,16 @@ function OrderSummary({
                 R$ {itemsTotal.toFixed(2).replace(".", ",")}
               </span>
             </div>
+            {discount > 0 && (
+              <div className="flex justify-between text-xs">
+                <span className="text-emerald-600 font-bold">
+                  Desconto {coupon ? `(${coupon.code})` : ""}
+                </span>
+                <span className="text-emerald-600 font-bold">
+                  − R$ {discount.toFixed(2).replace(".", ",")}
+                </span>
+              </div>
+            )}
             <div className="flex justify-between text-xs">
               <span className="text-slate-500 font-medium">Frete</span>
               <span className="text-slate-900 font-bold">
@@ -656,3 +798,4 @@ function OrderSummary({
     </div>
   );
 }
+
