@@ -520,6 +520,7 @@ function StepPayment({
           payerName: customer.name,
           payerDocument: onlyDigits(customer.cpf),
           shippingAmount: shipping?.price ?? 0,
+          couponCode: coupon?.code,
         },
       });
       if (!result.qrCode && !result.qrCodeImage) throw new Error("Gateway não retornou o código PIX.");
