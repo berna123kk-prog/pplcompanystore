@@ -69,16 +69,28 @@ export const createDeposit = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => depositSchema.parse(input))
   .handler(async ({ data }): Promise<DepositResult> => {
     // Server-side price calculation — never trust client amounts.
-    let amount = 0;
+    let subtotal = 0;
     const titles: string[] = [];
     for (const it of data.items) {
       const product = getProduct(it.slug);
       if (!product) {
         throw new Error(`Produto não encontrado: ${it.slug}`);
       }
-      amount += parseBrlPrice(product.price) * it.qty;
+      subtotal += parseBrlPrice(product.price) * it.qty;
       titles.push(product.title);
     }
+
+    // Aplicar cupom (sobre o subtotal de produtos, antes do frete)
+    let discount = 0;
+    if (data.couponCode) {
+      const coupon = findCoupon(data.couponCode);
+      if (!coupon) {
+        throw new Error("Cupom inválido.");
+      }
+      discount = calcDiscount(coupon, subtotal);
+    }
+
+    let amount = subtotal - discount;
     if (data.shippingAmount && data.shippingAmount > 0) {
       amount += data.shippingAmount;
     }
