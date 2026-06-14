@@ -467,7 +467,7 @@ function StepDelivery({
 
 // ---------- Step 3 ----------
 function StepPayment({
-  step, items, customer, address, shipping, itemsTotal, total, onPaid,
+  step, items, customer, address, shipping, itemsTotal, total, coupon, discount, onPaid,
 }: {
   step: 1 | 2 | 3;
   items: ReturnType<typeof useCart>["items"];
@@ -476,6 +476,8 @@ function StepPayment({
   shipping: ShippingOption | null;
   itemsTotal: number;
   total: number;
+  coupon: Coupon | null;
+  discount: number;
   onPaid: (transactionId?: string) => void;
 }) {
   const done = step > 3;
