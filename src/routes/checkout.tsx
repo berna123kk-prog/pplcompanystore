@@ -107,8 +107,26 @@ function CheckoutPage() {
   const [customer, setCustomer] = useState<Customer | null>(null);
   const [address, setAddress] = useState<Address | null>(null);
   const [shipping, setShipping] = useState<ShippingOption | null>(null);
+  const [coupon, setCoupon] = useState<Coupon | null>(null);
+  const [isFirstPurchase, setIsFirstPurchase] = useState(false);
 
-  const grandTotal = itemsTotal + (shipping?.price ?? 0);
+  // Detecta primeira compra e aplica PRIMEIRA20 automaticamente
+  useEffect(() => {
+    try {
+      const purchased = localStorage.getItem(FIRST_PURCHASE_FLAG);
+      if (!purchased) {
+        setIsFirstPurchase(true);
+        const c = findCoupon("PRIMEIRA20");
+        if (c) setCoupon(c);
+      }
+    } catch {}
+  }, []);
+
+  const discount = useMemo(
+    () => (coupon ? calcDiscount(coupon, itemsTotal) : 0),
+    [coupon, itemsTotal],
+  );
+  const grandTotal = Math.max(0, itemsTotal - discount) + (shipping?.price ?? 0);
 
   return (
     <main className="min-h-screen bg-slate-50/50 text-foreground">
