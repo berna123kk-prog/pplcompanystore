@@ -1,12 +1,13 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
-import { Copy, Check, Loader2, ArrowLeft, Pencil, Lock } from "lucide-react";
+import { Copy, Check, Loader2, ArrowLeft, Pencil, Lock, Tag, X, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import { TopBanner, Header, Footer } from "@/components/storefront";
 import { useCart } from "@/lib/cart";
 import { createDeposit, checkTransaction, type DepositResult } from "@/lib/elitepay.functions";
 import { getShippingOptions, type ShippingOption } from "@/lib/shipping.functions";
+import { findCoupon, calcDiscount, FIRST_PURCHASE_FLAG, type Coupon } from "@/lib/coupons";
 
 export const Route = createFileRoute("/checkout")({
   component: CheckoutPage,
