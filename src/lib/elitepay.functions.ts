@@ -17,6 +17,7 @@ function authHeaders() {
 }
 
 import { getProduct } from "./products";
+import { findCoupon, calcDiscount } from "./coupons";
 
 const depositSchema = z.object({
   items: z
@@ -31,6 +32,7 @@ const depositSchema = z.object({
   payerName: z.string().trim().min(2).max(120),
   payerDocument: z.string().trim().min(11).max(20),
   shippingAmount: z.number().min(0).max(500).optional(),
+  couponCode: z.string().trim().max(40).optional(),
 });
 
 
