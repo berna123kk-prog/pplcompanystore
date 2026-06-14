@@ -169,6 +169,8 @@ function CheckoutPage() {
               shipping={shipping}
               itemsTotal={itemsTotal}
               total={grandTotal}
+              coupon={coupon}
+              discount={discount}
               onPaid={(transactionId) => {
                 try {
                   const order = {
@@ -176,6 +178,8 @@ function CheckoutPage() {
                     paidAt: new Date().toISOString(),
                     total: grandTotal,
                     itemsTotal,
+                    discount,
+                    coupon: coupon ? { code: coupon.code, label: coupon.label } : null,
                     shipping: shipping ? { name: shipping.name, days: shipping.days, price: shipping.price } : null,
                     items: items.map((i) => ({ slug: i.slug, title: i.title, img: i.img, price: i.price, qty: i.qty, size: i.size })),
                     customer: customer!,
@@ -183,6 +187,7 @@ function CheckoutPage() {
                     transactionId,
                   };
                   sessionStorage.setItem("ppl:last-order", JSON.stringify(order));
+                  localStorage.setItem(FIRST_PURCHASE_FLAG, "1");
                 } catch {}
                 clear();
                 navigate({ to: "/pedido-confirmado" });
@@ -197,6 +202,24 @@ function CheckoutPage() {
               shipping={shipping}
               total={grandTotal}
               count={count}
+              coupon={coupon}
+              discount={discount}
+              isFirstPurchase={isFirstPurchase}
+              onApplyCoupon={(code) => {
+                const c = findCoupon(code);
+                if (!c) {
+                  toast.error("Cupom inválido");
+                  return false;
+                }
+                if (c.firstPurchaseOnly && !isFirstPurchase) {
+                  toast.error("Este cupom é apenas para a primeira compra");
+                  return false;
+                }
+                setCoupon(c);
+                toast.success(`Cupom ${c.code} aplicado!`);
+                return true;
+              }}
+              onRemoveCoupon={() => setCoupon(null)}
             />
           </div>
         </div>
