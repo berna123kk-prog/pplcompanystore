@@ -6,7 +6,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "VSN Store — Direto para sua casa" },
+      { title: "PPLCOMPANY STORE — Direto para sua casa" },
       { name: "description", content: "Vestuário, sneakers, acessórios e perfumes com até 12x sem juros." },
     ],
   }),

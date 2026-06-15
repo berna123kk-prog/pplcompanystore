@@ -11,8 +11,8 @@ export const Route = createFileRoute("/colecoes/$slug")({
   component: CollectionPage,
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.title ?? "Coleção"} — VSN Store` },
-      { name: "description", content: `${loaderData?.title ?? "Coleção"} na VSN Store.` },
+      { title: `${loaderData?.title ?? "Coleção"} — PPLCOMPANY STORE` },
+      { name: "description", content: `${loaderData?.title ?? "Coleção"} na PPLCOMPANY STORE.` },
     ],
   }),
   notFoundComponent: () => (
