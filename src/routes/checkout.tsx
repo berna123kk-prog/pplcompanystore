@@ -520,7 +520,7 @@ function StepPayment({
           items: items.map((i) => ({ slug: i.slug, qty: i.qty })),
           payerName: customer.name,
           payerDocument: onlyDigits(customer.cpf),
-          shippingAmount: shipping?.price ?? 0,
+          shippingAmount: coupon?.freeShipping ? 0 : (shipping?.price ?? 0),
           couponCode: coupon?.code,
         },
       });
