@@ -764,7 +764,11 @@ function OrderSummary({
             <div className="flex justify-between text-xs">
               <span className="text-slate-500 font-medium">Frete</span>
               <span className="text-slate-900 font-bold">
-                {shipping ? `R$ ${shipping.price.toFixed(2).replace(".", ",")}` : "—"}
+                {shipping
+                  ? coupon?.freeShipping
+                    ? <span className="text-emerald-600">Grátis</span>
+                    : `R$ ${shipping.price.toFixed(2).replace(".", ",")}`
+                  : "—"}
               </span>
             </div>
             <div className="pt-5 mt-2 border-t border-slate-100 flex justify-between items-end">
