@@ -126,7 +126,8 @@ function CheckoutPage() {
     () => (coupon ? calcDiscount(coupon, itemsTotal) : 0),
     [coupon, itemsTotal],
   );
-  const grandTotal = Math.max(0, itemsTotal - discount) + (shipping?.price ?? 0);
+  const shippingCost = shipping ? (coupon?.freeShipping ? 0 : shipping.price) : 0;
+  const grandTotal = Math.max(0, itemsTotal - discount) + shippingCost;
 
   return (
     <main className="min-h-screen bg-slate-50/50 text-foreground">
@@ -180,7 +181,7 @@ function CheckoutPage() {
                     itemsTotal,
                     discount,
                     coupon: coupon ? { code: coupon.code, label: coupon.label } : null,
-                    shipping: shipping ? { name: shipping.name, days: shipping.days, price: shipping.price } : null,
+                    shipping: shipping ? { name: shipping.name, days: shipping.days, price: shippingCost } : null,
                     items: items.map((i) => ({ slug: i.slug, title: i.title, img: i.img, price: i.price, qty: i.qty, size: i.size })),
                     customer: customer!,
                     address: address!,
@@ -519,7 +520,7 @@ function StepPayment({
           items: items.map((i) => ({ slug: i.slug, qty: i.qty })),
           payerName: customer.name,
           payerDocument: onlyDigits(customer.cpf),
-          shippingAmount: shipping?.price ?? 0,
+          shippingAmount: coupon?.freeShipping ? 0 : (shipping?.price ?? 0),
           couponCode: coupon?.code,
         },
       });
@@ -763,7 +764,11 @@ function OrderSummary({
             <div className="flex justify-between text-xs">
               <span className="text-slate-500 font-medium">Frete</span>
               <span className="text-slate-900 font-bold">
-                {shipping ? `R$ ${shipping.price.toFixed(2).replace(".", ",")}` : "—"}
+                {shipping
+                  ? coupon?.freeShipping
+                    ? <span className="text-emerald-600">Grátis</span>
+                    : `R$ ${shipping.price.toFixed(2).replace(".", ",")}`
+                  : "—"}
               </span>
             </div>
             <div className="pt-5 mt-2 border-t border-slate-100 flex justify-between items-end">

@@ -9,6 +9,7 @@ export type Coupon = {
   value: number; // porcentagem (0-100) ou valor em R$
   firstPurchaseOnly?: boolean;
   minOrder?: number;
+  freeShipping?: boolean;
 };
 
 export const COUPONS: Coupon[] = [
@@ -18,6 +19,13 @@ export const COUPONS: Coupon[] = [
     type: "percent",
     value: 20,
     firstPurchaseOnly: true,
+  },
+  {
+    code: "PPL50",
+    label: "35% OFF + Frete grátis",
+    type: "percent",
+    value: 35,
+    freeShipping: true,
   },
 ];
 

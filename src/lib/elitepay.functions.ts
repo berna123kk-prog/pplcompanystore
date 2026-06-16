@@ -82,16 +82,18 @@ export const createDeposit = createServerFn({ method: "POST" })
 
     // Aplicar cupom (sobre o subtotal de produtos, antes do frete)
     let discount = 0;
+    let freeShipping = false;
     if (data.couponCode) {
       const coupon = findCoupon(data.couponCode);
       if (!coupon) {
         throw new Error("Cupom inválido.");
       }
       discount = calcDiscount(coupon, subtotal);
+      freeShipping = !!coupon.freeShipping;
     }
 
     let amount = subtotal - discount;
-    if (data.shippingAmount && data.shippingAmount > 0) {
+    if (!freeShipping && data.shippingAmount && data.shippingAmount > 0) {
       amount += data.shippingAmount;
     }
     amount = Math.round(amount * 100) / 100;
