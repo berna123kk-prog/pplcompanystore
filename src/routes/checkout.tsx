@@ -181,7 +181,7 @@ function CheckoutPage() {
                     itemsTotal,
                     discount,
                     coupon: coupon ? { code: coupon.code, label: coupon.label } : null,
-                    shipping: shipping ? { name: shipping.name, days: shipping.days, price: shipping.price } : null,
+                    shipping: shipping ? { name: shipping.name, days: shipping.days, price: shippingCost } : null,
                     items: items.map((i) => ({ slug: i.slug, title: i.title, img: i.img, price: i.price, qty: i.qty, size: i.size })),
                     customer: customer!,
                     address: address!,
