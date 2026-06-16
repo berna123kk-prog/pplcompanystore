@@ -126,7 +126,8 @@ function CheckoutPage() {
     () => (coupon ? calcDiscount(coupon, itemsTotal) : 0),
     [coupon, itemsTotal],
   );
-  const grandTotal = Math.max(0, itemsTotal - discount) + (shipping?.price ?? 0);
+  const shippingCost = shipping ? (coupon?.freeShipping ? 0 : shipping.price) : 0;
+  const grandTotal = Math.max(0, itemsTotal - discount) + shippingCost;
 
   return (
     <main className="min-h-screen bg-slate-50/50 text-foreground">
