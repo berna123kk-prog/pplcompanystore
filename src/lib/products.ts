@@ -1707,7 +1707,7 @@ const kitLacosteCompletoProduct: Product = {
 const kitLacosteMizunoCompletoProduct: Product = {
   slug: "kit-lacoste-mizuno-completo-kits",
   title: "KIT LACOSTE + MIZUNO COMPLETO 5 PEÇAS",
-  price: "19,99",
+  price: "519,99",
   oldPrice: "1.199,99",
   installment: "25,99",
   off: "78% OFF",
@@ -1728,7 +1728,7 @@ const kitLacosteMizunoCompletoProduct: Product = {
 const kitLacosteMizunoProduct: Product = {
   slug: "kit-lacoste-mizuno-kits",
   title: "KIT LACOSTE + MIZUNO 4 PEÇAS",
-  price: "819,99",
+  price: "419,99",
   oldPrice: "999,99",
   installment: "21,99",
   off: "78% OFF",
@@ -1743,7 +1743,7 @@ const kitLacosteMizunoProduct: Product = {
 const kitPumaBmwProduct: Product = {
   slug: "kit-completo-puma-bmw-kits",
   title: "KIT COMPLETO PUMA + BMW 5 PEÇAS",
-  price: "919,99",
+  price: "359,99",
   oldPrice: "799,99",
   installment: "15,99",
   off: "80% OFF",
@@ -1777,7 +1777,7 @@ import kitLacosteMizunoNovo1 from "@/assets/kit-lacoste-mizuno-novo-1.png";
 const kitLacosteMizunoNovoProduct: Product = {
   slug: "kit-lacoste-mizuno-novo-kits",
   title: "KIT LACOSTE + MIZUNO 4 PEÇAS",
-  price: "949,99",
+  price: "549,99",
   oldPrice: "1.099,99",
   installment: "23,99",
   off: "78% OFF",
