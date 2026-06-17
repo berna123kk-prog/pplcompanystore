@@ -1679,7 +1679,7 @@ const kitLacosteMizunoProduct: Product = {
 const kitPumaBmwProduct: Product = {
   slug: "kit-completo-puma-bmw-kits",
   title: "KIT COMPLETO PUMA + BMW 5 PEÇAS",
-  price: "219,99",
+  price: "919,99",
   oldPrice: "799,99",
   installment: "15,99",
   off: "80% OFF",
