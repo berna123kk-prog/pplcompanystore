@@ -687,6 +687,13 @@ import calcaJeansJogadorComRasgos from "@/assets/calca-jeans-jogador-com-rasgos.
 import calcaJeansJogadorComRasgos2 from "@/assets/calca-jeans-jogador-com-rasgos-2.png";
 import calcaJeansJogadorClara from "@/assets/calca-jeans-jogador-clara.png";
 import calcaJeansJogadorComRespingos from "@/assets/calca-jeans-jogador-com-respingos.png";
+import calcaMoletomLacosteBranca1 from "@/assets/calca-moletom-lacoste-branca-1.png.asset.json";
+import calcaMoletomLacosteBranca2 from "@/assets/calca-moletom-lacoste-branca-2.png.asset.json";
+import calcaMoletomLacosteBranca3 from "@/assets/calca-moletom-lacoste-branca-3.png.asset.json";
+import calcaMoletomLacosteBranca4 from "@/assets/calca-moletom-lacoste-branca-4.png.asset.json";
+import calcaMoletomLacosteBranca5 from "@/assets/calca-moletom-lacoste-branca-5.png.asset.json";
+import calcaMoletomLacosteBranca6 from "@/assets/calca-moletom-lacoste-branca-6.png.asset.json";
+import calcaMoletomLacosteBranca7 from "@/assets/calca-moletom-lacoste-branca-7.png.asset.json";
 import calcaJeansJogadorClaraComRasgos from "@/assets/calca-jeans-jogador-clara-com-rasgos.png";
 import calcaJeansJogadorAzulRespingos from "@/assets/calca-jeans-jogador-azul-respingos.png";
 import calcaJeansJogadorClaraPatches from "@/assets/calca-jeans-jogador-clara-patches.png";
