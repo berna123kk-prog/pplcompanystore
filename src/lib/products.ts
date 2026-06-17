@@ -890,6 +890,7 @@ export const products: Product[] = [
   { slug: "moletom-sport-bmw-puma-cinza", title: "Moletom Sport BMW + Puma Cinza", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomSportBmwPumaCinza1, images: [moletomSportBmwPumaCinza1] },
   { slug: "blusa-cruzeiro", title: "Blusa Cruzeiro", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaCruzeiro1, images: [blusaCruzeiro1] },
   { slug: "blusa-atletico", title: "Blusa Atlético", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaAtletico1, images: [blusaAtletico1] },
+  { slug: "camiseta-lacoste-azul-jacare-grande", title: "Camiseta Lacoste Azul Jacaré Grande", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAzulJacare1.url, images: [camisetaLacosteAzulJacare1.url, camisetaLacosteAzulJacare2.url, camisetaLacosteAzulJacare3.url, camisetaLacosteAzulJacare4.url] },
   { slug: "conjunto-tenis-club", title: "Conjunto Tênis Club", price: "109,99", oldPrice: "249,99", installment: "10,99", off: "56% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: conjuntoTenisClub1.url, images: [conjuntoTenisClub1.url, conjuntoTenisClub2.url, conjuntoTenisClub3.url, conjuntoTenisClub4.url, conjuntoTenisClub5.url, conjuntoTenisClub6.url] },
   { slug: "camiseta-lacoste-jacare-grande", title: "Camiseta Lacoste Jacaré Grande", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteJacareGrande1.url, images: [camisetaLacosteJacareGrande1.url, camisetaLacosteJacareGrande2.url, camisetaLacosteJacareGrande3.url, camisetaLacosteJacareGrande4.url] },
   { slug: "camiseta-casa-blanca-luxo", title: "Camiseta Casa Blanca de Luxo", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaCasaBlancaLuxo1, images: [camisetaCasaBlancaLuxo1, camisetaCasaBlancaLuxo2] },
@@ -1353,6 +1354,10 @@ import camisetaLacosteJacareGrande1 from "@/assets/camiseta-lacoste-jacare-grand
 import camisetaLacosteJacareGrande2 from "@/assets/camiseta-lacoste-jacare-grande-2.png.asset.json";
 import camisetaLacosteJacareGrande3 from "@/assets/camiseta-lacoste-jacare-grande-3.png.asset.json";
 import camisetaLacosteJacareGrande4 from "@/assets/camiseta-lacoste-jacare-grande-4.png.asset.json";
+import camisetaLacosteAzulJacare1 from "@/assets/camiseta-lacoste-azul-jacare-1.png.asset.json";
+import camisetaLacosteAzulJacare2 from "@/assets/camiseta-lacoste-azul-jacare-2.png.asset.json";
+import camisetaLacosteAzulJacare3 from "@/assets/camiseta-lacoste-azul-jacare-3.png.asset.json";
+import camisetaLacosteAzulJacare4 from "@/assets/camiseta-lacoste-azul-jacare-4.png.asset.json";
 import conjuntoTenisClub1 from "@/assets/conjunto-tenis-club-1.png.asset.json";
 import conjuntoTenisClub2 from "@/assets/conjunto-tenis-club-2.png.asset.json";
 import conjuntoTenisClub3 from "@/assets/conjunto-tenis-club-3.png.asset.json";
