@@ -1730,7 +1730,7 @@ import kitLacosteCompletoV2_1 from "@/assets/kit-lacoste-completo-v2-1.png";
 const kitLacosteCompletoV2Product: Product = {
   slug: "kit-lacoste-completo-v2-kits",
   title: "KIT LACOSTE COMPLETO 4 PEÇAS",
-  price: "339,99",
+  price: "379,99",
   oldPrice: "1.099,99",
   installment: "21,99",
   off: "80% OFF",
