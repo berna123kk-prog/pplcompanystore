@@ -1713,7 +1713,7 @@ import kitLacosteMizunoNovo1 from "@/assets/kit-lacoste-mizuno-novo-1.png";
 const kitLacosteMizunoNovoProduct: Product = {
   slug: "kit-lacoste-mizuno-novo-kits",
   title: "KIT LACOSTE + MIZUNO 4 PEÇAS",
-  price: "249,99",
+  price: "949,99",
   oldPrice: "1.099,99",
   installment: "23,99",
   off: "78% OFF",
