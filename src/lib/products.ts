@@ -1664,7 +1664,7 @@ const kitLacosteMizunoCompletoProduct: Product = {
 const kitLacosteMizunoProduct: Product = {
   slug: "kit-lacoste-mizuno-kits",
   title: "KIT LACOSTE + MIZUNO 4 PEÇAS",
-  price: "319,99",
+  price: "819,99",
   oldPrice: "999,99",
   installment: "21,99",
   off: "78% OFF",
