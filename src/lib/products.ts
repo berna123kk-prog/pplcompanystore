@@ -1458,6 +1458,20 @@ const kitLacosteBrancoMizunoFeatured: Product = {
 
 export const featured = [
   {
+    slug: "chinelo-lacoste-original-featured",
+    title: "Chinelo Lacoste - Original",
+    price: "139,99",
+    oldPrice: "399,99",
+    installment: "13,99",
+    off: "65% OFF",
+    kind: "clothing" as const,
+    category: "camisetas" as const,
+    sold: 1,
+    stock: 15,
+    img: chineloLacosteOriginal1.url,
+    images: [chineloLacosteOriginal1.url, chineloLacosteOriginal2.url, chineloLacosteOriginal3.url, chineloLacosteOriginal4.url],
+  } as Product,
+  {
     slug: "conjunto-tenis-club-featured",
     title: "Conjunto Tênis Club",
     price: "109,99",
