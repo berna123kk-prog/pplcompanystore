@@ -790,8 +790,13 @@ export const COLLECTIONS: Record<string, { title: string; filter: (p: Product) =
   perfumes: { title: "Perfumes", filter: (p) => p.category === "perfumes" },
 };
 
+import sueterBrooksfieldMeioZiper1 from "@/assets/sueter-brooksfield-meio-ziper-1.png.asset.json";
+import sueterBrooksfieldMeioZiper2 from "@/assets/sueter-brooksfield-meio-ziper-2.png.asset.json";
+import sueterBrooksfieldMeioZiper3 from "@/assets/sueter-brooksfield-meio-ziper-3.png.asset.json";
+import sueterBrooksfieldMeioZiper4 from "@/assets/sueter-brooksfield-meio-ziper-4.png.asset.json";
+
 export const products: Product[] = [
-  
+  { slug: "sueter-brooksfield-meio-ziper", title: "Suéter Brooksfield - Meio Zíper", price: "149,99", oldPrice: "399,99", installment: "14,99", off: "62% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 15, img: sueterBrooksfieldMeioZiper1.url, images: [sueterBrooksfieldMeioZiper1.url, sueterBrooksfieldMeioZiper2.url, sueterBrooksfieldMeioZiper3.url, sueterBrooksfieldMeioZiper4.url] },
   { slug: "jaqueta-basica-zara", title: "JAQUETA BÁSICA BRANCA - ZARA", price: "169,99", oldPrice: "399,99", installment: "14,99", off: "63% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 15, img: jaquetaBasicaZara1.url, images: [jaquetaBasicaZara1.url, jaquetaBasicaZara2.url, jaquetaBasicaZara3.url, jaquetaBasicaZara4.url, jaquetaBasicaZara5.url, jaquetaBasicaZara6.url] },
   { slug: "combo-kit-3-blusas-zip-tommy", title: "Jaqueta Tommy Velejador Sustainable", price: "249,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: jaquetaTommyVelejador1, images: [jaquetaTommyVelejador1, jaquetaTommyVelejador2] },
   { slug: "blusa-lacoste-frio", title: "Blusa Lacoste Frio", price: "169,99", oldPrice: "799,99", installment: "12,99", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1840, stock: 10, img: blusaLacosteFrio, images: [blusaLacosteFrio] },
