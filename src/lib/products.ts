@@ -890,6 +890,7 @@ export const products: Product[] = [
   { slug: "moletom-sport-bmw-puma-cinza", title: "Moletom Sport BMW + Puma Cinza", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomSportBmwPumaCinza1, images: [moletomSportBmwPumaCinza1] },
   { slug: "blusa-cruzeiro", title: "Blusa Cruzeiro", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaCruzeiro1, images: [blusaCruzeiro1] },
   { slug: "blusa-atletico", title: "Blusa Atlético", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaAtletico1, images: [blusaAtletico1] },
+  { slug: "conjunto-tenis-club", title: "Conjunto Tênis Club", price: "109,99", oldPrice: "249,99", installment: "10,99", off: "56% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: conjuntoTenisClub1.url, images: [conjuntoTenisClub1.url, conjuntoTenisClub2.url, conjuntoTenisClub3.url, conjuntoTenisClub4.url, conjuntoTenisClub5.url, conjuntoTenisClub6.url] },
   { slug: "camiseta-lacoste-jacare-grande", title: "Camiseta Lacoste Jacaré Grande", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteJacareGrande1.url, images: [camisetaLacosteJacareGrande1.url, camisetaLacosteJacareGrande2.url, camisetaLacosteJacareGrande3.url, camisetaLacosteJacareGrande4.url] },
   { slug: "camiseta-casa-blanca-luxo", title: "Camiseta Casa Blanca de Luxo", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaCasaBlancaLuxo1, images: [camisetaCasaBlancaLuxo1, camisetaCasaBlancaLuxo2] },
   { slug: "camiseta-lacoste-preta-street-club", title: "Camiseta Lacoste Preta Street Club", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacostePretaStreetClub1, images: [camisetaLacostePretaStreetClub1] },
@@ -1352,6 +1353,12 @@ import camisetaLacosteJacareGrande1 from "@/assets/camiseta-lacoste-jacare-grand
 import camisetaLacosteJacareGrande2 from "@/assets/camiseta-lacoste-jacare-grande-2.png.asset.json";
 import camisetaLacosteJacareGrande3 from "@/assets/camiseta-lacoste-jacare-grande-3.png.asset.json";
 import camisetaLacosteJacareGrande4 from "@/assets/camiseta-lacoste-jacare-grande-4.png.asset.json";
+import conjuntoTenisClub1 from "@/assets/conjunto-tenis-club-1.png.asset.json";
+import conjuntoTenisClub2 from "@/assets/conjunto-tenis-club-2.png.asset.json";
+import conjuntoTenisClub3 from "@/assets/conjunto-tenis-club-3.png.asset.json";
+import conjuntoTenisClub4 from "@/assets/conjunto-tenis-club-4.png.asset.json";
+import conjuntoTenisClub5 from "@/assets/conjunto-tenis-club-5.png.asset.json";
+import conjuntoTenisClub6 from "@/assets/conjunto-tenis-club-6.png.asset.json";
 
 const jaquetaMiamiOpen2026Featured: Product = {
   slug: "jaqueta-miami-open-2026-featured",
@@ -1429,6 +1436,20 @@ const kitLacosteBrancoMizunoFeatured: Product = {
 };
 
 export const featured = [
+  {
+    slug: "conjunto-tenis-club-featured",
+    title: "Conjunto Tênis Club",
+    price: "109,99",
+    oldPrice: "249,99",
+    installment: "10,99",
+    off: "56% OFF",
+    kind: "clothing" as const,
+    category: "camisetas" as const,
+    sold: 1,
+    stock: 20,
+    img: conjuntoTenisClub1.url,
+    images: [conjuntoTenisClub1.url, conjuntoTenisClub2.url, conjuntoTenisClub3.url, conjuntoTenisClub4.url, conjuntoTenisClub5.url, conjuntoTenisClub6.url],
+  } as Product,
   {
     slug: "camiseta-lacoste-jacare-grande-featured",
     title: "Camiseta Lacoste Jacaré Grande",
