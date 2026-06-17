@@ -787,7 +787,7 @@ export const products: Product[] = [
   { slug: "blusa-lacoste-frio", title: "Blusa Lacoste Frio", price: "199,99", oldPrice: "799,99", installment: "12,99", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1840, stock: 10, img: blusaLacosteFrio, images: [blusaLacosteFrio] },
   { slug: "correntinha-pulseirinha-ouro", title: "Correntinha + Pulseirinha de Ouro", price: "339,99", oldPrice: "499,99", installment: "9,99", off: "80% OFF", kind: "accessory", category: "acessorios", sold: 1320, stock: 8, img: correntinhaPulseirinhaOuro, images: [correntinhaPulseirinhaOuro] },
   { slug: "kit-completo-lcst-sportswear", title: "KIT COMPLETO LCST SPORTSWEAR 4 PEÇAS", price: "199,99", oldPrice: "749,99", installment: "14,97", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3421, stock: 9, img: kitLcstSportswear },
-  { slug: "kit-tommy-velejador-2026-v3", title: "KIT COMPLETO TOMMY 2026 4 PEÇAS", price: "219,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 4188, stock: 6, img: jaquetaTommyBranca1, images: [jaquetaTommyBranca1, jaquetaTommyBranca2, jaquetaTommyBranca3, jaquetaTommyBranca4] },
+  { slug: "kit-tommy-velejador-2026-v3", title: "JAQUETA TOMMY VELEJADOR MODELO ANTIGO", price: "219,99", oldPrice: "664,99", installment: "15,97", off: "76% OFF", kind: "kit", category: "kits-completos", sold: 4188, stock: 6, img: jaquetaTommyBranca1, images: [jaquetaTommyBranca1, jaquetaTommyBranca2, jaquetaTommyBranca3, jaquetaTommyBranca4] },
   { slug: "jaqueta-nasa", title: "Jaqueta Nasa - A do Momento", price: "339,99", oldPrice: "", installment: "9,98", off: "", kind: "clothing", category: "jaquetas-e-moletons", sold: 1722, stock: 14, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
   { slug: "shorts-nk-praia", title: "Shorts Nk Praia", price: "339,99", oldPrice: "289,99", installment: "9,98", off: "66% OFF", kind: "clothing", category: "bermudas-e-shorts", sold: 2603, stock: 18, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6605.png?v=1775624827&width=1200" },
   { slug: "kit-nk-academy-slide-bone", title: "KIT NK ACADEMY COMPLETO COM SLIDE E BONÉ 4 PCS", price: "549,99", oldPrice: "499,00", installment: "9,98", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3501, stock: 11, img: kitNkAcademySlideBone },
@@ -1556,7 +1556,7 @@ export const featured = [
       return {
         ...p,
         slug: "kit-tommy-velejador-2026-v3-featured",
-        title: "KIT COMPLETO TOMMY 2026 4 PEÇAS",
+        title: "JAQUETA TOMMY VELEJADOR MODELO ANTIGO",
         img: kitHilfigerNavy1,
         images: [kitHilfigerNavy1, kitHilfigerNavy2],
       };
@@ -1799,7 +1799,7 @@ export const kits = [kitLacoste2025Product, kitLacosteLuxoProduct, kitTommy2025P
 
 
   if (p.slug === "kit-tommy-velejador-2026-v3") {
-    return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY 2026 4 PEÇAS", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
+    return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "JAQUETA TOMMY VELEJADOR MODELO ANTIGO", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
   }
   if (p.slug === "kit-nk-academy") {
     return { ...p, slug: "kit-nk-academy-kits", title: "KIT COMPLETO TOMMY 2026 4 PEÇAS", img: kitTommyVelejadorVermelho, images: undefined };
