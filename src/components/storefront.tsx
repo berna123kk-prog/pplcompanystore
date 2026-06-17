@@ -116,18 +116,49 @@ export function Header() {
           </button>
         </div>
       </div>
-      <nav className="md:hidden max-w-[1400px] mx-auto px-3 pb-3 -mt-2 flex items-center justify-center gap-3">
-        {navItems.map((item) => (
-          <Link
-            key={item.label}
-            to="/colecoes/$slug"
-            params={{ slug: item.slug }}
-            className="text-[11px] font-bold uppercase tracking-[0.15em] text-white hover:text-white/80 py-1"
-          >
-            {item.label}
-          </Link>
-        ))}
-      </nav>
+      <div className="md:hidden max-w-[1400px] mx-auto -mt-2">
+        <nav className="px-3 pb-2 flex items-center gap-4 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {navItems.map((item) =>
+            item.sub ? (
+              <button
+                key={item.label}
+                onClick={() => setOpen(open === item.label ? null : item.label)}
+                className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.15em] text-white py-1 shrink-0"
+              >
+                {item.label}
+                <ChevronDown className={`h-3 w-3 transition-transform ${open === item.label ? "rotate-180" : ""}`} />
+              </button>
+            ) : (
+              <Link
+                key={item.label}
+                to="/colecoes/$slug"
+                params={{ slug: item.slug }}
+                className="text-[11px] font-bold uppercase tracking-[0.15em] text-white hover:text-white/80 py-1 shrink-0"
+              >
+                {item.label}
+              </Link>
+            )
+          )}
+        </nav>
+        {navItems.map((item) =>
+          item.sub && open === item.label ? (
+            <div key={item.label} className="bg-white border-t border-sky-100 shadow-inner">
+              {item.sub.map((s) => (
+                <Link
+                  key={s.slug}
+                  to="/colecoes/$slug"
+                  params={{ slug: s.slug }}
+                  onClick={() => setOpen(null)}
+                  className="block px-5 py-3 text-[11px] uppercase tracking-[0.15em] font-bold text-sky-900/80 hover:text-sky-900 hover:bg-sky-50 border-b border-sky-50 last:border-b-0"
+                >
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          ) : null
+        )}
+      </div>
+
       <div className="max-w-[1400px] mx-auto px-6">
           <div className="h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
       </div>
