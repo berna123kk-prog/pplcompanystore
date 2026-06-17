@@ -1694,7 +1694,7 @@ const kitPumaBmwProduct: Product = {
 const kitRegataLacosteProduct: Product = {
   slug: "kit-regata-lacoste-kits",
   title: "KIT REGATA LACOSTE 4 PEÇAS",
-  price: "219,99",
+  price: "319,99",
   oldPrice: "699,99",
   installment: "15,99",
   off: "77% OFF",
