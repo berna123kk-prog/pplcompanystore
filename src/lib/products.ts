@@ -1356,6 +1356,11 @@ import camisetaLacosteJacareGrande2 from "@/assets/camiseta-lacoste-jacare-grand
 import camisetaLacosteJacareGrande3 from "@/assets/camiseta-lacoste-jacare-grande-3.png.asset.json";
 import camisetaLacosteJacareGrande4 from "@/assets/camiseta-lacoste-jacare-grande-4.png.asset.json";
 import camisetaLacosteAzulJacare1 from "@/assets/camiseta-lacoste-azul-jacare-1.png.asset.json";
+import camisetaLacosteSportMarinhoRaquete1 from "@/assets/camiseta-lacoste-sport-marinho-raquete-1.png.asset.json";
+import camisetaLacosteSportMarinhoRaquete2 from "@/assets/camiseta-lacoste-sport-marinho-raquete-2.png.asset.json";
+import camisetaLacosteSportMarinhoRaquete3 from "@/assets/camiseta-lacoste-sport-marinho-raquete-3.png.asset.json";
+import camisetaLacosteSportMarinhoRaquete4 from "@/assets/camiseta-lacoste-sport-marinho-raquete-4.png.asset.json";
+import camisetaLacosteSportMarinhoRaquete5 from "@/assets/camiseta-lacoste-sport-marinho-raquete-5.png.asset.json";
 import camisetaLacosteAzulJacare2 from "@/assets/camiseta-lacoste-azul-jacare-2.png.asset.json";
 import camisetaLacosteAzulJacare3 from "@/assets/camiseta-lacoste-azul-jacare-3.png.asset.json";
 import camisetaLacosteAzulJacare4 from "@/assets/camiseta-lacoste-azul-jacare-4.png.asset.json";
