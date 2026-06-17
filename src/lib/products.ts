@@ -1764,7 +1764,7 @@ import kitTommy2025_1 from "@/assets/kit-tommy-2025-1.png";
 const kitTommy2025Product: Product = {
   slug: "kit-tommy-2025-kits",
   title: "KIT DA TOMMY 2025 3 PEÇAS",
-  price: "239,99",
+  price: "199,99",
   oldPrice: "799,99",
   installment: "16,99",
   off: "79% OFF",
