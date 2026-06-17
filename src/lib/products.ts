@@ -694,6 +694,13 @@ import calcaMoletomLacosteBranca4 from "@/assets/calca-moletom-lacoste-branca-4.
 import calcaMoletomLacosteBranca5 from "@/assets/calca-moletom-lacoste-branca-5.png.asset.json";
 import calcaMoletomLacosteBranca6 from "@/assets/calca-moletom-lacoste-branca-6.png.asset.json";
 import calcaMoletomLacosteBranca7 from "@/assets/calca-moletom-lacoste-branca-7.png.asset.json";
+import calcaMoletomLacosteMarinho1 from "@/assets/calca-moletom-lacoste-marinho-1.png.asset.json";
+import calcaMoletomLacosteMarinho2 from "@/assets/calca-moletom-lacoste-marinho-2.png.asset.json";
+import calcaMoletomLacosteMarinho3 from "@/assets/calca-moletom-lacoste-marinho-3.png.asset.json";
+import calcaMoletomLacosteMarinho4 from "@/assets/calca-moletom-lacoste-marinho-4.png.asset.json";
+import calcaMoletomLacosteMarinho5 from "@/assets/calca-moletom-lacoste-marinho-5.png.asset.json";
+import calcaMoletomLacosteMarinho6 from "@/assets/calca-moletom-lacoste-marinho-6.png.asset.json";
+import calcaMoletomLacosteMarinho7 from "@/assets/calca-moletom-lacoste-marinho-7.png.asset.json";
 import calcaJeansJogadorClaraComRasgos from "@/assets/calca-jeans-jogador-clara-com-rasgos.png";
 import calcaJeansJogadorAzulRespingos from "@/assets/calca-jeans-jogador-azul-respingos.png";
 import calcaJeansJogadorClaraPatches from "@/assets/calca-jeans-jogador-clara-patches.png";
@@ -801,6 +808,7 @@ export const products: Product[] = [
   { slug: "kit-completo-lcst", title: "KIT COMPLETO PMA BMW MOTOSPORT 4 PCS", price: "239,99", oldPrice: "899,00", installment: "13,97", off: "84% OFF", kind: "kit", category: "kits-completos", sold: 1899, stock: 7, img: kitPmaBmwMotosportJeans },
   { slug: "kit-pma-bmw-m-4-pecas", title: "KIT COMPLETO PMA BMW MOTOSPORT 3 PCS", price: "239,99", oldPrice: "999,00", installment: "13,97", off: "86% OFF", kind: "kit", category: "kits-completos", sold: 2244, stock: 10, img: kitPmaBmwMotosportCinza1, images: [kitPmaBmwMotosportCinza1, kitPmaBmwMotosportCinza2] },
   { slug: "kit-nk-academy-slide-bone", title: "KIT NK ACADEMY COMPLETO COM SLIDE E BONÉ 4 PCS", price: "149,99", oldPrice: "499,00", installment: "9,98", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3501, stock: 11, img: kitNkAcademySlideBone },
+  { slug: "calca-moletom-lacoste-marinho", title: "Calça Moletom Lacoste Marinho", price: "79,99", oldPrice: "299,99", installment: "7,99", off: "73% OFF", kind: "clothing", category: "calcas", sold: 1, stock: 15, img: calcaMoletomLacosteMarinho1.url, images: [calcaMoletomLacosteMarinho1.url, calcaMoletomLacosteMarinho2.url, calcaMoletomLacosteMarinho3.url, calcaMoletomLacosteMarinho4.url, calcaMoletomLacosteMarinho5.url, calcaMoletomLacosteMarinho6.url, calcaMoletomLacosteMarinho7.url] },
   { slug: "calca-moletom-lacoste-branca", title: "Calça Moletom Lacoste Branca", price: "79,99", oldPrice: "299,99", installment: "7,99", off: "73% OFF", kind: "clothing", category: "calcas", sold: 1, stock: 15, img: calcaMoletomLacosteBranca1.url, images: [calcaMoletomLacosteBranca1.url, calcaMoletomLacosteBranca2.url, calcaMoletomLacosteBranca3.url, calcaMoletomLacosteBranca4.url, calcaMoletomLacosteBranca5.url, calcaMoletomLacosteBranca6.url, calcaMoletomLacosteBranca7.url] },
   { slug: "calca-jeans-city-denim", title: "Calça Jeans City Denim", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 900, stock: 15, img: calcaJeansDestroyedFrente, images: [calcaJeansDestroyedFrente, calcaJeansDestroyedDetalhe] },
   { slug: "calca-jeans-city-denim-2", title: "Calça Jeans City Denim", price: "79,99", oldPrice: "300,00", installment: "7,99", off: "80% OFF", kind: "clothing", category: "calcas", sold: 720, stock: 12, img: calcaJeansCityDenim2Frente, images: [calcaJeansCityDenim2Frente, calcaJeansCityDenim2Detalhe] },
