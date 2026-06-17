@@ -890,6 +890,7 @@ export const products: Product[] = [
   { slug: "moletom-sport-bmw-puma-cinza", title: "Moletom Sport BMW + Puma Cinza", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomSportBmwPumaCinza1, images: [moletomSportBmwPumaCinza1] },
   { slug: "blusa-cruzeiro", title: "Blusa Cruzeiro", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaCruzeiro1, images: [blusaCruzeiro1] },
   { slug: "blusa-atletico", title: "Blusa Atlético", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaAtletico1, images: [blusaAtletico1] },
+  { slug: "camiseta-lacoste-sportswear-branca", title: "Camiseta Lacoste Sportswear Branca", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteSportswearBranca1.url, images: [camisetaLacosteSportswearBranca1.url, camisetaLacosteSportswearBranca2.url, camisetaLacosteSportswearBranca3.url, camisetaLacosteSportswearBranca4.url, camisetaLacosteSportswearBranca5.url] },
   { slug: "camiseta-lacoste-sport-marinho-raquete", title: "Camiseta Lacoste Sport Marinho Raquete", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteSportMarinhoRaquete1.url, images: [camisetaLacosteSportMarinhoRaquete1.url, camisetaLacosteSportMarinhoRaquete2.url, camisetaLacosteSportMarinhoRaquete3.url, camisetaLacosteSportMarinhoRaquete4.url, camisetaLacosteSportMarinhoRaquete5.url] },
   { slug: "camiseta-lacoste-azul-jacare-grande", title: "Camiseta Lacoste Azul Jacaré Grande", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteAzulJacare1.url, images: [camisetaLacosteAzulJacare1.url, camisetaLacosteAzulJacare2.url, camisetaLacosteAzulJacare3.url, camisetaLacosteAzulJacare4.url] },
   { slug: "conjunto-tenis-club", title: "Conjunto Tênis Club", price: "109,99", oldPrice: "249,99", installment: "10,99", off: "56% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: conjuntoTenisClub1.url, images: [conjuntoTenisClub1.url, conjuntoTenisClub2.url, conjuntoTenisClub3.url, conjuntoTenisClub4.url, conjuntoTenisClub5.url, conjuntoTenisClub6.url] },
@@ -1356,6 +1357,11 @@ import camisetaLacosteJacareGrande2 from "@/assets/camiseta-lacoste-jacare-grand
 import camisetaLacosteJacareGrande3 from "@/assets/camiseta-lacoste-jacare-grande-3.png.asset.json";
 import camisetaLacosteJacareGrande4 from "@/assets/camiseta-lacoste-jacare-grande-4.png.asset.json";
 import camisetaLacosteAzulJacare1 from "@/assets/camiseta-lacoste-azul-jacare-1.png.asset.json";
+import camisetaLacosteSportswearBranca1 from "@/assets/camiseta-lacoste-sportswear-branca-1.png.asset.json";
+import camisetaLacosteSportswearBranca2 from "@/assets/camiseta-lacoste-sportswear-branca-2.png.asset.json";
+import camisetaLacosteSportswearBranca3 from "@/assets/camiseta-lacoste-sportswear-branca-3.png.asset.json";
+import camisetaLacosteSportswearBranca4 from "@/assets/camiseta-lacoste-sportswear-branca-4.png.asset.json";
+import camisetaLacosteSportswearBranca5 from "@/assets/camiseta-lacoste-sportswear-branca-5.png.asset.json";
 import camisetaLacosteSportMarinhoRaquete1 from "@/assets/camiseta-lacoste-sport-marinho-raquete-1.png.asset.json";
 import camisetaLacosteSportMarinhoRaquete2 from "@/assets/camiseta-lacoste-sport-marinho-raquete-2.png.asset.json";
 import camisetaLacosteSportMarinhoRaquete3 from "@/assets/camiseta-lacoste-sport-marinho-raquete-3.png.asset.json";
