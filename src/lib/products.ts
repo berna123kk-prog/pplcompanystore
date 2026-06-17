@@ -1072,7 +1072,7 @@ export const products: Product[] = [
   { slug: "tenis-nk-shox-tl-sunrise", title: "Tênis NK Shox TL", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkShoxTlSunrise1.url, images: [tenisNkShoxTlSunrise1.url, tenisNkShoxTlSunrise2.url, tenisNkShoxTlSunrise3.url, tenisNkShoxTlSunrise4.url] },
   { slug: "tenis-zara-multipecas", title: "Tênis Zara Multipeças", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisZaraMultipecas1.url, images: [tenisZaraMultipecas1.url, tenisZaraMultipecas2.url, tenisZaraMultipecas3.url] },
   { slug: "tenis-zara-monocromatico", title: "Tênis Zara Monocromático", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisZaraMonocromatico1.url, images: [tenisZaraMonocromatico1.url, tenisZaraMonocromatico2.url, tenisZaraMonocromatico3.url] },
-  { slug: "tenis-nk-air-jordan-1-low-se-navy", title: "Tênis NK Air Jordan 1 Low SE", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowSeNavy1.url, images: [tenisNkAirJordan1LowSeNavy1.url, tenisNkAirJordan1LowSeNavy2.url, tenisNkAirJordan1LowSeNavy3.url, tenisNkAirJordan1LowSeNavy4.url] },
+  { slug: "tenis-nk-air-jordan-1-low-se-navy", title: "Tênis NK Air Jordan 1 Low SE", price: "279,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowSeNavy1.url, images: [tenisNkAirJordan1LowSeNavy1.url, tenisNkAirJordan1LowSeNavy2.url, tenisNkAirJordan1LowSeNavy3.url, tenisNkAirJordan1LowSeNavy4.url] },
   { slug: "tenis-nk-air-jordan-1-low-se", title: "Tênis NK Air Jordan 1 Low SE", price: "219,99", oldPrice: "899,99", installment: "21,99", off: "76% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirJordan1LowSe1.url, images: [tenisNkAirJordan1LowSe1.url, tenisNkAirJordan1LowSe2.url, tenisNkAirJordan1LowSe3.url] },
   { slug: "tenis-lcst-lineshot", title: "Tênis Lcst Lineshot", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisLcstLineshot1.url, images: [tenisLcstLineshot1.url] },
   { slug: "tenis-nk-air-max-plus-swarovski", title: "Tênis NK Air Max Plus Swarovski® crystals", price: "99,99", oldPrice: "599,99", installment: "9,99", off: "83% OFF", kind: "footwear", category: "sneakers", sold: 1, stock: 10, img: tenisNkAirMaxPlusSwarovski1.url, images: [tenisNkAirMaxPlusSwarovski1.url, tenisNkAirMaxPlusSwarovski2.url, tenisNkAirMaxPlusSwarovski3.url, tenisNkAirMaxPlusSwarovski4.url, tenisNkAirMaxPlusSwarovski5.url] },
@@ -1135,7 +1135,7 @@ export const products: Product[] = [
   { slug: "jaqueta-tommy-azul-royal", title: "Boné Tommy Big Logo", price: "179,99", oldPrice: "799,99", installment: "13,99", off: "82% OFF", kind: "accessory", category: "acessorios", sold: 1100, stock: 7, img: boneTommyBigLogo },
   { slug: "jaqueta-tommy-corta-vento", title: "Boné Tommy Since 1985", price: "149,99", oldPrice: "799,99", installment: "14,99", off: "81% OFF", kind: "accessory", category: "acessorios", sold: 1340, stock: 6, img: boneTommySince1985_1, images: [boneTommySince1985_1, boneTommySince1985_2] },
   { slug: "kit-completo-nk-sportswear", title: "KIT COMPLETO NK SPORTSWEAR 4 PCS", price: "249,99", oldPrice: "799,99", installment: "14,97", off: "81% OFF", kind: "kit", category: "kits-completos", sold: 1620, stock: 8, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6603.png?v=1775624725&width=1200" },
-  { slug: "kit-completo-nk-academy-4-pecas", title: "KIT COMPLETO NK ACADEMY 4 PEÇAS ", price: "239,99", oldPrice: "699,99", installment: "15,97", off: "77% OFF", kind: "kit", category: "kits-completos", sold: 1480, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6618.png?v=1775625574&width=1200" },
+  { slug: "kit-completo-nk-academy-4-pecas", title: "KIT COMPLETO NK ACADEMY 4 PEÇAS ", price: "289,99", oldPrice: "699,99", installment: "15,97", off: "77% OFF", kind: "kit", category: "kits-completos", sold: 1480, stock: 7, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6618.png?v=1775625574&width=1200" },
   { slug: "kit-completo-nk-sportswear-lacoste", title: "KIT COMPLETO NK SPORTSWEAR 4 PCS", price: "219,99", oldPrice: "749,99", installment: "15,97", off: "78% OFF", kind: "kit", category: "kits-completos", sold: 1200, stock: 10, img: kitNkSportswearLacoste1, images: [kitNkSportswearLacoste1, kitNkSportswearLacoste2] },
   
   { slug: "bone-lcst-sport-diamante", title: "Boné Lcst Sport Diamante (Modelo Novo)", price: "99,99", oldPrice: "299,99", installment: "9,99", off: "67% OFF", kind: "accessory", category: "acessorios", sold: 860, stock: 18, img: boneLcstSportDiamante },
@@ -1707,7 +1707,7 @@ const kitLacosteCompletoProduct: Product = {
 const kitLacosteMizunoCompletoProduct: Product = {
   slug: "kit-lacoste-mizuno-completo-kits",
   title: "KIT LACOSTE + MIZUNO COMPLETO 5 PEÇAS",
-  price: "19,99",
+  price: "519,99",
   oldPrice: "1.199,99",
   installment: "25,99",
   off: "78% OFF",
@@ -1728,7 +1728,7 @@ const kitLacosteMizunoCompletoProduct: Product = {
 const kitLacosteMizunoProduct: Product = {
   slug: "kit-lacoste-mizuno-kits",
   title: "KIT LACOSTE + MIZUNO 4 PEÇAS",
-  price: "819,99",
+  price: "419,99",
   oldPrice: "999,99",
   installment: "21,99",
   off: "78% OFF",
@@ -1743,7 +1743,7 @@ const kitLacosteMizunoProduct: Product = {
 const kitPumaBmwProduct: Product = {
   slug: "kit-completo-puma-bmw-kits",
   title: "KIT COMPLETO PUMA + BMW 5 PEÇAS",
-  price: "919,99",
+  price: "359,99",
   oldPrice: "799,99",
   installment: "15,99",
   off: "80% OFF",
@@ -1777,7 +1777,7 @@ import kitLacosteMizunoNovo1 from "@/assets/kit-lacoste-mizuno-novo-1.png";
 const kitLacosteMizunoNovoProduct: Product = {
   slug: "kit-lacoste-mizuno-novo-kits",
   title: "KIT LACOSTE + MIZUNO 4 PEÇAS",
-  price: "949,99",
+  price: "549,99",
   oldPrice: "1.099,99",
   installment: "23,99",
   off: "78% OFF",
