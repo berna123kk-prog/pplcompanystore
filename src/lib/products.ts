@@ -1429,6 +1429,20 @@ const kitLacosteBrancoMizunoFeatured: Product = {
 };
 
 export const featured = [
+  {
+    slug: "camiseta-lacoste-jacare-grande-featured",
+    title: "Camiseta Lacoste Jacaré Grande",
+    price: "59,99",
+    oldPrice: "149,99",
+    installment: "5,99",
+    off: "60% OFF",
+    kind: "clothing" as const,
+    category: "camisetas" as const,
+    sold: 1,
+    stock: 20,
+    img: camisetaLacosteJacareGrande1.url,
+    images: [camisetaLacosteJacareGrande1.url, camisetaLacosteJacareGrande2.url, camisetaLacosteJacareGrande3.url, camisetaLacosteJacareGrande4.url],
+  } as Product,
   jaquetaMiamiOpen2026Featured,
   kitLacosteBrancoMizunoFeatured,
   brooksfieldFeatured,
