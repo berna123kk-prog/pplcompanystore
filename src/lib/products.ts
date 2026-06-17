@@ -783,6 +783,7 @@ export const COLLECTIONS: Record<string, { title: string; filter: (p: Product) =
 
 export const products: Product[] = [
   
+  { slug: "jaqueta-basica-zara", title: "Jaqueta Básica - Zara", price: "149,99", oldPrice: "399,99", installment: "14,99", off: "63% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 15, img: jaquetaBasicaZara1.url, images: [jaquetaBasicaZara1.url, jaquetaBasicaZara2.url, jaquetaBasicaZara3.url, jaquetaBasicaZara4.url, jaquetaBasicaZara5.url, jaquetaBasicaZara6.url] },
   { slug: "combo-kit-3-blusas-zip-tommy", title: "Jaqueta Tommy Velejador Sustainable", price: "249,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: jaquetaTommyVelejador1, images: [jaquetaTommyVelejador1, jaquetaTommyVelejador2] },
   { slug: "blusa-lacoste-frio", title: "Blusa Lacoste Frio", price: "199,99", oldPrice: "799,99", installment: "12,99", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1840, stock: 10, img: blusaLacosteFrio, images: [blusaLacosteFrio] },
   { slug: "correntinha-pulseirinha-ouro", title: "Correntinha + Pulseirinha de Ouro", price: "339,99", oldPrice: "499,99", installment: "9,99", off: "80% OFF", kind: "accessory", category: "acessorios", sold: 1320, stock: 8, img: correntinhaPulseirinhaOuro, images: [correntinhaPulseirinhaOuro] },
@@ -1460,6 +1461,12 @@ const kitLacosteBrancoMizunoFeatured: Product = {
   images: [kitLacosteBrancoMizuno],
 };
 
+import jaquetaBasicaZara1 from "@/assets/jaqueta-basica-zara-1.png.asset.json";
+import jaquetaBasicaZara2 from "@/assets/jaqueta-basica-zara-2.png.asset.json";
+import jaquetaBasicaZara3 from "@/assets/jaqueta-basica-zara-3.png.asset.json";
+import jaquetaBasicaZara4 from "@/assets/jaqueta-basica-zara-4.png.asset.json";
+import jaquetaBasicaZara5 from "@/assets/jaqueta-basica-zara-5.png.asset.json";
+import jaquetaBasicaZara6 from "@/assets/jaqueta-basica-zara-6.png.asset.json";
 import moletomMeioZiperTommy1 from "@/assets/moletom-meio-ziper-tommy-1.png.asset.json";
 import moletomMeioZiperTommy2 from "@/assets/moletom-meio-ziper-tommy-2.png.asset.json";
 import moletomMeioZiperTommy3 from "@/assets/moletom-meio-ziper-tommy-3.png.asset.json";
@@ -1467,6 +1474,21 @@ import moletomMeioZiperTommy4 from "@/assets/moletom-meio-ziper-tommy-4.png.asse
 import moletomMeioZiperTommy5 from "@/assets/moletom-meio-ziper-tommy-5.png.asset.json";
 import moletomMeioZiperTommy6 from "@/assets/moletom-meio-ziper-tommy-6.png.asset.json";
 import moletomMeioZiperTommy7 from "@/assets/moletom-meio-ziper-tommy-7.png.asset.json";
+
+const jaquetaBasicaZaraFeatured: Product = {
+  slug: "jaqueta-basica-zara-featured",
+  title: "Jaqueta Básica - Zara",
+  price: "149,99",
+  oldPrice: "399,99",
+  installment: "14,99",
+  off: "63% OFF",
+  kind: "clothing",
+  category: "jaquetas-e-moletons",
+  sold: 1,
+  stock: 15,
+  img: jaquetaBasicaZara1.url,
+  images: [jaquetaBasicaZara1.url, jaquetaBasicaZara2.url, jaquetaBasicaZara3.url, jaquetaBasicaZara4.url, jaquetaBasicaZara5.url, jaquetaBasicaZara6.url],
+};
 
 const moletomMeioZiperTommyFeatured: Product = {
   slug: "moletom-meio-ziper-tommy-featured",
@@ -1484,6 +1506,7 @@ const moletomMeioZiperTommyFeatured: Product = {
 };
 
 export const featured = [
+  jaquetaBasicaZaraFeatured,
   moletomMeioZiperTommyFeatured,
   {
     slug: "chinelo-lacoste-original-featured",
