@@ -1376,6 +1376,10 @@ import conjuntoTenisClub3 from "@/assets/conjunto-tenis-club-3.png.asset.json";
 import conjuntoTenisClub4 from "@/assets/conjunto-tenis-club-4.png.asset.json";
 import conjuntoTenisClub5 from "@/assets/conjunto-tenis-club-5.png.asset.json";
 import conjuntoTenisClub6 from "@/assets/conjunto-tenis-club-6.png.asset.json";
+import chineloLacosteOriginal1 from "@/assets/chinelo-lacoste-original-1.png.asset.json";
+import chineloLacosteOriginal2 from "@/assets/chinelo-lacoste-original-2.png.asset.json";
+import chineloLacosteOriginal3 from "@/assets/chinelo-lacoste-original-3.png.asset.json";
+import chineloLacosteOriginal4 from "@/assets/chinelo-lacoste-original-4.png.asset.json";
 
 const jaquetaMiamiOpen2026Featured: Product = {
   slug: "jaqueta-miami-open-2026-featured",
