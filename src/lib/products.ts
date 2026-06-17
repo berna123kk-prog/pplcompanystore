@@ -1628,7 +1628,7 @@ const kitLalaCompletoProduct: Product = {
 const kitLacosteCompletoProduct: Product = {
   slug: "kit-lacoste-completo-kits",
   title: "KIT LACOSTE COMPLETO 4 PEÇAS",
-  price: "339,99",
+  price: "369,99",
   oldPrice: "1.099,99",
   installment: "22,99",
   off: "79% OFF",
