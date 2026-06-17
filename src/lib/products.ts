@@ -1522,7 +1522,7 @@ export const featured = [
   {
     slug: "chinelo-lacoste-original-featured",
     title: "Chinelo Lacoste - Original",
-    price: "189,99",
+    price: "169,99",
     oldPrice: "399,99",
     installment: "13,99",
     off: "65% OFF",
