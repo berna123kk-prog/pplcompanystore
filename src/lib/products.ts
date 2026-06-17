@@ -1556,7 +1556,7 @@ export const featured = [
       return {
         ...p,
         slug: "kit-tommy-velejador-2026-v3-featured",
-        title: "KIT COMPLETO TOMMY 2026 4 PEÇAS",
+        title: "JAQUETA TOMMY VELEJADOR MODELO ANTIGO",
         img: kitHilfigerNavy1,
         images: [kitHilfigerNavy1, kitHilfigerNavy2],
       };
