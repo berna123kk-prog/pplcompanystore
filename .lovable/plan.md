@@ -1,16 +1,13 @@
-## Problema
-No mobile, o header mostra os itens de nível 1 (Vestuário, Acessórios, Slides, Sneakers, Perfumes) em uma única linha centralizada, mas:
-- "Vestuário" não revela as subcategorias (Camisetas, Jaquetas e Moletons, Calças, Bermudas e Shorts, Kits Completos) — no desktop elas aparecem via hover, mas no mobile não há hover nem clique para abrir.
-- A linha única com 5 itens espreme/quebra o texto em telas estreitas.
+Vou ajustar o menu no celular para que as sessões e subcategorias fiquem acessíveis.
 
-## Solução
-Reescrever apenas o bloco `<nav className="md:hidden ...">` em `src/components/storefront.tsx` (linhas 119–130), sem mexer no menu desktop.
+Plano:
+1. Manter o menu desktop como está.
+2. No mobile, transformar a barra de categorias em uma faixa com rolagem horizontal para evitar que itens sumam.
+3. Fazer categorias com subitens, como Vestuário, abrirem/fecharem ao toque.
+4. Exibir Camisetas, Jaquetas e Moletons, Calças, Bermudas e Shorts e Kits Completos em um painel logo abaixo da barra.
+5. Fechar o painel ao tocar em uma subcategoria, levando para a coleção correta.
 
-1. Transformar a nav mobile em uma faixa com **scroll horizontal** (`overflow-x-auto`, `whitespace-nowrap`, esconder scrollbar), para caber todos os itens sem quebrar.
-2. Para o item "Vestuário" (que tem `sub`), trocar o `Link` por um **botão toggle** com `ChevronDown` que abre/fecha um painel abaixo da nav listando as subcategorias (Camisetas, Jaquetas e Moletons, Calças, Bermudas e Shorts, Kits Completos), cada uma como `Link` para `/colecoes/$slug`.
-3. O painel de subcategorias aparece em largura total abaixo da faixa de categorias, com fundo branco/sky claro, fechando ao clicar em uma opção.
-4. Manter exatamente os mesmos slugs e estilo visual (uppercase, tracking, cor branca sobre o header azul).
-
-## Fora de escopo
-- Menu desktop permanece igual.
-- Nenhuma mudança em produtos, rotas ou lógica de carrinho.
+Detalhes técnicos:
+- Alterar apenas o componente de vitrine/menu mobile.
+- Usar o estado local já no componente para controlar qual categoria está aberta.
+- Preservar os links/slugs existentes das coleções.
