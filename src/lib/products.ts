@@ -632,6 +632,11 @@ import camisetaZaraSlimFitBranca1 from "@/assets/camiseta-zara-slim-fit-branca-1
 import camisetaZaraSlimFitBranca2 from "@/assets/camiseta-zara-slim-fit-branca-2.png";
 import combo4CamisetasDryFit1 from "@/assets/combo-4-camisetas-dry-fit-1.png";
 import camisetaLisaZara1 from "@/assets/camiseta-lisa-zara-1.png.asset.json";
+import camisetaBasicaZaraTexturizada1 from "@/assets/camiseta-basica-zara-texturizada-1.png.asset.json";
+import camisetaBasicaZaraTexturizada2 from "@/assets/camiseta-basica-zara-texturizada-2.png.asset.json";
+import camisetaBasicaZaraTexturizada3 from "@/assets/camiseta-basica-zara-texturizada-3.png.asset.json";
+import camisetaBasicaZaraTexturizada4 from "@/assets/camiseta-basica-zara-texturizada-4.png.asset.json";
+import camisetaBasicaZaraTexturizada5 from "@/assets/camiseta-basica-zara-texturizada-5.png.asset.json";
 import camisetaLisaZara2 from "@/assets/camiseta-lisa-zara-2.png.asset.json";
 import camisetaLisaZara3 from "@/assets/camiseta-lisa-zara-3.png.asset.json";
 import camisetaLisaZara4 from "@/assets/camiseta-lisa-zara-4.png.asset.json";
