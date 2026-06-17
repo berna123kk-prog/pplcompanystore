@@ -1376,6 +1376,10 @@ import conjuntoTenisClub3 from "@/assets/conjunto-tenis-club-3.png.asset.json";
 import conjuntoTenisClub4 from "@/assets/conjunto-tenis-club-4.png.asset.json";
 import conjuntoTenisClub5 from "@/assets/conjunto-tenis-club-5.png.asset.json";
 import conjuntoTenisClub6 from "@/assets/conjunto-tenis-club-6.png.asset.json";
+import chineloLacosteOriginal1 from "@/assets/chinelo-lacoste-original-1.png.asset.json";
+import chineloLacosteOriginal2 from "@/assets/chinelo-lacoste-original-2.png.asset.json";
+import chineloLacosteOriginal3 from "@/assets/chinelo-lacoste-original-3.png.asset.json";
+import chineloLacosteOriginal4 from "@/assets/chinelo-lacoste-original-4.png.asset.json";
 
 const jaquetaMiamiOpen2026Featured: Product = {
   slug: "jaqueta-miami-open-2026-featured",
@@ -1453,6 +1457,20 @@ const kitLacosteBrancoMizunoFeatured: Product = {
 };
 
 export const featured = [
+  {
+    slug: "chinelo-lacoste-original-featured",
+    title: "Chinelo Lacoste - Original",
+    price: "139,99",
+    oldPrice: "399,99",
+    installment: "13,99",
+    off: "65% OFF",
+    kind: "clothing" as const,
+    category: "camisetas" as const,
+    sold: 1,
+    stock: 15,
+    img: chineloLacosteOriginal1.url,
+    images: [chineloLacosteOriginal1.url, chineloLacosteOriginal2.url, chineloLacosteOriginal3.url, chineloLacosteOriginal4.url],
+  } as Product,
   {
     slug: "conjunto-tenis-club-featured",
     title: "Conjunto Tênis Club",
