@@ -1504,7 +1504,7 @@ const jaquetaBasicaZaraFeatured: Product = {
 const moletomMeioZiperTommyFeatured: Product = {
   slug: "moletom-meio-ziper-tommy-featured",
   title: "Moletom Meio Zíper - Tommy Hilfiger",
-  price: "189,99",
+  price: "169,99",
   oldPrice: "499,99",
   installment: "14,99",
   off: "70% OFF",
