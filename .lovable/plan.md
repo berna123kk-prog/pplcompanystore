@@ -1,26 +1,16 @@
-## Objetivo
+## Problema
+No mobile, o header mostra os itens de nível 1 (Vestuário, Acessórios, Slides, Sneakers, Perfumes) em uma única linha centralizada, mas:
+- "Vestuário" não revela as subcategorias (Camisetas, Jaquetas e Moletons, Calças, Bermudas e Shorts, Kits Completos) — no desktop elas aparecem via hover, mas no mobile não há hover nem clique para abrir.
+- A linha única com 5 itens espreme/quebra o texto em telas estreitas.
 
-Criar um único arquivo de configuração onde você edita os rótulos dos seletores de tamanho (ex.: "TAMANHO DA ROUPA", "TAMANHO DO CALÇADO") sem precisar mexer na lógica da página de produto.
+## Solução
+Reescrever apenas o bloco `<nav className="md:hidden ...">` em `src/components/storefront.tsx` (linhas 119–130), sem mexer no menu desktop.
 
-## O que será feito
+1. Transformar a nav mobile em uma faixa com **scroll horizontal** (`overflow-x-auto`, `whitespace-nowrap`, esconder scrollbar), para caber todos os itens sem quebrar.
+2. Para o item "Vestuário" (que tem `sub`), trocar o `Link` por um **botão toggle** com `ChevronDown` que abre/fecha um painel abaixo da nav listando as subcategorias (Camisetas, Jaquetas e Moletons, Calças, Bermudas e Shorts, Kits Completos), cada uma como `Link` para `/colecoes/$slug`.
+3. O painel de subcategorias aparece em largura total abaixo da faixa de categorias, com fundo branco/sky claro, fechando ao clicar em uma opção.
+4. Manter exatamente os mesmos slugs e estilo visual (uppercase, tracking, cor branca sobre o header azul).
 
-1. **Criar `src/lib/size-labels.ts`** — arquivo simples com os rótulos por tipo de produto:
-
-   ```ts
-   export const SIZE_LABELS = {
-     clothing: "TAMANHO DA ROUPA",
-     footwear: "TAMANHO",
-     kitClothing: "TAMANHO DA ROUPA",
-     kitFootwear: "TAMANHO DO CALÇADO",
-   };
-   ```
-
-   Para alterar qualquer rótulo, basta editar as strings desse arquivo.
-
-2. **Atualizar `src/routes/produtos.$slug.tsx`** — o componente `SizeSelector` passa a importar `SIZE_LABELS` e usar os valores em vez das strings fixas atuais.
-
-Nenhuma mudança em outras páginas, estilos ou comportamento. Só o ponto de leitura dos rótulos muda.
-
-## Como você usa depois
-
-Abrir `src/lib/size-labels.ts`, trocar o texto entre aspas, salvar. O site reflete imediatamente.
+## Fora de escopo
+- Menu desktop permanece igual.
+- Nenhuma mudança em produtos, rotas ou lógica de carrinho.
