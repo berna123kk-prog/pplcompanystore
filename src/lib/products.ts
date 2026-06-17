@@ -632,6 +632,11 @@ import camisetaZaraSlimFitBranca1 from "@/assets/camiseta-zara-slim-fit-branca-1
 import camisetaZaraSlimFitBranca2 from "@/assets/camiseta-zara-slim-fit-branca-2.png";
 import combo4CamisetasDryFit1 from "@/assets/combo-4-camisetas-dry-fit-1.png";
 import camisetaLisaZara1 from "@/assets/camiseta-lisa-zara-1.png.asset.json";
+import camisetaBasicaZaraTexturizada1 from "@/assets/camiseta-basica-zara-texturizada-1.png.asset.json";
+import camisetaBasicaZaraTexturizada2 from "@/assets/camiseta-basica-zara-texturizada-2.png.asset.json";
+import camisetaBasicaZaraTexturizada3 from "@/assets/camiseta-basica-zara-texturizada-3.png.asset.json";
+import camisetaBasicaZaraTexturizada4 from "@/assets/camiseta-basica-zara-texturizada-4.png.asset.json";
+import camisetaBasicaZaraTexturizada5 from "@/assets/camiseta-basica-zara-texturizada-5.png.asset.json";
 import camisetaLisaZara2 from "@/assets/camiseta-lisa-zara-2.png.asset.json";
 import camisetaLisaZara3 from "@/assets/camiseta-lisa-zara-3.png.asset.json";
 import camisetaLisaZara4 from "@/assets/camiseta-lisa-zara-4.png.asset.json";
@@ -894,6 +899,7 @@ export const products: Product[] = [
   { slug: "moletom-sport-bmw-puma-cinza", title: "Moletom Sport BMW + Puma Cinza", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomSportBmwPumaCinza1, images: [moletomSportBmwPumaCinza1] },
   { slug: "blusa-cruzeiro", title: "Blusa Cruzeiro", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaCruzeiro1, images: [blusaCruzeiro1] },
   { slug: "blusa-atletico", title: "Blusa Atlético", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaAtletico1, images: [blusaAtletico1] },
+  { slug: "camiseta-basica-zara-texturizada", title: "Camiseta Básica Zara - Texturizada", price: "59,99", oldPrice: "159,99", installment: "5,99", off: "62% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaBasicaZaraTexturizada1.url, images: [camisetaBasicaZaraTexturizada1.url, camisetaBasicaZaraTexturizada2.url, camisetaBasicaZaraTexturizada3.url, camisetaBasicaZaraTexturizada4.url, camisetaBasicaZaraTexturizada5.url] },
   { slug: "camiseta-lisa-zara", title: "Camiseta Lisa Zara", price: "59,99", oldPrice: "159,99", installment: "5,99", off: "62% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLisaZara1.url, images: [camisetaLisaZara1.url, camisetaLisaZara2.url, camisetaLisaZara3.url, camisetaLisaZara4.url] },
   { slug: "camiseta-lacoste-vermelha-court-streets", title: "Camiseta Lacoste Vermelha Court to Streets", price: "79,99", oldPrice: "199,99", installment: "7,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 15, img: camisetaLacosteVermelhaCourtStreets1.url, images: [camisetaLacosteVermelhaCourtStreets1.url, camisetaLacosteVermelhaCourtStreets2.url, camisetaLacosteVermelhaCourtStreets3.url, camisetaLacosteVermelhaCourtStreets4.url] },
   { slug: "camiseta-lacoste-sportswear-branca", title: "Camiseta Lacoste Sportswear Branca", price: "59,99", oldPrice: "149,99", installment: "5,99", off: "60% OFF", kind: "clothing", category: "camisetas", sold: 1, stock: 20, img: camisetaLacosteSportswearBranca1.url, images: [camisetaLacosteSportswearBranca1.url, camisetaLacosteSportswearBranca2.url, camisetaLacosteSportswearBranca3.url, camisetaLacosteSportswearBranca4.url, camisetaLacosteSportswearBranca5.url] },
