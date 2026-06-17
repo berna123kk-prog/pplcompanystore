@@ -1424,6 +1424,7 @@ const kitLacosteBrancoMizunoFeatured: Product = {
 };
 
 export const featured = [
+  jaquetaMiamiOpen2026Featured,
   kitLacosteBrancoMizunoFeatured,
   brooksfieldFeatured,
   jaquetaNikeSportwearFeatured,
