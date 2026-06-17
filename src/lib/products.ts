@@ -1799,7 +1799,7 @@ export const kits = [kitLacoste2025Product, kitLacosteLuxoProduct, kitTommy2025P
 
 
   if (p.slug === "kit-tommy-velejador-2026-v3") {
-    return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "KIT COMPLETO TOMMY 2026 4 PEÇAS", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
+    return { ...p, slug: "kit-tommy-velejador-2026-v3-kits", title: "JAQUETA TOMMY VELEJADOR MODELO ANTIGO", img: kitHilfigerNavy1, images: [kitHilfigerNavy1, kitHilfigerNavy2] };
   }
   if (p.slug === "kit-nk-academy") {
     return { ...p, slug: "kit-nk-academy-kits", title: "KIT COMPLETO TOMMY 2026 4 PEÇAS", img: kitTommyVelejadorVermelho, images: undefined };
