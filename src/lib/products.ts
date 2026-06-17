@@ -1613,7 +1613,7 @@ const kitLacosteRedProduct: Product = {
 const kitLalaCompletoProduct: Product = {
   slug: "kit-lala-completo-kits",
   title: "KIT LALA COMPLETO 5 PEÇAS",
-  price: "339,99",
+  price: "379,99",
   oldPrice: "899,99",
   installment: "17,99",
   off: "80% OFF",
