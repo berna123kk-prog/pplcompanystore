@@ -1489,7 +1489,7 @@ import moletomMeioZiperTommy7 from "@/assets/moletom-meio-ziper-tommy-7.png.asse
 const jaquetaBasicaZaraFeatured: Product = {
   slug: "jaqueta-basica-zara-featured",
   title: "JAQUETA BÁSICA BRANCA - ZARA",
-  price: "149,99",
+  price: "189,99",
   oldPrice: "399,99",
   installment: "14,99",
   off: "63% OFF",
