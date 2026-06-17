@@ -1460,7 +1460,31 @@ const kitLacosteBrancoMizunoFeatured: Product = {
   images: [kitLacosteBrancoMizuno],
 };
 
+import moletomMeioZiperTommy1 from "@/assets/moletom-meio-ziper-tommy-1.png.asset.json";
+import moletomMeioZiperTommy2 from "@/assets/moletom-meio-ziper-tommy-2.png.asset.json";
+import moletomMeioZiperTommy3 from "@/assets/moletom-meio-ziper-tommy-3.png.asset.json";
+import moletomMeioZiperTommy4 from "@/assets/moletom-meio-ziper-tommy-4.png.asset.json";
+import moletomMeioZiperTommy5 from "@/assets/moletom-meio-ziper-tommy-5.png.asset.json";
+import moletomMeioZiperTommy6 from "@/assets/moletom-meio-ziper-tommy-6.png.asset.json";
+import moletomMeioZiperTommy7 from "@/assets/moletom-meio-ziper-tommy-7.png.asset.json";
+
+const moletomMeioZiperTommyFeatured: Product = {
+  slug: "moletom-meio-ziper-tommy-featured",
+  title: "Moletom Meio Zíper - Tommy Hilfiger",
+  price: "149,99",
+  oldPrice: "499,99",
+  installment: "14,99",
+  off: "70% OFF",
+  kind: "clothing",
+  category: "jaquetas-e-moletons",
+  sold: 1,
+  stock: 15,
+  img: moletomMeioZiperTommy1.url,
+  images: [moletomMeioZiperTommy1.url, moletomMeioZiperTommy2.url, moletomMeioZiperTommy3.url, moletomMeioZiperTommy4.url, moletomMeioZiperTommy5.url, moletomMeioZiperTommy6.url, moletomMeioZiperTommy7.url],
+};
+
 export const featured = [
+  moletomMeioZiperTommyFeatured,
   {
     slug: "chinelo-lacoste-original-featured",
     title: "Chinelo Lacoste - Original",
