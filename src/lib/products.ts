@@ -1343,6 +1343,25 @@ const kitLacosteLuxoProduct: Product = {
 import blusaPumaFerrari1 from "@/assets/blusa-puma-ferrari-1.png";
 import kitMizunoBranco2026Featured1 from "@/assets/kit-mizuno-branco-2026-featured-1.webp";
 import kitLacosteBermudaPoloFeatured1 from "@/assets/kit-lacoste-bermuda-polo-featured-1.png";
+import jaquetaMiamiOpen2026_1 from "@/assets/jaqueta-miami-open-2026-1.png.asset.json";
+import jaquetaMiamiOpen2026_2 from "@/assets/jaqueta-miami-open-2026-2.png.asset.json";
+import jaquetaMiamiOpen2026_3 from "@/assets/jaqueta-miami-open-2026-3.png.asset.json";
+import jaquetaMiamiOpen2026_4 from "@/assets/jaqueta-miami-open-2026-4.png.asset.json";
+
+const jaquetaMiamiOpen2026Featured: Product = {
+  slug: "jaqueta-miami-open-2026-featured",
+  title: "Jaqueta Lacoste Miami Open 2026",
+  price: "129,99",
+  oldPrice: "799,99",
+  installment: "12,99",
+  off: "83% OFF",
+  kind: "clothing",
+  category: "jaquetas-e-moletons",
+  sold: 1,
+  stock: 10,
+  img: jaquetaMiamiOpen2026_1.url,
+  images: [jaquetaMiamiOpen2026_1.url, jaquetaMiamiOpen2026_2.url, jaquetaMiamiOpen2026_3.url, jaquetaMiamiOpen2026_4.url],
+};
 
 const blusaPumaFerrariFeatured: Product = {
   slug: "blusa-puma-ferrari-featured",
