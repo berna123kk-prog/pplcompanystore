@@ -541,6 +541,10 @@ import jaquetaNkAcademyDriFitBranca1 from "@/assets/jaqueta-nk-academy-dri-fit-b
 import jaquetaNkAcademyDriFitBranca2 from "@/assets/jaqueta-nk-academy-dri-fit-branca-2.png";
 import jaquetaNikeSportswearLimitado1 from "@/assets/jaqueta-nike-sportswear-limitado-1.png";
 import brooksfildDeFrio1 from "@/assets/brooksfild-de-frio-1.png";
+import brooksfildDeFrioPreta from "@/assets/brooksfild-de-frio-preta.jpg.asset.json";
+import brooksfildDeFrioVerde from "@/assets/brooksfild-de-frio-verde.jpg.asset.json";
+import brooksfildDeFrioBranca from "@/assets/brooksfild-de-frio-branca.jpg.asset.json";
+import brooksfildDeFrioVermelha from "@/assets/brooksfild-de-frio-vermelha.jpg.asset.json";
 import blusaColabPumaFerrariLimitado1 from "@/assets/blusa-colab-puma-ferrari-limitado-1.png";
 import moletomSportBmwPumaCinza1 from "@/assets/moletom-sport-bmw-puma-cinza-1.png";
 import blusaCruzeiro1 from "@/assets/blusa-cruzeiro-1.png";
