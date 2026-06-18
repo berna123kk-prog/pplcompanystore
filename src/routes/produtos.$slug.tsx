@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-rout
 import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { TopBanner, Header, Footer, Section } from "@/components/storefront";
-import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product } from "@/lib/products";
+import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product, type ProductColor } from "@/lib/products";
 import { SIZE_LABELS } from "@/lib/size-labels";
 import { useCart } from "@/lib/cart";
 import { toast } from "sonner";
