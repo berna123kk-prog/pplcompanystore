@@ -154,8 +154,12 @@ export function Logo() {
 
 export function Header() {
   const [open, setOpen] = useState<string | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
   const { openCart, count } = useCart();
   return (
+    <>
+    <SearchDialog open={searchOpen} onClose={() => setSearchOpen(false)} />
+
     <header className="relative bg-sky-400">
       <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center justify-between">
         <Logo />
