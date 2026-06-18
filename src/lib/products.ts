@@ -754,6 +754,8 @@ export type CategorySlug =
   | "acessorios"
   | "perfumes";
 
+export type ProductColor = { name: string; img: string; hex: string };
+
 export type Product = {
   slug: string;
   title: string;
@@ -767,6 +769,7 @@ export type Product = {
   category: CategorySlug;
   sold?: number;
   stock?: number;
+  colors?: ProductColor[];
 };
 
 export const CLOTHING_CATEGORIES: CategorySlug[] = [
