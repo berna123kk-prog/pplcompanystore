@@ -1,8 +1,95 @@
 import { Link } from "@tanstack/react-router";
-import { Search, User, ShoppingBag, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { Search, User, ShoppingBag, ChevronDown, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Product } from "@/lib/products";
+import { allProducts } from "@/lib/products";
 import { useCart } from "@/lib/cart";
+import logoPpl from "@/assets/logo-ppl-v3.png";
+
+const normalize = (s: string) =>
+  s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+function SearchDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const [q, setQ] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    setQ("");
+    const t = setTimeout(() => inputRef.current?.focus(), 50);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [open, onClose]);
+
+  const results = useMemo(() => {
+    const term = normalize(q.trim());
+    if (!term) return [];
+    return allProducts
+      .filter((p) => normalize(p.title).includes(term))
+      .slice(0, 8);
+  }, [q]);
+
+  if (!open) return null;
+
+  return (
+    <div className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm" onClick={onClose}>
+      <div
+        className="mx-auto mt-16 md:mt-24 max-w-2xl bg-white rounded-md shadow-2xl overflow-hidden mx-3"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center gap-3 px-4 py-3 border-b border-sky-100">
+          <Search className="h-5 w-5 text-sky-700 shrink-0" />
+          <input
+            ref={inputRef}
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Buscar produtos..."
+            className="flex-1 bg-transparent outline-none text-sm text-sky-900 placeholder:text-slate-400"
+          />
+          <button onClick={onClose} aria-label="Fechar" className="text-slate-500 hover:text-slate-800">
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+        <div className="max-h-[60vh] overflow-y-auto">
+          {!q.trim() && (
+            <p className="px-4 py-8 text-center text-xs uppercase tracking-[0.15em] text-slate-400">
+              Digite para buscar
+            </p>
+          )}
+          {q.trim() && results.length === 0 && (
+            <p className="px-4 py-8 text-center text-xs uppercase tracking-[0.15em] text-slate-400">
+              Nenhum produto encontrado
+            </p>
+          )}
+          {results.map((p) => (
+            <Link
+              key={p.slug}
+              to="/produtos/$slug"
+              params={{ slug: p.slug }}
+              onClick={onClose}
+              className="flex items-center gap-3 px-4 py-3 hover:bg-sky-50 border-b border-sky-50 last:border-b-0"
+            >
+              <img src={p.img} alt={p.title} className="h-14 w-14 object-cover rounded bg-sky-50 shrink-0" />
+              <div className="flex-1 min-w-0">
+                <h4 className="text-[12px] font-bold uppercase tracking-[0.08em] text-sky-900 truncate">{p.title}</h4>
+                <p className="text-sky-700 font-extrabold text-sm">R$ {p.price}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 import logoPpl from "@/assets/logo-ppl-v3.png";
 
 const banners = [
