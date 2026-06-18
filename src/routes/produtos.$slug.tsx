@@ -115,6 +115,9 @@ function ProductPage() {
   const prev = () => setImgIdx((i) => (i - 1 + gallery.length) % gallery.length);
   const next = () => setImgIdx((i) => (i + 1) % gallery.length);
 
+  const colors = product.colors ?? [];
+  const activeColor = colors.find((c) => c.img === currentImage) ?? colors[0];
+
   useEffect(() => {
     setImgIdx(0);
   }, [product.slug]);
@@ -132,6 +135,7 @@ function ProductPage() {
     const sizeParts = [
       showClothing ? clothing : "",
       showShoe ? shoe : "",
+      activeColor?.name ?? "",
     ].filter(Boolean);
     addItem(
       {
