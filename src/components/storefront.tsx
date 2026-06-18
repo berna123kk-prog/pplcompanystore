@@ -90,7 +90,7 @@ function SearchDialog({ open, onClose }: { open: boolean; onClose: () => void })
   );
 }
 
-import logoPpl from "@/assets/logo-ppl-v3.png";
+
 
 const banners = [
   "DIRETO PARA SUA CASA",
