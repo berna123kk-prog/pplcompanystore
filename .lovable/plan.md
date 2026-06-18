@@ -1,30 +1,27 @@
-## Objetivo
-No produto **BROOKSFILD DE FRIO**, adicionar 4 opções de cor (Preta, Verde, Branca, Vermelho) usando as 4 fotos enviadas. Ao tocar numa cor, a imagem principal troca e a cor escolhida vai junto ao carrinho.
+# Busca de produtos funcional
 
-## Passos
+Tornar o ícone da lupa (Header) realmente funcional, abrindo uma busca que encontra produtos pelo nome digitado.
 
-1. **Subir 4 novas imagens** via `lovable-assets` (CDN):
-   - `brooksfild-de-frio-preta.jpg` ← IMG_…533_945 (preta)
-   - `brooksfild-de-frio-verde.jpg` ← IMG_…534_286 (verde)
-   - `brooksfild-de-frio-branca.jpg` ← IMG_…533_403 (branca)
-   - `brooksfild-de-frio-vermelha.jpg` ← IMG_…534_182 (vermelha)
+## O que será feito
 
-2. **`src/lib/products.ts`**
-   - Adicionar campo opcional ao tipo `Product`:
-     ```ts
-     colors?: { name: string; img: string; hex: string }[];
-     ```
-   - Atualizar o produto na linha 902 (`brooksfild-de-frio`) e também a versão "featured" (linha 1283) para:
-     - usar as 4 novas imagens em `images`
-     - definir `img` como a preta (primeira foto)
-     - preencher `colors` com as 4 cores apontando cada uma para sua imagem (hex: #000, #16a34a, #f5f5f0, #dc2626)
+1. **`src/components/storefront.tsx`**
+   - Adicionar estado `searchOpen` no `Header`.
+   - O botão da lupa passa a abrir um overlay (Dialog/Sheet) com um campo de busca focado automaticamente.
+   - Funciona tanto no desktop quanto no mobile.
 
-3. **`src/routes/produtos.$slug.tsx`**
-   - Novo estado `color` (default = primeira cor, se existir).
-   - Quando o usuário toca numa cor, atualizar `imgIdx` para o índice da imagem dessa cor (e vice-versa: clicar numa thumbnail seleciona a cor correspondente).
-   - Renderizar o seletor de cor logo acima do seletor de tamanho: swatches circulares (`h-9 w-9 rounded-full` com `background hex`, borda dupla quando ativo) + label "Cor: <nome>".
-   - Em `handleAddToCart`, incluir o nome da cor em `size` (ex: `"M / Preta"`).
+2. **Novo componente `SearchDialog`** (no mesmo arquivo ou em `src/components/search-dialog.tsx`)
+   - Input de texto controlado.
+   - Filtra a lista completa de produtos importada de `src/lib/products.ts` por `title` (normalizado: lowercase + remoção de acentos), correspondência por substring.
+   - Mostra até ~8 resultados com miniatura, título e preço.
+   - Cada resultado é um `<Link to="/produtos/$slug">` que fecha o overlay ao clicar.
+   - Mensagens: "Digite para buscar" (vazio) e "Nenhum produto encontrado" (sem matches).
+   - Fecha com ESC, clique fora ou botão X.
+
+3. **`src/lib/products.ts`**
+   - Exportar (se ainda não existir) um array agregado `allProducts` reunindo todas as listas já exportadas, para a busca varrer o catálogo inteiro. Nenhuma alteração de produto, preço ou categoria.
 
 ## Fora de escopo
-- Outros produtos, preço, estoque, categoria ou layout geral — nada muda.
-- Não é criado um produto novo; é uma adição ao produto existente.
+
+- Busca por categoria, tags, preço ou filtros avançados.
+- Página dedicada `/busca` — por ora apenas overlay.
+- Mudanças de layout do header, cores ou outros produtos.
