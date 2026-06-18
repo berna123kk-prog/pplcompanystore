@@ -541,6 +541,10 @@ import jaquetaNkAcademyDriFitBranca1 from "@/assets/jaqueta-nk-academy-dri-fit-b
 import jaquetaNkAcademyDriFitBranca2 from "@/assets/jaqueta-nk-academy-dri-fit-branca-2.png";
 import jaquetaNikeSportswearLimitado1 from "@/assets/jaqueta-nike-sportswear-limitado-1.png";
 import brooksfildDeFrio1 from "@/assets/brooksfild-de-frio-1.png";
+import brooksfildDeFrioPreta from "@/assets/brooksfild-de-frio-preta.jpg.asset.json";
+import brooksfildDeFrioVerde from "@/assets/brooksfild-de-frio-verde.jpg.asset.json";
+import brooksfildDeFrioBranca from "@/assets/brooksfild-de-frio-branca.jpg.asset.json";
+import brooksfildDeFrioVermelha from "@/assets/brooksfild-de-frio-vermelha.jpg.asset.json";
 import blusaColabPumaFerrariLimitado1 from "@/assets/blusa-colab-puma-ferrari-limitado-1.png";
 import moletomSportBmwPumaCinza1 from "@/assets/moletom-sport-bmw-puma-cinza-1.png";
 import blusaCruzeiro1 from "@/assets/blusa-cruzeiro-1.png";
@@ -754,6 +758,8 @@ export type CategorySlug =
   | "acessorios"
   | "perfumes";
 
+export type ProductColor = { name: string; img: string; hex: string };
+
 export type Product = {
   slug: string;
   title: string;
@@ -767,6 +773,7 @@ export type Product = {
   category: CategorySlug;
   sold?: number;
   stock?: number;
+  colors?: ProductColor[];
 };
 
 export const CLOTHING_CATEGORIES: CategorySlug[] = [
@@ -899,7 +906,7 @@ export const products: Product[] = [
   { slug: "jaqueta-nk-academy-dri-fit", title: "Jaqueta NK Academy Dri-FIT", price: "79,99", oldPrice: "199,99", installment: "7,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaNkAcademyDriFit1, images: [jaquetaNkAcademyDriFit1, jaquetaNkAcademyDriFit2] },
   { slug: "jaqueta-nk-academy-dri-fit-branca", title: "Jaqueta NK Academy Dri-FIT Branca", price: "79,99", oldPrice: "199,99", installment: "7,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaNkAcademyDriFitBranca1, images: [jaquetaNkAcademyDriFitBranca1, jaquetaNkAcademyDriFitBranca2] },
   { slug: "jaqueta-nike-sportswear-limitado", title: "Jaqueta Nike Sportswear (Limitado)", price: "119,99", oldPrice: "299,99", installment: "11,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: jaquetaNikeSportswearLimitado1, images: [jaquetaNikeSportswearLimitado1] },
-  { slug: "brooksfild-de-frio", title: "BROOKSFILD DE FRIO", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: brooksfildDeFrio1, images: [brooksfildDeFrio1] },
+  { slug: "brooksfild-de-frio", title: "BROOKSFILD DE FRIO", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: brooksfildDeFrioPreta.url, images: [brooksfildDeFrioPreta.url, brooksfildDeFrioVerde.url, brooksfildDeFrioBranca.url, brooksfildDeFrioVermelha.url], colors: [{ name: "Preta", img: brooksfildDeFrioPreta.url, hex: "#0a0a0a" }, { name: "Verde", img: brooksfildDeFrioVerde.url, hex: "#16a34a" }, { name: "Branca", img: brooksfildDeFrioBranca.url, hex: "#f5f5f0" }, { name: "Vermelha", img: brooksfildDeFrioVermelha.url, hex: "#dc2626" }] },
   { slug: "blusa-colab-puma-ferrari-limitado", title: "Blusa Colab Puma + Ferrari (Limitado)", price: "129,99", oldPrice: "329,99", installment: "12,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaColabPumaFerrariLimitado1, images: [blusaColabPumaFerrariLimitado1] },
   { slug: "moletom-sport-bmw-puma-cinza", title: "Moletom Sport BMW + Puma Cinza", price: "99,99", oldPrice: "249,99", installment: "9,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: moletomSportBmwPumaCinza1, images: [moletomSportBmwPumaCinza1] },
   { slug: "blusa-cruzeiro", title: "Blusa Cruzeiro", price: "89,99", oldPrice: "229,99", installment: "8,99", off: "60% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1, stock: 20, img: blusaCruzeiro1, images: [blusaCruzeiro1] },
@@ -1291,8 +1298,14 @@ const brooksfieldFeatured: Product = {
   category: "jaquetas-e-moletons",
   sold: 1820,
   stock: 10,
-  img: brooksfieldDeFrio,
-  images: [brooksfieldDeFrio],
+  img: brooksfildDeFrioPreta.url,
+  images: [brooksfildDeFrioPreta.url, brooksfildDeFrioVerde.url, brooksfildDeFrioBranca.url, brooksfildDeFrioVermelha.url],
+  colors: [
+    { name: "Preta", img: brooksfildDeFrioPreta.url, hex: "#0a0a0a" },
+    { name: "Verde", img: brooksfildDeFrioVerde.url, hex: "#16a34a" },
+    { name: "Branca", img: brooksfildDeFrioBranca.url, hex: "#f5f5f0" },
+    { name: "Vermelha", img: brooksfildDeFrioVermelha.url, hex: "#dc2626" },
+  ],
 };
 
 const jaquetaNikeSportwearFeatured: Product = {

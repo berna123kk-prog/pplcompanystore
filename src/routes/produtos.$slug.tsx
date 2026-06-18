@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-rout
 import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { TopBanner, Header, Footer, Section } from "@/components/storefront";
-import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product } from "@/lib/products";
+import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product, type ProductColor } from "@/lib/products";
 import { SIZE_LABELS } from "@/lib/size-labels";
 import { useCart } from "@/lib/cart";
 import { toast } from "sonner";
@@ -115,6 +115,9 @@ function ProductPage() {
   const prev = () => setImgIdx((i) => (i - 1 + gallery.length) % gallery.length);
   const next = () => setImgIdx((i) => (i + 1) % gallery.length);
 
+  const colors: ProductColor[] = product.colors ?? [];
+  const activeColor = colors.find((c) => c.img === currentImage) ?? colors[0];
+
   useEffect(() => {
     setImgIdx(0);
   }, [product.slug]);
@@ -132,6 +135,7 @@ function ProductPage() {
     const sizeParts = [
       showClothing ? clothing : "",
       showShoe ? shoe : "",
+      activeColor?.name ?? "",
     ].filter(Boolean);
     addItem(
       {
@@ -217,9 +221,35 @@ function ProductPage() {
             em até 12x de <span className="text-sky-900 font-bold">R$ {product.installment}</span>
           </p>
 
+          {colors.length > 0 && (
+            <div className="mt-7">
+              <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
+                Cor: <span className="text-sky-900">{activeColor?.name}</span>
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {colors.map((c) => {
+                  const active = c.name === activeColor?.name;
+                  const idx = gallery.indexOf(c.img);
+                  return (
+                    <button
+                      key={c.name}
+                      type="button"
+                      onClick={() => { if (idx >= 0) setImgIdx(idx); }}
+                      aria-label={c.name}
+                      title={c.name}
+                      className={`h-9 w-9 rounded-full border-2 transition ${active ? "border-sky-900 ring-2 ring-sky-900/30" : "border-sky-200 hover:border-sky-400"}`}
+                      style={{ backgroundColor: c.hex }}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           <div className="mt-7">
             <SizeSelector product={product} shoe={shoe} setShoe={setShoe} clothing={clothing} setClothing={setClothing} />
           </div>
+
 
           {product.kind !== "accessory" && (
             <div className="mt-6">
