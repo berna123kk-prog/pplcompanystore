@@ -221,9 +221,35 @@ function ProductPage() {
             em até 12x de <span className="text-sky-900 font-bold">R$ {product.installment}</span>
           </p>
 
+          {colors.length > 0 && (
+            <div className="mt-7">
+              <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
+                Cor: <span className="text-sky-900">{activeColor?.name}</span>
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {colors.map((c) => {
+                  const active = c.name === activeColor?.name;
+                  const idx = gallery.indexOf(c.img);
+                  return (
+                    <button
+                      key={c.name}
+                      type="button"
+                      onClick={() => { if (idx >= 0) setImgIdx(idx); }}
+                      aria-label={c.name}
+                      title={c.name}
+                      className={`h-9 w-9 rounded-full border-2 transition ${active ? "border-sky-900 ring-2 ring-sky-900/30" : "border-sky-200 hover:border-sky-400"}`}
+                      style={{ backgroundColor: c.hex }}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           <div className="mt-7">
             <SizeSelector product={product} shoe={shoe} setShoe={setShoe} clothing={clothing} setClothing={setClothing} />
           </div>
+
 
           {product.kind !== "accessory" && (
             <div className="mt-6">
