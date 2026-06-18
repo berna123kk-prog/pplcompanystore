@@ -195,7 +195,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-5 text-white">
-          <button aria-label="Buscar"><Search className="h-5 w-5" /></button>
+          <button aria-label="Buscar" onClick={() => setSearchOpen(true)}><Search className="h-5 w-5" /></button>
           <button aria-label="Conta"><User className="h-5 w-5" /></button>
           <button aria-label="Sacola" className="relative" onClick={openCart}>
             <ShoppingBag className="h-5 w-5" />
