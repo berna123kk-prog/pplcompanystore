@@ -1891,3 +1891,15 @@ export const CLOTHING_SIZES = ["P", "M", "G", "GG"];
 export function getProduct(slug: string) {
   return [...featured, ...products, ...sneakers, ...kits].find((p) => p.slug === slug);
 }
+
+export const allProducts: Product[] = (() => {
+  const seen = new Set<string>();
+  const out: Product[] = [];
+  for (const p of [...featured, ...kits, ...sneakers, ...products]) {
+    if (seen.has(p.slug)) continue;
+    seen.add(p.slug);
+    out.push(p);
+  }
+  return out;
+})();
+
