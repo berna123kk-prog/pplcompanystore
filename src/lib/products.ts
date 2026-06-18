@@ -1298,8 +1298,14 @@ const brooksfieldFeatured: Product = {
   category: "jaquetas-e-moletons",
   sold: 1820,
   stock: 10,
-  img: brooksfieldDeFrio,
-  images: [brooksfieldDeFrio],
+  img: brooksfildDeFrioPreta.url,
+  images: [brooksfildDeFrioPreta.url, brooksfildDeFrioVerde.url, brooksfildDeFrioBranca.url, brooksfildDeFrioVermelha.url],
+  colors: [
+    { name: "Preta", img: brooksfildDeFrioPreta.url, hex: "#0a0a0a" },
+    { name: "Verde", img: brooksfildDeFrioVerde.url, hex: "#16a34a" },
+    { name: "Branca", img: brooksfildDeFrioBranca.url, hex: "#f5f5f0" },
+    { name: "Vermelha", img: brooksfildDeFrioVermelha.url, hex: "#dc2626" },
+  ],
 };
 
 const jaquetaNikeSportwearFeatured: Product = {
