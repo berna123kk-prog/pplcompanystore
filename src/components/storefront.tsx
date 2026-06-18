@@ -254,8 +254,10 @@ export function Header() {
           <div className="h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
       </div>
     </header>
+    </>
   );
 }
+
 
 export function ProductCard({ p }: { p: Product }) {
   return (
