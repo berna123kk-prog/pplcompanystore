@@ -167,7 +167,67 @@ function ProductPage() {
   const [cep, setCep] = useState("");
   const showShoe = product.kind === "footwear" || product.kind === "kit";
   const showClothing = product.kind === "clothing" || product.kind === "kit";
-  const soldOutSizes = product.soldOutSizes ?? [];
+  // Admin / size overrides
+  const queryClient = useQueryClient();
+  const getOverridesFn = useServerFn(getSizeOverrides);
+  const getMyRoleFn = useServerFn(getMyRole);
+  const setSoldOutFn = useServerFn(setSoldOutSizes);
+
+  const overridesQuery = useQuery({
+    queryKey: ["size-overrides"],
+    queryFn: () => getOverridesFn(),
+    staleTime: 30_000,
+  });
+
+  const [hasSession, setHasSession] = useState(false);
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => setHasSession(!!data.session));
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => setHasSession(!!s));
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  const roleQuery = useQuery({
+    queryKey: ["my-role", hasSession],
+    queryFn: () => getMyRoleFn(),
+    enabled: hasSession,
+    staleTime: 60_000,
+  });
+  const isAdmin = roleQuery.data?.isAdmin ?? false;
+
+  const remoteSoldOut = overridesQuery.data?.overrides?.[product.slug];
+  const soldOutSizes = useMemo(
+    () => remoteSoldOut ?? product.soldOutSizes ?? [],
+    [remoteSoldOut, product.soldOutSizes],
+  );
+
+  const [editMode, setEditMode] = useState(false);
+
+  const saveMutation = useMutation({
+    mutationFn: (sizes: string[]) => setSoldOutFn({ data: { slug: product.slug, sizes } }),
+    onMutate: async (sizes) => {
+      await queryClient.cancelQueries({ queryKey: ["size-overrides"] });
+      const prev = queryClient.getQueryData<{ overrides: Record<string, string[]> }>(["size-overrides"]);
+      queryClient.setQueryData(["size-overrides"], (old: { overrides: Record<string, string[]> } | undefined) => ({
+        overrides: { ...(old?.overrides ?? {}), [product.slug]: sizes },
+      }));
+      return { prev };
+    },
+    onError: (err: Error, _vars, ctx) => {
+      if (ctx?.prev) queryClient.setQueryData(["size-overrides"], ctx.prev);
+      toast.error(err.message || "Erro ao salvar");
+    },
+    onSuccess: () => toast.success("Salvo", { duration: 1500 }),
+  });
+
+  const handleToggleSoldOut = useCallback(
+    (size: string) => {
+      const current = soldOutSizes;
+      const next = current.includes(size) ? current.filter((s) => s !== size) : [...current, size];
+      saveMutation.mutate(next);
+    },
+    [soldOutSizes, saveMutation],
+  );
+
   const pickDefault = (list: string[], preferred: string) =>
     !soldOutSizes.includes(preferred) ? preferred : (list.find((s) => !soldOutSizes.includes(s)) ?? preferred);
   const [shoe, setShoe] = useState(showShoe ? pickDefault(SHOE_SIZES, "38") : "");
