@@ -222,7 +222,7 @@ function ProductPage() {
   const handleToggleSoldOut = useCallback(
     (size: string) => {
       const current = soldOutSizes;
-      const next = current.includes(size) ? current.filter((s) => s !== size) : [...current, size];
+      const next = current.includes(size) ? current.filter((s: string) => s !== size) : [...current, size];
       saveMutation.mutate(next);
     },
     [soldOutSizes, saveMutation],
