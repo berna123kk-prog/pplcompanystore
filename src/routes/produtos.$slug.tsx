@@ -1,11 +1,16 @@
 import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-router";
-import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, ChevronLeft, ChevronRight, Pencil, Check } from "lucide-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
 import { TopBanner, Header, Footer, Section } from "@/components/storefront";
 import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product, type ProductColor } from "@/lib/products";
 import { SIZE_LABELS } from "@/lib/size-labels";
 import { useCart } from "@/lib/cart";
+import { getSizeOverrides, getMyRole, setSoldOutSizes } from "@/lib/admin.functions";
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+
 
 export const Route = createFileRoute("/produtos/$slug")({
   loader: ({ params }) => {
