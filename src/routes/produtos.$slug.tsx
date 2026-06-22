@@ -99,7 +99,7 @@ function SizeSelector({
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
             {product.kind === "kit" ? SIZE_LABELS.kitClothing : SIZE_LABELS.clothing}: <span className="text-sky-900">{clothing}</span>
           </p>
-          <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} />
+          <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} soldOut={product.soldOutSizes} />
         </div>
       )}
       {showShoe && (
@@ -107,7 +107,7 @@ function SizeSelector({
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
             {product.kind === "kit" ? SIZE_LABELS.kitFootwear : SIZE_LABELS.footwear}: <span className="text-sky-900">{shoe}</span>
           </p>
-          <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} />
+          <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} soldOut={product.soldOutSizes} />
         </div>
       )}
     </div>
