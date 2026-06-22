@@ -371,8 +371,39 @@ function ProductPage() {
           )}
 
           <div className="mt-7">
-            <SizeSelector product={product} shoe={shoe} setShoe={setShoe} clothing={clothing} setClothing={setClothing} />
+            {isAdmin && product.kind !== "accessory" && (
+              <div className="mb-3 flex items-center justify-between gap-2 p-2 border border-dashed border-sky-300 rounded-sm bg-sky-50/40">
+                <span className="text-[11px] uppercase tracking-wide font-bold text-sky-700">
+                  Modo admin {saveMutation.isPending && "(salvando…)"}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setEditMode((v) => !v)}
+                  className={`inline-flex items-center gap-1 h-8 px-3 text-[11px] font-bold uppercase rounded-sm border ${
+                    editMode ? "bg-emerald-600 text-white border-emerald-600" : "bg-white text-sky-900 border-sky-300"
+                  }`}
+                >
+                  {editMode ? <><Check className="w-3.5 h-3.5" /> Concluir</> : <><Pencil className="w-3.5 h-3.5" /> Editar estoque</>}
+                </button>
+              </div>
+            )}
+            <SizeSelector
+              product={product}
+              shoe={shoe}
+              setShoe={setShoe}
+              clothing={clothing}
+              setClothing={setClothing}
+              soldOut={soldOutSizes}
+              editMode={editMode && isAdmin}
+              onToggleSoldOut={handleToggleSoldOut}
+            />
+            {editMode && isAdmin && (
+              <p className="mt-2 text-[11px] text-slate-500">
+                Clique nos tamanhos para alternar disponível / esgotado. As alterações são salvas automaticamente.
+              </p>
+            )}
           </div>
+
 
 
           {product.kind !== "accessory" && (
