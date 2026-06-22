@@ -119,12 +119,18 @@ function SizeSelector({
   setShoe,
   clothing,
   setClothing,
+  soldOut,
+  editMode,
+  onToggleSoldOut,
 }: {
   product: Product;
   shoe: string;
   setShoe: (s: string) => void;
   clothing: string;
   setClothing: (s: string) => void;
+  soldOut: string[];
+  editMode: boolean;
+  onToggleSoldOut: (s: string) => void;
 }) {
   const showShoe = product.kind === "footwear" || product.kind === "kit";
   const showClothing = product.kind === "clothing" || product.kind === "kit";
@@ -138,7 +144,7 @@ function SizeSelector({
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
             {product.kind === "kit" ? SIZE_LABELS.kitClothing : SIZE_LABELS.clothing}: <span className="text-sky-900">{clothing}</span>
           </p>
-          <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} soldOut={product.soldOutSizes} />
+          <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} soldOut={soldOut} editMode={editMode} onToggleSoldOut={onToggleSoldOut} />
         </div>
       )}
       {showShoe && (
@@ -146,12 +152,13 @@ function SizeSelector({
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
             {product.kind === "kit" ? SIZE_LABELS.kitFootwear : SIZE_LABELS.footwear}: <span className="text-sky-900">{shoe}</span>
           </p>
-          <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} soldOut={product.soldOutSizes} />
+          <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} soldOut={soldOut} editMode={editMode} onToggleSoldOut={onToggleSoldOut} />
         </div>
       )}
     </div>
   );
 }
+
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
