@@ -121,8 +121,11 @@ function ProductPage() {
   const [cep, setCep] = useState("");
   const showShoe = product.kind === "footwear" || product.kind === "kit";
   const showClothing = product.kind === "clothing" || product.kind === "kit";
-  const [shoe, setShoe] = useState(showShoe ? "38" : "");
-  const [clothing, setClothing] = useState(showClothing ? "M" : "");
+  const soldOutSizes = product.soldOutSizes ?? [];
+  const firstAvailable = (list: string[], fallback: string) =>
+    list.find((s) => !soldOutSizes.includes(s)) ?? fallback;
+  const [shoe, setShoe] = useState(showShoe ? firstAvailable(SHOE_SIZES, "38") : "");
+  const [clothing, setClothing] = useState(showClothing ? firstAvailable(CLOTHING_SIZES, "M") : "");
   const gallery = product.images && product.images.length > 0 ? product.images : [product.img];
   const [imgIdx, setImgIdx] = useState(0);
   const currentImage = gallery[imgIdx] ?? gallery[0] ?? product.img;
