@@ -1432,7 +1432,11 @@ const jaquetaMiamiOpen2026Featured: Product = {
   sold: 1,
   stock: 10,
   img: jaquetaMiamiOpen2026_1.url,
-  images: [jaquetaMiamiOpen2026_1.url, jaquetaMiamiOpen2026_2.url, jaquetaMiamiOpen2026_3.url, jaquetaMiamiOpen2026_4.url],
+  images: [jaquetaMiamiOpen2026_1.url, jaquetaMiamiOpen2026_2.url, jaquetaMiamiOpen2026_3.url, jaquetaMiamiOpen2026_4.url, jaquetaMiamiOpen2026Branca1.url, jaquetaMiamiOpen2026Branca2.url, jaquetaMiamiOpen2026Branca3.url, jaquetaMiamiOpen2026Branca4.url, jaquetaMiamiOpen2026Branca5.url],
+  colors: [
+    { name: "Azul", img: jaquetaMiamiOpen2026_1.url, hex: "#1e3a5f" },
+    { name: "Branca", img: jaquetaMiamiOpen2026Branca1.url, hex: "#f5f5f0" },
+  ],
 };
 
 const blusaPumaFerrariFeatured: Product = {
