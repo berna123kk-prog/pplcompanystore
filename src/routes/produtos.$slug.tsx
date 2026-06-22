@@ -43,12 +43,45 @@ export const Route = createFileRoute("/produtos/$slug")({
   },
 });
 
-function SizeGrid({ sizes, value, onChange, soldOut = [] }: { sizes: string[]; value: string; onChange: (s: string) => void; soldOut?: string[] }) {
+function SizeGrid({
+  sizes,
+  value,
+  onChange,
+  soldOut = [],
+  editMode = false,
+  onToggleSoldOut,
+}: {
+  sizes: string[];
+  value: string;
+  onChange: (s: string) => void;
+  soldOut?: string[];
+  editMode?: boolean;
+  onToggleSoldOut?: (s: string) => void;
+}) {
   return (
     <div className="flex flex-wrap gap-2">
       {sizes.map((s) => {
         const active = s === value;
         const isSoldOut = soldOut.includes(s);
+
+        if (editMode) {
+          return (
+            <button
+              key={s}
+              type="button"
+              onClick={() => onToggleSoldOut?.(s)}
+              title={isSoldOut ? "Clique para marcar como disponível" : "Clique para marcar como esgotado"}
+              className={`min-w-[44px] h-11 px-3 text-[11px] font-bold uppercase border-2 rounded-sm transition ${
+                isSoldOut
+                  ? "line-through text-slate-400 border-red-300 bg-red-50"
+                  : "text-sky-900 border-emerald-400 bg-emerald-50 hover:border-emerald-600"
+              }`}
+            >
+              {s}
+            </button>
+          );
+        }
+
         if (isSoldOut) {
           return (
             <button
@@ -78,6 +111,7 @@ function SizeGrid({ sizes, value, onChange, soldOut = [] }: { sizes: string[]; v
     </div>
   );
 }
+
 
 function SizeSelector({
   product,
