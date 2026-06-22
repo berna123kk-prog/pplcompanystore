@@ -1382,6 +1382,11 @@ import jaquetaMiamiOpen2026_1 from "@/assets/jaqueta-miami-open-2026-1.png.asset
 import jaquetaMiamiOpen2026_2 from "@/assets/jaqueta-miami-open-2026-2.png.asset.json";
 import jaquetaMiamiOpen2026_3 from "@/assets/jaqueta-miami-open-2026-3.png.asset.json";
 import jaquetaMiamiOpen2026_4 from "@/assets/jaqueta-miami-open-2026-4.png.asset.json";
+import jaquetaMiamiOpen2026Branca1 from "@/assets/jaqueta-miami-open-2026-branca-1.png.asset.json";
+import jaquetaMiamiOpen2026Branca2 from "@/assets/jaqueta-miami-open-2026-branca-2.png.asset.json";
+import jaquetaMiamiOpen2026Branca3 from "@/assets/jaqueta-miami-open-2026-branca-3.png.asset.json";
+import jaquetaMiamiOpen2026Branca4 from "@/assets/jaqueta-miami-open-2026-branca-4.png.asset.json";
+import jaquetaMiamiOpen2026Branca5 from "@/assets/jaqueta-miami-open-2026-branca-5.png.asset.json";
 import camisetaLacosteJacareGrande1 from "@/assets/camiseta-lacoste-jacare-grande-1.png.asset.json";
 import camisetaLacosteJacareGrande2 from "@/assets/camiseta-lacoste-jacare-grande-2.png.asset.json";
 import camisetaLacosteJacareGrande3 from "@/assets/camiseta-lacoste-jacare-grande-3.png.asset.json";
@@ -1427,7 +1432,11 @@ const jaquetaMiamiOpen2026Featured: Product = {
   sold: 1,
   stock: 10,
   img: jaquetaMiamiOpen2026_1.url,
-  images: [jaquetaMiamiOpen2026_1.url, jaquetaMiamiOpen2026_2.url, jaquetaMiamiOpen2026_3.url, jaquetaMiamiOpen2026_4.url],
+  images: [jaquetaMiamiOpen2026_1.url, jaquetaMiamiOpen2026_2.url, jaquetaMiamiOpen2026_3.url, jaquetaMiamiOpen2026_4.url, jaquetaMiamiOpen2026Branca1.url, jaquetaMiamiOpen2026Branca2.url, jaquetaMiamiOpen2026Branca3.url, jaquetaMiamiOpen2026Branca4.url, jaquetaMiamiOpen2026Branca5.url],
+  colors: [
+    { name: "Azul", img: jaquetaMiamiOpen2026_1.url, hex: "#1e3a5f" },
+    { name: "Branca", img: jaquetaMiamiOpen2026Branca1.url, hex: "#f5f5f0" },
+  ],
 };
 
 const blusaPumaFerrariFeatured: Product = {
