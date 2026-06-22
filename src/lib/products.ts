@@ -774,6 +774,7 @@ export type Product = {
   sold?: number;
   stock?: number;
   colors?: ProductColor[];
+  soldOutSizes?: string[];
 };
 
 export const CLOTHING_CATEGORIES: CategorySlug[] = [

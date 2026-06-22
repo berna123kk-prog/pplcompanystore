@@ -38,11 +38,26 @@ export const Route = createFileRoute("/produtos/$slug")({
   },
 });
 
-function SizeGrid({ sizes, value, onChange }: { sizes: string[]; value: string; onChange: (s: string) => void }) {
+function SizeGrid({ sizes, value, onChange, soldOut = [] }: { sizes: string[]; value: string; onChange: (s: string) => void; soldOut?: string[] }) {
   return (
     <div className="flex flex-wrap gap-2">
       {sizes.map((s) => {
         const active = s === value;
+        const isSoldOut = soldOut.includes(s);
+        if (isSoldOut) {
+          return (
+            <button
+              key={s}
+              type="button"
+              disabled
+              aria-disabled="true"
+              title="Esgotado"
+              className="min-w-[44px] h-11 px-3 text-[11px] font-bold uppercase border rounded-sm line-through text-slate-400 border-slate-200 bg-slate-100/50 cursor-not-allowed"
+            >
+              {s}
+            </button>
+          );
+        }
         return (
           <button
             key={s}
@@ -84,7 +99,7 @@ function SizeSelector({
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
             {product.kind === "kit" ? SIZE_LABELS.kitClothing : SIZE_LABELS.clothing}: <span className="text-sky-900">{clothing}</span>
           </p>
-          <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} />
+          <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} soldOut={product.soldOutSizes} />
         </div>
       )}
       {showShoe && (
@@ -92,7 +107,7 @@ function SizeSelector({
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
             {product.kind === "kit" ? SIZE_LABELS.kitFootwear : SIZE_LABELS.footwear}: <span className="text-sky-900">{shoe}</span>
           </p>
-          <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} />
+          <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} soldOut={product.soldOutSizes} />
         </div>
       )}
     </div>
@@ -106,8 +121,11 @@ function ProductPage() {
   const [cep, setCep] = useState("");
   const showShoe = product.kind === "footwear" || product.kind === "kit";
   const showClothing = product.kind === "clothing" || product.kind === "kit";
-  const [shoe, setShoe] = useState(showShoe ? "38" : "");
-  const [clothing, setClothing] = useState(showClothing ? "M" : "");
+  const soldOutSizes = product.soldOutSizes ?? [];
+  const pickDefault = (list: string[], preferred: string) =>
+    !soldOutSizes.includes(preferred) ? preferred : (list.find((s) => !soldOutSizes.includes(s)) ?? preferred);
+  const [shoe, setShoe] = useState(showShoe ? pickDefault(SHOE_SIZES, "38") : "");
+  const [clothing, setClothing] = useState(showClothing ? pickDefault(CLOTHING_SIZES, "M") : "");
   const gallery = product.images && product.images.length > 0 ? product.images : [product.img];
   const [imgIdx, setImgIdx] = useState(0);
   const currentImage = gallery[imgIdx] ?? gallery[0] ?? product.img;
