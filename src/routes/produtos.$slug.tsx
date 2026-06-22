@@ -1,11 +1,16 @@
 import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-router";
-import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Minus, Plus, Truck, ShieldCheck, RefreshCw, Headphones, Package, ChevronLeft, ChevronRight, Pencil, Check } from "lucide-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
 import { TopBanner, Header, Footer, Section } from "@/components/storefront";
 import { getProduct, products, SHOE_SIZES, CLOTHING_SIZES, type Product, type ProductColor } from "@/lib/products";
 import { SIZE_LABELS } from "@/lib/size-labels";
 import { useCart } from "@/lib/cart";
+import { getSizeOverrides, getMyRole, setSoldOutSizes } from "@/lib/admin.functions";
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+
 
 export const Route = createFileRoute("/produtos/$slug")({
   loader: ({ params }) => {
@@ -38,12 +43,45 @@ export const Route = createFileRoute("/produtos/$slug")({
   },
 });
 
-function SizeGrid({ sizes, value, onChange, soldOut = [] }: { sizes: string[]; value: string; onChange: (s: string) => void; soldOut?: string[] }) {
+function SizeGrid({
+  sizes,
+  value,
+  onChange,
+  soldOut = [],
+  editMode = false,
+  onToggleSoldOut,
+}: {
+  sizes: string[];
+  value: string;
+  onChange: (s: string) => void;
+  soldOut?: string[];
+  editMode?: boolean;
+  onToggleSoldOut?: (s: string) => void;
+}) {
   return (
     <div className="flex flex-wrap gap-2">
       {sizes.map((s) => {
         const active = s === value;
         const isSoldOut = soldOut.includes(s);
+
+        if (editMode) {
+          return (
+            <button
+              key={s}
+              type="button"
+              onClick={() => onToggleSoldOut?.(s)}
+              title={isSoldOut ? "Clique para marcar como disponível" : "Clique para marcar como esgotado"}
+              className={`min-w-[44px] h-11 px-3 text-[11px] font-bold uppercase border-2 rounded-sm transition ${
+                isSoldOut
+                  ? "line-through text-slate-400 border-red-300 bg-red-50"
+                  : "text-sky-900 border-emerald-400 bg-emerald-50 hover:border-emerald-600"
+              }`}
+            >
+              {s}
+            </button>
+          );
+        }
+
         if (isSoldOut) {
           return (
             <button
@@ -74,18 +112,25 @@ function SizeGrid({ sizes, value, onChange, soldOut = [] }: { sizes: string[]; v
   );
 }
 
+
 function SizeSelector({
   product,
   shoe,
   setShoe,
   clothing,
   setClothing,
+  soldOut,
+  editMode,
+  onToggleSoldOut,
 }: {
   product: Product;
   shoe: string;
   setShoe: (s: string) => void;
   clothing: string;
   setClothing: (s: string) => void;
+  soldOut: string[];
+  editMode: boolean;
+  onToggleSoldOut: (s: string) => void;
 }) {
   const showShoe = product.kind === "footwear" || product.kind === "kit";
   const showClothing = product.kind === "clothing" || product.kind === "kit";
@@ -99,7 +144,7 @@ function SizeSelector({
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
             {product.kind === "kit" ? SIZE_LABELS.kitClothing : SIZE_LABELS.clothing}: <span className="text-sky-900">{clothing}</span>
           </p>
-          <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} soldOut={product.soldOutSizes} />
+          <SizeGrid sizes={CLOTHING_SIZES} value={clothing} onChange={setClothing} soldOut={soldOut} editMode={editMode} onToggleSoldOut={onToggleSoldOut} />
         </div>
       )}
       {showShoe && (
@@ -107,12 +152,13 @@ function SizeSelector({
           <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
             {product.kind === "kit" ? SIZE_LABELS.kitFootwear : SIZE_LABELS.footwear}: <span className="text-sky-900">{shoe}</span>
           </p>
-          <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} soldOut={product.soldOutSizes} />
+          <SizeGrid sizes={SHOE_SIZES} value={shoe} onChange={setShoe} soldOut={soldOut} editMode={editMode} onToggleSoldOut={onToggleSoldOut} />
         </div>
       )}
     </div>
   );
 }
+
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
@@ -121,7 +167,67 @@ function ProductPage() {
   const [cep, setCep] = useState("");
   const showShoe = product.kind === "footwear" || product.kind === "kit";
   const showClothing = product.kind === "clothing" || product.kind === "kit";
-  const soldOutSizes = product.soldOutSizes ?? [];
+  // Admin / size overrides
+  const queryClient = useQueryClient();
+  const getOverridesFn = useServerFn(getSizeOverrides);
+  const getMyRoleFn = useServerFn(getMyRole);
+  const setSoldOutFn = useServerFn(setSoldOutSizes);
+
+  const overridesQuery = useQuery({
+    queryKey: ["size-overrides"],
+    queryFn: () => getOverridesFn(),
+    staleTime: 30_000,
+  });
+
+  const [hasSession, setHasSession] = useState(false);
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => setHasSession(!!data.session));
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => setHasSession(!!s));
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  const roleQuery = useQuery({
+    queryKey: ["my-role", hasSession],
+    queryFn: () => getMyRoleFn(),
+    enabled: hasSession,
+    staleTime: 60_000,
+  });
+  const isAdmin = roleQuery.data?.isAdmin ?? false;
+
+  const remoteSoldOut = overridesQuery.data?.overrides?.[product.slug];
+  const soldOutSizes = useMemo(
+    () => remoteSoldOut ?? product.soldOutSizes ?? [],
+    [remoteSoldOut, product.soldOutSizes],
+  );
+
+  const [editMode, setEditMode] = useState(false);
+
+  const saveMutation = useMutation({
+    mutationFn: (sizes: string[]) => setSoldOutFn({ data: { slug: product.slug, sizes } }),
+    onMutate: async (sizes) => {
+      await queryClient.cancelQueries({ queryKey: ["size-overrides"] });
+      const prev = queryClient.getQueryData<{ overrides: Record<string, string[]> }>(["size-overrides"]);
+      queryClient.setQueryData(["size-overrides"], (old: { overrides: Record<string, string[]> } | undefined) => ({
+        overrides: { ...(old?.overrides ?? {}), [product.slug]: sizes },
+      }));
+      return { prev };
+    },
+    onError: (err: Error, _vars, ctx) => {
+      if (ctx?.prev) queryClient.setQueryData(["size-overrides"], ctx.prev);
+      toast.error(err.message || "Erro ao salvar");
+    },
+    onSuccess: () => toast.success("Salvo", { duration: 1500 }),
+  });
+
+  const handleToggleSoldOut = useCallback(
+    (size: string) => {
+      const current = soldOutSizes;
+      const next = current.includes(size) ? current.filter((s: string) => s !== size) : [...current, size];
+      saveMutation.mutate(next);
+    },
+    [soldOutSizes, saveMutation],
+  );
+
   const pickDefault = (list: string[], preferred: string) =>
     !soldOutSizes.includes(preferred) ? preferred : (list.find((s) => !soldOutSizes.includes(s)) ?? preferred);
   const [shoe, setShoe] = useState(showShoe ? pickDefault(SHOE_SIZES, "38") : "");
@@ -265,8 +371,39 @@ function ProductPage() {
           )}
 
           <div className="mt-7">
-            <SizeSelector product={product} shoe={shoe} setShoe={setShoe} clothing={clothing} setClothing={setClothing} />
+            {isAdmin && product.kind !== "accessory" && (
+              <div className="mb-3 flex items-center justify-between gap-2 p-2 border border-dashed border-sky-300 rounded-sm bg-sky-50/40">
+                <span className="text-[11px] uppercase tracking-wide font-bold text-sky-700">
+                  Modo admin {saveMutation.isPending && "(salvando…)"}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setEditMode((v) => !v)}
+                  className={`inline-flex items-center gap-1 h-8 px-3 text-[11px] font-bold uppercase rounded-sm border ${
+                    editMode ? "bg-emerald-600 text-white border-emerald-600" : "bg-white text-sky-900 border-sky-300"
+                  }`}
+                >
+                  {editMode ? <><Check className="w-3.5 h-3.5" /> Concluir</> : <><Pencil className="w-3.5 h-3.5" /> Editar estoque</>}
+                </button>
+              </div>
+            )}
+            <SizeSelector
+              product={product}
+              shoe={shoe}
+              setShoe={setShoe}
+              clothing={clothing}
+              setClothing={setClothing}
+              soldOut={soldOutSizes}
+              editMode={editMode && isAdmin}
+              onToggleSoldOut={handleToggleSoldOut}
+            />
+            {editMode && isAdmin && (
+              <p className="mt-2 text-[11px] text-slate-500">
+                Clique nos tamanhos para alternar disponível / esgotado. As alterações são salvas automaticamente.
+              </p>
+            )}
           </div>
+
 
 
           {product.kind !== "accessory" && (
