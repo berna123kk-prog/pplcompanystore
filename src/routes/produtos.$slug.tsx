@@ -38,11 +38,26 @@ export const Route = createFileRoute("/produtos/$slug")({
   },
 });
 
-function SizeGrid({ sizes, value, onChange }: { sizes: string[]; value: string; onChange: (s: string) => void }) {
+function SizeGrid({ sizes, value, onChange, soldOut = [] }: { sizes: string[]; value: string; onChange: (s: string) => void; soldOut?: string[] }) {
   return (
     <div className="flex flex-wrap gap-2">
       {sizes.map((s) => {
         const active = s === value;
+        const isSoldOut = soldOut.includes(s);
+        if (isSoldOut) {
+          return (
+            <button
+              key={s}
+              type="button"
+              disabled
+              aria-disabled="true"
+              title="Esgotado"
+              className="min-w-[44px] h-11 px-3 text-[11px] font-bold uppercase border rounded-sm line-through text-slate-400 border-slate-200 bg-slate-100/50 cursor-not-allowed"
+            >
+              {s}
+            </button>
+          );
+        }
         return (
           <button
             key={s}
