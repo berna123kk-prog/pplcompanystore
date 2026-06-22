@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StatusDominioRouteImport } from './routes/status-dominio'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PedidoConfirmadoRouteImport } from './routes/pedido-confirmado'
 import { Route as CheckoutRouteImport } from './routes/checkout'
@@ -16,6 +17,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProdutosSlugRouteImport } from './routes/produtos.$slug'
 import { Route as ColecoesSlugRouteImport } from './routes/colecoes.$slug'
 
+const StatusDominioRoute = StatusDominioRouteImport.update({
+  id: '/status-dominio',
+  path: '/status-dominio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/checkout': typeof CheckoutRoute
   '/pedido-confirmado': typeof PedidoConfirmadoRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/status-dominio': typeof StatusDominioRoute
   '/colecoes/$slug': typeof ColecoesSlugRoute
   '/produtos/$slug': typeof ProdutosSlugRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/checkout': typeof CheckoutRoute
   '/pedido-confirmado': typeof PedidoConfirmadoRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/status-dominio': typeof StatusDominioRoute
   '/colecoes/$slug': typeof ColecoesSlugRoute
   '/produtos/$slug': typeof ProdutosSlugRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/checkout': typeof CheckoutRoute
   '/pedido-confirmado': typeof PedidoConfirmadoRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/status-dominio': typeof StatusDominioRoute
   '/colecoes/$slug': typeof ColecoesSlugRoute
   '/produtos/$slug': typeof ProdutosSlugRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/checkout'
     | '/pedido-confirmado'
     | '/sitemap.xml'
+    | '/status-dominio'
     | '/colecoes/$slug'
     | '/produtos/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/checkout'
     | '/pedido-confirmado'
     | '/sitemap.xml'
+    | '/status-dominio'
     | '/colecoes/$slug'
     | '/produtos/$slug'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/checkout'
     | '/pedido-confirmado'
     | '/sitemap.xml'
+    | '/status-dominio'
     | '/colecoes/$slug'
     | '/produtos/$slug'
   fileRoutesById: FileRoutesById
@@ -104,12 +116,20 @@ export interface RootRouteChildren {
   CheckoutRoute: typeof CheckoutRoute
   PedidoConfirmadoRoute: typeof PedidoConfirmadoRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  StatusDominioRoute: typeof StatusDominioRoute
   ColecoesSlugRoute: typeof ColecoesSlugRoute
   ProdutosSlugRoute: typeof ProdutosSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/status-dominio': {
+      id: '/status-dominio'
+      path: '/status-dominio'
+      fullPath: '/status-dominio'
+      preLoaderRoute: typeof StatusDominioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -160,19 +180,10 @@ const rootRouteChildren: RootRouteChildren = {
   CheckoutRoute: CheckoutRoute,
   PedidoConfirmadoRoute: PedidoConfirmadoRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  StatusDominioRoute: StatusDominioRoute,
   ColecoesSlugRoute: ColecoesSlugRoute,
   ProdutosSlugRoute: ProdutosSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
