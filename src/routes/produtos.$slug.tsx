@@ -240,10 +240,15 @@ function ProductPage() {
   const next = () => setImgIdx((i) => (i + 1) % gallery.length);
 
   const colors: ProductColor[] = product.colors ?? [];
-  const activeColor = colors.find((c) => c.img === currentImage) ?? colors[0];
+  const [selectedColorName, setSelectedColorName] = useState<string | null>(null);
+  const activeColor =
+    colors.find((c) => c.name === selectedColorName) ??
+    colors.find((c) => c.img === currentImage) ??
+    colors[0];
 
   useEffect(() => {
     setImgIdx(0);
+    setSelectedColorName(null);
   }, [product.slug]);
 
   useEffect(() => {
