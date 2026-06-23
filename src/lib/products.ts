@@ -780,6 +780,7 @@ export type Product = {
   sold?: number;
   stock?: number;
   colors?: ProductColor[];
+  variantLabel?: string;
   soldOutSizes?: string[];
 };
 
