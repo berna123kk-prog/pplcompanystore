@@ -348,7 +348,7 @@ function ProductPage() {
           {colors.length > 0 && (
             <div className="mt-7">
               <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-sky-700 mb-3">
-                Cor: <span className="text-sky-900">{activeColor?.name}</span>
+                {product.variantLabel ?? "Cor"}: <span className="text-sky-900">{activeColor?.name}</span>
               </p>
               <div className="flex flex-wrap gap-3">
                 {colors.map((c) => {
