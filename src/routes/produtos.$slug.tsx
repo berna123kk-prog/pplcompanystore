@@ -258,7 +258,25 @@ function ProductPage() {
   const stock = product.stock ?? 10;
   const stockPct = Math.max(10, Math.min(100, (stock / 30) * 100));
 
-  const related = products.filter((p) => p.slug !== product.slug).slice(0, 6);
+  const related = (() => {
+    const others = products.filter((p) => p.slug !== product.slug);
+    const sameCategory = others.filter((p) => p.category === product.category);
+    const sameKind = others.filter(
+      (p) => p.kind === product.kind && p.category !== product.category,
+    );
+    const rest = others.filter(
+      (p) => p.category !== product.category && p.kind !== product.kind,
+    );
+    const seen = new Set<string>();
+    const out: typeof others = [];
+    for (const p of [...sameCategory, ...sameKind, ...rest]) {
+      if (seen.has(p.slug)) continue;
+      seen.add(p.slug);
+      out.push(p);
+      if (out.length === 6) break;
+    }
+    return out;
+  })();
 
   const handleAddToCart = () => {
     const sizeParts = [

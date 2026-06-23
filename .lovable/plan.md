@@ -1,23 +1,23 @@
-# Adicionar opção de boné Branco/Preto nos dois kits Mizuno
+## Objetivo
+Fazer a seção "Produtos Relacionados" (na página de cada produto) mostrar sempre itens parecidos com o produto em destaque, em vez dos 6 primeiros produtos quaisquer.
 
-## Problema
-1. Existem **dois** produtos com o título "KIT COMPLETO MIZUNO 4 PEÇAS":
-   - `kit-mizuno-branco-2026-featured` (já tem o seletor adicionado)
-   - `kit-completo-mizuno-kits` (sem seletor) ← é o que você está vendo agora
-2. No kit que já tem o seletor, **não dá para selecionar "Boné Preto"** porque a página identifica a variante ativa pela imagem (`colors.find(c => c.img === currentImage)`). Como as duas variantes apontam para a mesma imagem, ele sempre marca a primeira (Branco) como ativa.
+## Mudança
+Arquivo: `src/routes/produtos.$slug.tsx` (linha 261)
 
-## Mudanças
+Hoje:
+```ts
+const related = products.filter((p) => p.slug !== product.slug).slice(0, 6);
+```
 
-**1. `src/lib/products.ts`** — adicionar o mesmo `variantLabel: "Boné"` + `colors` (Branco/Preto) no produto `kit-completo-mizuno-kits` (linha 1847).
+Passar a priorizar produtos da **mesma categoria** do produto em destaque, com fallback para a mesma `kind` (clothing / kit / sneaker / accessory / etc.) caso falte item, e por fim completar com outros produtos para sempre ter 6 cards:
 
-**2. `src/routes/produtos.$slug.tsx`** — corrigir a seleção de variante:
-- Adicionar `const [selectedColorName, setSelectedColorName] = useState<string | null>(null)`.
-- `activeColor`: usar `colors.find(c => c.name === selectedColorName)` primeiro, com fallback para `colors.find(c => c.img === currentImage) ?? colors[0]`.
-- No `onClick` do botão da variante, chamar `setSelectedColorName(c.name)` além do `setImgIdx` atual.
-- Resetar `selectedColorName` quando o produto muda (efeito ligado ao `slug`).
+1. Filtra produtos com `p.category === product.category` (exceto o próprio).
+2. Se sobrar menos de 6, completa com produtos da mesma `kind`.
+3. Se ainda sobrar menos de 6, completa com o restante do catálogo.
+4. Embaralha levemente (ordem estável por slug) e corta em 6.
 
-Assim, mesmo quando duas variantes compartilham a imagem, cada uma pode ser selecionada visualmente.
+Resultado: na página de uma jaqueta aparecem outras jaquetas/moletons; na página de um kit aparecem outros kits; na de um tênis, outros sneakers; etc.
 
 ## Fora de escopo
-- Carrinho/checkout não persistem a variante escolhida (não existe carrinho no projeto).
-- Não vou unificar/deduplicar os dois produtos Mizuno — pode ser intencional ter dois.
+- Não muda layout, título da seção, nem o componente `Section`.
+- Não mexe em `src/lib/products.ts`.
