@@ -1,6 +1,12 @@
 import kitLcstSportswear from "@/assets/kit-lcst-sportswear.png";
 import kitLcstFeatured from "@/assets/kit-lcst-featured.png";
 import kitPma5Pecas from "@/assets/kit-pma-5-pecas.png";
+import kitConjuntoTenisClub1 from "@/assets/kit-conjunto-tenis-club-1.png.asset.json";
+import kitConjuntoTenisClub2 from "@/assets/kit-conjunto-tenis-club-2.png.asset.json";
+import kitConjuntoTenisClub3 from "@/assets/kit-conjunto-tenis-club-3.png.asset.json";
+import kitConjuntoTenisClub4 from "@/assets/kit-conjunto-tenis-club-4.png.asset.json";
+import kitConjuntoTenisClub5 from "@/assets/kit-conjunto-tenis-club-5.png.asset.json";
+import kitConjuntoTenisClub6 from "@/assets/kit-conjunto-tenis-club-6.png.asset.json";
 import tenisPmaCavenFerrari from "@/assets/tenis-pma-caven-ferrari.png";
 import tenisPmaCavenFerrari2 from "@/assets/tenis-pma-caven-ferrari-2.png";
 import boneLcstSportDiamante from "@/assets/bone-lcst-sport-diamante.png";
@@ -809,6 +815,7 @@ export const products: Product[] = [
   { slug: "combo-kit-3-blusas-zip-tommy", title: "Jaqueta Tommy Velejador Sustainable", price: "249,99", oldPrice: "899,99", installment: "14,97", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 2110, stock: 12, img: jaquetaTommyVelejador1, images: [jaquetaTommyVelejador1, jaquetaTommyVelejador2] },
   { slug: "blusa-lacoste-frio", title: "Blusa Lacoste Frio", price: "169,99", oldPrice: "799,99", installment: "12,99", off: "83% OFF", kind: "clothing", category: "jaquetas-e-moletons", sold: 1840, stock: 10, img: blusaLacosteFrio, images: [blusaLacosteFrio] },
   { slug: "correntinha-pulseirinha-ouro", title: "Correntinha + Pulseirinha de Ouro", price: "339,99", oldPrice: "499,99", installment: "9,99", off: "80% OFF", kind: "accessory", category: "acessorios", sold: 1320, stock: 8, img: correntinhaPulseirinhaOuro, images: [correntinhaPulseirinhaOuro] },
+  { slug: "kit-conjunto-tenis-club", title: "Conjunto Tênis Club", price: "249,99", oldPrice: "699,99", installment: "14,97", off: "64% OFF", kind: "kit", category: "kits-completos", sold: 1, stock: 15, img: kitConjuntoTenisClub1.url, images: [kitConjuntoTenisClub1.url, kitConjuntoTenisClub2.url, kitConjuntoTenisClub3.url, kitConjuntoTenisClub4.url, kitConjuntoTenisClub5.url, kitConjuntoTenisClub6.url] },
   { slug: "kit-completo-lcst-sportswear", title: "KIT COMPLETO LCST SPORTSWEAR 4 PEÇAS", price: "169,99", oldPrice: "749,99", installment: "14,97", off: "80% OFF", kind: "kit", category: "kits-completos", sold: 3421, stock: 9, img: kitLcstSportswear },
   
   { slug: "jaqueta-nasa", title: "Jaqueta Nasa - A do Momento", price: "339,99", oldPrice: "", installment: "9,98", off: "", kind: "clothing", category: "jaquetas-e-moletons", sold: 1722, stock: 14, img: "https://visionariostore.com.br/cdn/shop/files/IMG_6555_1f76a074-c8eb-40b2-abb6-828a13e3b0cd.png?v=1775623906&width=1200" },
