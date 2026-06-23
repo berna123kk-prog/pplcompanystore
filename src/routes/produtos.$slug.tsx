@@ -240,10 +240,15 @@ function ProductPage() {
   const next = () => setImgIdx((i) => (i + 1) % gallery.length);
 
   const colors: ProductColor[] = product.colors ?? [];
-  const activeColor = colors.find((c) => c.img === currentImage) ?? colors[0];
+  const [selectedColorName, setSelectedColorName] = useState<string | null>(null);
+  const activeColor =
+    colors.find((c) => c.name === selectedColorName) ??
+    colors.find((c) => c.img === currentImage) ??
+    colors[0];
 
   useEffect(() => {
     setImgIdx(0);
+    setSelectedColorName(null);
   }, [product.slug]);
 
   useEffect(() => {
@@ -358,7 +363,7 @@ function ProductPage() {
                     <button
                       key={c.name}
                       type="button"
-                      onClick={() => { if (idx >= 0) setImgIdx(idx); }}
+                      onClick={() => { setSelectedColorName(c.name); if (idx >= 0) setImgIdx(idx); }}
                       aria-label={c.name}
                       title={c.name}
                       className={`h-9 w-9 rounded-full border-2 transition ${active ? "border-sky-900 ring-2 ring-sky-900/30" : "border-sky-200 hover:border-sky-400"}`}

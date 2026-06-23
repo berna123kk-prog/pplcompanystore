@@ -1857,6 +1857,11 @@ const kitCompletoMizunoProduct: Product = {
   stock: 4,
   img: kitCompletoMizuno1,
   images: [kitCompletoMizuno1],
+  variantLabel: "Boné",
+  colors: [
+    { name: "Boné Branco", img: kitCompletoMizuno1, hex: "#ffffff" },
+    { name: "Boné Preto", img: kitCompletoMizuno1, hex: "#0a0a0a" },
+  ],
 };
 
 import kitTommy2025_1 from "@/assets/kit-tommy-2025-1.png";
