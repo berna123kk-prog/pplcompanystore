@@ -780,6 +780,7 @@ export type Product = {
   sold?: number;
   stock?: number;
   colors?: ProductColor[];
+  variantLabel?: string;
   soldOutSizes?: string[];
 };
 
@@ -1475,6 +1476,11 @@ const kitMizunoBranco2026Featured: Product = {
   stock: 5,
   img: kitMizunoBranco2026Featured1,
   images: [kitMizunoBranco2026Featured1],
+  variantLabel: "Boné",
+  colors: [
+    { name: "Boné Branco", img: kitMizunoBranco2026Featured1, hex: "#ffffff" },
+    { name: "Boné Preto", img: kitMizunoBranco2026Featured1, hex: "#0a0a0a" },
+  ],
 };
 
 const kitLacosteBermudaPoloFeatured: Product = {
