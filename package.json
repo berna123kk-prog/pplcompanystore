@@ -14,7 +14,9 @@
     "dev:reset": "node scripts/reset-vite-cache.mjs",
     "dev:fresh": "node scripts/reset-vite-cache.mjs --run",
     "test:e2e": "playwright test",
-    "test:e2e:install": "playwright install --with-deps chromium"
+    "test:e2e:install": "playwright install --with-deps chromium",
+    "catalog:check": "node scripts/catalog-guard.mjs",
+    "catalog:approve": "node scripts/catalog-guard.mjs --update"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
