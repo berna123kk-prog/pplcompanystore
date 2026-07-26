@@ -1,23 +1,39 @@
-## Objetivo
-Fazer a seção "Produtos Relacionados" (na página de cada produto) mostrar sempre itens parecidos com o produto em destaque, em vez dos 6 primeiros produtos quaisquer.
+## O que aconteceu
 
-## Mudança
-Arquivo: `src/routes/produtos.$slug.tsx` (linha 261)
+Os shorts não foram removidos de propósito — eles sumiram numa edição em massa de preços feita em 17/06/2026. Nessa alteração, 13 produtos da categoria "Bermudas e Shorts" foram apagados junto do bloco editado (a edição chegou a deixar um `...` solto no arquivo, sinal de recorte errado).
 
-Hoje:
-```ts
-const related = products.filter((p) => p.slug !== product.slug).slice(0, 6);
-```
+Hoje a aba "Bermudas e Shorts" mostra apenas 3 itens:
+- Shorts Nk Praia
+- Short Tommy Exclusivo
+- Short Tommy Exclusivo (destaque)
 
-Passar a priorizar produtos da **mesma categoria** do produto em destaque, com fallback para a mesma `kind` (clothing / kit / sneaker / accessory / etc.) caso falte item, e por fim completar com outros produtos para sempre ter 6 cards:
+As imagens continuam no projeto e os `import` delas ainda estão no catálogo — só as fichas dos produtos foram apagadas.
 
-1. Filtra produtos com `p.category === product.category` (exceto o próprio).
-2. Se sobrar menos de 6, completa com produtos da mesma `kind`.
-3. Se ainda sobrar menos de 6, completa com o restante do catálogo.
-4. Embaralha levemente (ordem estável por slug) e corta em 6.
+## Produtos a restaurar
 
-Resultado: na página de uma jaqueta aparecem outras jaquetas/moletons; na página de um kit aparecem outros kits; na de um tênis, outros sneakers; etc.
+| Produto | Preço na época |
+| --- | --- |
+| Bermuda Jeans Jogador (escura) | R$ 69,99 |
+| Bermuda Jeans Jogador (clara) | R$ 79,90 |
+| Bermuda Jeans Jogador (clara 2) | R$ 79,99 |
+| Bermuda Jeans Jogador (destroyed) | R$ 69,99 |
+| Shorts NK Praia Azul | R$ 69,99 |
+| Shorts NK Praia Cinza | R$ 69,99 |
+| Shorts NK Praia Chuva de NK | R$ 79,99 |
+| Bermuda NK By Swoosh | R$ 69,99 |
+| 2 Bermudas NK Swoosh | R$ 99,99 (era R$ 999,99, claramente errado) |
+| Shorts NK Sportswear | R$ 69,99 |
+| Kit 3 Bermudas NK Dri-FIT | R$ 79,99 |
+| Shorts NK Athletics | R$ 69,99 |
 
-## Fora de escopo
-- Não muda layout, título da seção, nem o componente `Section`.
-- Não mexe em `src/lib/products.ts`.
+## Como faço
+
+1. Recupero as fichas exatas desses produtos da versão anterior do catálogo (`src/lib/products.ts`), com slug, título, preço, parcelas, estoque e galeria de imagens originais.
+2. Reinsiro todas no array de produtos, na categoria `bermudas-e-shorts`, mantendo os imports de imagem que já existem (confirmo que cada arquivo em `src/assets` continua presente; se algum sumiu, aviso).
+3. Corrijo o preço do "2 Bermudas NK Swoosh" de R$ 999,99 para R$ 99,99, alinhado aos demais.
+4. Abro a aba /colecoes/bermudas-e-shorts no navegador para conferir que os 15 itens aparecem com imagem e preço corretos.
+
+## Detalhes técnicos
+
+- Arquivo único: `src/lib/products.ts`. Nada muda na página de coleção, que já filtra por `p.category === "bermudas-e-shorts"`.
+- Restauro via `git show <commit-pai>:src/lib/products.ts` para copiar as linhas originais, sem tocar em outros produtos nem reverter os ajustes de preço feitos depois.
