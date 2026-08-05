@@ -27,6 +27,12 @@ export const COUPONS: Coupon[] = [
     value: 35,
     freeShipping: true,
   },
+  {
+    code: "PPL50PP",
+    label: "50% OFF",
+    type: "percent",
+    value: 50,
+  },
 ];
 
 export function findCoupon(code: string): Coupon | undefined {
